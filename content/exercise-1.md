@@ -7,3 +7,9 @@ author="Stephan Seitz"
 +++
 
 # Signals
+
+Submission date: XX/XX/XX
+
+## Getting started
+
+During this semester we will cre

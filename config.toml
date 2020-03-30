@@ -18,7 +18,7 @@ theme = "dinkleberg"
 
 [extra]
 blog_logo="/imgs/common/prl_logo_small.png" #will appear on top header
-blog_title="Medizintechnik II - Exercise" #will appear on top header after logo
+blog_title="Medizintechnik II - Exercises" #will appear on top header after logo
 
 ## i18n words
 label_tags = "Tags"
@@ -46,7 +46,7 @@ twitter_username="@???" # OPTIONAL, Twitter User to help with metrics
 ## Sidebar automatic links
 sidebar = [
     {name = "Social", urls=[
-        {name="Telegram", url="https://t.me/rustlangbr"},
+        {name="Telegram", url="index"},
         {name="Github", url="https://github.com/rust-br"},
     ]},
     {name = "Divida Conhecimento!", urls=[
