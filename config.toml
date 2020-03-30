@@ -1,0 +1,55 @@
+# The URL the site will be built for
+base_url = "https://example.com"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+generate_rss = true
+
+#theme = "hyde"
+theme = "dinkleberg"
+#theme = "book"
+
+[extra]
+blog_logo="/imgs/common/prl_logo_small.png" #will appear on top header
+blog_title="Medizintechnik II - Exercise" #will appear on top header after logo
+
+## i18n words
+label_tags = "Tags"
+label_tag = "Tag"
+label_categories = "Categories"
+label_category = "Category"
+label_minutes = "Minutes"
+label_relative_posts = "Related posts"
+label_next = "Next"
+label_previous = "Previous"
+label_page = "Page"
+label_of = "de"
+
+og_image="" # Image that will appear on social media
+og_alt_image="" # Alt for og_image
+og_site_name="" # Site Name for Open Graphic
+keywords="" # Keywords for SEO
+
+educational_use="knowledge share" # OPTIONAL
+copyright_year="2018" # OPTIONAL
+
+fb_app_id="???" # OPTIONAL, Facebook App Id to help in metrics
+twitter_username="@???" # OPTIONAL, Twitter User to help with metrics
+
+## Sidebar automatic links
+sidebar = [
+    {name = "Social", urls=[
+        {name="Telegram", url="https://t.me/rustlangbr"},
+        {name="Github", url="https://github.com/rust-br"},
+    ]},
+    {name = "Divida Conhecimento!", urls=[
+        {name="Contribuir!", url="https://rust-br.github.io/blog/hello-world"}
+    ]}
+]
