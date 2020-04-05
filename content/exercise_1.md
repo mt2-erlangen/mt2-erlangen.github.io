@@ -14,6 +14,8 @@ Submission date: XX/XX/XX
 
 During this semester we will cre
 
+Standard project layout
+http://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html
 ## Tasks
 
  - Download Git
@@ -43,7 +45,8 @@ During this semester we will cre
     ```
 
     - Accessors
-```java
+
+	```java
 	public void show() {
 		DisplayUtilsKt.showArray(buffer, name, indexOrigin);
 	}
@@ -51,20 +54,24 @@ During this semester we will cre
 	public int size() 
 	public float[] buffer() 
 	public int indexOrigin()
-```
+	```
 
 
     - Implement
-    ```java
-    public void show()
-	public float atIndex(int i, BoundaryHandling boundaryHandling)
+	```java
+	public void show()
+	    public float atIndex(int i, BoundaryHandling boundaryHandling)
+	```
     
     - Test
-    ```
+
  - Implement `Filter.java`
- ```java
-    public Signal apply(Signal input);
- ```
+     ```java
+	public Signal apply(Signal input);
+     ```
+
+     Might be handy to implement `int[] Signal.minIndices`/`int[] Signal.maxIndices`
+
  - Implement `LinearFilter.java`
     - Inherit `Signal`. implement `Filter`
     - Implement `public Signal LinearFiler.apply(Signal input)`
