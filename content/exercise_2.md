@@ -6,6 +6,12 @@ title = "Exercise 2"
 author="Stephan Seitz"
 +++
 
+
+## Dataset
+
+ https://data.mendeley.com/datasets/7dybx7wyfn/3
+ Plawiak, Pawel (2017), “ECG signals (1000 fragments)”, Mendeley Data, v3 http://dx.doi.org/10.17632/7dybx7wyfn.3 
+
 For research purposes, the ECG signals were obtained from the PhysioNet service (http://www.physionet.org)
 from the MIT-BIH Arrhythmia database. 
 The created database with ECG signals is described below. 

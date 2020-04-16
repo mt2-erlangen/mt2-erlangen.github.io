@@ -8,14 +8,16 @@ author="Stephan Seitz"
 
 # Signals
 
-Submission date: XX/XX/XX
+Submission date: 11.05.20 23:59h
 
 ## Getting started
 
-During this semester we will cre
+During this semester we will create Java library for signal and image processing.
+Unlike AuD, were you wrote most the
 
 Standard project layout
 http://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html
+
 ## Tasks
 
  - Download Git
@@ -40,16 +42,11 @@ http://maven.apache.org/guides/introduction/introduction-to-the-standard-directo
 	private float buffer[];
 	private String name;
 	protected int indexOrigin = 0;
-
-	public final int DIMENSIONS = 1;
     ```
 
     - Accessors
 
 	```java
-	public void show() {
-		DisplayUtilsKt.showArray(buffer, name, indexOrigin);
-	}
 
 	public int size() 
 	public float[] buffer() 
@@ -59,8 +56,10 @@ http://maven.apache.org/guides/introduction/introduction-to-the-standard-directo
 
     - Implement
 	```java
-	public void show()
-	    public float atIndex(int i, BoundaryHandling boundaryHandling)
+	public void show() {
+		DisplayUtils.showArray(buffer, name, origin, spacing=1);
+	}
+	public float atIndex(int i, BoundaryHandling boundaryHandling)
 	```
     
     - Test
@@ -72,7 +71,7 @@ http://maven.apache.org/guides/introduction/introduction-to-the-standard-directo
 
      Might be handy to implement `int[] Signal.minIndices`/`int[] Signal.maxIndices`
 
- - Implement `LinearFilter.java`
+    - Implement `LinearFilter.java`
     - Inherit `Signal`. implement `Filter`
     - Implement `public Signal LinearFiler.apply(Signal input)`
     - Test
@@ -82,9 +81,5 @@ http://maven.apache.org/guides/introduction/introduction-to-the-standard-directo
 - Open HeartCurve
 - Filter with `{1,1,1,1,1}/5`,`{1,1,1}/3`, `{-1,1,-1}/3`
 - Show images of filters and Signals
-- Observe FFT. How do the filters affect the spectrum?
+<!--- Observe FFT. How do the filters affect the spectrum?-->
 
-## Dataset
-
- https://data.mendeley.com/datasets/7dybx7wyfn/3
- Plawiak, Pawel (2017), “ECG signals (1000 fragments)”, Mendeley Data, v3 http://dx.doi.org/10.17632/7dybx7wyfn.3 
