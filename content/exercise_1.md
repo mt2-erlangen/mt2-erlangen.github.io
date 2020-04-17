@@ -69,7 +69,6 @@ http://maven.apache.org/guides/introduction/introduction-to-the-standard-directo
 	public Signal apply(Signal input);
      ```
 
-     Might be handy to implement `int[] Signal.minIndices`/`int[] Signal.maxIndices`
 
     - Implement `LinearFilter.java`
     - Inherit `Signal`. implement `Filter`
@@ -78,7 +77,6 @@ http://maven.apache.org/guides/introduction/introduction-to-the-standard-directo
 
 ## Questions
 
-- Open HeartCurve
 - Filter with `{1,1,1,1,1}/5`,`{1,1,1}/3`, `{-1,1,-1}/3`
 - Show images of filters and Signals
 <!--- Observe FFT. How do the filters affect the spectrum?-->
