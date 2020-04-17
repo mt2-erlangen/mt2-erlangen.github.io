@@ -5,3 +5,5 @@ zola serve
 ```
 
 or just look into the contents of [`content`](content).
+
+You can also edit the contents of the markdown file using Gitlabs/Githubs web ui.
