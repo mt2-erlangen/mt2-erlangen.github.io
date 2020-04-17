@@ -20,9 +20,9 @@ http://maven.apache.org/guides/introduction/introduction-to-the-standard-directo
 
 ## Tasks
 
- - Download Git
- - Clone project
- - Download ImageJ from website
+ - (optional) Download Git
+ - (optional) Clone project
+ - (optional) Download ImageJ/Fiji from website
  - Add ImageJ dependency
     - run with `new ImageJ`
  - Open in Eclipse/IntelliJ
