@@ -6,23 +6,31 @@ title = "Exercise 1"
 author="Stephan Seitz"
 +++
 
-# Signals
+# Signals and Convolution
 
 Submission date: 11.05.20 23:59h
 
+## ImageJ
+
+The imaging processing program we want to use during this semester is called ImageJ.
+It was developed at the US National Institutes of Health and is used nowadays especially in research 
+for medical and biological images.
+
+If you want to, you can download a stand-alone version of the program [here](https://fiji.sc/).
+
 ## Getting started
 
-During this semester we will create Java library for signal and image processing.
-Unlike AuD, were you wrote most the
+ImageJ can not only be used as a Java library.
+We already created a Java that uses ImageJ.
+You can download it from TODO and import with the IDE of your choice:
 
+ - [Instructions for Eclipse](eclipse.md)
+ - [Instructions for IntelliJ](intellij.md)
+
+## Tasks
 Standard project layout
 http://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html
 
-## Tasks
-
- - (optional) Download Git
- - (optional) Clone project
- - (optional) Download ImageJ/Fiji from website
  - Add ImageJ dependency
     - run with `new ImageJ`
  - Open in Eclipse/IntelliJ
@@ -71,13 +79,13 @@ http://maven.apache.org/guides/introduction/introduction-to-the-standard-directo
 
 
     - Implement `LinearFilter.java`
-    - Inherit `Signal`. implement `Filter`
+    - Inherit `Signal`
     - Implement `public Signal LinearFiler.apply(Signal input)`
     - Test
 
 ## Questions
 
-- Filter with `{1,1,1,1,1}/5`,`{1,1,1}/3`, `{-1,1,-1}/3`
+- Filter with `{1,1,1,1,1}/5`,`{1,1,1}/3`, `{-0.5,0,0.5}`
 - Show images of filters and Signals
 <!--- Observe FFT. How do the filters affect the spectrum?-->
 
