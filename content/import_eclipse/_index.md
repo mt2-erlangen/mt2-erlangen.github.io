@@ -39,10 +39,21 @@ page.title="Import with Eclipse"
 
   ![ss](run.png)  
 
-- You are seeing red squiggles and
+- You are seeing red squiggles, you found a bug in a Eclipse plugin. Upgrade it in the Eclipse Marketplace! 
 
-  ![ss](run.png)  
+  ![ss](marketplace.png)  
 
+- Search for `gradle build`! Then, click on the `Installed` button of "Buildship Gradle Integration.
+
+  ![ss](search_for_gradle_build.png)
+
+- ... and click on `Update`! This should solve the bug after a restart.
+
+  ![ss](eclipse_gradle.png)
+
+- You should now see ImageJ when you start Exercise01
+
+  ![ss](imagej.png)
 
 
 
