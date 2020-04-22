@@ -8,6 +8,11 @@ or just look into the contents of [`content`](content).
 
 You can also edit the contents of the markdown file using Gitlabs/Githubs web ui.
 
+## Import Instructions
+
+- [Eclipse](content/import_eclipse/_index.md)
+- IntelliJ (TODO, should work just out of the box)
+
 ## Content
 
 - [Exercise01](content/exercise_1.md)
