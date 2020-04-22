@@ -15,5 +15,5 @@ You can also edit the contents of the markdown file using Gitlabs/Githubs web ui
 
 ## Content
 
-- [Exercise01](content/exercise_1.md)
+- [Exercise01](content/exercise01/_index.md)
 - [Exercise02](content/exercise_2.md)
