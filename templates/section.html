@@ -1,0 +1,68 @@
+{% extends "index.html" %}
+
+{% block title %} {{section.title}} {% endblock title %}
+{% block ogtitle %} {{section.title}} {% endblock ogtitle %}">
+{% block ogdesc %} {{section.description}} {% endblock ogdesc %}">
+{% block ogurl %}{{section.permalink}}{% endblock ogurl%}">
+{% block ogaltimg %}{{section.title}}{% endblock ogaltimg %}">
+{% block ogimg %}{% if section.extra.image %}{{section.extra.image}}{% else %}{% if config.extra.og_image %}{{config.extra.og_image}}{% endif %}{% endif %}{% endblock ogimg %}
+
+{% block content %}
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    {% if section.extra.image %}
+        <meta itemprop="image" content="{{section.extra.image}}">
+    {% else %}
+        {% if config.extra.og_image %}
+            <meta itemprop="image" content="{{config.extra.og_image}}">
+        {% endif %}
+    {% endif %}
+    <header>
+        {% if section.taxonomies.categories %}
+            <a  class="category" href="{{ get_taxonomy_url(kind="categories", name=section.taxonomies.categories[0]) }}">
+                {{ section.taxonomies.categories[0]  }}
+            </a>
+        {% endif %}
+        <h1 class="title" itemprop="headline">{{ section.title }}</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">{{section.extra.author}}</span>
+        </address>
+        <div class="extra">
+            {% if section.taxonomies.tags %}
+                {{config.extra.label_tags}}:
+                {% for tag in section.taxonomies.tags %}
+                    <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{ tag }}</a>
+                    {% if section.taxonomies.tags | length > 1 %}
+                        {% if loop.index != section.taxonomies.tags | length %}
+                            {% if loop.index == section.taxonomies.tags | length - 1 %}
+                                e
+                            {% else %}
+                                ,
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+
+            {% if section.extra.relative_posts %}
+                <div class="relative-posts">
+                    {{config.extra.label_relative_posts}}:
+                    <ul class="base-list">
+                        {% for relative in section.extra.relative_posts %}
+                            <li>
+                                - <a href="{{config.base_url}}{{relative.url}}">{{relative.label}}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      {{ section.content | safe }}
+    </div>
+</article>
+
+{% endblock content %}
+{% block sidebar %}
+{% endblock sidebar %}
+

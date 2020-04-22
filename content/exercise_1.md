@@ -24,8 +24,9 @@ ImageJ can not only be used as a Java library.
 We already created a Java that uses ImageJ.
 You can download it from TODO and import with the IDE of your choice:
 
- - [Instructions for Eclipse](eclipse.md)
- - [Instructions for IntelliJ](intellij.md)
+
+ - [Instructions for Eclipse](../import_eclipse)
+ - [Instructions for IntelliJ](../import_intellij)
 
 ## Tasks
 Standard project layout
