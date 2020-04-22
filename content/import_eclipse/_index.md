@@ -54,6 +54,7 @@ author="Stephan Seitz"
   ![ss](imagej.png)
 
 
+[Back to exercise 01](../exercise01)
 
 <!--- Ensure that Eclipse can find your Java Runtime Enviroment-->
   <!--![ss](../openproperties.png)  -->
