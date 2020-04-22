@@ -5,8 +5,6 @@ title = "Import a Gradle project with Eclipse"
 
 [extra]
 author="Stephan Seitz"
-[page]
-page.title="Import with Eclipse"
 +++
 
 
@@ -51,7 +49,7 @@ page.title="Import with Eclipse"
 
   ![ss](eclipse_gradle.png)
 
-- You should now see ImageJ when you start Exercise01
+- You should now see ImageJ when you start Exercise01.
 
   ![ss](imagej.png)
 
