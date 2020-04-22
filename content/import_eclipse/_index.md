@@ -16,24 +16,31 @@ page.title="Import with Eclipse"
 - Install Eclipse from [https://www.eclipse.org/downloads/](https://www.eclipse.org/downloads/)
 
 - Open Eclipse 
+
   ![ss](1.png)  
 
 - Import...
+
   ![ss](2.png)  
 
 - Existing Gradle Project...
+
   ![ss](3.png)  
 
 - Chose path of the downloaded project and click `Next`
+
   ![ss](4.png)  
 
 - Grab a coffee while it's downloading ImageJ
+
   ![ss](5.png)  
 
 - Try to run Exercise01
+
   ![ss](run.png)  
 
 - You are seeing red squiggles and
+
   ![ss](run.png)  
 
 
