@@ -26,7 +26,7 @@ If you want to, you can download a stand-alone version of the program [here](htt
 ## Getting started
 
 ImageJ can not only be used as a Java library.
-We already created a Java that uses ImageJ.
+We already created a Java project that uses ImageJ.
 You can download it from TODO and import with the IDE of your choice:
 
 
@@ -149,10 +149,17 @@ You can test your convolution function with the tests provided in `src/test/java
 
 ## Questions
 
-- Filter with `{1,1,1,1,1}/5`,`{1,1,1}/3`, `{-0.5,0,0.5}`
-- Show images of filters and Signals
-<!--- Observe FFT. How do the filters affect the spectrum?-->
+<P align="right"><i>3 Points</i>
+
+In this task we want to convolve a test `Signal` with three different linear filters.
+Filter the signal `Signal(new float[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0}, "f(x)")`
+with filter `{1.0f/3 ,1/3.f ,1/3.f}`, `{1/5.f, 1/5.f , 1/5.f, 1/5.f, 1/5.f}`, `{0.5, 0, -0.5}`.
+
+Save the images of the input signal and filtered results (recommended filetype: `png`).
+Create a PDF document (e.g. with Word or LibreOffice) with those images in which you describe briefly how the filters modified the input signal and why.
 
 ## Submitting
 
 Please assure that all files you created also contain your name and your IDM ID and also your partner's name and IDM ID if you're not working alone.
+
+Then, compress your source code folder `src` to a zip archive (`src.zip`) and submit it and your PDF document via StudOn!
