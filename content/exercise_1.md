@@ -109,6 +109,9 @@ In our black board exercises, we agreed that we want to continue our signals wit
 If we access indices of our `Signal` with values smaller than `minIndex()` or larger `maxIndex()` we want to return `0.0f`.
 If the users accesses an index between `minIndex()` and `maxIndex()` we want the return corresponding value stored in our array.
 
+
+![minIndex](../signal-min-max.png)
+
 Implement the method `atIndex` and `setAtIndex`. Please be aware that `minIndex` can be smaller than 0 for subclasses of Signal.
 If `setAtIndex` is called with an invalid index (smaller than `minIndex` or greater than `maxIndex`), it's ok for the program to crash.
 This should not happen for `atIndex`.
@@ -126,6 +129,8 @@ You can check the correctnes of `atIndex`/`setAtIndex` with the test `testAtInde
 
  Implement `LinearFilter` in file `src/main/java/LinearFilter.java` as a subclass of `Signal`.
  `LinearFilter` should work like `Signal` except its `minIndex` should be at `- floor(coefficients.length/2)` as in the exercise slides.
+
+ ![tip2](../tip2.png)
 
 `LinearFilter` should have an constructor that checks that coefficients is an array of odd size or throws an error otherwise (any error is ok).
 ```java
@@ -145,7 +150,15 @@ and a method that executes the discrete convolution on another `Signal input` an
 
  $$g[k] = \sum_{\kappa=h.\text{minIndex}}^{h.\text{maxIndex}} f[k-\kappa] h[\kappa] \cdot$$
 
+ ![tip3](../tip3.png)
+
 You can test your convolution function with the tests provided in `src/test/java/LinearFilterTests.java`.
+
+Good test cases are:
+
+- `{0,0,1,0,0}`: this filter should not change your signal at all
+- `{0,1,0,0,0}`: this filter should move your signal one value to the right
+- `{0,0,0,1,0}`: this filter should move your signal one value to the left
 
 ## Questions
 
@@ -157,13 +170,13 @@ with filters
 
  - $h_1[k]$: `{1.0f/3 ,1/3.f ,1/3.f}`,
  - $h_2[k]$: `{1/5.f, 1/5.f , 1/5.f, 1/5.f, 1/5.f}`,
- - $h_3[k]$: `{0.5, 0, -0.5}`.
+ - $h_3[k]$: `{0.5f, 0, -0.5f}`.
 
 Save the images of the input signal and filtered results (recommended filetype: `png`).
 Create a PDF document (e.g. with Word or LibreOffice) with those images in which you describe briefly how the filters modified the input signal and why.
 
 ## Submitting
 
-Please assure that all files you created also contain your name and your IDM ID and also your partner's name and IDM ID if you're not working alone.
+Please ensure that all files you created also contain your name and your IDM ID and also your partner's name and IDM ID if you're not working alone.
 
 Then, compress your source code folder `src` to a zip archive (`src.zip`) and submit it and your PDF document via StudOn!
