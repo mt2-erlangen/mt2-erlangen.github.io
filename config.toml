@@ -47,5 +47,6 @@ twitter_username="@???" # OPTIONAL, Twitter User to help with metrics
 sidebar = [
     {name = "Materials", urls=[
         {name="Github (Java project template)", url="https://github.com/mt2-erlangen/exercises-ss2020"},
+        {name="StudOn", url="https://www.studon.fau.de/crs2961834.html"},
     ]},
 ]
