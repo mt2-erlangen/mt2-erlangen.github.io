@@ -23,4 +23,4 @@ author="Stephan Seitz"
 - Wait until all dependencies are downloaded
 ![Run](intellij_3.png)
 
-[Back to exercise 01](../exercise01)
+[Back to exercise 01](../exercise_1)
