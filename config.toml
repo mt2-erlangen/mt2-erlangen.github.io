@@ -45,11 +45,7 @@ twitter_username="@???" # OPTIONAL, Twitter User to help with metrics
 
 ## Sidebar automatic links
 sidebar = [
-    {name = "Social", urls=[
-        {name="Telegram", url="index"},
-        {name="Github", url="https://github.com/rust-br"},
+    {name = "Materials", urls=[
+        {name="Github (Java project template)", url="https://github.com/mt2-erlangen/exercises-ss2020"},
     ]},
-    {name = "Divida Conhecimento!", urls=[
-        {name="Contribuir!", url="https://rust-br.github.io/blog/hello-world"}
-    ]}
 ]

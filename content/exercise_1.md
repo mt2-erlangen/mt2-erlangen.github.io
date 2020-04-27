@@ -17,7 +17,7 @@ Each exercise has **10 points**. You have to achieve **30 of 60 points in six ho
 
 ## ImageJ
 
-The imaging processing program we want to use during this semester is called ImageJ.
+The image processing program we want to use during this semester is called ImageJ.
 It was developed at the US National Institutes of Health and is used nowadays especially in research 
 for medical and biological images.
 
@@ -27,7 +27,7 @@ If you want to, you can download a stand-alone version of the program [here](htt
 
 ImageJ can not only be used as a Java library.
 We already created a Java project that uses ImageJ.
-You can download it from TODO and import with the IDE of your choice:
+You can download it from [https://github.com/mt2-erlangen/exercises-ss2020](https://github.com/mt2-erlangen/exercises-ss2020) and import with the IDE of your choice:
 
 
  - [Instructions for Eclipse](../import_eclipse)
@@ -53,7 +53,7 @@ public class Exercise01 {
 
 ### Signal.java
 
-<P align="right"><i>3 Points</i>
+<P align="right"><i>4 Points</i>
 
 As a first step, we will implement the class `Signal` 
 which should hold a signal of finite length.
@@ -122,7 +122,7 @@ You can check the correctnes of `atIndex`/`setAtIndex` with the test `testAtInde
 
 ### LinearFilter.java
 
-<P align="right"><i>4 Points</i>
+<P align="right"><i>3 Points</i>
 
  Implement `LinearFilter` in file `src/main/java/LinearFilter.java` as a subclass of `Signal`.
  `LinearFilter` should work like `Signal` except its `minIndex` should be at `- floor(coefficients.length/2)` as in the exercise slides.
@@ -143,7 +143,7 @@ and a method that executes the discrete convolution on another `Signal input` an
 
  or with our `minIndex`/`maxIndex` methods for each index $k$ of the output signal.
 
- $$g[k] = \sum_{\kappa=h.\text{minIndex}}^{h.\text{maxIndex}} f[k-\kappa] h(\kappa) \cdot$$
+ $$g[k] = \sum_{\kappa=h.\text{minIndex}}^{h.\text{maxIndex}} f[k-\kappa] h[\kappa] \cdot$$
 
 You can test your convolution function with the tests provided in `src/test/java/LinearFilterTests.java`.
 
@@ -152,8 +152,12 @@ You can test your convolution function with the tests provided in `src/test/java
 <P align="right"><i>3 Points</i>
 
 In this task we want to convolve a test `Signal` with three different linear filters.
-Filter the signal `Signal(new float[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0}, "f(x)")`
-with filter `{1.0f/3 ,1/3.f ,1/3.f}`, `{1/5.f, 1/5.f , 1/5.f, 1/5.f, 1/5.f}`, `{0.5, 0, -0.5}`.
+Filter the signal $f[k]$  `Signal(new float[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0}, "f(k)")`
+with filters
+
+ - $h_1[k]$: `{1.0f/3 ,1/3.f ,1/3.f}`,
+ - $h_2[k]$: `{1/5.f, 1/5.f , 1/5.f, 1/5.f, 1/5.f}`,
+ - $h_3[k]$: `{0.5, 0, -0.5}`.
 
 Save the images of the input signal and filtered results (recommended filetype: `png`).
 Create a PDF document (e.g. with Word or LibreOffice) with those images in which you describe briefly how the filters modified the input signal and why.
