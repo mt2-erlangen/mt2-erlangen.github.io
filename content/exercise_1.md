@@ -11,7 +11,7 @@ author="Stephan Seitz"
 
 **Submission dead line: 11.05.20 23:59h**
 
-Please assure that all files you created also contain **your name and your IDM ID** and also your partner's name and IDM ID if you're not working alone.
+Please ensure that all files you created also contain **your name and your IDM ID** and also your partner's name and IDM ID if you're not working alone.
 
 Each exercise has **10 points**. You have to achieve **30 of 60 points in six homework exercises** to pass the module.
 
@@ -107,7 +107,7 @@ To test it, create a `Signal` with arbitray values in the main method of `Exerci
 
 In our black board exercises, we agreed that we want to continue our signals with zeros where we don't have any values stored.
 If we access indices of our `Signal` with values smaller than `minIndex()` or larger `maxIndex()` we want to return `0.0f`.
-If the users accesses an index between `minIndex()` and `maxIndex()` we want the return corresponding value stored in our array.
+If the users accesses an index between `minIndex()` and `maxIndex()` we want to return the corresponding value stored in our array.
 
 
 ![minIndex](../signal-min-max.png)
