@@ -55,14 +55,14 @@ author="Stephan Seitz"
 
   ![ss](imagej.png)
 
-- If you're still facing problems: please also check whether a valid Java Runtime Enviroment was found selected by clicking on the project folder
+- If you're still facing problems: please also check whether a valid Java Runtime Enviroment was found by clicking on the project folder
   (if it still has red crosses). Select `Properties` -> `Java Build Path`. Sometimes Eclipse does not find your Java
   installation. You can select it there.
 
   ![ss](6.png)
 
 
-[Back to exercise 01](../exercise01)
+[Back to exercise 01](../exercise_1)
 
 <!--- Ensure that Eclipse can find your Java Runtime Enviroment-->
   <!--![ss](../openproperties.png)  -->
