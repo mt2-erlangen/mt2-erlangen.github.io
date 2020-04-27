@@ -118,7 +118,7 @@ This should not happen for `atIndex`.
 
 ```java
     public float atIndex(int i)
-    public float setAtIndex(int i, float value)
+    public void setAtIndex(int i, float value)
 ```
 
 You can check the correctnes of `atIndex`/`setAtIndex` with the test `testAtIndex` in file `src/test/java/SignalTests.java`.
