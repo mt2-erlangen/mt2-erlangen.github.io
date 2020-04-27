@@ -7,7 +7,8 @@ author="Stephan Seitz"
 +++
 
 - On Windows, [download the latest Java version (14.1) from Oracle](https://www.oracle.com/java/technologies/javase-jdk14-downloads.html).
-  On Ubuntu Linux, you can install `sudo apt install openjdk-14-jdk`
+  On Ubuntu Linux, you can install `sudo apt install openjdk-14-jdk` (only on 19.10) or `sudo apt install openjdk-11-jdk`.
+  At least Java 11 is required.
 
 - You can [get IntelliJ from here](https://www.jetbrains.com/idea/). There's a free community edition and you can also 
   unlock the Ultimate Edition when registering with your FAU email adress.
