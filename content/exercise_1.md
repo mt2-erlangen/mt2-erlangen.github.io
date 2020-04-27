@@ -107,7 +107,7 @@ To test it, create a `Signal` with arbitray values in the main method of `Exerci
 
 In our black board exercises, we agreed that we want to continue our signals with zeros where we don't have any values stored.
 If we access indices of our `Signal` with values smaller than `minIndex()` or larger `maxIndex()` we want to return `0.0f`.
-If the users accesses an index between `minIndex()` and `maxIndex()` we want to return the corresponding value stored in our array.
+If an user accesses an index between `minIndex()` and `maxIndex()` we want to return the corresponding value stored in our array.
 
 
 ![minIndex](../signal-min-max.png)
