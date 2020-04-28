@@ -39,8 +39,17 @@ In case, you need to add external software to your own projects you can use [thi
 To analyze our signals, add the following to your `Signal` class.
 
 ``java
-
+	public float min()         //< Lowest signal value
+	public float max()         //< Largest signal value
+	public double sum()        //< Sum of all signal values
+	public double mean()       //< Mean value of the signal
+    public double variance()   //< Variance of the signal
+	public double stdDev()     //< Standard deviation of the signal
 ```
+
+In the last exercise, we treated signals as pure sequence of numbers without any physical dimensions.
+But for medical measurements physical dimensions are important.
+Apart from out indexing a integer numbers
 
 
  https://data.mendeley.com/datasets/7dybx7wyfn/3
