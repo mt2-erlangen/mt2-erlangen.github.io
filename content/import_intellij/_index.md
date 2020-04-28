@@ -11,7 +11,7 @@ author="Stephan Seitz"
   At least Java 11 is required.
 
 - You can [get IntelliJ from here](https://www.jetbrains.com/idea/). There's a free community edition and you can also 
-  unlock the Ultimate Edition when registering with your FAU email adress.
+  unlock the Ultimate Edition when applying with your FAU email adress [here](https://www.jetbrains.com/community/education/#students).
 
 - Start IntelliJ and select "Open or Import"
 
