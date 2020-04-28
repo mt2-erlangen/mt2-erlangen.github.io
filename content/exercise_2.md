@@ -38,12 +38,12 @@ In case, you need to add external software to your own projects you can use [thi
 
 To analyze our signals, add the following to your `Signal` class.
 
-``java
+```java
 	public float min()         //< Lowest signal value
 	public float max()         //< Largest signal value
 	public double sum()        //< Sum of all signal values
 	public double mean()       //< Mean value of the signal
-    public double variance()   //< Variance of the signal
+        public double variance()   //< Variance of the signal
 	public double stdDev()     //< Standard deviation of the signal
 ```
 
