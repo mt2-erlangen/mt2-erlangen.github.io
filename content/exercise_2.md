@@ -11,8 +11,8 @@ author="Stephan Seitz"
 <!--import scipy.io -->
  
 <!--for f in files: -->
-    <!--data = scipy.io.loadmat(f) -->
-    <!--scipy.io.savemat(f, data) -->
+<!--data = scipy.io.loadmat(f) -->
+<!--scipy.io.savemat(f, data) -->
      
 
 ** This is just a draft and may be changed until the official release of this exercise **
