@@ -98,6 +98,9 @@ if (file.isFile()) {
     // A file should be opened 
     var mat = Mat5.readFromFile(file).getMatrix(0);
     Signal heartSignal = new mt.Signal(mat.getNumElements(), "Heart Signal");
+    for (int i = 0; i < heartSignal.size(); ++i) {
+	    heartSignal.buffer()[i] = mat.getFloat(i);
+    }
     heartSignal.show();
 
 
@@ -150,7 +153,7 @@ Add also a setter and getter method
 ```
 
 Read in the [discription of the data](http://dx.doi.org/10.17632/7dybx7wyfn.3) set the sampling frequency of the signal
-and use it to calculate the spacing between two samples. Set this property in the main method.
+and use it to calculate the spacing between two samples. Set this property `setSpacing` in the main method.
 
 Next, we want to change `show()` to regard our spacing and to accept a `ij.gui.Plot` so that we can set the axis of our plot.
 
@@ -172,14 +175,48 @@ Please create an instance of `ij.gui.Plot` in the main method of `Exercise02` wi
 <!--You can find a complete description of this class [here](https://imagej.nih.gov/ij/developer/api/ij/gui/Plot.html).-->
 ```java
 // Constructs a new Plot with the default options.
-new Plot("title", "xLabel", "yLabel")
+Plot plot = new Plot("title", "xLabel", "yLabel")
+heartSignal.show(plot);
+
+//... add here more plotting stuff
+
+plot.show()
 ```
+
 
 # Determine the Heart Frequency
 
-TODO: use sane types for this
+Create a file  `src/main/java/lme/HeartSignalPeaks.java` with following content
 ```java
-    public static HeartSignalPeaks getPeakPositions(mt.Signal signal, float relativeThreshold)
+package lme;
+
+import java.util.ArrayList;
+
+public class HeartSignalPeaks {
+	public ArrayList<Double> xValues = new ArrayList<Double>();
+	public ArrayList<Double> yValues = new ArrayList<Double>();
+}
+```
+
+We now want to find the peaks of the heart signal. We do that by finding local maxima within region that are above a certain
+threshold (here in blue).
+Find a good value of this threshold so that all peaks are above this value.
+You may use `mean()`, `max()`, `min()` to calculate it.
+You can see your threshold by ploting it:
+
+```
+    plot.setColor("blue");
+    plot.add("lines", new double[] { 0, /* a high value */10000 }, new double[] { threshold, threshold });
+```
+
+Imp
+
+
+
+![pic alt](../find_peaks.png)
+
+```java
+    public static HeartSignalPeaks getPeakPositions(mt.Signal signal, float threshold)
     public static mt.Signal calcPeakIntervals(HeartSignalPeaks peaks)
 ```
 
