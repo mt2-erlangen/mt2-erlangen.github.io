@@ -217,10 +217,10 @@ Implement the following method that finds all peaks of the signal.
 ```
 You could do that by a normal maximum search over your
 signal values saving the x (`max`) and the y value (`argmax`) of the current maximum.
-Determine with to variable whether the current values is above or below your threshold.
-Whenever you encounter a value that is below there threshold while the previous was above add
+Determine with `boolean` variable whether the current values is above or below your threshold.
+Whenever you encounter a value that is below the threshold while the previous was above, add
 your intermediate result to instance of `HeartSignalPeaks` (or better said to `peaks.xValues` and `peaks.yValues`) and reset your
-intermediate result.
+intermediate result. Also save your intermediate result if the last value of your `Signal` is above the threshold.
 
 You can plot the peaks you have found:
 
