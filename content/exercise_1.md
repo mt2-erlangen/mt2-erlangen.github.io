@@ -96,6 +96,7 @@ Implement the following getter methods for `Signal`
     public float[] buffer()  // Get the internal array 
     public int minIndex()    // Get lowest index of signal (that is stored in buffer)
     public int maxIndex()    // Get highest index of signal (that is stored in buffer)
+    public String name()     // Get the name of the signal
 ```
 
 Next, we want to visualize our Signal in the method `show`. You can use provided function `lme.DisplayUtils.showArray`.
