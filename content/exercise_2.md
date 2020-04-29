@@ -238,7 +238,7 @@ beats per minute (`60. * 1. / intervals.mean()`). Print those values!
 
 # Bonus
 
-*Do this is not required for exercise.*
+*Do this is not required for the exercise.*
 
 Run `Exercise02` with the whole folder of the data set as an argument.
 It should use your implementation to find the signal with lowest and highest variance in the data set corresponding to probably
