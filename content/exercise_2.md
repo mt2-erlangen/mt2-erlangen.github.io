@@ -120,12 +120,13 @@ Please implement the following methods that calculate some descriptive propertie
 ```java
     public float min()         //< lowest signal value
     public float max()         //< largest signal value
-    public double sum()        //< sum of all signal values
-    public double mean()       //< mean value of the signal
-    public double variance()   //< variance of the signal
-    public double stddev()     //< standard deviation of the signal
+    public float sum()        //< sum of all signal values
+    public float mean()       //< mean value of the signal
+    public float variance()   //< variance of the signal
+    public float stddev()     //< standard deviation of the signal
 ```
-Test the methods in your main function and check whether the calculated values seem plausible by looking at your plot.
+Test the methods in your main function and check whether the calculated values seem plausible
+by looking at your plot and printing the calculated values.
 
 # Physical Dimensions
 
@@ -168,18 +169,18 @@ Because we are lazy, we can still keep the original usage of `show()`
 ```
 
 Please create an instance of `ij.gui.Plot` in the main method of `Exercise02` with descriptive labels for both axis and use if for `heartSignal.show(...)`.
-You can find a complete description of this class [here](https://imagej.nih.gov/ij/developer/api/ij/gui/Plot.html).
-
+<!--You can find a complete description of this class [here](https://imagej.nih.gov/ij/developer/api/ij/gui/Plot.html).-->
 ```java
 // Constructs a new Plot with the default options.
-Plot(java.lang.String title, java.lang.String xLabel, java.lang.String yLabel)
+new Plot("title", "xLabel", "yLabel")
 ```
+
 # Determine the Heart Frequency
 
 TODO: use sane types for this
 ```java
-    public static Map.Entry<ArrayList<Double>, ArrayList<Double>> getPeakPositions(mt.Signal signal, double relativeThreshold)
-    public static mt.Signal calcPeakIntervals(Map.Entry<ArrayList<Double>, ArrayList<Double>> peaks)
+    public static HeartSignalPeaks getPeakPositions(mt.Signal signal, float relativeThreshold)
+    public static mt.Signal calcPeakIntervals(HeartSignalPeaks peaks)
 ```
 
 
