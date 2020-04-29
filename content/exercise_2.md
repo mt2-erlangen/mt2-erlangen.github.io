@@ -159,12 +159,13 @@ Next, we want to change `show()` to regard our spacing and to accept a `ij.gui.P
     }
 ```
 
-Because we are lazy, we can still recover the original usage of `show()`
+Because we are lazy, we can still keep the original usage of `show()`
 
 ```java
     public void show() {
 	    DisplayUtils.showArray(buffer, name, , /*start of the signal=*/0.f, spacing);
     }
+```
 
 Please create an instance of `ij.gui.Plot` in the main method of `Exercise02` with descriptive labels for both axis and use if for `heartSignal.show(...)`.
 You can find a complete description of this class [here](https://imagej.nih.gov/ij/developer/api/ij/gui/Plot.html).
