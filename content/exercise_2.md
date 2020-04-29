@@ -67,8 +67,7 @@ In case, you need to add external software to your own projects you can use [thi
 
 	    } else if (file.isDirectory()) {
 		// A directory should be opened 
-
-
+		lme.HeartSignalAnalyzer.analyzeHeartSignalFolder(file);
 	    } else {
 		System.err.println("Could not find " + file);
 	    }
@@ -237,7 +236,13 @@ Next, create a Signal with the difference in time between succesive peaks.
 You can use that signal to determine the mean cycle duration (`peakIntervals.mean()`), the mean heart frequency (`(1. / intervals.mean())`) and
 beats per minute (`60. * 1. / intervals.mean()`). Print those values!
 
+# Bonus
 
+*Do this is not required for exercise.*
+
+Run `Exercise02` with the whole folder of the data set as an argument.
+It should use your implementation to find the signal with lowest and highest variance in the data set corresponding to probably
+healthy patient and one with arythmia.
 
  <!--https://data.mendeley.com/datasets/7dybx7wyfn/3-->
 
