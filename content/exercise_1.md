@@ -9,7 +9,7 @@ author="Stephan Seitz"
 
 # Signals and Convolution
 
-**Submission dead line: 11.05.20 23:59h**
+**Submission deadline: 11.05.20 23:59h**
 
 Please ensure that all files you created also contain **your name and your IDM ID** and also your partner's name and IDM ID if you're not working alone.
 
