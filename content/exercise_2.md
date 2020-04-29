@@ -20,7 +20,7 @@ author="Stephan Seitz"
 # Statistical Measures
 
 In this exercise, we want to have a look on how we can analyze signals using simple statistical measures.
-We will use a freely available ECG data set with the goal to distinguish healthy from unhealthy patients.
+We will use a freely available ECG data set with the goal to distinguish healthy from patients with heart rythm problems.
 
 ![ECG curve](../heartbeat.png)
 
