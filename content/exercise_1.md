@@ -124,7 +124,7 @@ This should not happen for `atIndex`.
     public void setAtIndex(int i, float value)
 ```
 
-You can check the correctnes of `atIndex`/`setAtIndex` with the test `testAtIndex` in file `src/test/java/SignalTests.java`.
+You can check the correctness of `atIndex`/`setAtIndex` with the test `testAtIndex` in file `src/test/java/SignalTests.java`.
 
 ### LinearFilter.java
 
@@ -135,7 +135,7 @@ You can check the correctnes of `atIndex`/`setAtIndex` with the test `testAtInde
 
  ![tip2](../tip2.png)
 
-`LinearFilter` should have an constructor that checks that coefficients is an array of odd size or throws an error otherwise (any error is ok).
+`LinearFilter` should have a constructor that checks that coefficients is an array of odd size or throws an error otherwise (any error is ok).
 ```java
     public LinearFilter(float[] coefficients, String name)
 ```
