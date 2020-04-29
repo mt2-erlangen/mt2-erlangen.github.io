@@ -1,0 +1,20 @@
++++
+date= 2020-04-29
+title = "Set Program Arguments in Eclipse"
+
+[extra]
+author="Stephan Seitz"
++++
+
+# Set Program Arguments in Eclipse
+
+Go to **Run Configurations...**
+![eclipse_args](eclipse_args.png "opt title")
+
+Create a new launch configuration
+![eclipse_args](eclipse_new_run_config.png "opt title")
+
+Set the arguments with the file name in quotes: **"*path to file*"**
+![eclipse_args](eclipse_set_args.png "opt title")
+
+Click **Run**!
