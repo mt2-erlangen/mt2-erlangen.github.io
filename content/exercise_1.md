@@ -150,8 +150,9 @@ and a method that executes the discrete convolution on another `Signal input` an
  $$g[k] = \sum_{\kappa=-K}^{K} f[k-\kappa] h[ \kappa ] \cdot$$
 
  or with our `minIndex`/`maxIndex` methods for each index $k$ of the output signal.
-
  $$g[k] = \sum_{\kappa=h.\text{minIndex}}^{h.\text{maxIndex}} f[k-\kappa] h[\kappa] \cdot$$
+
+Be sure that you use `atIndex` to access the value of `input` and the filter.
 
  ![tip3](../tip3.png)
 
