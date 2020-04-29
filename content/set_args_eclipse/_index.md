@@ -11,10 +11,12 @@ author="Stephan Seitz"
 Go to **Run Configurations...**
 ![eclipse_args](eclipse_args.png "opt title")
 
-Create a new launch configuration
+Create a **New launch configuration** with main class `exercises.Exercise02`
 ![eclipse_args](eclipse_new_run_config.png "opt title")
 
 Set the arguments with the file name in quotes: **"*path to file*"**
 ![eclipse_args](eclipse_set_args.png "opt title")
 
 Click **Run**!
+
+

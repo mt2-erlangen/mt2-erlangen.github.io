@@ -41,7 +41,7 @@ To read those files, an external dependency was already added to our `build.grad
     implementation 'us.hebi.matlab.mat:mfl-core:0.5.6'
 ```
 
-does the magic and automatically downloaded a [*.mat file reader](https://github.com/HebiRobotics/MFL).
+does the magic and automatically downloaded a [\*.mat file reader](https://github.com/HebiRobotics/MFL).
 In case, you need to add external software to your own projects you can use [this search engine](https://search.maven.org/).
 
 ## Tasks
@@ -82,10 +82,31 @@ In case, you need to add external software to your own projects you can use [thi
 
 Launch `Exercise02` with the one of the files of the data set as an argument (e.g. `<where_you_saved_your_data_set>/MLII/1 NSR/100m (0).mat`)!
 
-[How to do that in Eclipse](../set_args_eclipse)
+- [How to do that in Eclipse](../set_args_eclipse)
+- [How to do that in IntelliJ](../set_args_intellij)
+
+Your program should print now the file name you selected:
+
+![Stared with arguments](../start_with_args.png)
+
+**Remember to never put file names directly in your code. Your program will then only work on your machine!**
+
+Let's open this file!
+
+```java
+if (file.isFile()) {
+    // A file should be opened 
+    var mat = Mat5.readFromFile(file).getMatrix(0);
+    Signal heartSignal = new mt.Signal(mat.getNumElements(), "Heart Signal");
+    heartSignal.show();
 
 
+} else if (file.isDirectory()) {
+```
 
+
+You should now see the signal. However this plot does not have any labels with physical units attached.
+We will change that later.
 
 
 ![dimensionless ECG curve](../dimensionless.png)
@@ -93,7 +114,8 @@ Launch `Exercise02` with the one of the files of the data set as an argument (e.
 
 # Extension of Signal.java
 
-To analyze our signals, add the following to your `Signal` class.
+To analyze this and other signals, we will extend our `Signal` class.
+Please implement the following methods that calculate some descriptive properties of the signal:
 
 ```java
     public float min()         //< lowest signal value
@@ -103,12 +125,62 @@ To analyze our signals, add the following to your `Signal` class.
     public double variance()   //< variance of the signal
     public double stddev()     //< standard deviation of the signal
 ```
+Test the methods in your main function and check whether the calculated values seem plausible by looking at your plot.
+
+# Physical Dimensions
 
 In the last exercise, we treated signals as pure sequence of numbers without any physical dimensions.
 But for medical measurements physical dimensions are important.
-Because of this 
+We want to extend our plot to look like this with the horizontal axis labeled with seconds:
 
 ![pic alt](../find_peaks.png)
+
+To do this we will add a new member to our signal that's describing the physical distance between two samples
+
+```java
+    protected float spacing;
+```
+
+Add also a setter and getter method
+
+```java
+    public void setSpacing(float spacing) 
+    public float spacing() 
+```
+
+Read in the [discription of the data](http://dx.doi.org/10.17632/7dybx7wyfn.3) set the sampling frequency of the signal
+and use it to calculate the spacing between two samples. Set this property in the main method.
+
+Next, we want to change `show()` to regard our spacing and to accept a `ij.gui.Plot` so that we can set the axis of our plot.
+
+```java
+    public void show(Plot plot) {
+	DisplayUtils.showArray(buffer, plot, /*start of the signal=*/0.f, spacing);
+    }
+```
+
+Because we are lazy, we can still recover the original usage of `show()`
+
+```java
+    public void show() {
+	    DisplayUtils.showArray(buffer, name, , /*start of the signal=*/0.f, spacing);
+    }
+
+Please create an instance of `ij.gui.Plot` in the main method of `Exercise02` with descriptive labels for both axis and use if for `heartSignal.show(...)`.
+You can find a complete description of this class [here](https://imagej.nih.gov/ij/developer/api/ij/gui/Plot.html).
+
+```java
+// Constructs a new Plot with the default options.
+Plot(java.lang.String title, java.lang.String xLabel, java.lang.String yLabel)
+```
+# Determine the Heart Frequency
+
+TODO: use sane types for this
+```java
+    public static Map.Entry<ArrayList<Double>, ArrayList<Double>> getPeakPositions(mt.Signal signal, double relativeThreshold)
+    public static mt.Signal calcPeakIntervals(Map.Entry<ArrayList<Double>, ArrayList<Double>> peaks)
+```
+
 
 
  <!--https://data.mendeley.com/datasets/7dybx7wyfn/3-->
