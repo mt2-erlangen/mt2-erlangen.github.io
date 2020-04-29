@@ -175,7 +175,7 @@ Please create an instance of `ij.gui.Plot` in the main method of `Exercise02` wi
 <!--You can find a complete description of this class [here](https://imagej.nih.gov/ij/developer/api/ij/gui/Plot.html).-->
 ```java
 // Constructs a new Plot with the default options.
-Plot plot = new Plot("title", "xLabel", "yLabel")
+Plot plot = new Plot("chosee title here", "choose xLabel here", "choose yLabel here")
 heartSignal.show(plot);
 
 //... add here more plotting stuff
@@ -204,21 +204,38 @@ Find a good value of this threshold so that all peaks are above this value.
 You may use `mean()`, `max()`, `min()` to calculate it.
 You can see your threshold by ploting it:
 
-```
+```java
     plot.setColor("blue");
     plot.add("lines", new double[] { 0, /* a high value */10000 }, new double[] { threshold, threshold });
 ```
-
-Imp
-
-
-
 ![pic alt](../find_peaks.png)
+
+Implement the following method that finds all peaks of the signal.
 
 ```java
     public static HeartSignalPeaks getPeakPositions(mt.Signal signal, float threshold)
+```
+You could do that by a normal maximum search over your
+signal values saving the x (`max`) and the y value (`argmax`) of the current maximum.
+Determine with to variable whether the current values is above or below your threshold.
+Whenever you encounter a value that is below there threshold while the previous was above add
+your intermediate result to instance of `HeartSignalPeaks` (or better said to `peaks.xValues` and `peaks.yValues`) and reset your
+intermediate result.
+
+You can plot the peaks you have found:
+
+```java
+    plot.setColor("red");
+    plot.addPoints(peaks.xValues, peaks.yValues, 0);
+```
+
+Next, create a Signal with the difference in time between succesive peaks.
+```java
     public static mt.Signal calcPeakIntervals(HeartSignalPeaks peaks)
 ```
+
+You can use that signal to determine the mean cycle duration (`peakIntervals.mean()`), the mean heart frequency (`(1. / intervals.mean())`) and
+beats per minute (`60. * 1. / intervals.mean()`). Print those values!
 
 
 
