@@ -51,6 +51,8 @@ public class Exercise01 {
 }
 ```
 
+IntelliJ will only allow to run `Exercise01` when there are no errors in the project. You can just comment-out the method `lme.Algorithms.convolution1d` until you implemented your `Signal` class.
+
 ### Signal.java
 
 <P align="right"><i>4 Points</i>
