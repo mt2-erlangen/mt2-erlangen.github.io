@@ -1,6 +1,6 @@
 +++
 date= 2020-04-29
-title = "Set Program Arguments in Eclipse"
+title = "Set Program Arguments in IntelliJ"
 
 [extra]
 author="Stephan Seitz"
