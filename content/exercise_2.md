@@ -15,7 +15,11 @@ author="Stephan Seitz"
 <!--scipy.io.savemat(f, data) -->
      
 
-** This is just a draft and may be changed until the official release of this exercise **
+**Submission deadline: 18.05.20 23:59h**
+
+Please ensure that all files you created also contain **your name and your IDM ID** and also your partner's name and IDM ID if you're not working alone.
+
+Each exercise has **10 points**. You have to achieve **30 of 60 points in six homework exercises** to pass the module.
 
 # Statistical Measures
 
@@ -116,12 +120,14 @@ We will change that later.
 
 # Extension of Signal.java
 
+<P align="right"><i>4 Points</i>
+
 To analyze this and other signals, we will extend our `Signal` class.
 Please implement the following methods that calculate some descriptive properties of the signal:
 
 ```java
-    public float min()         //< lowest signal value
-    public float max()         //< largest signal value
+    public float min()        //< lowest signal value
+    public float max()        //< largest signal value
     public float sum()        //< sum of all signal values
     public float mean()       //< mean value of the signal
     public float variance()   //< variance of the signal
@@ -132,6 +138,10 @@ by looking at your plot and printing the calculated values.
 
 # Physical Dimensions
 
+<P align="right"><i>1 Points</i>
+
+*The remainder of this exercise will be implemented `Exercise02.java`*
+
 In the last exercise, we treated signals as pure sequence of numbers without any physical dimensions.
 But for medical measurements physical dimensions are important.
 We want to extend our plot to look like this with the horizontal axis labeled with seconds:
@@ -141,7 +151,7 @@ We want to extend our plot to look like this with the horizontal axis labeled wi
 To do this we will add a new member to our signal that's describing the physical distance between two samples
 
 ```java
-    protected float spacing;
+    protected float spacing = 1.0f;  //< Use 1.0f as a default when we don't set the physical distance between points
 ```
 
 Add also a setter and getter method
@@ -181,9 +191,8 @@ heartSignal.show(plot);
 
 plot.show()
 ```
-
-
 # Determine the Heart Frequency
+<P align="right"><i>5 Points</i>
 
 Create a file  `src/main/java/lme/HeartSignalPeaks.java` with following content
 ```java
@@ -196,6 +205,8 @@ public class HeartSignalPeaks {
 	public ArrayList<Double> yValues = new ArrayList<Double>();
 }
 ```
+
+`ArrayList` behave like arrays, except you can add new items to make it longer. [You can read more about them here.](https://www.w3schools.com/java/java_arraylist.asp)
 
 We now want to find the peaks of the heart signal. We do that by finding local maxima within region that are above a certain
 threshold (here in blue).
@@ -240,9 +251,9 @@ beats per minute (`60. * 1. / intervals.mean()`). Print those values!
 
 *Do this is not required for the exercise.*
 
-Run `Exercise02` with the whole folder of the data set as an argument.
-It should use your implementation to find the signal with lowest and highest variance in the data set corresponding to probably
-healthy patient and one with arythmia.
+Run `Exercise02` with other files of the data set as an argument.
+What is the meaning of the mean value and the variance of time distance between the peeks?
+How do signals with low variance in the peak distances look like and how signals with high variance?
 
  <!--https://data.mendeley.com/datasets/7dybx7wyfn/3-->
 
