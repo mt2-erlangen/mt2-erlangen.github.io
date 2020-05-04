@@ -66,12 +66,9 @@ In case, you need to add external software to your own projects you can use [thi
 	if (args.length == 1) {
 	    File file = new File(args[0]);
 	    if (file.isFile()) {
-		// A file should be opened 
+		// Your code here:
 
 
-	    } else if (file.isDirectory()) {
-		// A directory should be opened 
-		lme.HeartSignalAnalyzer.analyzeHeartSignalFolder(file);
 	    } else {
 		System.err.println("Could not find " + file);
 	    }
@@ -111,7 +108,7 @@ if (file.isFile()) {
 ```
 
 
-You should now see the signal. However this plot does not have any labels with physical units attached.
+You should now see the signal. However, this plot does not have any labels with physical units attached.
 We will change that later.
 
 
@@ -123,7 +120,7 @@ We will change that later.
 <P align="right"><i>4 Points</i>
 
 To analyze this and other signals, we will extend our `Signal` class.
-Please implement the following methods that calculate some descriptive properties of the signal:
+Please implement the following methods in `Signal.java` that calculate some descriptive properties of the signal:
 
 ```java
     public float min()        //< lowest signal value
@@ -140,7 +137,7 @@ by looking at your plot and printing the calculated values.
 
 <P align="right"><i>1 Points</i>
 
-*The remainder of this exercise will be implemented `Exercise02.java`*
+*The remainder of this exercise will be implemented in `Exercise02.java`*
 
 In the last exercise, we treated signals as pure sequence of numbers without any physical dimensions.
 But for medical measurements physical dimensions are important.
@@ -223,7 +220,7 @@ You can see your threshold by ploting it:
 Implement the following method that finds all peaks of the signal.
 
 ```java
-    public static HeartSignalPeaks getPeakPositions(mt.Signal signal, float threshold)
+    public static lme.HeartSignalPeaks getPeakPositions(mt.Signal signal, float threshold)
 ```
 You could do that by a normal maximum search over your
 signal values saving the x (`max`) and the y value (`argmax`) of the current maximum.
@@ -241,7 +238,7 @@ You can plot the peaks you have found:
 
 Next, create a Signal with the difference in time between succesive peaks.
 ```java
-    public static mt.Signal calcPeakIntervals(HeartSignalPeaks peaks)
+    public static mt.Signal calcPeakIntervals(lme.HeartSignalPeaks peaks)
 ```
 
 You can use that signal to determine the mean cycle duration (`peakIntervals.mean()`), the mean heart frequency (`(1. / intervals.mean())`) and

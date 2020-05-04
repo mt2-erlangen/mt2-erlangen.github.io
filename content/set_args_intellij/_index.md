@@ -16,6 +16,6 @@ Select **Edit configurations...**
 
 ![edit](edit_configurations.png)
 
-Fill in the form with main class `Exercise02` and your file name as programm arguments in **quotes**!
+Fill in the form with main class `exercises.Exercise02` and your file name as programm arguments in **quotes**!
 
 ![edit](dialog.png)
