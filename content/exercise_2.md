@@ -52,7 +52,7 @@ In case, you need to add external software to your own projects you can use [thi
 
 # Loading one of File of the Data Set
 
-`Exercise02.java` ([available here](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/exercises/Exercise02.java)) should alread contain some code for parsing the program parameters:
+`src/main/java/exercises/Exercise02.java` ([available here (Click the `raw` button)](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/exercises/Exercise02.java)) should alread contain some code for parsing the program parameters:
 
 ```java
     public static void main(String[] args) throws IOException {
