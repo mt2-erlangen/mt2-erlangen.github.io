@@ -1,3 +1,5 @@
+Website for Medizintechnik II exercises: https://mt2-erlangen.github.io/
+
 Either install [zola](https://www.getzola.org/documentation/getting-started/installation/) and run
 
 ```bash
