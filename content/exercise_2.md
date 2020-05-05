@@ -137,6 +137,8 @@ by looking at your plot and printing the calculated values.
 
 <P align="right"><i>1 Points</i>
 
+*The code for this section belong to `Signal.java`*
+
 In the last exercise, we treated signals as pure sequence of numbers without any physical dimensions.
 But for medical measurements physical dimensions are important.
 We want to extend our plot to look like this with the horizontal axis labeled with seconds:
