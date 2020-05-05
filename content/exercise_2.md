@@ -137,8 +137,6 @@ by looking at your plot and printing the calculated values.
 
 <P align="right"><i>1 Points</i>
 
-*The remainder of this exercise will be implemented in `Exercise02.java`*
-
 In the last exercise, we treated signals as pure sequence of numbers without any physical dimensions.
 But for medical measurements physical dimensions are important.
 We want to extend our plot to look like this with the horizontal axis labeled with seconds:
@@ -190,6 +188,8 @@ plot.show()
 ```
 # Determine the Heart Frequency
 <P align="right"><i>5 Points</i>
+
+*The remainder of this exercise will be implemented in `Exercise02.java`*
 
 Create a file  `src/main/java/lme/HeartSignalPeaks.java` with following content
 ```java
