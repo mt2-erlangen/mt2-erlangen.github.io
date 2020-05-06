@@ -2,11 +2,11 @@
 date= 2020-11-05
 title = "Exercise 3"
 
-insert_anchor_links = "left"
 
 [extra]
 author="Stephan Seitz"
 +++
+
 
 **Submission deadline: 25.05.20 23:59h**
 
@@ -192,7 +192,7 @@ filter's width and $L_y$ the filter's height.
 ```
 
 
-Convolution in 2-d works similar to convolution in 1-d. [Compare with the formula from exercise 01](@/exercise_1.md#LinearFilter.java)
+Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the formula from exercise 01](@/exercise_1.md#linearfilter-java)-->
 
  $$K_x = \lfloor L_x/2 \rfloor$$
  $$K_y = \lfloor L_y/2 \rfloor$$
@@ -200,11 +200,13 @@ Convolution in 2-d works similar to convolution in 1-d. [Compare with the formul
 
  Remember to use `atIndex` and `setAtIndex` to get and set the values.
 
- Now it's time to test use the file [`src/tests/main/java/mt/LinearFilterTests`]. Add the following methods to `Signal.java` to make the tests work.
+ Now it's time to test!
+ Use the file [`src/tests/main/java/mt/LinearFilterTests.java`]((https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/tests/main/java/mt/LinearFilterTests.java)).
+ Add the following methods to `Signal.java` to make the tests work.
 
 ```java
 	public void addNoise(float mean, float standardDeviation) {
-		Random rand = new Random(42);
+		Random rand = new Random();
 		for (int i = 0; i < buffer.length; i++) {
 			buffer[i] += mean + rand.nextGaussian() * standardDeviation;
 		}
@@ -228,11 +230,23 @@ public class GaussFilter2d extends LinearImageFilter {
     
 }
 ```
-Set the coefficients according to the 2-d normal distribution.
 
+It has the following constructor
 
+```java
+	public GaussFilter2d(int filterSize, float sigma)
+```
 
+In the constructor, set the coefficients according to the unormalized 2-d normal distribution with standard deviation $\sigma$ (`sigma`).
+`Math.exp` is the exponetial function.
 
+$$ h[x,y] = e^{-\frac{x^2+y^2}{2 \sigma^2}}$$
+
+Call `normalize()` at the end of the constructor to ensure that all coefficients sum up to one.
+
+Test your Gauss filter in `Exercise03.java`.
+Use arbitray values for `sigma` and `filterSize`.
+There is also a unit test file that you can use: [`src/tests/main/java/mt/GaussFilter2dTests.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/tests/main/java/exercises/Exercise03Demo.java)
 
 ## Calculating with Images
 
@@ -242,9 +256,27 @@ Implement the method `Image.minus` in `Image.java` that subtracts the current im
     public Image minus(Image other)
 ```
 
-## Experiment
+We use this method to calculate error images.
 
-* Original Image
-* Image with addNoise
-* Gauss filtered
-* 1 - Gauss filtered
+## Demo
+
+*This is not required for the exercise!*
+
+ Place the file [`src/tests/main/java/exercises/Exercise03Demo.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/tests/main/java/exercises/Exercise03Demo.java)
+ in your project folder and run it.
+
+ You should see an interactive demo applying your Gauss filter to a noisy image.
+ You change the used parameters.
+
+## Submitting
+
+Please ensure that all files you created also contain your name and your IDM ID and also your partner's name and IDM ID if you're not working alone.
+
+Then, compress your source code folder src to a zip archive (src.zip) and submit it on studOn.
+
+<!--To answer the question place-->
+
+<!--* Original Image-->
+<!--* Image with addNoise-->
+<!--* Gauss filtered-->
+<!--* 1 - Gauss filtered-->
