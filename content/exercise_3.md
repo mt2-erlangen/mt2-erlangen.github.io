@@ -234,7 +234,7 @@ public class GaussFilter2d extends LinearImageFilter {
 It has the following constructor
 
 ```java
-	public GaussFilter2d(int filterSize, float sigma)
+    public GaussFilter2d(int filterSize, float sigma)
 ```
 
 In the constructor, set the coefficients according to the unormalized 2-d normal distribution with standard deviation $\sigma$ (`sigma`).

@@ -78,7 +78,6 @@ It alread contain some code for parsing the program parameters:
 	    System.out.println("Wrong argcount: " + args.length);
 	    System.exit(-1);
 	}
-}
 ```
 
 Launch `Exercise02` with the one of the files of the data set as an argument (e.g. `<where_you_saved_your_data_set>/MLII/1 NSR/100m (0).mat`)!
@@ -166,7 +165,7 @@ Next, we want to change `show()` to regard our spacing and to accept a `ij.gui.P
 
 ```java
     public void show(Plot plot) {
-	DisplayUtils.showArray(buffer, plot, /*start of the signal=*/0.f, spacing);
+	    DisplayUtils.showArray(buffer, plot, /*start of the signal=*/0.f, spacing);
     }
 ```
 
