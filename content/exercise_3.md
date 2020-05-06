@@ -14,7 +14,7 @@ Please ensure that all files you created also contain **your name and your IDM I
 
 Each exercise has **10 points**. You have to achieve **30 of 60 points in six homework exercises** to pass the module.
 
-# Images and Convolution
+# Images and 2-d Convolution
 
 In this exercise we finally to work with images. It's time to update the file `src/main/java/lme/DisplayUtils.java` [to the newest version](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/lme/DisplayUtils.java).
 
