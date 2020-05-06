@@ -119,7 +119,7 @@ Add the method show to display the image
     }
 ```
 
-Open the image `pakemaker.png` in `exercise.Exercise03` (in the same project):
+Open the image `pakemaker.png` in a file  `src/main/java/exercise/Exercise03` (in the same project as previous exercise):
 
 ```java
 // <your name> <your idm>
