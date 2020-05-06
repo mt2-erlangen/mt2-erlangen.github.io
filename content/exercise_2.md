@@ -96,7 +96,7 @@ Let's open this file!
 ```java
 if (file.isFile()) {
     // A file should be opened 
-    Matrix mat = Mat5.readFromFile(file).getMatrix(0);
+    us.hebi.matlab.mat.types.Matrix mat = Mat5.readFromFile(file).getMatrix(0);
     Signal heartSignal = new mt.Signal(mat.getNumElements(), "Heart Signal");
     for (int i = 0; i < heartSignal.size(); ++i) {
 	    heartSignal.buffer()[i] = mat.getFloat(i);
