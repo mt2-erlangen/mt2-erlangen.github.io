@@ -175,12 +175,12 @@ package mt;
 
 public class LinearImageFilter extends Image implements ImageFilter {
 
-	public void normalize() {
-		double sum = sum();
-		for (int i = 0; i < buffer.length; i++) {
-			buffer[i] /= sum;
-		}
+    public void normalize() {
+	double sum = sum();
+	for (int i = 0; i < buffer.length; i++) {
+	    buffer[i] /= sum;
 	}
+    }
 }
 ```
 
@@ -205,16 +205,16 @@ Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the fo
  Add the following methods to `Signal.java` to make the tests work.
 
 ```java
-	public void addNoise(float mean, float standardDeviation) {
-		Random rand = new Random();
-		for (int i = 0; i < buffer.length; i++) {
-			buffer[i] += mean + rand.nextGaussian() * standardDeviation;
-		}
+    public void addNoise(float mean, float standardDeviation) {
+	Random rand = new Random();
+	for (int i = 0; i < buffer.length; i++) {
+	    buffer[i] += mean + rand.nextGaussian() * standardDeviation;
 	}
+    }
 
-	public void setBuffer(float[] buffer) {
-		this.buffer = buffer;
-	}
+    public void setBuffer(float[] buffer) {
+	this.buffer = buffer;
+    }
 ```
 
 ## Gauss Filter
