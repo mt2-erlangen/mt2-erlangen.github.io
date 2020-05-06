@@ -224,12 +224,19 @@ Implement the following method that finds all peaks of the signal.
 ```java
     public static lme.HeartSignalPeaks getPeakPositions(mt.Signal signal, float threshold)
 ```
-You could do that by a normal maximum search over your
-signal values saving the x (`max`) and the y value (`argmax`) of the current maximum.
-Determine with `boolean` variable whether the current values is above or below your threshold.
-Whenever you encounter a value that is below the threshold while the previous was above, add
-your intermediate result to instance of `HeartSignalPeaks` (or better said to `peaks.xValues` and `peaks.yValues`) and reset your
-intermediate result. Also save your intermediate result if the last value of your `Signal` is above the threshold.
+To determine the signal peaks, one can use normal maximum search over the signal values.
+Save the found maximum value (i.e. signal amplitude) in x(`max`) and
+the location of maximum (i.e. the time at which the peak occurs) in y(`arg max`).
+
+You can implement the peak finding method as follows:
+
+* Loop over the signal and at each index
+  * Use  `boolean` variable to determine if the current signal value is above the threshold.
+  
+  * If the previous signal value was above the threshold (i.e `boolean` value was true), and the current value is below threshold (i.e `boolean` value is false)
+  * Add the previous signal value as a instance of `HeartSignalPeaks` (like `peaks.xValues` and `peaks.yValues`)
+
+This is a suggested workflow, but feel free to use your own ideas to efficently find the peaks of the signal.
 
 You can plot the peaks you have found:
 
@@ -248,7 +255,7 @@ beats per minute (`60. * 1. / intervals.mean()`). Print those values!
 
 # Bonus
 
-*Do this is not required for the exercise.*
+* This is not required for the exercise.*
 
 Run `Exercise02` with other files of the data set as an argument.
 What is the meaning of the mean value and the variance of time distance between the peeks?
