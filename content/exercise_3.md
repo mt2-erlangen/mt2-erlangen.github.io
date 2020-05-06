@@ -166,7 +166,7 @@ public interface ImageFilter {
 }
 ```
 
-Ok. Now the convolution.
+Ok. Now the convolution. The class has already a method that we will need later. It uses your sum method.
 
 ```java
 // <your name> <your idm>
@@ -175,7 +175,12 @@ package mt;
 
 public class LinearImageFilter extends Image implements ImageFilter {
 
-
+	public void normalize() {
+		double sum = sum();
+		for (int i = 0; i < buffer.length; i++) {
+			buffer[i] /= sum;
+		}
+	}
 }
 ```
 
@@ -195,7 +200,39 @@ Convolution in 2-d works similar to convolution in 1-d. [Compare with the formul
 
  Remember to use `atIndex` and `setAtIndex` to get and set the values.
 
- Now it's time to test 
+ Now it's time to test use the file [`src/tests/main/java/mt/LinearFilterTests`]. Add the following methods to `Signal.java` to make the tests work.
+
+```java
+	public void addNoise(float mean, float standardDeviation) {
+		Random rand = new Random(42);
+		for (int i = 0; i < buffer.length; i++) {
+			buffer[i] += mean + rand.nextGaussian() * standardDeviation;
+		}
+	}
+
+	public void setBuffer(float[] buffer) {
+		this.buffer = buffer;
+	}
+```
+
+## Gauss Filter
+
+The Gauss filter is a `LinearImageFilter` with special coefficients (the filter has the same height and width).
+
+```java
+// <your name> <your idm>
+// <your partner's name> <your partner's idm> (if you submit with a group partner)
+package mt;
+
+public class GaussFilter2d extends LinearImageFilter {
+    
+}
+```
+Set the coefficients according to the 2-d normal distribution.
+
+
+
+
 
 ## Calculating with Images
 
