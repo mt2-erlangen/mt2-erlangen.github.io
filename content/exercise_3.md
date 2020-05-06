@@ -249,7 +249,7 @@ There is also a unit test file that you can use: [`src/tests/main/java/mt/GaussF
 
 ## Calculating with Images
 
-Implement the method `Image.minus` in `Image.java` that subtracts the current image with another one and returns the result:
+Implement the method `Image.minus` in `Image.java` that subtracts the current image element-wise with another one and returns the result:
 
 ```java
     public Image minus(Image other)
