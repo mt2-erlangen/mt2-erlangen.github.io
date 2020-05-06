@@ -266,7 +266,7 @@ We use this method to calculate error images.
  in your project folder and run it.
 
  You should see an interactive demo applying your Gauss filter to a noisy image.
- You change the used parameters.
+ You change change the used parameters.
 
 ## Submitting
 
