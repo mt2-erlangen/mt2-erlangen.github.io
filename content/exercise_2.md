@@ -264,7 +264,7 @@ To summarize the list of tasks that needs to be implemented to complete this exe
   5. Find the peaks (follow the description provided here)
   6. Calculate intervals between the peaks
 
-# Note 
+### Note 
 
 While setting file path as arguments, add "path" if there are spaces in file name since java parses space as new arguments.
 
