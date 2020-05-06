@@ -2,11 +2,13 @@
 date= 2020-11-05
 title = "Exercise 3"
 
+insert_anchor_links = "left"
+
 [extra]
 author="Stephan Seitz"
 +++
 
-**Submission deadline: 18.05.20 23:59h**
+**Submission deadline: 25.05.20 23:59h**
 
 Please ensure that all files you created also contain **your name and your IDM ID** and also your partner's name and IDM ID if you're not working alone.
 
@@ -21,6 +23,9 @@ This should provide you the following methods to work with images:
 ```java
     // Open a file
     public static mt.Image openImage(String path) 
+
+    // Download and open a file from the internet
+    public static mt.Image openImageFromInternet(String url, String filetype) 
 
     // Save an image to a file
     public static void saveImage(mt.Image image, String path) 
@@ -49,7 +54,7 @@ public class Image extends Signal {
 }
 ```
 
-`mt.Image` has five members (apart from the ones inherited by `mt.Signal`).
+`mt.Image` has four members (apart from the ones inherited by `mt.Signal`).
 
 ```java
     // Dimensions of the image
@@ -59,9 +64,6 @@ public class Image extends Signal {
     // Same as Signal.minIndex but for X and Y dimension
     protected int minIndexX;
     protected int minIndexY;
-
-    // Where the top-left point of the image is located in physical space
-    protected float[] origin = new float[] { 0, 0 };
 ```
 
 
@@ -74,6 +76,7 @@ And two constructors
     // Create an image with given dimensions and also provide the content
     public Image(int width, int height, String name, float[] pixels)
 ```
+
 As show in the exercise slides, we will store all the pixels in one array, like we did in `Signal`.
 The array should have the size `width * height`.
 
@@ -82,7 +85,7 @@ The array should have the size `width * height`.
 Call the constructors of the super class `Signal` in the constructors of `Image`.
 You can call the constructor of a super class by placing `super(...)` with the respetive arguments in the first line of the constructor of the subclass.
 
-Let's also provide some getters and setters!
+Let's also provide some getters!
 
 ```java
     // Image dimensions
@@ -94,19 +97,20 @@ Let's also provide some getters and setters!
     public int minIndexY()
     public int maxIndexX()
     public int maxIndexY()
-
-    // Set position of top-left corner
-    public void setOrigin(float x, float y)
-    public float[] origin()
 ```
 
 `atIndex` and `setAtIndex` should work like in `Signal` except that they now have two coordinate indices.
-`minIndexX` should `maxIndexY` should be 0 for normal images.
+`minIndexX` should `maxIndexY` should be 0 for normal images. `atIndex` should return `0.0f` if an index outside of the image
+is requested.
 
 ```java
     public float atIndex(int x, int y)
     public void setAtIndex(int x, int y, float value) {
 ```
+
+Remember how we calculated the indices in the exercise slides. You have to apply that formula in `atIndex`/`setAtIndex`.
+
+**TODO: Nice image here. With width and height and buffer_size=width * height**
 
 Add the method show to display the image
 ```java
@@ -115,40 +119,91 @@ Add the method show to display the image
     }
 ```
 
-Next, implement the method shape both for `Signal` (`Signal.java`) and for `Image` (`Image.java`).
+Open the image `pakemaker.png` in `exercise.Exercise03` (in the same project):
 
 ```java
-    public long[] shape() // returns {width, height} for image and {buffer.length} for Signal
-```
+// <your name> <your idm>
+// <your partner's name> <your partner's idm> (if you submit with a group partner)
+package exercises;
 
-Open an image **TODO provide file**
+import mt.GaussFilter2d;
+import mt.Image;
+
+public class Exercise03 {
+    public static void main(String[] args) {
+        (new ij.ImageJ()).exitWhenQuitting(true);
+
+        // without noise
+        Image image = lme.DisplayUtils.openImageFromInternet("https://mt2-erlangen.github.io/images/pakemaker.jpg", ".jpg");
+        image.show();
+
+    }
+}
+```
 
 ## LinearFilter
 
+Like in Exercise 1, we want to be able to convolve our image signal.
+Infact, we will learn a lot of new ways to process images.
+Often we need to create an output image of same size.
+Let's create an interface (`src/main/java/mt/ImageFilter.java`) for that that we only need to implement this once.
 
 ```java
 package mt;
 
 public interface ImageFilter {
-	default mt.Image apply(mt.Image image) {
-		Image output = new Image(image.width(), image.height(), "Untitled");
-		apply(image, output);
-		return output;
-	}
+    default mt.Image apply(mt.Image image) {
+        Image output = new Image(image.width(), image.height(), image.name() + " processed with " + this.name());
+        apply(image, output);
+        return output;
+    }
 
-	default void apply(mt.Image input, mt.Image output) {
-		throw new RuntimeException();
-	}
+    default void apply(mt.Image input, mt.Image output) {
+        throw new RuntimeException("Please implement this method!");
+    }
+
+    String name();
 }
 ```
 
+Ok. Now the convolution.
 
- * Create Gauss filter
+```java
+// <your name> <your idm>
+// <your partner's name> <your partner's idm> (if you submit with a group partner)
+package mt;
+
+public class LinearImageFilter extends Image implements ImageFilter {
+
+
+}
+```
+
+Create a constructor for it. Recall how we implemented `LinearFilter`!
+`minIndexX` and `minIndexX` need to be set to $-\lfloor L_x/2 \rfloor$ and $-\lfloor L_y/2 \rfloor$ when $L_x$ is the
+filter's width and $L_y$ the filter's height.
+```java
+    public LinearImageFilter(int width, int height, String name)
+```
+
+
+Convolution in 2-d works similar to convolution in 1-d. [Compare with the formula from exercise 01](@/exercise_1.md#LinearFilter.java)
+
+ $$K_x = \lfloor L_x/2 \rfloor$$
+ $$K_y = \lfloor L_y/2 \rfloor$$
+ $$g[x,y] = \sum_{x'=-K_x}^{+K_x} \sum_{y'=-K_y}^{+K_y} f[x-x', y-y'] \cdot h[ x', y' ] \cdot$$
+
+ Remember to use `atIndex` and `setAtIndex` to get and set the values.
+
+ Now it's time to test 
 
 ## Calculating with Images
 
-* Signal.addNoise
-* Image.minus
+Implement the method `Image.minus` in `Image.java` that subtracts the current image with another one and returns the result:
+
+```java
+    public Image minus(Image other)
+```
 
 ## Experiment
 
