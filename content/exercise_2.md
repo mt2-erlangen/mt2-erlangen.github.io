@@ -248,7 +248,20 @@ You can plot the peaks you have found:
 
 Next, create a Signal with the difference in time between succesive peaks.
 ```java
-    public static mt.Signal calcPeakIntervals(lme.HeartSignalPeaks peaks)
+	public static mt.Signal calcPeakIntervals(lme.HeartSignalPeaks peaks) {
+		ArrayList<Double> peakPositions = peaks.xValues;
+		if  (peakPositions.size() > 1) {
+			Signal intervals = new mt.Signal(peaks.xValues.size() - 1, "Peak Intervals");
+
+			for (int i = 0; i < peakPositions.size() - 1; ++i) {
+				intervals.buffer()[i] = (float) (peakPositions.get(i + 1) - peakPositions.get(i));
+			}
+			return intervals;
+		} else {
+			return new mt.Signal(1, "No Intervals found");
+		}
+
+	}
 ```
 
 You can use that signal to determine the mean cycle duration (`peakIntervals.mean()`), the mean heart frequency (`(1. / intervals.mean())`) and
