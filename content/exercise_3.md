@@ -146,7 +146,7 @@ public class Exercise03 {
 Like in Exercise 1, we want to be able to convolve our image signal.
 Infact, we will learn a lot of new ways to process images.
 Often we need to create an output image of same size.
-Let's create an interface (`src/main/java/mt/ImageFilter.java`) for that that we only need to implement this once.
+Let's create an interface (`src/main/java/mt/ImageFilter.java`) for that, so we only need to implement this once.
 
 ```java
 package mt;
