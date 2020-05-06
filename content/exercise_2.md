@@ -253,6 +253,22 @@ Next, create a Signal with the difference in time between succesive peaks.
 You can use that signal to determine the mean cycle duration (`peakIntervals.mean()`), the mean heart frequency (`(1. / intervals.mean())`) and
 beats per minute (`60. * 1. / intervals.mean()`). Print those values!
 
+# Summary of tasks
+
+To summarize the list of tasks that needs to be implemented to complete this exercise
+
+  1. Set the file path correctly to load the signal into your program (Ensures you can load the signal inside the program)
+  2. Add labels to the plot, include spacing variable in signal class for visualizng plots in physical dimensions.
+  3. Implement methods to compute statistical measures (like mean, median,...). (Use the formula provied in lecture/exercise slides)
+  4. Determine the threshold (follow the description provided here)
+  5. Find the peaks (follow the description provided here)
+  6. Calculate intervals between the peaks
+
+# Note 
+
+While setting file path as arguments, add "path" if there are spaces in file name since java parses space as new arguments.
+
+
 # Bonus
 
 *This is not required for the exercise.*
