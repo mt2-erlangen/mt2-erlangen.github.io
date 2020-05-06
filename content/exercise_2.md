@@ -255,7 +255,7 @@ beats per minute (`60. * 1. / intervals.mean()`). Print those values!
 
 # Bonus
 
-* This is not required for the exercise.*
+*This is not required for the exercise.*
 
 Run `Exercise02` with other files of the data set as an argument.
 What is the meaning of the mean value and the variance of time distance between the peeks?
