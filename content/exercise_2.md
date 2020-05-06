@@ -71,14 +71,14 @@ It alread contain some code for parsing the program parameters:
 
 
 	    } else {
-		System.err.println("Could not find " + file);
+		    System.err.println("Could not find " + file);
 	    }
 
 	} else {
 	    System.out.println("Wrong argcount: " + args.length);
 	    System.exit(-1);
 	}
-    }
+}
 ```
 
 Launch `Exercise02` with the one of the files of the data set as an argument (e.g. `<where_you_saved_your_data_set>/MLII/1 NSR/100m (0).mat`)!
@@ -231,7 +231,7 @@ the location of maximum (i.e. the time at which the peak occurs) in y(`arg max`)
 
 You can implement the peak finding method as follows:
 
-* Loop over the signal and at each index
+  * Loop over the signal and at each index
   * Use  `boolean` variable to determine if the current signal value is above the threshold.
   
   * If the previous signal value was above the threshold (i.e `boolean` value was true), and the current value is below threshold (i.e `boolean` value is false)
@@ -260,7 +260,6 @@ Next, create a Signal with the difference in time between succesive peaks (impor
 		} else {
 			return new mt.Signal(1, "No Intervals found");
 		}
-
 	}
 ```
 
