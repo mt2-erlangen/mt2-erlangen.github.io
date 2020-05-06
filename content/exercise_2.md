@@ -246,7 +246,7 @@ You can plot the peaks you have found:
     plot.addPoints(peaks.xValues, peaks.yValues, 0);
 ```
 
-Next, create a Signal with the difference in time between succesive peaks.
+Next, create a Signal with the difference in time between succesive peaks (import `import java.util.ArrayList;`). 
 ```java
 	public static mt.Signal calcPeakIntervals(lme.HeartSignalPeaks peaks) {
 		ArrayList<Double> peakPositions = peaks.xValues;
