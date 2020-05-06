@@ -77,7 +77,7 @@ And two constructors
     public Image(int width, int height, String name, float[] pixels)
 ```
 
-As show in the exercise slides, we will store all the pixels in one array, like we did in `Signal`.
+As shown in the exercise slides, we will store all the pixels in one array, like we did in `Signal`.
 The array should have the size `width * height`.
 
 **TODO: Nice image here. With width and height and buffer_size=width * height**
@@ -133,7 +133,6 @@ public class Exercise03 {
     public static void main(String[] args) {
         (new ij.ImageJ()).exitWhenQuitting(true);
 
-        // without noise
         Image image = lme.DisplayUtils.openImageFromInternet("https://mt2-erlangen.github.io/images/pakemaker.jpg", ".jpg");
         image.show();
 
