@@ -205,7 +205,7 @@ Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the fo
  $$K_x = \lfloor L_x/2 \rfloor$$
  $$K_y = \lfloor L_y/2 \rfloor$$
  $$g[x,y] = \sum_{x'=-K_x}^{+K_x} \sum_{y'=-K_y}^{+K_y} f[x-x', y-y'] \cdot h[ x', y' ] \cdot$$
- $$g[x,y] = \sum_{x'=h.minIndexX}^{h.maxIndexX} \sum_{y'==h.minIndexY}^{h.maxIndexY} f[x-x', y-y'] \cdot h[ x', y' ] \cdot$$
+ $$g[x,y] = \sum_{x'=\text{h.minIndexX}}^{\text{h.maxIndexX}} \sum_{y'=\text{h.minIndexY}}^{\text{h.maxIndexY}} f[x-x', y-y'] \cdot h[ x', y' ] \cdot$$
 
  Remember to use `atIndex` and `setAtIndex` to get and set the values.
 
