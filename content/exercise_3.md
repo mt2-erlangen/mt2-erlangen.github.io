@@ -39,6 +39,10 @@ They all work with the class `mt.Image` so let's create it!
 
 ## mt/Image.java
 
+<P align="right"><i>4 Points</i>
+
+*The code for this section should go to `src/main/java/mt/Image.java`*
+
 Our goal is to share as much code with our `mt.Signal` class. So `mt.Image` will be a subclass of `mt.Signal`.
 
 ```java
@@ -140,7 +144,10 @@ public class Exercise03 {
 }
 ```
 
-## LinearFilter
+## mt.LinearFilter
+
+<P align="right"><i>3 Points</i>
+
 
 Like in Exercise 1, we want to be able to convolve our image signal.
 Infact, we will learn a lot of new ways to process images.
@@ -164,6 +171,8 @@ public interface ImageFilter {
     String name();
 }
 ```
+
+*The code for the convolution should go to `src/main/java/mt/LinearImageFilter.java`*
 
 Ok. Now the convolution. The class has already a method that we will need later. It uses your sum method.
 
@@ -196,6 +205,7 @@ Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the fo
  $$K_x = \lfloor L_x/2 \rfloor$$
  $$K_y = \lfloor L_y/2 \rfloor$$
  $$g[x,y] = \sum_{x'=-K_x}^{+K_x} \sum_{y'=-K_y}^{+K_y} f[x-x', y-y'] \cdot h[ x', y' ] \cdot$$
+ $$g[x,y] = \sum_{x'=h.minIndexX}^{h.maxIndexX} \sum_{y'==h.minIndexY}^{h.maxIndexY} f[x-x', y-y'] \cdot h[ x', y' ] \cdot$$
 
  Remember to use `atIndex` and `setAtIndex` to get and set the values.
 
@@ -217,6 +227,10 @@ Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the fo
 ```
 
 ## Gauss Filter
+
+<P align="right"><i>2 Points</i>
+
+*The code for the convolution should go to `src/main/java/mt/GaussFilter2d.java`*
 
 The Gauss filter is a `LinearImageFilter` with special coefficients (the filter has the same height and width).
 
@@ -248,6 +262,10 @@ Use arbitray values for `sigma` and `filterSize`.
 There is also a unit test file that you can use: [`src/tests/main/java/mt/GaussFilter2dTests.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/tests/main/java/exercises/Exercise03Demo.java)
 
 ## Calculating with Images
+
+<P align="right"><i>1 Points</i>
+
+*The code for the convolution should go to `src/main/java/mt/Image.java`*
 
 Implement the method `Image.minus` in `Image.java` that subtracts the current image element-wise with another one and returns the result:
 
