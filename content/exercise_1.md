@@ -161,8 +161,8 @@ You can test your convolution function with the tests provided in `src/test/java
 Good test cases are:
 
 - `{0,0,1,0,0}`: this filter should not change your signal at all
-- `{0,1,0,0,0}`: this filter should move your signal one value to the right
-- `{0,0,0,1,0}`: this filter should move your signal one value to the left
+- `{0,1,0,0,0}`: this filter should move your signal one value to the *left*
+- `{0,0,0,1,0}`: this filter should move your signal one value to the *right*
 
 ## Questions
 
