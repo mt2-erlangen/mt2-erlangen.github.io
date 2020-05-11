@@ -172,7 +172,7 @@ The image is from [our open access book](https://www.springer.com/gp/book/978331
 
 ![pacemaker.png](../pacemaker.png)
 
-## mt.LinearFilter
+## mt.ImageFilter
 
 <P align="right"><i>3 Points</i>:
 
@@ -237,7 +237,7 @@ Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the fo
 
  Remember to use `atIndex` and `setAtIndex` to get and set the values.
  Implement the convolution in the method `apply`.
- The `result` image was already created by our interface `LinearFilter`.
+ The `result` image was already created by our interface `ImageFilter`.
 
 ```java
     public void apply(Image image, Image result)
