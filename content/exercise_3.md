@@ -107,6 +107,7 @@ As shown in the exercise slides, we will store all the pixels in one array, like
 The array should have the size `width * height`.
 `minIndexX`,`minIndexY` should be 0 for normal images.
 
+![Constructor](../image_constructor.png)
 <!--**TODO: Nice image here. With width and height and buffer_size=width * height**-->
 
 Call the constructors of the super class `Signal` in the constructors of `Image`.
@@ -138,6 +139,7 @@ Let's also provide some getters!
 
 Remember how we calculated the indices in the exercise slides. You have to apply that formula in `atIndex`/`setAtIndex`.
 
+![Constructor](../smile_extended.png)
 <!--**TODO: Nice image here. With width and height and buffer_size=width * height**-->
 
 Add the method `show` to display the image
