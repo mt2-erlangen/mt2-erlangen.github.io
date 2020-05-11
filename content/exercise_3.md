@@ -37,7 +37,7 @@ This should provide you the following methods to work with images:
 ```
 They all work with the class `mt.Image` so let's create it!
 
-Before that add the following two methods to your `Signal` class:
+Before that add the following two methods to your `Signal` class (they are used by the tests of this exercise):
 
 ```java
     public void addNoise(float mean, float standardDeviation) {
