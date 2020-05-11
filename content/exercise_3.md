@@ -257,7 +257,7 @@ Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the fo
 
 <P align="right"><i>2 Points</i>
 
-*The code for the convolution should go to `src/main/java/mt/GaussFilter2d.java`.*
+*The code for the Gauss filter should go to `src/main/java/mt/GaussFilter2d.java`.*
 
 The Gauss filter is a `LinearImageFilter` with special coefficients (the filter has the same height and width).
 
