@@ -234,8 +234,8 @@ Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the fo
 
  $$K_x = \lfloor L_x/2 \rfloor$$
  $$K_y = \lfloor L_y/2 \rfloor$$
- $$g[x,y] = \sum_{y'=-K_y}^{+K_y} \sum_{x'=-K_x}^{+K_x} f[x-x', y-y'] \cdot h[ x', y' ] \cdot$$
- $$g[x,y] = \sum_{y'=\text{h.minIndexY}}^{\text{h.maxIndexY}} \sum_{x'=\text{h.minIndexX}}^{\text{h.maxIndexX}} f[x-x', y-y'] \cdot h[ x', y' ] \cdot$$
+ $$g[x,y] = \sum_{y'=-K_y}^{+K_y} \sum_{x'=-K_x}^{+K_x} f[x-x', y-y'] \cdot h[ x', y' ] $$
+ $$g[x,y] = \sum_{y'=\text{h.minIndexY}}^{\text{h.maxIndexY}} \sum_{x'=\text{h.minIndexX}}^{\text{h.maxIndexX}} f[x-x', y-y'] \cdot h[ x', y' ] $$
 
  Remember to use `atIndex` and `setAtIndex` to get and set the values.
  Implement the convolution in the method `apply`.
@@ -244,6 +244,8 @@ Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the fo
 ```java
     public void apply(Image image, Image result)
 ```
+
+![filtering](../filtering.png)
 
 
  Now it's time to test!
