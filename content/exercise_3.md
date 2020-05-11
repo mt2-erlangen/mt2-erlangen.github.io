@@ -246,7 +246,9 @@ Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the fo
 ```
 
 ![filtering](../filtering.png)
+![Animation](https://raw.githubusercontent.com/vdumoulin/conv_arithmetic/master/gif/same_padding_no_strides.gif)
 
+<P align="right"><i>Source: https://github.com/vdumoulin/conv_arithmetic</i>
 
  Now it's time to test!
  Use the file [`src/test/java/mt/LinearImageFilterTests.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/test/java/mt/LinearImageFilterTests.java).
