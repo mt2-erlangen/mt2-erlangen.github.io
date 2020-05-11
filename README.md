@@ -10,7 +10,7 @@ or just look into the contents of [`content`](content).
 
 You can also edit the contents of the markdown file using Gitlabs/Githubs web ui.
 
-Be sure to clone with submodules (to also clone the theme folder).
+**Be sure to clone with submodules (to clone with the theme folder)!**
 
 ## Import Instructions
 
