@@ -305,7 +305,7 @@ We use this method to calculate error images.
 
 *This is not required for the exercise!*
 
- Place the file [`src/tests/main/java/exercises/Exercise03Demo.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/tests/main/java/exercises/Exercise03Demo.java)
+ Place the file [`src/main/java/exercises/Exercise03Demo.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/exercises/Exercise03Demo.java)
  in your project folder and run it.
 
  ![Demo](../exercise3demo.png)
