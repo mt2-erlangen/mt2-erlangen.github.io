@@ -223,7 +223,7 @@ public class LinearImageFilter extends Image implements ImageFilter {
 ```
 
 Create a constructor for it. Recall how we implemented `LinearFilter`!
-`minIndexX` and `minIndexX` need to be set to $-\lfloor L_x/2 \rfloor$ and $-\lfloor L_y/2 \rfloor$ when $L_x$ is the
+`minIndexX` and `minIndexY` need to be set to $-\lfloor L_x/2 \rfloor$ and $-\lfloor L_y/2 \rfloor$ when $L_x$ is the
 filter's width and $L_y$ the filter's height.
 ```java
     public LinearImageFilter(int width, int height, String name)
