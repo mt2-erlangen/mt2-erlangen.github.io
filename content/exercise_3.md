@@ -53,7 +53,7 @@ Before that, add the following two methods to your `Signal` class (they are used
 ```
 
 **PS:** The method `addNoise` is also useful to test your `mean` and `standardDeviation` calculation in exercise 2.
-Create a long signal and add noise with a specify `mean` and `standardDeviation`.
+Create a long signal and add noise with a specific `mean` and `standardDeviation`.
 The result of your `mean` and `standardDeviation` method should be approximatelly the same.
 
 ## mt/Image.java
