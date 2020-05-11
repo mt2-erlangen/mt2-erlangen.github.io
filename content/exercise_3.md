@@ -312,7 +312,7 @@ We use this method to calculate error images.
 
 Please ensure that all files you created also contain your name and your IDM ID and also your partner's name and IDM ID if you're not working alone.
 
-Then, compress your source code folder src to a zip archive (src.zip) and submit it on studOn.
+Then, compress your source code folder `src` to a zip archive (src.zip) and submit it on studOn.
 
 <!--To answer the question place-->
 
