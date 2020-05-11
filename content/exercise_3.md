@@ -16,7 +16,7 @@ Each exercise has **10 points**. You have to achieve **30 of 60 points in six ho
 
 # Images and 2-d Convolution
 
-In this exercise we finally to work with images. It's time to update the file `src/main/java/lme/DisplayUtils.java` [to the newest version](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/lme/DisplayUtils.java).
+In this exercise, we finally to work with images. It's time to update the file `src/main/java/lme/DisplayUtils.java` [to the newest version](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/lme/DisplayUtils.java).
 
 This should provide you the following methods to work with images:
 
@@ -58,7 +58,7 @@ public class Image extends Signal {
 }
 ```
 
-`mt.Image` has four members (apart from the ones inherited by `mt.Signal`).
+`mt.Image` has five members (apart from the ones inherited by `mt.Signal`).
 
 ```java
     // Dimensions of the image
@@ -68,10 +68,13 @@ public class Image extends Signal {
     // Same as Signal.minIndex but for X and Y dimension
     protected int minIndexX;
     protected int minIndexY;
+
+    // For exercise 4 (no need to do anything with it in exercise 3)
+    protected float[] origin;
 ```
 
 
-And two constructors
+And two constructors:
 
 ```java
     // Create an image with given dimensions
@@ -83,11 +86,14 @@ And two constructors
 
 As shown in the exercise slides, we will store all the pixels in one array, like we did in `Signal`.
 The array should have the size `width * height`.
+`minIndexX`,`minIndexY` should be 0 for normal images.
 
-**TODO: Nice image here. With width and height and buffer_size=width * height**
+<!--**TODO: Nice image here. With width and height and buffer_size=width * height**-->
 
 Call the constructors of the super class `Signal` in the constructors of `Image`.
 You can call the constructor of a super class by placing `super(...)` with the respetive arguments in the first line of the constructor of the subclass.
+The constructor `public Image(int width, int height, String name, float[] pixels)` does not need to create its own array (take `pixels` for `buffer`).
+But you can check whether `pixels` has the correct size.
 
 Let's also provide some getters!
 
@@ -104,8 +110,7 @@ Let's also provide some getters!
 ```
 
 `atIndex` and `setAtIndex` should work like in `Signal` except that they now have two coordinate indices.
-`minIndexX` should `maxIndexY` should be 0 for normal images. `atIndex` should return `0.0f` if an index outside of the image
-is requested.
+`atIndex` should return `0.0f` if either the `x` or `y` index are outside of the image ranges.
 
 ```java
     public float atIndex(int x, int y)
@@ -114,16 +119,16 @@ is requested.
 
 Remember how we calculated the indices in the exercise slides. You have to apply that formula in `atIndex`/`setAtIndex`.
 
-**TODO: Nice image here. With width and height and buffer_size=width * height**
+<!--**TODO: Nice image here. With width and height and buffer_size=width * height**-->
 
-Add the method show to display the image
+Add the method `show` to display the image
 ```java
     public void show() {
-        DisplayUtils.showImage(buffer, name, width(), origin, spacing(), false);
+        DisplayUtils.showImage(buffer, name, width(), origin, spacing(), /*Replace window with same name*/true);
     }
 ```
 
-Open the image `pakemaker.png` in a file  `src/main/java/exercise/Exercise03` (in the same project as previous exercise):
+Open the image `pacemaker.png` in a file  `src/main/java/exercise/Exercise03` (in the same project as previous exercise):
 
 ```java
 // <your name> <your idm>
@@ -137,16 +142,20 @@ public class Exercise03 {
     public static void main(String[] args) {
         (new ij.ImageJ()).exitWhenQuitting(true);
 
-        Image image = lme.DisplayUtils.openImageFromInternet("https://mt2-erlangen.github.io/images/pakemaker.jpg", ".jpg");
+        Image image = lme.DisplayUtils.openImageFromInternet("https://mt2-erlangen.github.io/pacemaker.png", ".png");
         image.show();
 
     }
 }
 ```
 
+The image is from [our open access book](https://www.springer.com/gp/book/9783319965192).
+
+![pacemaker.png](../pacemaker.png)
+
 ## mt.LinearFilter
 
-<P align="right"><i>3 Points</i>
+<P align="right"><i>3 Points</i>:
 
 
 Like in Exercise 1, we want to be able to convolve our image signal.
@@ -204,10 +213,17 @@ Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the fo
 
  $$K_x = \lfloor L_x/2 \rfloor$$
  $$K_y = \lfloor L_y/2 \rfloor$$
- $$g[x,y] = \sum_{x'=-K_x}^{+K_x} \sum_{y'=-K_y}^{+K_y} f[x-x', y-y'] \cdot h[ x', y' ] \cdot$$
- $$g[x,y] = \sum_{x'=\text{h.minIndexX}}^{\text{h.maxIndexX}} \sum_{y'=\text{h.minIndexY}}^{\text{h.maxIndexY}} f[x-x', y-y'] \cdot h[ x', y' ] \cdot$$
+ $$g[x,y] = \sum_{y'=-K_y}^{+K_y} \sum_{x'=-K_x}^{+K_x} f[x-x', y-y'] \cdot h[ x', y' ] \cdot$$
+ $$g[x,y] = \sum_{y'=\text{h.minIndexY}}^{\text{h.maxIndexY}} \sum_{x'=\text{h.minIndexX}}^{\text{h.maxIndexX}} f[x-x', y-y'] \cdot h[ x', y' ] \cdot$$
 
  Remember to use `atIndex` and `setAtIndex` to get and set the values.
+ Implement the convolution in the method `apply`.
+ The `result` image was already created by our interface `LinearFilter`.
+
+```java
+    public void apply(Image image, Image result)
+```
+
 
  Now it's time to test!
  Use the file [`src/tests/main/java/mt/LinearFilterTests.java`]((https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/tests/main/java/mt/LinearFilterTests.java)).
@@ -230,7 +246,7 @@ Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the fo
 
 <P align="right"><i>2 Points</i>
 
-*The code for the convolution should go to `src/main/java/mt/GaussFilter2d.java`*
+*The code for the convolution should go to `src/main/java/mt/GaussFilter2d.java`.*
 
 The Gauss filter is a `LinearImageFilter` with special coefficients (the filter has the same height and width).
 
@@ -251,9 +267,10 @@ It has the following constructor
 ```
 
 In the constructor, set the coefficients according to the unormalized 2-d normal distribution with standard deviation $\sigma$ (`sigma`).
-`Math.exp` is the exponetial function.
+`Math.exp` is the exponetial function.  Use `setAtIndex`: $x$ should run from `minIndexX` to `maxIndexX` and $y$ from `minIndexY` to `maxIndexY`.
 
-$$ h[x,y] = e^{-\frac{x^2+y^2}{2 \sigma^2}}$$
+$$ h[x,y] = \mathrm{e}^{-\frac{x^2+y^2}{2 \sigma^2}}$$
+
 
 Call `normalize()` at the end of the constructor to ensure that all coefficients sum up to one.
 
@@ -265,7 +282,7 @@ There is also a unit test file that you can use: [`src/tests/main/java/mt/GaussF
 
 <P align="right"><i>1 Points</i>
 
-*The code for the convolution should go to `src/main/java/mt/Image.java`*
+*The code for this section should go to `src/main/java/mt/Image.java`.*
 
 Implement the method `Image.minus` in `Image.java` that subtracts the current image element-wise with another one and returns the result:
 
@@ -281,6 +298,8 @@ We use this method to calculate error images.
 
  Place the file [`src/tests/main/java/exercises/Exercise03Demo.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/tests/main/java/exercises/Exercise03Demo.java)
  in your project folder and run it.
+
+ ![Demo](../exercise3demo.png)
 
  You should see an interactive demo applying your Gauss filter to a noisy image.
  You change change the used parameters.
