@@ -300,7 +300,7 @@ Implement the method `Image.minus` in `Image.java` that subtracts the current im
 ```
 
 We use this method to calculate error images.
-You can implement this with only one loop over the elements of `buffer`s of the two images.
+You can implement this with only one loop over the elements of the `buffer`s of the two images.
 
 ## Demo
 
