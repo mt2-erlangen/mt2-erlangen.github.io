@@ -242,6 +242,10 @@ Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the fo
     }
 ```
 
+**PS:** This method is also useful to test your `mean` and `standardDeviation` calculation in exercise 2.
+Create a long signal and add noise with a specify `mean` and `standardDeviation`.
+The result of your `mean` and `standardDeviation` method should be approximatelly the same.
+
 ## Gauss Filter
 
 <P align="right"><i>2 Points</i>
