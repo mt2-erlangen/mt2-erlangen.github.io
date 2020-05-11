@@ -245,7 +245,7 @@ Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the fo
 
 
  Now it's time to test!
- Use the file [`src/tests/main/java/mt/LinearFilterTests.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/test/main/java/mt/LinearFilterTests.java).
+ Use the file [`src/tests/main/java/mt/LinearFilterTests.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/test/java/mt/LinearFilterTests.java).
 
 ## Gauss Filter
 
