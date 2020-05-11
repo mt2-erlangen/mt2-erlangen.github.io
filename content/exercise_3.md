@@ -281,7 +281,11 @@ Call `normalize()` at the end of the constructor to ensure that all coefficients
 
 Test your Gauss filter in `Exercise03.java`.
 Use arbitray values for `sigma` and `filterSize`.
-There is also a unit test file that you can use: [`src/tests/main/java/mt/GaussFilter2dTests.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/tests/main/java/exercises/Exercise03Demo.java)
+The Gauss filter will blur your input image clearly if you chose a large value for sigma.
+
+![Blurred image](../pacemaker-blurred.png)
+
+There is also a unit test file that you can use: [`src/test/java/mt/GaussFilter2dTests.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/test/java/mt/GaussFilter2dTests.java)
 
 ## Calculating with Images
 
