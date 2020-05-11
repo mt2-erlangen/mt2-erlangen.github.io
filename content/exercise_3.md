@@ -181,7 +181,7 @@ The image is from [our open access book](https://www.springer.com/gp/book/978331
 
 Like in Exercise 1, we want to be able to convolve our image signal.
 Infact, we will learn a lot of new ways to process images.
-Often we need to create an output image of same size.
+Often, we need to create an output image of same size.
 Let's create an interface (`src/main/java/mt/ImageFilter.java`) for that, so we only need to implement this once.
 
 ```java
