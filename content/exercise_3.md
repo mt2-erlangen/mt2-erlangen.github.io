@@ -37,6 +37,25 @@ This should provide you the following methods to work with images:
 ```
 They all work with the class `mt.Image` so let's create it!
 
+Before that add the following two methods to your `Signal` class:
+
+```java
+    public void addNoise(float mean, float standardDeviation) {
+	Random rand = new Random();
+	for (int i = 0; i < buffer.length; i++) {
+	    buffer[i] += mean + rand.nextGaussian() * standardDeviation;
+	}
+    }
+
+    public void setBuffer(float[] buffer) {
+	this.buffer = buffer;
+    }
+```
+
+**PS:** The method `addNoise` is also useful to test your `mean` and `standardDeviation` calculation in exercise 2.
+Create a long signal and add noise with a specify `mean` and `standardDeviation`.
+The result of your `mean` and `standardDeviation` method should be approximatelly the same.
+
 ## mt/Image.java
 
 <P align="right"><i>4 Points</i>
@@ -226,25 +245,7 @@ Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the fo
 
 
  Now it's time to test!
- Use the file [`src/tests/main/java/mt/LinearFilterTests.java`]((https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/tests/main/java/mt/LinearFilterTests.java)).
- Add the following methods to `Signal.java` to make the tests work.
-
-```java
-    public void addNoise(float mean, float standardDeviation) {
-	Random rand = new Random();
-	for (int i = 0; i < buffer.length; i++) {
-	    buffer[i] += mean + rand.nextGaussian() * standardDeviation;
-	}
-    }
-
-    public void setBuffer(float[] buffer) {
-	this.buffer = buffer;
-    }
-```
-
-**PS:** This method is also useful to test your `mean` and `standardDeviation` calculation in exercise 2.
-Create a long signal and add noise with a specify `mean` and `standardDeviation`.
-The result of your `mean` and `standardDeviation` method should be approximatelly the same.
+ Use the file [`src/tests/main/java/mt/LinearFilterTests.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/tests/main/java/mt/LinearFilterTests.java).
 
 ## Gauss Filter
 
