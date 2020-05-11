@@ -112,7 +112,7 @@
                 {%- for page in paginator.pages -%}
                     {{ macro::post(page=page) }}
                 {%- endfor -%}
-                {{ macro::post_nav(ref=paginator, extra=config.extra) }}
+                <!--{{ macro::post_nav(ref=paginator, extra=config.extra) }}-->
             </main>
         {%- endblock content -%}
         {%- block sidebar %}

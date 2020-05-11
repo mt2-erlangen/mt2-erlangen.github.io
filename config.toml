@@ -30,7 +30,7 @@ label_relative_posts = "Related posts"
 label_next = "Next"
 label_previous = "Previous"
 label_page = "Page"
-label_of = "de"
+label_of = "of"
 
 og_image="" # Image that will appear on social media
 og_alt_image="" # Alt for og_image

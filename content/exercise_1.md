@@ -1,5 +1,5 @@
 +++
-date= 2020-04-27
+date= 2020-27-04
 title = "Exercise 1"
 
 [extra]
@@ -33,7 +33,7 @@ You can download it from [https://github.com/mt2-erlangen/exercises-ss2020](http
  - [Instructions for Eclipse](../import_eclipse)
  - [Instructions for IntelliJ](../import_intellij)
 
-## Tasks
+# Tasks
 <!--Standard project layout-->
 <!--http://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html-->
 You should now be able to execute the file `src/main/java/exercises/Exercise01.java`
