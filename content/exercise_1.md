@@ -147,7 +147,7 @@ and a method that executes the discrete convolution on another `Signal input` an
  You should be able to directly use the formula from the exercise slides (f is the input signal, h our filter, $L$ the filter length)
 
  $$K = \lfloor L/2 \rfloor$$
- $$g[k] = \sum_{\kappa=-K}^{K} f[k-\kappa] h[ \kappa ] \cdot$$
+ $$g[k] = \sum_{\kappa=-K}^{K} f[k-\kappa] \cdot h[ \kappa ]$$
 
  or with our `minIndex`/`maxIndex` methods for each index $k$ of the output signal.
  $$g[k] = \sum_{\kappa=h.\text{minIndex}}^{h.\text{maxIndex}} f[k-\kappa] h[\kappa] \cdot$$
