@@ -90,7 +90,7 @@ public class Image extends Signal {
     protected int minIndexY;
 
     // For exercise 4 (no need to do anything with it in exercise 3)
-    protected float[] origin;
+    protected float[] origin = new float[]{ 0, 0 };
 ```
 
 
