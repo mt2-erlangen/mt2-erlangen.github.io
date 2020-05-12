@@ -40,6 +40,7 @@ They all work with the class `mt.Image` so let's create it!
 Before that, add the following two methods to your `Signal` class (they are used by the tests of this exercise):
 
 ```java
+    // Needs: import java.util.Random
     public void addNoise(float mean, float standardDeviation) {
 	Random rand = new Random();
 	for (int i = 0; i < buffer.length; i++) {
