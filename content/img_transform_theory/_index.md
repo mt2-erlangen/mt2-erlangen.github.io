@@ -1,9 +1,9 @@
 +++
-date= 2020-04-05
+date= 2020-05-18
 title = "Image transformation theory"
 
 [extra]
-author=" "
+author="Srikrishna Jaganathan"
 
 +++
 
