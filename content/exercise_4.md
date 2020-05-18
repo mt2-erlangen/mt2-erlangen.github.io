@@ -61,18 +61,18 @@ Please read the theory before proceeding since we don't re-introduce everything 
 and [```src/main/java/mt/ImageTransformer.java```](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/exercises/Exercise04.java)
 
 
-__0. Getting started__
+### 0. Getting started
 
-* To ensure that everything is running, run the main function.
+<P align="right"><i>1 Point</i>
 
-* The GUI displays the image with different image transformation option.
+* For Exercise 4 we provide a GUI that displays the image with different image transformation options.
 ![Visualize GUI](../x_ray_gui.png)
 
 * Once you have all the transformations implemented you should be able to adjust the sliders and perform the desired transformations in an interactive manner.
 
 * The transformations requires an origin point about which we perform all the transformation.
 
-* Extend the `Image` class with these threee methods
+* Extend the `Image` class with these three methods
 
 ```java
     // store the origin points x,y as 
@@ -84,15 +84,16 @@ __0. Getting started__
     public float[] origin()
 
     // Sets the origin to the center of the image
-    public void centerOrigin() {
-
-    }
-
+    public void centerOrigin()
 ```
 
+* To ensure that everything is running, run the main function.
 * We already set the origin point for you in the file ```src/main/java/exercises/Exercise04.java```
+* To ensure that everything is running, run the main function of `Exercise04`.
 
-__1. Image interpolation__
+### 1. Image interpolation
+
+<P align="right"><i>4 Points</i>
 
 * Since the image transformations heavily relies on the interpolation, we first implement the interpolation method by extending the ```Image``` class  with the following method:
 
@@ -178,7 +179,9 @@ already given in the [theory](../img_transform_theory) section.
   
   
 
-__2. Image Transformation__
+### 2. Image Transformation
+
+<P align="right"><i>5 Points</i>
 
 Now we can start with the implementation of ```ImageTransformer``` class.
 
