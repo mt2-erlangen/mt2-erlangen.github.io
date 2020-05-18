@@ -40,6 +40,7 @@ They all work with the class `mt.Image` so let's create it!
 Before that, add the following two methods to your `Signal` class (they are used by the tests of this exercise):
 
 ```java
+    // Needs: import java.util.Random
     public void addNoise(float mean, float standardDeviation) {
 	Random rand = new Random();
 	for (int i = 0; i < buffer.length; i++) {
@@ -89,7 +90,7 @@ public class Image extends Signal {
     protected int minIndexY;
 
     // For exercise 4 (no need to do anything with it in exercise 3)
-    protected float[] origin;
+    protected float[] origin = new float[]{ 0, 0 };
 ```
 
 
