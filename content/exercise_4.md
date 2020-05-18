@@ -58,7 +58,7 @@ Please read the theory before proceeding since we don't re-introduce everything 
 
 * We provide the main method for the task with an interactive ImageJ plug-in in the files
 [```src/main/java/exercises/Exercise04.java```](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/exercises/Exercise04.java)
-and [```src/main/java/mt/ImageTransformer.java```](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/exercises/Exercise04.java)
+and [```src/main/java/mt/ImageTransformer.java```](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/mt/ImageTransformer.java)
 
 
 ### 0. Getting started
