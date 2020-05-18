@@ -56,12 +56,14 @@ Please read the theory before proceeding since we don't re-introduce everything 
 
 ## Task Description
 
-* We provide the main method for the task with an interactive ImageJ plug-in in the file  ```src/main/java/exercises/Exercise04.java``` 
+* We provide the main method for the task with an interactive ImageJ plug-in in the files
+[```src/main/java/exercises/Exercise04.java```](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/exercises/Exercise04.java)
+and [```src/main/java/mt/ImageTransformer.java```](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/exercises/Exercise04.java)
 
 
 __0. Getting started__
 
-* To get things started and ensure that everything is running run the main function.
+* To ensure that everything is running, run the main function.
 
 * The GUI displays the image with different image transformation option.
 ![Visualize GUI](../x_ray_gui.png)
@@ -70,7 +72,7 @@ __0. Getting started__
 
 * The transformations requires an origin point about which we perform all the transformation.
 
-* Extend the `Image` class with these two methods
+* Extend the `Image` class with these threee methods
 
 ```java
     // store the origin points x,y as 
@@ -80,6 +82,11 @@ __0. Getting started__
     // the origin() returns the {x,y} as float 
     // array from the stored origin class variable. 
     public float[] origin()
+
+    // Sets the origin to the center of the image
+    public void centerOrigin() {
+
+    }
 
 ```
 
@@ -175,26 +182,21 @@ __2. Image Transformation__
 
 Now we can start with the implementation of ```ImageTransformer``` class.
 
-* Create a file in your project folder as follows
-  ```src/main/java/mt/ImageTransformer.java```
-
-* Create a new class ```ImageTransformer``` in the ```ImageTransformer.java``` file.
-
 * The class consists of the following member functions for translation
 
-  ```java
-  // Transformation parameters
-  public float shiftX; // tx
-  public float shiftY; // ty
-  public float rotation; // theta
-  public float scale; // s
-  ```
+```java
+// Transformation parameters
+public float shiftX; // tx
+public float shiftY; // ty
+public float rotation; // theta
+public float scale; // s
+```
 
 * Also use the interface ```ImageFilter``` abstract class which you have implemented in the previous exercises. 
 This can be done using ```implements``` keyword.
 
-* Add the method ```apply(Image input,Image output)``` which takes in two variables input and 
-output of ```Image``` class type. The input variable provides the input image to our transformer class. 
+* Add the method `apply(Image input,Image output)` which takes in two variables input and 
+output of `Image` class type. The input variable provides the input image to our transformer class. 
 The output variable is where the transformed image is stored.
 
 * Consider each pixel in the image with index $(i,j)$. When we access an image pixel we get 
@@ -225,11 +227,12 @@ set it to the output image value at (x',y').
 
 ```java
 // We need to compute (x,y) from (x',y')
+// We use xPrime,yPrime in the code to indicate (x',y')
 // Interpolate the values at (x,y) from the input image to get
-// the output value at (x',y')
+float pixelValue = input.interpolatedAt(x,y);
 
-// we use xPrime,yPrime in the code to indicate (x',y')
-output.setAtIndex(xPrime, yPrime, input.interpolatedAt(x,y));
+// Set your result at the current output pixel (x',y')
+output.setAtIndex(xPrime, yPrime, pixelValue);
 
 ```
 
@@ -248,7 +251,7 @@ output.setAtIndex(xPrime, yPrime, input.interpolatedAt(x,y));
 
 
 * __Implementation detail__ Now you can directly use the above equations to implement translation, rotation and scaling.
-The entire ```apply``` method for the ```ImageTransformer``` class can be implemented as follows:
+The entire `apply` method for the `ImageTransformer` class can be implemented as follows:
 
   * Iterate over each pixel in the output image (although they are just the same as input initially).
   * At each pixel the index $(i,j)$ represents our coordinates $(x',y')$ of the output image
