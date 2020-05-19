@@ -22,3 +22,4 @@ You can also edit the contents of the markdown file using Gitlabs/Githubs web ui
 - [Exercise01](content/exercise_1.md)
 - [Exercise02](content/exercise_2.md)
 - [Exercise03](content/exercise_3.md)
+- [Exercise04](content/exercise_4.md)
