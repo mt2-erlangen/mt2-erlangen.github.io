@@ -119,7 +119,7 @@ $$ y = y_1 + (f)(y_2 - y_1) $$
 
     ```java
     float linearInterpolation(float y_1, float y_2, float f) {
-      return y_1 + f * (y_1 - y_2);
+      return y_1 + f * (y_2 - y_1);
     }
     ```
 
