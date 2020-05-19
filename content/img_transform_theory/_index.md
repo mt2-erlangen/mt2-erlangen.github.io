@@ -77,8 +77,8 @@ We can define the translation in $x$ and $y$ direction as below
 *** 
 We can also chain the different transformations and compute the transformed coordinate using a single equation
 
-$$x' =  s (x cos\theta + y sin\theta ) + t_x$$
-$$y' =  s(-x sin\theta + y cos\theta) + t_y$$
+$$x' =  s (x \cos\theta + y \sin\theta ) + t_x$$
+$$y' =  s(-x \sin\theta + y \cos\theta) + t_y$$
 
 ***
 
