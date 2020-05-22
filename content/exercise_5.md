@@ -31,4 +31,17 @@ public static float psnr(Image a, Image b);
 Take adavatage of the fact that you already implemented a `minus` method.
 Static also means that you will use them like `float mse = Image.meanSquaredError(imageA, imageB);`.
 
+Open a DICOM test image add some noise using `addNoise`.
+Apply a Gauss filter (choose a good `filterSize` and `sigma`) on the noise image and compare the result with the original image.
+Can the error reduced in comparision to the unfiltered noisy image?
 
+*Hint: You can use a for-loop to try out different values for `sigma`*
+
+# Non-Linear Filters
+
+A quality criterion for CT images are sharp edges.
+However, though the Gauss filter reduces the noise it also blurs out the edges.
+In this exercise, we try to 
+
+<!--Java unzip: https://www.journaldev.com/960/java-unzip-file-example-->
+<!--https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.2857.5885.605148569068237074211642729801-->
