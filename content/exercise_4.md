@@ -106,9 +106,17 @@ We use bilinear interpolation to find the value at $(x,y)$ (described in the [th
 
 $$ \frac{f(x) - f(x_1)}{x-x_1} = \frac{f(x_2) - f(x_1)}{x_2 - x_1} $$
 
+<!--or-->
+
+<!--$$ \frac{f(x) - f(x_1)}{x-x_1} = \frac{f(x_2) - f(x_1)}{x_2 - x_1} $$-->
+
+
+<!--![bilinear]( ../bilinear.png )-->
 * Since we already know the difference $x_2 - x_1$ is either 1.0 if we have a pixel spacing of 1.0 or pixel spacing, we can simplify the above equation as follows:
 
 $$f(x) = f(x_1) + (x-x_1) (f(x_2) - f(x_1))$$
+
+![bilinear]( ../bilinear_simplified.png )
 
 * We now have an way to interpolate between two points in 1D. We need to extend this to 2D case such that we can use 
 it for interpolating values in our image. An illustration of how this can be done is 
@@ -147,7 +155,6 @@ already given in the [theory](../img_transform_theory) section.
   * __Note:__ Take care of image origin and pixel spacing for the input coordinates before you perform any of the steps.
    Also, always use ```atIndex``` and ```setIndex``` for accessing the image values. 
    This ensures that we handle the values at boundary correctly.
-
 
 
 
