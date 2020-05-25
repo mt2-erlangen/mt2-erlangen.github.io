@@ -14,40 +14,58 @@ Please ensure that all files you created also contain **your name and your IDM I
 
 Each exercise has **10 points**. You have to achieve **30 of 60 points in six homework exercises** to pass the module.
 
-# Meassuring Errors
+# Quanitfying Errors
 
 <P align="right"><i>3 Points</i>
 
-In [Exercise03](../exercise03), we have seen that we can you linear low-pass filters, like the Gauss filter, to reduce 
+In [Exercise03](../exercise03), we have seen that we can use linear low-pass filters, like the Gauss filter, to reduce 
 the amount of noise in images. Let's test that!
 
 Add two static methods to the `Image` class:
 
 ```java
 public static float meanSquaredError(Image a, Image b);
-public static float psnr(Image a, Image b, float maxValue);
+public static float psnr(Image a, Image b, float maxValue); // maxValue is 255 for PNG images
 ```
 <!--Take adavatage of the fact that you already implemented a `minus` method.-->
 Static also means that you will use them like `float mse = Image.meanSquaredError(imageA, imageB);`.
 
-Open a DICOM test image add some noise using `addNoise` in `exercise.Exercise05` (`src/main/java/exercise/Exercise05`).
+Open a test image and add some noise using `addNoise` in `exercise.Exercise05` (`src/main/java/exercise/Exercise05`).
+
+```java
+    (new ij.ImageJ()).exitWhenQuitting(true);
+    Image original = lme.DisplayUtils.openImageFromInternet("https://mt2-erlangen.github.io/shepp_logan.png", ".png");
+
+    
+    Image noise = new Image(image.width(), image.height(), "Noise");
+    noise.addNoise(0.f, 10.f);
+
+    Image noisyImage = original.minus(noise); // You might also implement your own `plus` ;-)
+```
+
 Apply a Gauss filter (choose a good `filterSize` and `sigma`) on the noise image and compare the result with the original image.
 Can the error reduced in comparision to the unfiltered noisy image? Also that a look at the error images that you can
 calculate using your `minus` method of the class `Image`.
 
 - *Hint: You can use a for-loop to try out different values for `sigma`*.
-- *Hint: You do not need to submit answer to the questions in the text. Just do the correponding experiments!*
+- *Hint: You do not need to submit written answers to the questions in the text. Just do the correponding experiments!*
 
-# Non-Linear Filters/
+# Non-Linear Filters
 
 <P align="right"><i>3 Points</i>
 
-A quality criterion for CT images are sharp edges.
+A quality criterion for medical images are sharp edges.
 However, though the Gauss filter reduces the noise it also blurs out those edges.
 In this exercise, we try to mitigate that problem using non-linear filters.
 
 Non-linear filters calculate similar to a convolution each pixel value in the output from a neighborhood of the
-input image. Create a class `mt.NonLinearFilter` in the file `src/main/java/mt/NonLinearFilter.java`:
+input image. Remember the sliding window from exercise 3? Non-linear filters do exactly the same.
+
+![Animation](https://raw.githubusercontent.com/vdumoulin/conv_arithmetic/master/gif/same_padding_no_strides.gif)
+
+<P align="right"><i>Source: https://github.com/vdumoulin/conv_arithmetic</i>
+
+Create a class `mt.NonLinearFilter` in the file `src/main/java/mt/NonLinearFilter.java`:
 
 ```java
 // Your name here <your idm>
@@ -80,7 +98,7 @@ public class NonLinearFilter implements ImageFilter {
 }
 ```
 
-As you can see `NonLinearFilter` uses two interfaces. You can copy them into your `src/main/java/lme/` folder.
+As you can see, `NonLinearFilter` uses two interfaces. You can copy them into your `src/main/java/lme/` folder.
 
 ```java
 // in file `src/main/java/lme/WeightingFunction2d.java`
@@ -113,27 +131,28 @@ Implement the method `apply` for `NonLinearFilter`.
 
 The method should calculate each output pixel from a neighborhood. So
 
-- Create an array to hold the values of the neighborhood pixels (how many neighborhood pixels are there?)
+- Create an array to hold the values of the neighborhood pixels. How many neighborhood pixels are there?
 - Loop over each output pixel
     - Fill the array of neighborhood pixels with values from the input image (needs two inner loops)
     - Use `this.reductionFunction.reduce` to determine the value of the output pixel.
-    - Save the value to the output image
+    - Save the value to the output image (using `setAtIndex`).
 
 Overall, the method should look very similar to your `LinearImageFilter.apply` method.
 
-To test your method, implement the `MedianFilter` in a file `src/main/mt/MedianFilter.java` as a subclass of `LinearImageFilter`.
+To test your method, implement a `MedianFilter` in a file `src/main/mt/MedianFilter.java` as a subclass of `LinearImageFilter`.
 
 ```java
-
+// Your name here
+// Team partner's name here
 package mt;
 
 import java.util.Arrays;
 
 public class MedianFilter extends FancyFilter {
 	public MedianFilter(int filterSize) {
-		// TODO:
-        super(...);
-        reductionFunction = ...;
+            // TODO:
+            super(...);
+            reductionFunction = ...;
 	}
 }
 ```
@@ -159,7 +178,7 @@ public class BilateralFilter extends mt.FancyFilter {
 ```
 
 The bilateral assign a weight to each neightborhood pixel.
-So modify your `NonLinearFilter.apply` method that it also creates a `weights` array and uses `weightingFunction` to
+So modify your `NonLinearFilter.apply` method that it also creates a `weights` array and uses `weightingFunction.getWeight` to
 fill it. `reductionFunction` should now also be called with the `weights` array.
 
 The bilateral has to parameters $\sigma_{\text{value}}$ and $\sigma_{\text{spatial}}$.
