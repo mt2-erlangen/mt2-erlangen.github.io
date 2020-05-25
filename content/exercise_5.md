@@ -18,7 +18,7 @@ Each exercise has **10 points**. You have to achieve **30 of 60 points in six ho
 
 <P align="right"><i>3 Points</i>
 
-In [Exercise03](../exercise03), we have seen that we can use linear low-pass filters, like the Gauss filter, to reduce 
+In [Exercise03](../exercise-3), we have seen that we can use linear low-pass filters, like the Gauss filter, to reduce 
 the amount of noise in images. Let's test that!
 
 Add two static methods to the `Image` class:
@@ -44,7 +44,7 @@ Open a test image and add some noise using `addNoise` in `exercise.Exercise05` (
 ```
 
 Apply a Gauss filter (choose a good `filterSize` and `sigma`) on the noise image and compare the result with the original image.
-Can the error reduced in comparision to the unfiltered noisy image? Also that a look at the error images that you can
+Can the error be reduced in comparision to the unfiltered noisy image? Also take a look on the error images that you can
 calculate using your `minus` method of the class `Image`.
 
 - *Hint: You can use a for-loop to try out different values for `sigma`*.
@@ -157,7 +157,8 @@ public class MedianFilter extends FancyFilter {
 }
 ```
 The `MedianFilter` is a `LinearImageFilter` with
-`reductionFunction` `(values, weights) -> { Arrays.sort(values); return values[values.length / 2]; }`.
+`reductionFunction` `(values, weights) -> { Arrays.sort(values); return values[values.length / 2]; }`
+(it sorts the values and takes the one in the middle).
 All you need to do is to call the `super` constructor and set `reductionFunction`.
 
 Does the median filter also reduce the noise in the image?
@@ -190,7 +191,7 @@ Your `BilateralFilter` should now behave like a Gauss filter. Does it pass the t
 use `BilateralFilter` instead of `GaussFilter2d`?
 
 
-### Edge-Presvering Filtering
+### Edge-Preserving Filtering
 
 <P align="right"><i>2 Points</i>
 
@@ -220,9 +221,6 @@ Can you reduce the error even more using the bilateral filter? My results look l
     <th>Gauss filtered</th>
     <th>Bilateral filtered</th>
   </tr>
-<!--</table> -->
-
- <!--<table style="width:100% text-align: center;">-->
   <tr>
     <th></th>
     <th><a href="../error_noise.png" ><img align="center" src="../error_noise.png" ></a></th>
