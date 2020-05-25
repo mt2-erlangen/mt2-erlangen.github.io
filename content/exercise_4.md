@@ -110,19 +110,6 @@ $$ \frac{f(x) - f(x_1)}{x-x_1} = \frac{f(x_2) - f(x_1)}{x_2 - x_1} $$
 
 $$f(x) = f(x_1) + (x-x_1) (f(x_2) - f(x_1))$$
 
-* We can rewrite the equation with $f(x_i) = y_i$ as follows:
-
-$$ y = y_1 + (x - x_1) (y_2 - y_1) $$
-$$ y = y_1 + (f)(y_2 - y_1) $$
-
-* You can use the function below to compute linear interpolation between two points $x_1,x_2$ at $x$
-
-    ```java
-    float linearInterpolation(float y_1, float y_2, float f) {
-      return y_1 + f * (y_2 - y_1);
-    }
-    ```
-
 * We now have an way to interpolate between two points in 1D. We need to extend this to 2D case such that we can use 
 it for interpolating values in our image. An illustration of how this can be done is 
 already given in the [theory](../img_transform_theory) section.
