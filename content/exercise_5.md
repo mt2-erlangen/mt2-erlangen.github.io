@@ -148,7 +148,7 @@ package mt;
 
 import java.util.Arrays;
 
-public class MedianFilter extends FancyFilter {
+public class MedianFilter extends NonLinearFilter {
 	public MedianFilter(int filterSize) {
             // TODO:
             super(...);
@@ -172,10 +172,13 @@ Next, we will implement the `BilateralFilter`.
 ```java
 package mt;
 
-public class BilateralFilter extends mt.FancyFilter {
+public class BilateralFilter extends NonLinearFilter {
     GaussFilter2d gaussFilter;
 
-    public BilateralFilter(int filterSize, float spatialSigma, float valueSigma)
+    public BilateralFilter(int filterSize, float spatialSigma, float valueSigma){
+        ...
+    }
+}
 ```
 
 The bilateral assign a weight to each neightborhood pixel.
