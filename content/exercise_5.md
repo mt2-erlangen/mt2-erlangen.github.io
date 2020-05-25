@@ -220,15 +220,17 @@ Can you reduce the error even more using the bilateral filter? My results look l
     <th>Gauss filtered</th>
     <th>Bilateral filtered</th>
   </tr>
-</table> 
+<!--</table> -->
 
- <table style="width:100% text-align: center;">
+ <!--<table style="width:100% text-align: center;">-->
   <tr>
-    <th><a href="../shepp_logan_noisy.png" ><img align="center" src="../error_noise.png" ></a></th>
-    <th><a href="../shepp_logan_gauss.png" ><img align="center" src="../error_gauss.png" ></a></th>
-    <th><a href="../shepp_logan_bilateral.png" ><img align="center" src="../error_bilateral.png" ></a></th>
+    <th></th>
+    <th><a href="../error_noise.png" ><img align="center" src="../error_noise.png" ></a></th>
+    <th><a href="../error_gauss.png" ><img align="center" src="../error_gauss.png" ></a></th>
+    <th><a href="../error_bilateral.png" ><img align="center" src="../error_bilateral.png" ></a></th>
   </tr>
   <tr>
+    <th></th>
     <th>Original Error</th>
     <th>Error Gauss</th>
     <th>Error Bilateral</th>
