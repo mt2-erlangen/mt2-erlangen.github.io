@@ -204,8 +204,36 @@ Just multiply with this value $w_v$ in `weightingFunction`. The total weight of 
 Now we have the problem that our weights will no longer add up to one! To solve this problem divide by the sum of `weights`
 in the `reductionFunction`.
 
-Can you reduce the error even more using the bilateral filter?
 
+Can you reduce the error even more using the bilateral filter? My results look like this.
+
+ <table style="width:100% text-align: center;">
+  <tr>
+    <th><a href="../shepp_logan_original.png" ><img align="center" src="../shepp_logan_original.png" ></a></th>
+    <th><a href="../shepp_logan_noisy.png" ><img align="center" src="../shepp_logan_noisy.png" ></a></th>
+    <th><a href="../shepp_logan_gauss.png" ><img align="center" src="../shepp_logan_gauss.png" ></a></th>
+    <th><a href="../shepp_logan_bilateral.png" ><img align="center" src="../shepp_logan_bilateral.png" ></a></th>
+  </tr>
+  <tr>
+    <th>Original</th>
+    <th>Noisy</th>
+    <th>Gauss filtered</th>
+    <th>Bilateral filtered</th>
+  </tr>
+</table> 
+
+ <table style="width:100% text-align: center;">
+  <tr>
+    <th><a href="../shepp_logan_noisy.png" ><img align="center" src="../error_noise.png" ></a></th>
+    <th><a href="../shepp_logan_gauss.png" ><img align="center" src="../error_gauss.png" ></a></th>
+    <th><a href="../shepp_logan_bilateral.png" ><img align="center" src="../error_bilateral.png" ></a></th>
+  </tr>
+  <tr>
+    <th>Original Error</th>
+    <th>Error Gauss</th>
+    <th>Error Bilateral</th>
+  </tr>
+</table> 
 
 <!--Java unzip: https://www.journaldev.com/960/java-unzip-file-example-->
 <!--https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.2857.5885.605148569068237074211642729801-->
