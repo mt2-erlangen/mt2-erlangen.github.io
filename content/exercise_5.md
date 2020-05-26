@@ -27,6 +27,11 @@ Add two static methods to the `Image` class:
 public static float meanSquaredError(Image a, Image b);
 public static float psnr(Image a, Image b, float maxValue); // maxValue is 255 for PNG images
 ```
+<!--$ \mathrm{MSE}_{ab} =  \frac{1}{M} \sum_{i=0}^M \left(x_i - y_i\right)^2 $$-->
+$$ \mathrm{MSE}_{ab}=  \frac{1}{M} \sum _{i=0}^{M} \left(x_i - y_i\right)^2 $$
+
+$$        \mathrm{PSNR_{ab}} = 20\cdot  \log_{10}(\mathtt{maxPossibleValue}) - 10\cdot \log_{10}(\mathrm{MSE}_{ab}) $$
+
 <!--Take adavatage of the fact that you already implemented a `minus` method.-->
 Static also means that you will use them like `float mse = Image.meanSquaredError(imageA, imageB);`.
 
