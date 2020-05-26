@@ -232,7 +232,7 @@ Can you reduce the error even more using the bilateral filter? My results look l
   </tr>
   <tr>
     <th></th>
-    <th>Original Error</th>
+    <th>Error Unfiltered</th>
     <th>Error Gauss</th>
     <th>Error Bilateral</th>
   </tr>
