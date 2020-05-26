@@ -134,7 +134,7 @@ The method should calculate each output pixel from a neighborhood. So
 - Create an array to hold the values of the neighborhood pixels. How many neighborhood pixels are there?
 - Loop over each output pixel
     - Fill the array of neighborhood pixels with values from the input image (needs two inner loops)
-    - Use `this.reductionFunction.reduce` to determine the value of the output pixel.
+    - Use `this.reductionFunction.reduce` to determine the value of the output pixel. You can use `null` for the second parameter for now (we will implement `weights` later).
     - Save the value to the output image (using `setAtIndex`).
 
 Overall, the method should look very similar to your `LinearImageFilter.apply` method.
