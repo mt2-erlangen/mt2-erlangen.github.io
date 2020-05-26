@@ -106,7 +106,7 @@ package lme;
 
 @FunctionalInterface // Does nothing. But Eclipse is happier when it's there.
 public interface WeightingFunction2d {
-    // Assigns  a neightbor shiftX, shiftY a weight depending on its value and the value of the center pixel
+    // Assigns  a neighbor (shiftX, shiftY) a weight depending on its value and the value of the pixel in the middle of the neighborhood
     float getWeight(float centerValue, float neighborValue, int shiftX, int shiftY);
 }
 ```
@@ -211,7 +211,7 @@ in the `reductionFunction`.
 
 Can you reduce the error even more using the bilateral filter? My results look like this.
 
- <table style="width:100% text-align: center;">
+ <table style="width:100% text-align:;">
   <tr>
     <th><a href="../shepp_logan_original.png" ><img align="center" src="../shepp_logan_original.png" ></a></th>
     <th><a href="../shepp_logan_noisy.png" ><img align="center" src="../shepp_logan_noisy.png" ></a></th>
