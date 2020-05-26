@@ -35,9 +35,9 @@ Open a test image and add some noise using `addNoise` in `exercise.Exercise05` (
 ```java
     (new ij.ImageJ()).exitWhenQuitting(true);
     Image original = lme.DisplayUtils.openImageFromInternet("https://mt2-erlangen.github.io/shepp_logan.png", ".png");
-
+    original.setName("Original");
     
-    Image noise = new Image(image.width(), image.height(), "Noise");
+    Image noise = new Image(original.width(), original.height(), "Noise");
     noise.addNoise(0.f, 10.f);
 
     Image noisyImage = original.minus(noise); // You might also implement your own `plus` ;-)
