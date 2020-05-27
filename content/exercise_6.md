@@ -81,7 +81,7 @@ For the histologic examination of breast cancer samples a colored subtances call
 of different portions of the tissue. Open the image in `Exercise06.main`.
 
 ```java
-    mt.Image cell = lme.DisplayUtils.openImageFromInternet("https://upload.wikimedia.org/wikipedia/commons/c/c4/Breast_cancer_cells.jpg", ".jpg");
+    mt.Image cells = lme.DisplayUtils.openImageFromInternet("https://upload.wikimedia.org/wikipedia/commons/c/c4/Breast_cancer_cells.jpg", ".jpg");
 ```
 Use a suitable threshold to segment the individual sites with high contrast (0 background, 1 contrasted cells).
 You can use one of method to overlay your segmentation with the original image.
