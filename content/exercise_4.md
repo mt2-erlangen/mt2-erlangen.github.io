@@ -118,6 +118,21 @@ $$f(x) = f(x_1) + (x-x_1) (f(x_2) - f(x_1))$$
 
 ![bilinear]( ../bilinear_simplified.png )
 
+* You can use the function below to compute linear interpolation between two points $x_1,x_2$ at $x$
+
+    ```java
+    
+     // Definition of arguments
+     // diff_x_x1 = x - x_1 compute the difference between point x and x_1
+     // fx_1 = f(x_1), pixel value at point x_1
+     // fx_2 = f(x_2), pixel value at point x_2 
+
+     float linearInterpolation(float fx_1, float fx_2, float diff_x_x1) {
+         return fx_1 + diff_x_x1 * (fx_1 - fx_2);
+     }
+     
+    ```
+
 * We now have an way to interpolate between two points in 1D. We need to extend this to 2D case such that we can use 
 it for interpolating values in our image. An illustration of how this can be done is 
 already given in the [theory](../img_transform_theory) section.

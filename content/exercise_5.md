@@ -144,7 +144,7 @@ The method should calculate each output pixel from a neighborhood. So
 
 Overall, the method should look very similar to your `LinearImageFilter.apply` method.
 
-To test your method, implement a `MedianFilter` in a file `src/main/mt/MedianFilter.java` as a subclass of `LinearImageFilter`.
+To test your method, implement a `MedianFilter` in a file `src/main/mt/MedianFilter.java` as a subclass of `NonLinearFilter`.
 
 ```java
 // Your name here
