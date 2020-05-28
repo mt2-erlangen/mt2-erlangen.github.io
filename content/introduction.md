@@ -51,8 +51,9 @@ Your first task is to find out more about computer tomography and write an intro
   not webpages.
 
 The introduction shound not be longer than one page. 
-Whenever we refer to the maximum length of a section we're not counting figures and tables and just consider the length
-of the text. Your introduction and conclusion should not contain any images.
+<!--Whenever we refer to the maximum length of a section we're not counting figures and tables and just consider the length-->
+<!--of the text.-->
+Your introduction and conclusion should not contain any images.
 
 Please have a look on our checklist for a good project report **TODO**.
 
