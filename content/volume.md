@@ -115,3 +115,6 @@ Here a short summary of handy function of ImageJ when working with CT images.
 - Ctrl+Shift+C: Brightness and Contrast
 - Ctrl+Shift+H: Orthogonal Views (view volume from three sides)
 - After selecting a line: Ctrl+K Line Plot
+- Look at a [3-d rendering with ClearVolume](../clearvolume)
+
+[Next: Forward Projection](../projection)
