@@ -100,27 +100,31 @@ You may notice that by just choosing a threshold you may not be able to separate
 
 ![cells](../cell2_segmented.png)
 
-There's a trick to improve your segmentation using [the watershed method](https://en.wikipedia.org/wiki/Watershed_%28image_processing%29). 
-Click on the following menu items while displaying your 0/1 segmentation.
+You can try out some operations from the menu *Process > Binary* while you have your 0/1 segmentation focused.
+You have to convert to 8-bit first. E.g.
+
+<!--There's a trick to improve your segmentation using [the watershed method](https://en.wikipedia.org/wiki/Watershed_%28image_processing%29). -->
+<!--Click on the following menu items while displaying your 0/1 segmentation.-->
 
 -  *Image > Type > 8-bit*
 -  *Process > Binary > Watershed*
 
-![cells](../cell2_segmented_watershed.png)
+<!--![cells](../cell2_segmented_watershed.png)-->
 
-You can also "click" on menu items in your program code.
+Or "click" on menu items in your program code.
 
 ```java
+    segmentation.show();
     IJ.run("8-bit");
     IJ.run("Watershed");
-    DisplayUtils.showSegmentedCells(...);
+    DisplayUtils.showSegmentedCells(cells, segmentation);
 ```
 
 ![cells](../SegmentationOnImage.png)
 
-Also other morphologic operations from the "Binary" menu may help to improve the segmentation.
+<!--Also other morphologic operations from the "Binary" menu may help to improve the segmentation.-->
 
-<!--## Morphologic Operations-->
+<!--[>## Morphologic Operations<]-->
 
 
 <!--<P align=right> <i>5 Bonus points</i>-->
