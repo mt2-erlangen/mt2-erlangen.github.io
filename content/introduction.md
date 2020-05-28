@@ -6,86 +6,55 @@ title = "Project Work – Introduction"
 author = "Stephan Seitz"
 +++
 
-# Getting started
+# Our Goal
 
-**Important: You have to work alone on your project work. No team partners' allow anymore 😔!**
+The goal for this year project work is to reconstruct a computer tomography (CT) volume from multiple (simulated) X-ray images.
+You can download these images from studOn.
 
-This year's project work is about computer tomography (CT) reconstruction.
-CT reconstruction treats the problem of recovering a three-dimensional volume from a set of X-ray images.
-
-So we will need two classes that represent our volume and our stack of projections
-It turns out that we can interpret our projects and our volume just as a list of 2-d images.
-
-<table>
-<tr>
-<td><img align="center" src="../volume_slices.png" ></td>
-</tr>
-<tr>
-<th>A volume: very much just multiple images stacked one over another</th>
-</tr>
-</table>
-
-Create a class `mt.Volume`
+Open ImageJ in a file `src/main/java/project/Playground.java`. Use this file to try things out. We won't correct it.
 
 ```java
-// Your name <your idm>
-// No team partner... So sad 😢!
+package project;
 
-package mt;
+class Playground {
 
-import java.util.Arrays;
-import java.util.stream.IntStream;
+    public static void main(String[] args) {
+        (new ij.ImageJ()).exitWhenQuitting(true);
 
-public class Volume {
-    // Here we store our images
-    protected mt.Image[] slices;
-
-    // Dimensions of our volume
-    protected int width, height, depth;
-
-    // Spacing and origin like for mt.Image
-    protected float spacing = 1.f; // spacing is now our voxel size
-    protected float[] origin = new float[]{0, 0, 0}; // position of the top-left-bottom corner
-
-    // A name for the volume
-    protected String name;
+    }
 
 }
 ```
 
-Create a constructor. Remember: `width`, `height`, `depth`, `name` must be set and `slices` must be created as an array.
-We need `depth` images of size `width` $\times$ `height` for the `slices`.
+Open `projections.tif` by dragging it onto ImageJ.
 
-```java
-    public Volume(int width, int height, int depth, String name)
-```
+<video controls loop>
+  <source src="../drag_drop.webm" type="video/webm">
+</video> 
 
-Getters/setters...
-```java
-    public int width()
-    public int height()
-    public int depth()
+**HINT FOR TUTORS: NEEDS TO BE REPLACED BY REAL PROJECTIONS!!!**
 
-    public mt.Image getSlice(int z) 
-    public void setSlice(int z, mt.Image slice)
+# Introduction
 
-    public float spacing()
-    public String name()
-    public float[] origin()
-```
+During this semester we will learn how CT reconstruction algorithms work.
+Your first task is to find out more about computer tomography and write an introduction for your project report.
 
+- Find an informative title for your project report. "Project Report" and "Introduction" are not good titles.
+- What is computer tomography?
+  What is the problem it tries to solve? When and how was it first introduced?
+  What are kind of electromagnetic radition is used to aquire the images.
+  How did modern CT devices improve over their predecessors?
+- What are adavatages and disadantages of CT in comparison with other modalities. Include at least 2 advatages and
+  two disadvantages.
+- Give a short overview of the contents of the following sections of your project report.
+- Proof all your statements with references. You should use at least four distinct sources in your introduction that are
+  not webpages.
 
-No comes the interstig part visualize the volume!
-You will need the update [`src/main/java/lme/DisplayUtils.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/lme/DisplayUtils.java).
+The introduction shound not be longer than one page. 
+Whenever we refer to the maximum length of a section we're not counting figures and tables and just consider the length
+of the text. Your introduction and conclusion should not contain any images.
 
-```java
-    public void show() {
-        lme.DisplayUtils.showVolume(this);
-    }
-```
-
-You can download a volume from [the Cancer Imaging Archive]. Open it in your main 
+Please have a look on our checklist for a good project report **TODO**.
 
 
-You can now scroll through the different slices.
-<iframe src="https://giphy.com/embed/3o6gbenQcUjEGTaNfW" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/sloth-sloths-slothilda-3o6gbenQcUjEGTaNfW">via GIPHY</a></p>
+
