@@ -39,15 +39,15 @@ Open `projections.tif` by dragging it onto ImageJ.
 During this semester we will learn how CT reconstruction algorithms work.
 Your first task is to find out more about computer tomography and write an introduction for your project report.
 
-- Find an informative title for your project report. "Project Report" and "Introduction" are not good titles.
-- What is computer tomography?
+- Find an **informative title** for your project report. "Project Report" and "Introduction" are not good titles.
+- **What is computer tomography**?
   What is the problem it tries to solve? When and how was it first introduced?
   What are kind of electromagnetic radition is used to aquire the images.
   How did modern CT devices improve over their predecessors?
-- What are adavatages and disadantages of CT in comparison with other modalities. Include at least 2 advatages and
+- What are **adavatages and disadantages** of CT in comparison with other modalities. Include at least 2 advatages and
   two disadvantages.
-- Give a short overview of the contents of the following sections of your project report.
-- Proof all your statements with references. You should use at least four distinct sources in your introduction that are
+- Give a **short overview** of the contents of the following sections of your project report.
+- Proof all your statements with **references**. You should use at least four distinct sources in your introduction that are
   not webpages.
 
 The introduction shound not be longer than one page. 
