@@ -10,9 +10,7 @@ author = "Stephan Seitz"
 
 **Important: You have to work alone on your project work. No team partners' allow anymore 😔!**
 
-This year's project work is about computer tomography (CT) reconstruction.
 CT reconstruction treats the problem of recovering a three-dimensional volume from a set of X-ray images.
-
 So we will need two classes that represent our volume and our stack of projections
 It turns out that we can interpret our projects and our volume just as a list of 2-d images.
 
@@ -84,8 +82,36 @@ You will need the update [`src/main/java/lme/DisplayUtils.java`](https://github.
     }
 ```
 
-You can download a volume from [the Cancer Imaging Archive]. Open it in your main 
+You can download a volume from [the Cancer Imaging Archive].
+Open the folder with the DICOM image in the main of a file `src/main/java/project/ProjectMain.java`
 
+
+```java
+// Your name <your idm>
+
+package project;
+
+import mt.Volume;
+
+class ProjectMain {
+
+    public static void main(String[] args) {
+        (new ij.ImageJ()).exitWhenQuitting(true);
+        
+        Volume groundTruth = DisplayUtils.openDicomFolder("path/to/folder/with/dicoms");
+        groundTruth.show();
+        
+    }
+
+}
+
+```
 
 You can now scroll through the different slices.
 <iframe src="https://giphy.com/embed/3o6gbenQcUjEGTaNfW" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/sloth-sloths-slothilda-3o6gbenQcUjEGTaNfW">via GIPHY</a></p>
+
+Here a short summary of handy function of ImageJ when working with CT images.
+
+- Ctrl+Shift+C: Brightness and Contrast
+- Ctrl+Shift+H: Orthogonal Views (view volume from three sides)
+- After selecting a line: Ctrl+K Line Plot
