@@ -87,13 +87,13 @@ You can use one of method to overlay your segmentation with the original image.
 ```java
     // In lme.DisplayUtils
     public static void showSegmentedCells(mt.Image original, mt.Image segmented) 
-    // You may also try showSegmentedCells(cells, segmentation, true); with the newest version DisplayUtils
+    // You may also try `showSegmentedCells(cells, segmentation, true);` with the newest version of DisplayUtils
 ```
 
 
 ![cells](../SegmentationOnImageNoWatershed.png)
 
-## Separting the Cells
+## Improving your Segmentation
 *This is optional and not required for the exercise.*
 
 You may notice that by just choosing a threshold you may not be able to separate each individual structure.
