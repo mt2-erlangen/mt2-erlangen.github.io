@@ -18,21 +18,29 @@ In your project report you should...
 - prove your explanations with references, also provide the source of the formula
 
 In this project work, we will make some simplifying assumptions on the acquisition geometry.
-Look I made a nice little drawing!
+I made drawing of the path of a single X-ray through a slice of our volume.
+Since this ray crosses the origin of our coordinate system we call it the principal ray.
 
+What are the coordinates of a point P on the line of the principal ray in depedency of the angle $\alpha$ and the distance
+from origin $l$?
 
-Unfortunally, there seems to be some coffee spills, some information is missing on it and
-you shouldn't use hand drawn figures.
-Create a better figure for your project report with everything labeled.
-Do some math to give equations for the points on the lines.
+In reality, not all X-rays cross the coordinate origin. 
+We assume parallel rays.
+What are the coordinates of a point P that is on a ray that hits the detector at coordinate $s$ in depedency of $l$ and $\anlge$?
+
+Unfortunally, the figure was written on paper and you shouldn't use hand drawn figures in the project report.
+Please one or two plots on the computer that are explaining your derived the ray equations to the reader of the project
+report
 
 - How does the described situation differ from the **actual acquisition geometry** of modern CT scanners?
   What are the reasons for that? Could our simplified situation be implemented in reality?
-- **After Implementation:** what would you need to change in your implementation to cover the real geometry?
-- **After Implementation:** what physical effects were neglected in our simulation but are present in reality?
-    Name at least three non-idealities of real systems.
+<!--- **After Implementation:** what would you need to change in your implementation to cover the real geometry?-->
+- **After Implementation:** Describe briefly your implementation of the projection? 
+  what physical effects were neglected in our simulation but are present in reality?
+  Name at least three non-idealities of real systems.
 
 This part of the project work should be not longer than 1.5 pages.
 
 ## Implementation
+
 
