@@ -141,3 +141,5 @@ To do that ...
     - Calculate `theata` from `angleIndex` by calling the function `getNthAngle`
     - Call `projectRay` with `s` and `theta`
     - Save the result to sinogram at positions `angleIndex` and `sIndex`
+
+[Next section](../sinogram)
