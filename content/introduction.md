@@ -1,7 +1,6 @@
 +++
-date= 2020-06-03
-title = "Project Work – Introduction"
-
+date= 2020-06-03T08:01:00Z
+title = "Project Work 1 – Introduction"
 [extra]
 author = "Stephan Seitz"
 +++

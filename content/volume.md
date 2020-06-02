@@ -1,6 +1,6 @@
 +++
-date= 2020-06-03
-title = "Project Work – Volumes"
+date= 2020-06-03T08:02:00Z
+title = "Project Work 2 – Volumes"
 
 [extra]
 author = "Stephan Seitz"
@@ -8,7 +8,7 @@ author = "Stephan Seitz"
 
 # Getting started
 
-**Important: You have to work alone on your project work. No team partners' allow anymore 😔!**
+**Important: You have to work alone on your project work. No team partners allow anymore 😔!**
 
 CT reconstruction treats the problem of recovering a three-dimensional volume from a set of X-ray images.
 So we will need two classes that represent our volume and our stack of projections
@@ -63,13 +63,20 @@ Getters/setters...
     public int width()
     public int height()
     public int depth()
+    public float physicalWidth() // width * spacing()
+    public float physicalHeight() // height * spacing()
+    public float physicalDepth() // depth * spacing()
 
     public mt.Image getSlice(int z) 
     public void setSlice(int z, mt.Image slice)
 
     public float spacing()
+    public void setSpacing(float spacing) // should also set spacing also for all slices!
     public String name()
     public float[] origin()
+
+    // should set origin to (-0.5 width, -0.5 height, -0.5 depth) and call centerOrigin on each slice
+    public void centerOrigin()
 ```
 
 
@@ -115,6 +122,7 @@ Here a short summary of handy function of ImageJ when working with CT images.
 - Ctrl+Shift+C: Brightness and Contrast
 - Ctrl+Shift+H: Orthogonal Views (view volume from three sides)
 - After selecting a line: Ctrl+K Line Plot
+- Ctrl+I: Get patient information of a DICOM
 - Look at a [3-d rendering with ClearVolume](../clearvolume)
 
 [Next: Forward Projection](../projection)

@@ -109,7 +109,7 @@
     <div class="container padding-header">
         {% block content -%}
             <main class="main">
-                {%- for page in paginator.pages -%}
+                {%- for page in paginator.pages | reverse -%}
                     {{ macro::post(page=page) }}
                 {%- endfor -%}
                 <!--{{ macro::post_nav(ref=paginator, extra=config.extra) }}-->
