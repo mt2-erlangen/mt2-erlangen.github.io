@@ -94,7 +94,9 @@ You can use one of method to overlay your segmentation with the original image.
 ![cells](../SegmentationOnImageNoWatershed.png)
 
 ## Improving your Segmentation
-*This is optional and not required for the exercise.*
+*This is optional and not required for the exercise.
+You might want to go directly to the evaluation of this year's exercises:
+[https://forms.gle/2pbmuWtmeTtaVcKL7](https://forms.gle/2pbmuWtmeTtaVcKL7)*
 
 You may notice that by just choosing a threshold you may not be able to separate each individual structure.
 
@@ -121,6 +123,13 @@ Or "click" on menu items in your program code.
 ```
 
 ![cells](../SegmentationOnImage.png)
+
+## Evaluation
+
+We redesigned the exercises from scratch for this semester.
+Therefore, some of the exercises might have been difficult to understand or too much work. 
+We are glad for your feedback to help future semesters' students😊:
+[https://forms.gle/2pbmuWtmeTtaVcKL7](https://forms.gle/2pbmuWtmeTtaVcKL7)
 
 <!--Also other morphologic operations from the "Binary" menu may help to improve the segmentation.-->
 
