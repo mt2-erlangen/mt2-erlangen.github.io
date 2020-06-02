@@ -137,7 +137,8 @@ To do that ...
     - $\theta$ goes from left to right
     - $s$ goes from top to bottom
 - Iterate over each pixel of the sinogram. I would use `angleIdx`, `sIndex`  as a loop variables.
-    - Calculate `s` from `sIndex` by muliplying with `sinogram.spacing()` (pixel size of the detector)
+    - Calculate `s` from `sIndex` by muliplying with `sinogram.spacing()` (pixel size of the detector) and adding
+`sinogram.origin()[1]` (`== -sinogram.physicalHeight() * 0.5f`)
     - Calculate `theata` from `angleIndex` by calling the function `getNthAngle`
     - Call `projectRay` with `s` and `theta`
     - Save the result to sinogram at positions `angleIndex` and `sIndex`
