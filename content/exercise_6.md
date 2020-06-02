@@ -34,7 +34,7 @@ public class Exercise06 {
 }
 ```
 
-We will use the [Sobel Filter](https://en.wikipedia.org/wiki/Sobel_operator), to estimate gradient of the image.
+We will use the [Sobel Filter](https://en.wikipedia.org/wiki/Sobel_operator), to estimate the gradient of the image.
 The Sobel Filter uses two filter kernels. One to estimate the x-component of the gradient and one for the y-component.
 
 ![Sobel](../sobel.png)
