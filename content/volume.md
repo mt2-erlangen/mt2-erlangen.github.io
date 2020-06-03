@@ -89,7 +89,7 @@ You will need the update [`src/main/java/lme/DisplayUtils.java`](https://github.
     }
 ```
 
-You can download a volume from [the Cancer Imaging Archive](https://wiki.cancerimagingarchive.net/display/Public/RIDER+Lung+CT#871e8e71d08d428c887407cfe6cb0cec).
+You can download a volume from [the Cancer Imaging Archive](https://wiki.cancerimagingarchive.net/display/Public/RIDER+Lung+CT).
 Use one of the folowing links.
 
 - [Volume 1](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.9328.50.1.152572901056058406211409536989510187742)
