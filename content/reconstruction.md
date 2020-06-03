@@ -45,7 +45,7 @@ You should now be able to reconstruct volumes.
 *Hint: You can use the following construct instead of a for-loop to enable multi-threaded calculation.*
 
 ```java
-    // You have to replace var by `java.util.concurrent.atomic.AtomicInteger` when using Java 1.8
+    // You have to replace `var` by `java.util.concurrent.atomic.AtomicInteger` when using Java 1.8
     var progress = new java.util.concurrent.atomic.AtomicInteger(0);
     IntStream.range(0, sinogram.depth()).parallel().forEach(z -> {
         System.out.println("Progess: " + (int) (progress.incrementAndGet() * 100.0 / (double) sinogram.depth()) + " %");

@@ -89,8 +89,19 @@ You will need the update [`src/main/java/lme/DisplayUtils.java`](https://github.
     }
 ```
 
-You can download a volume from [the Cancer Imaging Archive].
-Open the folder with the DICOM image in the main of a file `src/main/java/project/ProjectMain.java`
+You can download a volume from [the Cancer Imaging Archive]((https://wiki.cancerimagingarchive.net/display/Public/LungCT-Diagnosis).
+Unzip the folder and drag the whole folder onto a running ImageJ.
+Save it the opened DICOM as a `*.tif` file (*File > Save As > Tiff...*).
+
+<!--- [Volume 1](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.4320.5030.411911859032422710586149276741)-->
+<!--- [Volume 2](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.4320.5030.300069571844254433153455037441)-->
+<!--- [Volume 3](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.4320.5030.167938164374243671184910060739)-->
+
+- [Volume 1](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.9328.50.1.152572901056058406211409536989510187742)
+- [Volume 2](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.9328.50.1.136792069117584747719409894247257396682)
+- [Volume 3](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.9328.50.1.245630263591502535745452645381329674063)
+
+Open the saved tiff file in the main of a file `src/main/java/project/ProjectMain.java`:
 
 
 ```java
@@ -105,7 +116,7 @@ class ProjectMain {
     public static void main(String[] args) {
         (new ij.ImageJ()).exitWhenQuitting(true);
         
-        Volume groundTruth = DisplayUtils.openDicomFolder("path/to/folder/with/dicoms");
+        Volume groundTruth = DisplayUtils.openDicomFolder("path/to/file.tif");
         groundTruth.show();
         
     }

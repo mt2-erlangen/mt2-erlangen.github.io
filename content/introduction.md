@@ -14,33 +14,33 @@ author = "Stephan Seitz"
 - [Backprojection and Reconstruction](../backprojection) *Tafelübung 23. Juni*
 - [Iterative Reconstruction and Conclusion](../reconstruction)
 
-# Our Goal
+<!--# Our Goal-->
 
-The goal for this year project work is to reconstruct a computer tomography (CT) volume from multiple (simulated) X-ray images.
-You can download these images from studOn.
+<!--The goal for this year project work is to reconstruct a computer tomography (CT) volume from multiple (simulated) X-ray images.-->
+<!--You can download these images from studOn.-->
 
-Open ImageJ in a file `src/main/java/project/Playground.java`. Use this file to try things out. We won't correct it.
+<!--Open ImageJ in a file `src/main/java/project/Playground.java`. Use this file to try things out. We won't correct it.-->
 
-```java
-package project;
+<!--```java-->
+<!--package project;-->
 
-class Playground {
+<!--class Playground {-->
 
-    public static void main(String[] args) {
-        (new ij.ImageJ()).exitWhenQuitting(true);
+    <!--public static void main(String[] args) {-->
+        <!--(new ij.ImageJ()).exitWhenQuitting(true);-->
 
-    }
+    <!--}-->
 
-}
-```
+<!--}-->
+<!--```-->
 
-Open `projections.tif` by dragging it onto ImageJ.
+<!--Open `projections.tif` by dragging it onto ImageJ.-->
 
-<video controls loop>
-  <source src="../drag_drop.webm" type="video/webm">
-</video> 
+<!--<video controls loop>-->
+  <!--<source src="../drag_drop.webm" type="video/webm">-->
+<!--</video> -->
 
-**HINT FOR TUTORS: NEEDS TO BE REPLACED BY REAL PROJECTIONS!!!**
+<!--**HINT FOR TUTORS: NEEDS TO BE REPLACED BY REAL PROJECTIONS!!!**-->
 
 # Introduction
 

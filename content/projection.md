@@ -22,24 +22,29 @@ In this project work, we will make some simplifying assumptions on the acquisiti
 I made drawing of the path of a single X-ray through a slice of our volume.
 Since this ray crosses the origin of our coordinate system we call it the **principal ray**.
 
+![drawing](../drawing_compressed.jpg)
+
 What are the coordinates $\vec{x}_{P}$ of a point $P$ on the line of the principal ray in depedency of the angle $\theta$ and the distance
 from origin $r$?
 
 In reality, not all X-rays cross the coordinate origin. 
 We assume parallel rays.
 What are the coordinates $\vec{x}_{P'}$ of a point $P'$ that is on a ray that hits the detector at coordinate $s$ in depedency of $r$ and $\theta$?
+Think about which vector you have to add to $P$ to get to $P'$.
+
+![drawing](../drawing_parallel_compressed.jpg)
 
 Unfortunally, the figure was written on paper and you shouldn't use hand drawn figures in the project report.
-Please one or two plots on the computer that are explaining your derived the ray equations to the reader of the project
+Please create one or two plots on the computer that are explaining your derived the ray equations to the reader of the project
 report
 
 - How does the described situation differ from the **actual acquisition geometry** of modern CT scanners?
   What are the reasons for that? Could our simplified situation be implemented in reality?
 <!--- **After Implementation:** what would you need to change in your implementation to cover the real geometry?-->
-- **After Implementation:** Describe briefly your implementation of the projection?
+- **After Implementation:** Describe briefly your implementation of the projection.
   Do not refer any Java classes or variable names!
-  Give a formula how you calculated the different projection angles.
-  Give a formula how you calculated the projection result for each ray.
+  Give a formula for how you calculated the different projection angles.
+  Give a formula for how you calculated the projection result for each ray.
   What physical effects were neglected in our simulation but are present in reality?
   Name at least three non-idealities of real systems.
 
@@ -99,6 +104,8 @@ We could directly use those coordinates $\vec{x}$ to calculate the integral in L
 
 $$ I_{\textrm{mono}} = I_{0} \cdot  \exp\left(-\intop\mu\left(\vec{x}\right)\textrm{d}\vec{x}\right) = I_{0} \cdot  \exp\left(-\intop_{-R}^{R}\mu\left(r,\theta, s\right)\textrm{d}r\right)$$
 
+*$R$ is the radius of the circle circumscribing our rectangular slice.*
+
 We are only interested in the value of the line integral
 
 $$ P(s, \theta) = \intop_{-R}^{R}\mu\left(r, s, \theta\right)\textrm{d}r $$
@@ -142,5 +149,22 @@ To do that ...
     - Calculate `theata` from `angleIndex` by calling the function `getNthAngle`
     - Call `projectRay` with `s` and `theta`
     - Save the result to sinogram at positions `angleIndex` and `sIndex`
+
+We recommend you to test your algorithm using a simple image
+
+<table>
+<tr> 
+    <td><a href="../dot.png" ><img align="center" src="../dot.png" ></a></ts>
+    <td><a href="../sinogram_dot.png" ><img align="center" src="../sinogram_dot.png" ></a></ts>
+</tr>
+<tr> 
+    <th>Simple test slice</th>
+    <th>Sinogram of that slice</th>
+</td>
+</table>
+
+*I used a high number of 500 angles to get a near square image.
+When you are using less angles the width of your sinogram will be smaller.
+Use less angles to compute the results faster.*
 
 [Next section](../sinogram)
