@@ -34,7 +34,7 @@ public class Exercise06 {
 }
 ```
 
-We will use the [Sobel Filter](https://en.wikipedia.org/wiki/Sobel_operator), to estimate gradient of the image.
+We will use the [Sobel Filter](https://en.wikipedia.org/wiki/Sobel_operator), to estimate the gradient of the image.
 The Sobel Filter uses two filter kernels. One to estimate the x-component of the gradient and one for the y-component.
 
 ![Sobel](../sobel.png)
@@ -65,7 +65,7 @@ $$ \left|\left| \nabla I \right|\right| =\left|\left| \left(\delta_x,\\ \delta_x
 
 ![Gradient](../cell2_GradientMagnitude.png)
 
-Find a good threshold and set all gradient magnitude values to zero that are above this values and all other to `1.f` to
+Find a good threshold and set all gradient magnitude values to zero that are below this values and all other to `1.f` to
 obtain an image like this with a clear segmentation in edge pixels and non-edge pixels.
 
 ![Gradient Segmented](../cell2_GradientSegmented.png)
