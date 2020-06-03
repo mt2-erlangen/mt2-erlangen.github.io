@@ -37,7 +37,7 @@ Create 3-d versions of `projectSlice`, `backprojectSlice` and `reconstructIterat
 ```java
     public void project()
     public void backproject()
-    public void reconstructIteratively(Volume measuredProjections)
+    public void reconstructIteratively(Volume measuredProjections, int numIterations)
 ```
 All they should do is calling their 2-d version for each slice.
 You should now be able to reconstruct volumes.
@@ -61,7 +61,7 @@ like variable name or function names. Compare it with the Filtered Backprojectio
 Filtered Backprojection Algorithm in detail. Just highlight the main difference.
 
 Test your reconstruction algorithm on a slice of a CT reconstruction of the Cancer Imaging Archive.
-Measure the error of the reconstructed slices after each iteration.
+Measure the error of the reconstructed slices after each iteration (so call `reconstructIteratively` with `numIterations == 1`).
 Include a figure showing this error in dependance of the iteration number in the project report.
 Include images comparing ground truth, the backprojected slice and 
 
