@@ -65,6 +65,10 @@ To do this
     - Call `backprojectRay` with `angleIdx` and `s`
     - Add this result of `backprojectRay` to current value at position `x`, `y` and save the sum at that position
 
+*Hint: You may have seen that all the CT reconstructions from the Cancer Imaging Archive contain only image information
+within a circular region. If you want to, you can only regard `x`,`y` coordinates within that region or set them to 0 after
+the backprojection. If you do that, you should mention it in the project report.*
+
 
 ## Reconstruction
 
