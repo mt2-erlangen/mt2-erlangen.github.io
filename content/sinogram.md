@@ -6,6 +6,9 @@ title = "Project Work 4 – Sinogram"
 author = "Stephan Seitz"
 +++
 
+# Sinogram
+
+![sinogram](../sinogram.png)
 
 Now you should be able to generate sinogram from volume slice.
 Generate two sinograms from two volume slices:

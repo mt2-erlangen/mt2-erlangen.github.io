@@ -18,8 +18,7 @@ However, if we have no access to the original volume slice we can not tell anyth
 All the following situations would generate the same projection!
 
 
-![sinogram](../sinogram.png)
-**TODO**
+![sinogram](../projection_distance.png)
 
 So apparently, we get some information in the direction of the detector plane, but all information orthogonal to the detector plane
 is lost.
@@ -27,17 +26,23 @@ So one thing that we can do if we want do if we want to perform a reconstruction
 and uniormly smear it into the direction orthogonal to the detector plane in a range where we assume the object is located.
 We call this process **backprojection**.
 
-![sinogram](../sinogram.png)
-**TODO**
+<table>
+<tr>
+    <th><img align="center" src="../backprojection.png" ></th>
+<tr>
+<tr>
+    <td>The backprojection smeers the value of the projection uniformly over the paths of the rays</td>
+<tr>
+</table>
 
 Implement the following method, that is calculating the value that we want to smear back.
 ```java
     // in mt.Projector
     public float backprojectRay(mt.Image sinogramSlice, int angleIdx, float s) {
-        return sinogramSlice.interpolatedAt(angleIdx * sinogram.spacing, s) // * sinogram.spacing is necessary because spacing is not valid for our angle indices (actually each coordinate should have their own spacing).
-                / (volume.physicalWidth()) // we guess that this is the size of our object
-                / sinogramSlice.width()    // we will backproject for each angle. We can take the mean of all angle position that we have here.
-                );
+        return sinogramSlice.interpolatedAt(angleIdx * sinogram.spacing, s) // * sinogram.spacing is necessary because spacing is not valid for our angle indices (actually each coordinate should have their own spacing. That's the revenge for us being lazy.).
+                / volume.physicalWidth() // we guess that this is the size of our object
+                / sinogramSlice.width()  // we will backproject for each angle. We can take the mean of all angle position that we have here.
+                ;
     }
 ```
 Use this method in `backprojectSlice` to backproject for each pixel `x`, `y` a horizontal line of the sinogram (all possible angles).
