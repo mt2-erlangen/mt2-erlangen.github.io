@@ -45,7 +45,7 @@ author = "Stephan Seitz"
 # Introduction
 
 During this semester we will learn how computer tomography (CT) reconstruction algorithms work.
-Your first task is to find out more about computer tomography and write an introduction for your project report.
+Your first task is to find out more about CT and write an introduction for your project report.
 
 - Find an **informative title** for your project report. "Project Report" and "Introduction" are not good titles.
 - **What is computer tomography**?

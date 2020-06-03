@@ -10,7 +10,7 @@ author = "Stephan Seitz"
 
 ![sinogram](../sinogram.png)
 
-Now you should be able to generate sinograms from volume slice.
+Now, you should be able to generate sinograms from volume slice.
 Generate two sinograms from two volume slices:
 
 - One sinogram from a *simple test image*. You can use for instance a white circle as I was doing in the last section.
