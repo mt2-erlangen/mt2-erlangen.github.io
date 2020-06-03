@@ -151,7 +151,9 @@ To do that ...
     - Call `projectRay` with `s` and `theta`
     - Save the result to sinogram at positions `angleIndex` and `sIndex`
 
-We recommend you to test your algorithm using a simple image
+We recommend you to test your algorithm using a simple image.
+Choose a good size for the sinogram to capture the whole image (e.g. height == `volume.height`).
+For simplicity, you do not need to change the spacing of the volume or the sinogram.
 
 <table>
 <tr> 
