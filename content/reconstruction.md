@@ -51,7 +51,7 @@ You should now be able to reconstruct volumes.
         System.out.println("Progess: " + (int) (progress.incrementAndGet() * 100.0 / (double) sinogram.depth()) + " %");
         //Do stuff here for slice z
         ...
-    };
+    });
 ```
 
 ## Project Report

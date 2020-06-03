@@ -17,9 +17,11 @@ Generate two sinograms from two volume slices:
 - One sinogram from a real *CT reconstruction*. You should cite the source of that image. The Cancer Imaging Archive even
 [explains you how to do that](https://wiki.cancerimagingarchive.net/display/Public/RIDER+Lung+CT#871e8e71d08d428c887407cfe6cb0cec).
 
-Show both the volume slices and the sinograms.
-Explain to the reader what they are seeing.
-Do the sinograms contain some kind of symmetry? What is the reason for that.
+- Show both the volume slices and the sinograms.
+Explain to the reader what they are seeing. What is the radon transform?
+Can the radon transform be inverted?
+- Do the sinograms contain some kind of symmetry? What is the reason for that.
+Do we really need a 360° degree scan?
 
 <!--How can the Fourier-Slice-Theorem be used to reconstruct.-->
 <!--Remember to explain the meaning of all variables if you should be using formulas.-->
