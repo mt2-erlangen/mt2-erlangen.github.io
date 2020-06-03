@@ -5,6 +5,15 @@ title = "Project Work 1 – Introduction"
 author = "Stephan Seitz"
 +++
 
+# Contents
+
+- [Introduction](../introduction) *Tafelübung 9. Juni*
+- [Volumes](../volume)
+- [Projection](../projection) *Tafelübung 16. Juni*
+- [Sinogram](../sinogram)
+- [Backprojection and Reconstruction](../backprojection) *Tafelübung 23. Juni*
+- [Iterative Reconstruction and Conclusion](../reconstruction)
+
 # Our Goal
 
 The goal for this year project work is to reconstruct a computer tomography (CT) volume from multiple (simulated) X-ray images.
@@ -43,7 +52,7 @@ Your first task is to find out more about computer tomography and write an intro
   What is the problem it tries to solve? When and how was it first introduced?
   What are kind of electromagnetic radition is used to aquire the images.
   How did modern CT devices improve over their predecessors?
-- What are **adavatages and disadantages** of CT in comparison with other modalities. Include at least 2 advatages and
+- What are **adavatages and disadantages** of CT in comparison with other modalities. Include at least two advatages and
   two disadvantages.
 - Give a **short overview** of the contents of the following sections of your project report.
 - Proof all your statements with **references**. You should use at least four distinct sources in your introduction that are
@@ -54,7 +63,7 @@ The introduction shound not be longer than one page.
 <!--of the text.-->
 Your introduction and conclusion should not contain any images.
 
-Please have a look on our checklist for a good project report **TODO**.
+Please have a look on our [checklist for a good project report](../checklist).
 
 [Next task](../volume)
 

@@ -40,20 +40,20 @@ Implement the following method, that is calculating the value that we want to sm
                 );
     }
 ```
-Use this method in `projectBackwardSlice` to backproject for each pixel `x`, `y` a horizontal line of the sinogram (all possible angles).
+Use this method in `backprojectSlice` to backproject for each pixel `x`, `y` a horizontal line of the sinogram (all possible angles).
 
 ```java
     // in mt.Projector
-    public void projectBackwardSlice(int sliceIdx)
+    public void backprojectSlice(int sliceIdx)
     // A helper method
-    public void projectBackwardSlice(int sliceIdx, int angleIdx)
+    public void backprojectSlice(int sliceIdx, int angleIdx)
 ```
 
 To do this 
 
 - Create a loop over all `angleIdx`
     - Call the helper method for all angle indices (there are `sinogram.width` angles)
-- In `public void projectBackwardSlice(int sliceIdx, int angleIdx)`
+- In `public void backprojectSlice(int sliceIdx, int angleIdx)`
     - Get the slice with index `sliceIdx`
     - Loop over all `x`, `y` of this image
     - Calculate the physical coordinates from the integers `x` and `y` (times `spacing` plus `origin`!)
@@ -124,12 +124,14 @@ Use `backprojectSlice(...)` to create your first reconstruction of a slice.
 For the project report, you should briefly describe your backprojection reconstruction algorithm.
 
 - Describe your implementation, create at least one figure supporting your explanations.
-You should never mention implementation details like for-loops or variable names.
+You should never mention implementation details like for-loops or variable names, but important parameters like the number
+of projection angles you used
 - Test your reconstruction algorithm
     - using a simple test image like a white circle or square
     - using a CT reconstruction that you downloaded . Cite the data source!
 - How do images look like? If they are blurry, what is the reason for that.
 Mention in one sentence how the Filtered Backprojection algorithm tries to solve that problem.
+Show the images in your project report.
 - How big are your errors in comparison to the ground truth? If you are using a measure like the Mean Squared Error give
 a formula defining it.
 
