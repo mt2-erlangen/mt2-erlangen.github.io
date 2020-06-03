@@ -11,7 +11,7 @@ author = "Stephan Seitz"
 **Important: You have to work alone on your project work. No team partners allowed anymore 😔!**
 
 CT reconstruction treats the problem of recovering a three-dimensional volume from a set of X-ray images.
-So we will need two classes that represent our volume and our stack of projections.
+So we will need two classes that represent our volume and our stack of X-ray projections.
 It turns out that we can interpret our projections and our volume just as a list of 2-d images.
 
 <table>
@@ -80,7 +80,7 @@ Getters/setters...
 ```
 
 
-No comes the interesting part: visualize the volume!
+Now comes the interesting part: visualize the volume!
 You will need the update [`src/main/java/lme/DisplayUtils.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/lme/DisplayUtils.java).
 
 ```java
