@@ -62,7 +62,7 @@ Filtered Backprojection Algorithm in detail. Just highlight the main difference.
 
 **Test your reconstruction algorithm** on a slice of a CT reconstruction of the Cancer Imaging Archive.
 Measure the error of the reconstructed slices after each iteration (so call `reconstructIteratively` with `numIterations == 1`).
-**Include a figure** showing this **error in dependance of the iteration number** in the project report.
+**Include a figure** showing this **error in dependence of the iteration number** in the project report.
 Include images comparing ground truth, the backprojected slice and the result after a few iterations.
 
 **Comment on the error and the images** in your text.
