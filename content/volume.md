@@ -8,7 +8,7 @@ author = "Stephan Seitz"
 
 # Getting started
 
-**Important: You have to work alone on your project work. No team partners allow anymore 😔!**
+**Important: You have to work alone on your project work. No team partners allowed anymore 😔!**
 
 CT reconstruction treats the problem of recovering a three-dimensional volume from a set of X-ray images.
 So we will need two classes that represent our volume and our stack of projections.
