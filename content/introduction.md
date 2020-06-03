@@ -51,7 +51,7 @@ Your first task is to find out more about computer tomography and write an intro
 - **What is computer tomography**?
   What is the problem it tries to solve? When and how was it first introduced?
   What kind of electromagnetic radition is used to aquire the images?
-  How did modern CT devices improve over their predecessors? What is the typical resolution of a state-of-the-art CT scanner.
+  How did modern CT devices improve over their predecessors? What is the typical spatial resolution of a state-of-the-art CT scanner?
 - What are **advantages and disadvantages** of CT in comparison with other modalities. Include at least two advatages and
   two disadvantages.
 - Give a **short overview** of the contents of the following sections of your project report.
