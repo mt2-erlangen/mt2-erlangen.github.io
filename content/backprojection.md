@@ -110,7 +110,7 @@ Call `groundTruthProjector.projectSlice` with an arbiray slice index.
 <!--You get the generated sinogram slice with `groundTruthProjector.sinogram().getSlice(...)`.-->
 
 Create an empty volume (all pixels 0)  with the same dimensions as the ground truth volume and a copy of `groundTruthProjector.sinogram()`.
-You caan add the following method to `mt.Volume` to create copies.
+You can add the following method to `mt.Volume` to create copies.
 
 ```java
     // in mt/Volume.java

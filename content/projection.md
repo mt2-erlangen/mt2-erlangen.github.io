@@ -15,12 +15,12 @@ In your project report you should...
 
 - explain the reader the physical process of **X-ray attenuation** and its material dependance.
 What materials in the human body attenuate more X-rays than others?
-- explain the **fundamental theorem** hat describes this process. Give a formula! Explain all the symbols that you use in
-  the formula.
+- explain the **fundamental theorem** hat describes this process (X-ray attenuation). Give a formula!
+Explain all the symbols that you use in the formula.
 - prove your explanations with references, also provide the source of the formula.
 
 In this project work, we will make some simplifying assumptions on the acquisition geometry.
-I made drawing of the path of a single X-ray through a slice of our volume.
+I made a drawing of the path of a single X-ray through a slice of our volume.
 Since this ray crosses the origin of our coordinate system we call it the **principal ray**.
 
 ![drawing](../drawing_compressed.jpg)
@@ -31,7 +31,7 @@ from origin $r$?
 In reality, not all X-rays cross the coordinate origin. 
 We assume parallel rays.
 What are the coordinates $\vec{x}_{P'}$ of a point $P'$ that is on a ray that hits the detector at coordinate $s$ in depedency of $r$ and $\theta$?
-Think about which vector you have to add to $P$ to get to $P'$.
+*Hint: What vector do you have to add to $P$ to get to $P'$?*
 
 ![drawing](../drawing_parallel_compressed.jpg)
 
