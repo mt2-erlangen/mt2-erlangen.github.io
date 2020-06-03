@@ -25,7 +25,7 @@ So apparently, we get some information in the direction of the detector plane, b
 is lost.
 So one thing that we can do if we want do if we want to perform a reconstruction from the sinogram is to take the information in direction of the detector plane
 and uniormly smear it into the direction orthogonal to the detector plane in a range where we assume the object is located.
-We call this process **back-projection**.
+We call this process **backprojection**.
 
 ![sinogram](../sinogram.png)
 **TODO**
@@ -36,11 +36,11 @@ Implement the following method, that is calculating the value that we want to sm
     public float backprojectRay(mt.Image sinogramSlice, int angleIdx, float s) {
         return sinogramSlice.interpolatedAt(angleIdx * sinogram.spacing, s) // * sinogram.spacing is necessary because spacing is not valid for our angle indices (actually each coordinate should have their own spacing).
                 / (volume.physicalWidth()) // we guess that this is the size of our object
-                / sinogramSlice.width()    // we will back-project for each angle. We can take the mean of all angle position that we have here.
+                / sinogramSlice.width()    // we will backproject for each angle. We can take the mean of all angle position that we have here.
                 );
     }
 ```
-Use this method in `projectBackwardSlice` to back-project for each pixel `x`, `y` a horizontal line of the sinogram (all possible angles).
+Use this method in `projectBackwardSlice` to backproject for each pixel `x`, `y` a horizontal line of the sinogram (all possible angles).
 
 ```java
     // in mt.Projector
@@ -68,7 +68,7 @@ To do this
 
 ## Reconstruction
 
-Next, we want to try out whether we can use our back-projection to reconstruct a volume.
+Next, we want to try out whether we can use our backprojection to reconstruct a volume.
 Whenever we want to test whether method works, we need something to compare with.
 We the best possible result, the "true" values, is usally called ground truth.
 We can use one of the reconstructions that we downloaded from the Cancer Imaging Archive as a ground thruth volume.
@@ -117,12 +117,18 @@ Use `backprojectSlice(...)` to create your first reconstruction of a slice.
 
 ## Project Report
 
-- describe your implementation, create own figure supporting your explanations 
-- first test image
-- real image
-- error?
-- how do images look like?
-- Why blurry? Reason?
+For the project report, you should briefly describe your backprojection reconstruction algorithm.
+
+- Describe your implementation, create at least one figure supporting your explanations.
+You should never mention implementation details like for-loops or variable names.
+- Test your reconstruction algorithm
+    - using a simple test image like a white circle or square
+    - using a CT reconstruction that you downloaded . Cite the data source!
+- How do images look like? If they are blurry, what is the reason for that.
+Mention in one sentence how the Filtered Backprojection algorithm tries to solve that problem.
+- How big are your errors in comparison to the ground truth? If you are using a measure like the Mean Squared Error give
+a formula defining it.
+
 
 The text for this section should be about one page long. 
 [Next section](../reconstruction)
