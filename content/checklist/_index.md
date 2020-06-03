@@ -33,4 +33,4 @@ After that, *CT* is enough.
 To obtain all the points for the content of your report
 
 - Check whether you have addressed all the **questions** in the task description.
-- Check for **numbers in the questions**. Do you really have **two** advantages and **two** disadvanges of using computer tomography.
+- Check for **numbers in the questions**. Do you really have **two** advantages and **two** disadvanges of using computer tomography?
