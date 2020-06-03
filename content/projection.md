@@ -24,7 +24,7 @@ Since this ray crosses the origin of our coordinate system we call it the **prin
 
 ![drawing](../drawing_compressed.jpg)
 
-What are the coordinates $\vec{x}_{P}$ of a point $P$ on the line of the principal ray in depedency of the angle $\theta$ and the distance
+What are the coordinates $\vec{x}_{P}$ of a point $P$ on the line of the principal ray in dependency of the angle $\theta$ ($\alpha$ in drawing) and the distance
 from origin $r$?
 
 In reality, not all X-rays cross the coordinate origin. 
