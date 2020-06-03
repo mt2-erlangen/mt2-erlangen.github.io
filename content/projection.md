@@ -130,12 +130,12 @@ Next we want to call this function for every ray and every pixel of our sinogram
 To do that ...
 - Get the slice `sliceIdx` from `this.volume` using `getSlice`
     - This is a slice of our volume with coordinates $x$ and $y$.
-    - $x$ goes from left to right
-    - $y$ goes from top to bottom
+    - $x$ runs from left to right
+    - $y$ runs from top to bottom
 - Get the sinogram for that slice `sliceIdx` from `this.sinogramm` using `getSlice`
     - This is a slice of our sinogram with physical coordinates $s$ and $\theta$.
-    - $\theta$ goes from left to right
-    - $s$ goes from top to bottom
+    - $\theta$ runs from left to right
+    - $s$ runs from top to bottom
 - Iterate over each pixel of the sinogram. I would use `angleIdx`, `sIndex`  as a loop variables.
     - Calculate `s` from `sIndex` by muliplying with `sinogram.spacing()` (pixel size of the detector) and adding
 `sinogram.origin()[1]` (`== -sinogram.physicalHeight() * 0.5f`)
