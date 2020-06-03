@@ -11,8 +11,8 @@ author = "Stephan Seitz"
 **Important: You have to work alone on your project work. No team partners allow anymore 😔!**
 
 CT reconstruction treats the problem of recovering a three-dimensional volume from a set of X-ray images.
-So we will need two classes that represent our volume and our stack of projections
-It turns out that we can interpret our projects and our volume just as a list of 2-d images.
+So we will need two classes that represent our volume and our stack of projections.
+It turns out that we can interpret our projections and our volume just as a list of 2-d images.
 
 <table>
 <tr>
@@ -75,12 +75,12 @@ Getters/setters...
     public String name()
     public float[] origin()
 
-    // should set origin to (-0.5 width, -0.5 height, -0.5 depth) and call centerOrigin on each slice
+    // should set origin to (-0.5 physicalWidth, -0.5 physicalHeight, -0.5 physicalDepth) and call centerOrigin on each slice
     public void centerOrigin()
 ```
 
 
-No comes the interstig part visualize the volume!
+No comes the interesting part: visualize the volume!
 You will need the update [`src/main/java/lme/DisplayUtils.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/lme/DisplayUtils.java).
 
 ```java
@@ -89,29 +89,57 @@ You will need the update [`src/main/java/lme/DisplayUtils.java`](https://github.
     }
 ```
 
-You can download a volume from [the Cancer Imaging Archive]((https://wiki.cancerimagingarchive.net/display/Public/LungCT-Diagnosis).
-Unzip the folder and drag the whole folder onto a running ImageJ.
-Save it the opened DICOM as a `*.tif` file (*File > Save As > Tiff...*).
-
-<!--- [Volume 1](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.4320.5030.411911859032422710586149276741)-->
-<!--- [Volume 2](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.4320.5030.300069571844254433153455037441)-->
-<!--- [Volume 3](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.4320.5030.167938164374243671184910060739)-->
+You can download a volume from [the Cancer Imaging Archive](https://wiki.cancerimagingarchive.net/display/Public/RIDER+Lung+CT#871e8e71d08d428c887407cfe6cb0cec).
+Use one of the folowing links.
 
 - [Volume 1](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.9328.50.1.152572901056058406211409536989510187742)
 - [Volume 2](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.9328.50.1.136792069117584747719409894247257396682)
 - [Volume 3](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.9328.50.1.245630263591502535745452645381329674063)
 
-Open the saved tiff file in the main of a file `src/main/java/project/ProjectMain.java`:
+Unzip the folder and drag the whole folder onto a running ImageJ.
+E.g. by creating a file `src/main/java/project/Playground.java`.
 
 
 ```java
-// Your name <your idm>
+// This file is only for you to experiment. We will not correct it.
 
 package project;
 
 import mt.Volume;
 
-class ProjectMain {
+class Playground {
+
+    public static void main(String[] args) {
+        // Starts ImageJ
+        (new ij.ImageJ()).exitWhenQuitting(true);
+
+        // You can now use drag & drop to convert the downloaded folder into a *.tif file
+        
+    }
+
+}
+
+```
+
+Save it the opened DICOM as a `*.tif` file (*File > Save As > Tiff...*).
+There are more smaller test volumes on studOn.
+
+<!--- [Volume 1](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.4320.5030.411911859032422710586149276741)-->
+<!--- [Volume 2](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.4320.5030.300069571844254433153455037441)-->
+<!--- [Volume 3](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.4320.5030.167938164374243671184910060739)-->
+
+
+Open the saved tiff file in the main of a file `src/main/java/project/Playground.java`:
+
+
+```java
+// This file is only for you to experiment. We will not correct it.
+
+package project;
+
+import mt.Volume;
+
+class Playground {
 
     public static void main(String[] args) {
         (new ij.ImageJ()).exitWhenQuitting(true);
@@ -128,7 +156,7 @@ class ProjectMain {
 You can now scroll through the different slices.
 <iframe src="https://giphy.com/embed/3o6gbenQcUjEGTaNfW" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/sloth-sloths-slothilda-3o6gbenQcUjEGTaNfW">via GIPHY</a></p>
 
-Here a short summary of handy function of ImageJ when working with CT images.
+Here a short summary of handy functions of ImageJ when working with CT images.
 
 - Ctrl+Shift+C: Brightness and Contrast
 - Ctrl+Shift+H: Orthogonal Views (view volume from three sides)

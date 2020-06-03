@@ -26,10 +26,10 @@ author = "Stephan Seitz"
 
 <!--class Playground {-->
 
-    <!--public static void main(String[] args) {-->
-        <!--(new ij.ImageJ()).exitWhenQuitting(true);-->
+<!--public static void main(String[] args) {-->
+<!--(new ij.ImageJ()).exitWhenQuitting(true);-->
 
-    <!--}-->
+<!--}-->
 
 <!--}-->
 <!--```-->
@@ -50,15 +50,15 @@ Your first task is to find out more about computer tomography and write an intro
 - Find an **informative title** for your project report. "Project Report" and "Introduction" are not good titles.
 - **What is computer tomography**?
   What is the problem it tries to solve? When and how was it first introduced?
-  What are kind of electromagnetic radition is used to aquire the images.
-  How did modern CT devices improve over their predecessors?
+  What kind of electromagnetic radition is used to aquire the images?
+  How did modern CT devices improve over their predecessors? What is the typical resolution of a state-of-the-art CT scanner.
 - What are **adavatages and disadantages** of CT in comparison with other modalities. Include at least two advatages and
   two disadvantages.
 - Give a **short overview** of the contents of the following sections of your project report.
 - Proof all your statements with **references**. You should use at least four distinct sources in your introduction that are
   not webpages.
 
-The introduction shound not be longer than one page. 
+The introduction shound not be longer than one page and but at least half a page. 
 <!--Whenever we refer to the maximum length of a section we're not counting figures and tables and just consider the length-->
 <!--of the text.-->
 Your introduction and conclusion should not contain any images.

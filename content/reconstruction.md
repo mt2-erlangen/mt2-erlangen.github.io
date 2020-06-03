@@ -29,10 +29,10 @@ It should
 - call `backprojectSlice` with the current `sliceIdx`
 - repeat all this for `numIterations` iterations
 
-So we're now doing an reconstruction of the error and adding it to our blurry image.
+So we're now doing an reconstruction of the error sinogram and adding it to our blurry image.
 Does this reduce our error?
 
-Our reconstruction algorithm is now finished. But it only operates on 2-d slices.
+Our reconstruction algorithm is now finished. But it operates only on 2-d slices.
 Create 3-d versions of `projectSlice`, `backprojectSlice` and `reconstructIteratively`:
 ```java
     public void project()
@@ -56,16 +56,16 @@ You should now be able to reconstruct volumes.
 
 ## Project Report
 
-For the project, describe how your iterative reconstruction algorithm works. You should not mention implementation details
-like variable name or function names. Compare it with the Filtered Backprojection algorithm! It's not necessary to explain 
+For the project, **describe how your iterative reconstruction algorithm works**. You should not mention implementation details
+like variable name or function names. **Compare it with the Filtered Backprojection** algorithm! It's not necessary to explain 
 Filtered Backprojection Algorithm in detail. Just highlight the main difference.
 
-Test your reconstruction algorithm on a slice of a CT reconstruction of the Cancer Imaging Archive.
+**Test your reconstruction algorithm** on a slice of a CT reconstruction of the Cancer Imaging Archive.
 Measure the error of the reconstructed slices after each iteration (so call `reconstructIteratively` with `numIterations == 1`).
-Include a figure showing this error in dependance of the iteration number in the project report.
+**Include a figure** showing this **error in dependance of the iteration number** in the project report.
 Include images comparing ground truth, the backprojected slice and the result after a few iterations.
 
-Comment on the error and the images in your text.
+**Comment on the error and the images** in your text.
 Does the result of the iterative reconstruction look better than solely using backprojection?
 
 This part of the project report should be no longer than 1.5 pages.
@@ -80,6 +80,6 @@ This part of the project work should be about a quarter page long and should con
 
 # Submission
 
-Submit until your project report as a PDF and your entire project folder until **August 09 23:55h**.
+Submit your project report as a PDF and your entire project folder of your code until **August 09 23:55h**.
 Your project must compile as a whole!
 Make sure that you had a last look at our [checklist](../checklist).

@@ -8,13 +8,14 @@ author = "Stephan Seitz"
 
 # Projections
 
-To understand how we can reconstruct a volume from X-ray images, we will first go through the process how these X-ray images
-were acquired from the physical volume.
+To understand how we can reconstruct a volume from X-ray images, we will first go through the process of how these X-ray images
+were acquired from a physical volume.
 
 In your project report you should...
 
 - explain the reader the physical process of **X-ray attenuation** and its material dependance.
-- explain the **fundamental theorem** describes this process. Give a formula! Explain all the symbols that you use in
+What materials in the human body attenuate more X-rays than others?
+- explain the **fundamental theorem** hat describes this process. Give a formula! Explain all the symbols that you use in
   the formula.
 - prove your explanations with references, also provide the source of the formula.
 
@@ -34,9 +35,9 @@ Think about which vector you have to add to $P$ to get to $P'$.
 
 ![drawing](../drawing_parallel_compressed.jpg)
 
-Unfortunally, the figure was written on paper and you shouldn't use hand drawn figures in the project report.
+Unfortunally, the figure was written on paper and you shouldn't use hand drawn figures in the project report (as you can see they look ugly).
 Please create one or two plots on the computer that are explaining your derived the ray equations to the reader of the project
-report
+report. Decide which information is important for the reader to understand your text.
 
 - How does the described situation differ from the **actual acquisition geometry** of modern CT scanners?
   What are the reasons for that? Could our simplified situation be implemented in reality?
@@ -71,8 +72,8 @@ public class Projector {
 }
 ```
 Imlement a constructor for this class.
-It should call `this.volume.centerOrigin()` and `this.projections.centerOrigin()` that we use the same coordinate
-systems as in our drawings
+It should call `this.volume.centerOrigin()` and `this.projections.centerOrigin()` so we use the same coordinate
+systems as in our drawings.
 ```java
     public Projector(mt.Volume projectionVolume, mt.Volume sinogram) {
         ... // Implementation here
@@ -91,7 +92,7 @@ Constructor and Setters/Getters:
 
 We assume that we aquire $N$ projections at $N$ different angles $\theta$.
 All angles should have the same distance from each other and divide $2\cdot \pi$ in $N$ equal parts (we always use [radians](https://en.wikipedia.org/wiki/Radian) for angles).
-What value is the value of the $n$th angle when $\theta = 0$ when $n=0$?
+What is the value of the $n$th angle when $\theta = 0$ when $n=0$?
 Use this formula in the description of your implementation and implement the following method:
 
 ```java
@@ -100,22 +101,22 @@ Use this formula in the description of your implementation and implement the fol
 ```
 
 Now, recall the formula you derived for the position of point $P'$ in the previous section.
-We could directly use those coordinates $\vec{x}$ to calculate the integral in Lambert-Beer's law for a ray with angle $\theta$ and shift $s$ over a slice $\mu$ if our computers:
+We could directly use those coordinates $\vec{x}$ to calculate the integral in Lambert-Beer's law for a ray with angle $\theta$ and shift $s$ over a slice $\mu$ on our computers:
 
 $$ I_{\textrm{mono}} = I_{0} \cdot  \exp\left(-\intop\mu\left(\vec{x}\right)\textrm{d}\vec{x}\right) = I_{0} \cdot  \exp\left(-\intop_{-R}^{R}\mu\left(r,\theta, s\right)\textrm{d}r\right)$$
 
-*$R$ is the radius of the circle circumscribing our rectangular slice.*
+*$R$ is the radius of the circle circumscribing our rectangular slice. You can see it in the drawing.*
 
 We are only interested in the value of the line integral
 
 $$ P(s, \theta) = \intop_{-R}^{R}\mu\left(r, s, \theta\right)\textrm{d}r $$
 
-and we have to replace the integral by a sum
+and we have to replace the integral by a sum (computers cannot calculate integrals directly)
 
 $$ P(s, \theta) = \sum_{r=-R}^{R}\mu\left(r,\theta, s\right) $$
 
 Calculate this sum for a fixed $s$ and $\theta$ on a slice of our volume!
-You can use `volumeSlice.interpolatedAt(x,y)` to access values of our slice.
+You can use `volumeSlice.interpolatedAt(x,y)` to deterime $\mu(\vec{x})$ and access values of our slice.
 
 ```java
     // in mt.Projector
