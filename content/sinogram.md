@@ -28,4 +28,6 @@ Do we really need a 360° degree scan?
 
 This section should not be longer than one page.
 
+[Previous section](../projection)
+
 [Next section](../backprojection)

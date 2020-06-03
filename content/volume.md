@@ -164,4 +164,6 @@ Here a short summary of handy functions of ImageJ when working with CT images.
 - Ctrl+I: Get patient information of a DICOM
 - Look at a [3-d rendering with ClearVolume](../clearvolume)
 
+[Previous: Introduction](../introduction) 
+
 [Next: Forward Projection](../projection)

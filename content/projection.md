@@ -168,4 +168,6 @@ We recommend you to test your algorithm using a simple image
 When you are using less angles the width of your sinogram will be smaller.
 Use less angles to compute the results faster.*
 
+[Previous section](../volume)
+
 [Next section](../sinogram)
