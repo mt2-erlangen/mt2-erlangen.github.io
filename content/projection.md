@@ -29,8 +29,8 @@ What are the coordinates $\vec{x}_{P}$ of a point $P$ on the line of the princip
 from origin $r$?
 
 In reality, not all X-rays cross the coordinate origin. 
-We assume parallel rays.
 What are the coordinates $\vec{x}_{P'}$ of a point $P'$ that is on a ray that hits the detector at coordinate $s$ in depedency of $r$ and $\theta$?
+We assume parallel rays.
 
 *Hint: What vector do you have to add to $P$ to get to $P'$?*
 
@@ -55,7 +55,7 @@ This part of the project work should be not longer than 1.5 pages.
 ## Implementation
 
 Our `Volume` class is basically a storage for a stack of images.
-We want to use it also to store our projections as a so called sinogram.
+We want to use it also to store our projections as so called sinogram.
 Create a class `mt.Projector` in a file `src/main/java/mt/Projector.java`.
 
 ```java
