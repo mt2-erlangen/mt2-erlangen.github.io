@@ -31,6 +31,7 @@ from origin $r$?
 In reality, not all X-rays cross the coordinate origin. 
 We assume parallel rays.
 What are the coordinates $\vec{x}_{P'}$ of a point $P'$ that is on a ray that hits the detector at coordinate $s$ in depedency of $r$ and $\theta$?
+
 *Hint: What vector do you have to add to $P$ to get to $P'$?*
 
 ![drawing](../drawing_parallel_compressed.jpg)
@@ -105,7 +106,8 @@ We could directly use those coordinates $\vec{x}$ to calculate the integral in L
 
 $$ I_{\textrm{mono}} = I_{0} \cdot  \exp\left(-\intop\mu\left(\vec{x}\right)\textrm{d}\vec{x}\right) = I_{0} \cdot  \exp\left(-\intop_{-R}^{R}\mu\left(r,\theta, s\right)\textrm{d}r\right)$$
 
-*$R$ is the radius of the circle circumscribing our rectangular slice. You can see it in the drawing.*
+*$R$ is the radius of the circle circumscribing our rectangular slice. You can see it in the drawing.
+The path integral goes along the path marked in yellow in the drawings.*
 
 We are only interested in the value of the line integral
 
