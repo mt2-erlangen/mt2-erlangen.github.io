@@ -79,9 +79,8 @@ Getters/setters...
     public void centerOrigin()
 ```
 
-
-No comes the interesting part: visualize the volume!
-You will need the update [`src/main/java/lme/DisplayUtils.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/lme/DisplayUtils.java).
+Now comes the interesting part: visualize the volume!
+You will need to update [`src/main/java/lme/DisplayUtils.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/lme/DisplayUtils.java) file and use the following command to visualize the volume.
 
 ```java
     public void show() {
