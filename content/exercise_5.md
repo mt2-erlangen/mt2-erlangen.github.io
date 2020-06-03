@@ -10,7 +10,7 @@ author="Stephan Seitz"
 
 **Submission deadline: 08.06.20 23:55h**
 
-Please ensure that all files you created also contain **your name and your IDM ID** and also your partner's name and IDM ID if you're not working alone.
+Please ensure that all files you created also contain **your name and your IDM ID**/se and also your partner's name and IDM ID if you're not working alone.
 
 Each exercise has **10 points**. You have to achieve **30 of 60 points in six homework exercises** to pass the module.
 
@@ -193,7 +193,7 @@ fill it. `reductionFunction` should now also be called with the `weights` array.
 The bilateral has to parameters $\sigma_{\text{value}}$ and $\sigma_{\text{spatial}}$.
 For large values of $\sigma_{\text{spatial}}$ the bilateral filter behaves like a Gauss filter.
 Initialize `gaussFilter` in the constructor. Set `weightingFunction` so that the weights $w_s$ of the Gauss filter are returned.
-Set `reductionFunction`. It should multiply each of the `values` with its weight and then results up.
+Set `reductionFunction`. It should multiply each of the `values` with its weight and then sum the results up.
 
 Your `BilateralFilter` should now behave like a Gauss filter. Does it pass the test in `GaussFilter2dTests` when you
 use `BilateralFilter` instead of `GaussFilter2d`?
