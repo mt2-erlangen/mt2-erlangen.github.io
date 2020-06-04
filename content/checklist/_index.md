@@ -29,6 +29,7 @@ by the order you use them in the text when numbering the sources).
 - Do not use **abbreviation** without introducing them. The first time you should write *computer tomography (CT)*.
 After that, *CT* is enough.
 - **Label all axes** in all plots and coordinate systems!
+- Never use "Ich" or "I". In English texts it's acceptable to use "we" even though you did all the work alone.
 
 
 To obtain all the points for the content of your report
