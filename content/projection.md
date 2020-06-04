@@ -15,7 +15,7 @@ In your project report you should...
 
 - explain the reader the physical process of **X-ray attenuation** and its material dependance.
 What materials in the human body attenuate more X-rays than others?
-How is this represented in a CT reconstruction? Or in other words what quantity does a CT reconstruction actually show?
+How is this represented in a CT reconstruction? Or in other words: what quantity does a CT reconstruction actually show?
 Which kind of tissues appear therefore lighter and which darker?
 - explain the **fundamental theorem** hat describes this process (X-ray attenuation). Give a formula!
 Explain all the symbols that you use in the formula.
