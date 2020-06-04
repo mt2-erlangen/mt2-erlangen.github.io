@@ -143,6 +143,6 @@ a formula defining it.
 
 The text for this section should be about one page long. 
 
-[Previous section](../projection)
+[Previous section](../sinogram)
 
 [Next section](../reconstruction)
