@@ -84,4 +84,10 @@ Submit your project report as a PDF and your entire project folder of your code 
 Your project must compile as a whole!
 Make sure that you had a last look at our [checklist](../checklist).
 
+
+# Evaluation
+
+We hope you had a fun project work!
+[You can help us to improve the instructions for next year!](https://forms.gle/EZZsFXz5QrgTAutu9)
+
 [Previous section](../backprojection.md)
