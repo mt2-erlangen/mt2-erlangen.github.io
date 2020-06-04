@@ -28,6 +28,7 @@ by the order you use them in the text when numbering the sources).
 - A list of figures is not needed.
 - Do not use **abbreviation** without introducing them. The first time you should write *computer tomography (CT)*.
 After that, *CT* is enough.
+- **Label all axes** in all plots and coordinate systems!
 
 
 To obtain all the points for the content of your report
