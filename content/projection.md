@@ -91,6 +91,8 @@ Constructor and Setters/Getters:
 
     public void setVolume(Volume volume)
     public Volume volume()
+
+    public int numAngles() // == sinogram.width()
 ```
 
 We assume that we aquire $N$ projections at $N$ different angles $\theta$.
