@@ -31,7 +31,7 @@ We call this process **backprojection**.
     <th><img align="center" src="../backprojection.png" ></th>
 <tr>
 <tr>
-    <td>The backprojection smeers the value of the projection uniformly over the paths of the rays</td>
+    <td>The backprojection smears the value of the projection uniformly over the paths of the rays</td>
 <tr>
 </table>
 
