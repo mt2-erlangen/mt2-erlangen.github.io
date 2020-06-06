@@ -17,7 +17,7 @@ line to your `gradle.build`.
 implementation 'sc.fiji:imglib-clearvolume:1.4.2'
 ```
 
-I guess, this only works if you are running Jave 1.8 (at least on my Linux machines)!
+I guess, this only works if you are running Java 1.8 (at least on my Linux machines)!
 
 ![](clearvolume_menu.png)
 
