@@ -96,7 +96,8 @@ Use one of the following links.
 - [Volume 2](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.9328.50.1.136792069117584747719409894247257396682)
 - [Volume 3](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.9328.50.1.245630263591502535745452645381329674063)
 
-Unzip the folder and drag the whole folder onto a running ImageJ.
+Unzip the folder and drag the whole folder onto a running ImageJ
+([if you have problems unzipping the files you might try official downloader from the website](https://www.cancerimagingarchive.net/nbia-search/?CollectionCriteria=RIDER%20Lung%20CT)).
 E.g. by creating a file `src/main/java/project/Playground.java`.
 
 
