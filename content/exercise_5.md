@@ -10,7 +10,7 @@ author="Stephan Seitz"
 
 **Submission deadline: 08.06.20 23:55h**
 
-Please ensure that all files you created also contain **your name and your IDM ID**/se and also your partner's name and IDM ID if you're not working alone.
+Please ensure that all files you created also contain **your name and your IDM ID** and also your partner's name and IDM ID if you're not working alone.
 
 Each exercise has **10 points**. You have to achieve **30 of 60 points in six homework exercises** to pass the module.
 
