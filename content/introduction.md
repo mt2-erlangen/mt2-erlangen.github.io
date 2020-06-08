@@ -58,7 +58,7 @@ Your first task is to find out more about CT and write an introduction for your 
 - Proof all your statements with **references**. You should use at least four distinct sources in your introduction that are
   not webpages.
 
-The introduction shound not be longer than one page and but at least half a page. 
+The introduction should not be longer than one page and but at least half a page. 
 <!--Whenever we refer to the maximum length of a section we're not counting figures and tables and just consider the length-->
 <!--of the text.-->
 Your introduction and conclusion should not contain any images.
