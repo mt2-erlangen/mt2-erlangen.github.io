@@ -141,7 +141,7 @@ Mention in one sentence how the Filtered Backprojection algorithm tries to solve
 a formula defining it.
 
 
-The text for this section should be about one page long. 
+The content for this section should be about one page long. 
 
 [Previous section](../sinogram)
 
