@@ -24,6 +24,8 @@ Use the same citation style for all your references.
 - Check your **spelling**: there shouldn't be any obvious spelling errors that can be detected by Word.
 - All **symbols in equations** should be explained in the text.
 - All **equations, figures and tables** (tables probably not needed) should be **numbered and referenced** in the text.
+- All your figures should look professional. They should not be blurry and images should not have window border of ImageJ.
+They should not overlap with the text.
 - All figures should have **captions** giving a brief description what the figure shows. The caption should be below the figure.
 - All **figures should be full-width**, not next text. A figure can contain multiple images next to each other.
 - A list of figures is not needed.
