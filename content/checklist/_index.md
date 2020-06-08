@@ -19,6 +19,7 @@ the exercise slides.
 - Create a **bibliography**. Follow the advises from the exercise slides.
 The bibliography must be sorted (either alphabetically when using the Name/Year citation style or
 by the order you use them in the text when numbering the sources).
+Use the same citation style for all your references.
 - Do **not use footnotes**!
 - Check your **spelling**: there shouldn't be any obvious spelling errors that can be detected by Word.
 - All **symbols in equations** should be explained in the text.
