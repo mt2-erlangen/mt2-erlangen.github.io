@@ -82,7 +82,7 @@ For histologic examinations colored subtances called stains are used to enhance 
 of different portions of the tissue.
 
 Use a suitable threshold to segment the individual sites with high contrast (0 background, 1 contrasted cells).
-You can use one of method to overlay your segmentation with the original image.
+You can use the following method to overlay your segmentation with the original image.
 
 ```java
     // In lme.DisplayUtils

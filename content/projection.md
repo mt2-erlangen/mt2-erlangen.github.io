@@ -15,7 +15,9 @@ In your project report you should...
 
 - explain the reader the physical process of **X-ray attenuation** and its material dependance.
 What materials in the human body attenuate more X-rays than others?
-- explain the **fundamental theorem** that describes this process (X-ray attenuation). Give a formula!
+How is this represented in a CT reconstruction? Or in other words: what quantity does a CT reconstruction actually show?
+Which kind of tissues appear therefore lighter and which darker?
+- explain the **fundamental theorem** hat describes this process (X-ray attenuation). Give a formula!
 Explain all the symbols that you use in the formula.
 - prove your explanations with references, also provide the source of the formula.
 
@@ -29,8 +31,9 @@ What are the coordinates $\vec{x}_{P}$ of a point $P$ on the line of the princip
 from origin $r$?
 
 In reality, not all X-rays cross the coordinate origin. 
-We assume parallel rays.
 What are the coordinates $\vec{x}_{P'}$ of a point $P'$ that is on a ray that hits the detector at coordinate $s$ in depedency of $r$ and $\theta$?
+We assume parallel rays.
+
 *Hint: What vector do you have to add to $P$ to get to $P'$?*
 
 ![drawing](../drawing_parallel_compressed.jpg)
@@ -89,6 +92,8 @@ Constructor and Setters/Getters:
 
     public void setVolume(Volume volume)
     public Volume volume()
+
+    public int numAngles() // == sinogram.width()
 ```
 
 We assume that we aquire $N$ projections at $N$ different angles $\theta$.
@@ -108,7 +113,8 @@ We could directly use those coordinates $\vec{x}$ to calculate the integral in L
 
 $$ I_{\textrm{mono}} = I_{0} \cdot  \exp\left(-\intop\mu\left(\vec{x}\right)\textrm{d}\vec{x}\right) = I_{0} \cdot  \exp\left(-\intop_{-R}^{R}\mu\left(r,\theta, s\right)\textrm{d}r\right)$$
 
-*$R$ is the radius of the circle circumscribing our rectangular slice. You can see it in the drawing.*
+*$R$ is the radius of the circle circumscribing our rectangular slice. You can see it in the drawing.
+The path integral goes along the path marked in yellow in the drawings.*
 
 We are only interested in the value of the line integral
 
@@ -116,7 +122,7 @@ $$ P(s, \theta) = \intop_{-R}^{R}\mu\left(r, s, \theta\right)\textrm{d}r $$
 
 and we have to replace the integral by a sum (computers cannot calculate integrals directly)
 
-$$ P(s, \theta) = \sum_{r=-R}^{R}\mu\left(r,\theta, s\right) $$
+$$ P(s, \theta) = \sum_{r=-R}^{R}\mu\left(r,\theta, s\right) \cdot \mathtt{spacing}$$
 
 Calculate this sum for a fixed $s$ and $\theta$ on a slice of our volume!
 You can use `volumeSlice.interpolatedAt(x,y)` to deterime $\mu(\vec{x})$ and access values of our slice.
@@ -162,7 +168,9 @@ the sinogram to the center.
 This can be done by muliplying `sIndex` with `sinogram.spacing()` (pixel size of the detector) and adding
 `sinogram.origin()[1]` (`== -sinogram.physicalHeight() * 0.5f`).
 
-We recommend you to test your algorithm using a simple image
+We recommend you to test your algorithm using a simple image.
+Choose a good size for the sinogram to capture the whole image (e.g. height == `volume.height`).
+For simplicity, you do not need to change the spacing of the volume or the sinogram.
 
 <table>
 <tr> 

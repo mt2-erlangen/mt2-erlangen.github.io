@@ -8,7 +8,7 @@ zola serve
 
 or just look into the contents of [`content`](content).
 
-You can also edit the contents of the markdown file using Gitlabs/Githubs web ui.
+You can also edit the contents of the markdown file using Gitlab's/Github's web ui.
 
 **Be sure to clone with submodules (to clone with the theme folder)!**
 

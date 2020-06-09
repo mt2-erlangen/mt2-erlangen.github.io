@@ -11,7 +11,7 @@ author = "Stephan Seitz"
 **Important: You have to work alone on your project work. No team partners allowed anymore 😔!**
 
 CT reconstruction treats the problem of recovering a three-dimensional volume from a set of X-ray images.
-So we will need two classes that represent our volume and our stack of projections.
+So we will need two classes that represent our volume and our stack of X-ray projections.
 It turns out that we can interpret our projections and our volume just as a list of 2-d images.
 
 <table>
@@ -89,13 +89,14 @@ You will need to update [`src/main/java/lme/DisplayUtils.java`](https://github.c
 ```
 
 You can download a volume from [the Cancer Imaging Archive](https://wiki.cancerimagingarchive.net/display/Public/RIDER+Lung+CT).
-Use one of the folowing links.
+Use one of the following links (it does not matter which CT volume you use).
 
 - [Volume 1](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.9328.50.1.152572901056058406211409536989510187742)
 - [Volume 2](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.9328.50.1.136792069117584747719409894247257396682)
 - [Volume 3](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.9328.50.1.245630263591502535745452645381329674063)
 
-Unzip the folder and drag the whole folder onto a running ImageJ.
+Unzip the folder and drag the whole folder onto a running ImageJ
+([if you have problems unzipping the files you might try official downloader from the website](https://www.cancerimagingarchive.net/nbia-search/?CollectionCriteria=RIDER%20Lung%20CT)).
 E.g. by creating a file `src/main/java/project/Playground.java`.
 
 
@@ -146,7 +147,7 @@ class Playground {
     public static void main(String[] args) {
         (new ij.ImageJ()).exitWhenQuitting(true);
         
-        Volume groundTruth = DisplayUtils.openDicomFolder("path/to/file.tif");
+        Volume groundTruth = DisplayUtils.openVolume("path/to/file.tif");
         groundTruth.show();
         
     }

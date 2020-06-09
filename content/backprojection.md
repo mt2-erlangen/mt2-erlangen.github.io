@@ -31,7 +31,7 @@ We call this process **backprojection**.
     <th><img align="center" src="../backprojection.png" ></th>
 <tr>
 <tr>
-    <td>The backprojection smeers the value of the projection uniformly over the paths of the rays</td>
+    <td>The backprojection smears the value of the projection uniformly over the paths of the rays</td>
 <tr>
 </table>
 
@@ -40,7 +40,7 @@ Use the following method, that is calculating the value that we want to smear ba
     // in mt.Projector
     public float backprojectRay(mt.Image sinogramSlice, int angleIdx, float s) {
         return sinogramSlice.interpolatedAt(angleIdx * sinogram.spacing, s) // * sinogram.spacing is necessary because spacing is not valid for our angle indices (actually each coordinate should have their own spacing. That's the revenge for us being lazy.).
-                / volume.physicalWidth() // we guess that this is the size of our object
+                / (volume.physicalWidth() * Math.sqrt(2)) // we guess that this is the size of our object, diagonal of our slice
                 / sinogramSlice.width()  // we will backproject for each angle. We can take the mean of all angle position that we have here.
                 ;
     }
@@ -141,5 +141,8 @@ Mention in one sentence how the Filtered Backprojection algorithm tries to solve
 a formula defining it.
 
 
-The text for this section should be about one page long. 
+The content for this section should be about one page long. 
+
+[Previous section](../sinogram)
+
 [Next section](../reconstruction)
