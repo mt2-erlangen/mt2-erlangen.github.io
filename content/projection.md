@@ -56,9 +56,10 @@ This part of the project work should be not longer than 1.5 pages.
 
 ## Implementation
 
-Our `Volume` class is basically a storage for a stack of images.
-We want to use it also to store our projections as so called sinogram.
-Create a class `mt.Projector` in a file `src/main/java/mt/Projector.java`.
+We already have an volume class which can store the stack of image slices. Additionally, we also want
+to store the projection images (referred as sinograms) for these stack of image slices. For this create
+create a class `mt.Projector` in a file `src/main/java/mt/Projector.java`, which can hold both volume slices
+and the sinograms.
 
 ```java
 // Your name here <your idm>
@@ -97,8 +98,10 @@ Constructor and Setters/Getters:
 
 We assume that we aquire $N$ projections at $N$ different angles $\theta$.
 All angles should have the same distance from each other and divide $2\cdot \pi$ in $N$ equal parts (we always use [radians](https://en.wikipedia.org/wiki/Radian) for angles).
-What is the value of the $n$th angle when $\theta = 0$ when $n=0$?
-Use this formula in the description of your implementation and implement the following method:
+
+Implement a method which computes angle value of $n^{th}$ angle index. We want to use the method such that at $n=0$ our angle value should return $\theta=0$, at $n=1$ returns $\theta= \frac{2\cdot \pi}{N}$, and so on. Think of a general formula to compute the $n^{th}$ angle and describe it briefly in the description of your implmentation.
+
+Use this formula to implement the following method:
 
 ```java
     // In mt.Projector
@@ -142,20 +145,28 @@ Next we want to call this function for every ray and every pixel of our sinogram
 ```
 
 To do that ...
+
 - Get the slice `sliceIdx` from `this.volume` using `getSlice`
-    - This is a slice of our volume with coordinates $x$ and $y$.
-    - $x$ runs from left to right
-    - $y$ runs from top to bottom
+  
+  - This is a slice of our volume with coordinates $x$ and $y$.
+  - $x$ runs from left to right
+  - $y$ runs from top to bottom
+  
 - Get the sinogram for that slice `sliceIdx` from `this.sinogramm` using `getSlice`
-    - This is a slice of our sinogram with physical coordinates $s$ and $\theta$.
-    - $\theta$ runs from left to right
-    - $s$ runs from top to bottom
+  - This is a slice of our sinogram with physical coordinates $s$ and $\theta$.
+  - $\theta$ runs from left to right
+  - $s$ runs from top to bottom
+  
 - Iterate over each pixel of the sinogram. I would use `angleIdx`, `sIndex`  as a loop variables.
-    - Calculate `s` from `sIndex` by muliplying with `sinogram.spacing()` (pixel size of the detector) and adding
-`sinogram.origin()[1]` (`== -sinogram.physicalHeight() * 0.5f`)
-    - Calculate `theata` from `angleIndex` by calling the function `getNthAngle`
-    - Call `projectRay` with `s` and `theta`
-    - Save the result to sinogram at positions `angleIndex` and `sIndex`
+  - Calculate the actual value of `s` from `sIndex`.
+  - Calculate `theata` from `angleIndex` by calling the function `getNthAngle`
+  - Call `projectRay` with `s` and `theta`
+  - Save the result to sinogram at positions `angleIndex` and `sIndex`
+
+__Hint__ Computing `s` from `sIndex` is just using the physical coordinates and shifting the origin of $s$ axis in
+the sinogram to the center.
+This can be done by muliplying `sIndex` with `sinogram.spacing()` (pixel size of the detector) and adding
+`sinogram.origin()[1]` (`== -sinogram.physicalHeight() * 0.5f`).
 
 We recommend you to test your algorithm using a simple image.
 Choose a good size for the sinogram to capture the whole image (e.g. height == `volume.height`).

@@ -10,7 +10,7 @@ author = "Stephan Seitz"
 ## Backprojection
 
 If we have a look at the sinogram values corresponding to one detector position we get some information about the projected object.
-For instance, we can se the profile of the projected circle in the following image.
+For instance, we can see the profile of the projected circle in the following image.
 
 ![sinogram](../sinogram.png)
 
@@ -78,10 +78,10 @@ To do this
 ## Reconstruction
 
 Next, we want to try out whether we can use our backprojection to reconstruct a volume.
-Whenever we want to test whether method works, we need something to compare it with.
+Whenever we want to test whether a method works, we need something to compare it with.
 The best possible result, the "true" values, is usally called ground truth.
-We can use one of the reconstructions that we downloaded from the Cancer Imaging Archive as a ground thruth volume.
-The best possible result for our reconstruction is to come as close as possible to the original volume.
+We can use one of the reconstructions that we downloaded from the Cancer Imaging Archive as a ground truth volume.
+The best possible result for our reconstruction is to come as close as possible to the original (ground truth) volume.
 
 Create a file `src/main/java/project/GroundTruthReconstruction.java`.
 
@@ -102,8 +102,8 @@ class GroundTruthReconstruction {
 ```
 
 It's important that we never mix up the ground truth with the results of our algorithm.
-Create therefore a instance of `Projector` that will have the task to simulate projections.
-You can call it `groundTruthProjector`. 
+Create therefore an instance of `Projector` that will have the task to simulate projections.
+You can call it `groundTruthProjector`.
 Open a test volume and create an empty (all pixels 0) sinogram. They are needed to call the constructor of `Projector`.
 
 Call `groundTruthProjector.projectSlice` with an arbiray slice index.
