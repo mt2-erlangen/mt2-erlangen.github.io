@@ -34,3 +34,11 @@ Project
 - [Sinogram](content/sinogram.md)
 - [Backprojection](content/backprojection.md)
 - [Iterative Reconstruction and Conclusion](content/reconstruction.md)
+
+## Rebuild Search Index 
+
+https://github.com/mre/tinysearch
+
+```bash
+tinysearch --optimize --path static public/json/index.html
+```
