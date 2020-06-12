@@ -12,13 +12,15 @@ highlight_code = true
 build_search_index = true
 generate_rss = true
 
+title = "Medizintechnik II – Exercises"
+
 #theme = "hyde"
 theme = "dinkleberg"
 #theme = "book"
 
 [extra]
 blog_logo="/imgs/common/prl_logo_small.png" #will appear on top header
-blog_title="Medizintechnik II - Exercises" #will appear on top header after logo
+blog_title="Medizintechnik II – Exercises" #will appear on top header after logo
 
 ## i18n words
 label_tags = "Tags"
