@@ -39,6 +39,7 @@ Use the following method, that is calculating the value that we want to smear ba
 ```java
     // in mt.Projector
     public float backprojectRay(mt.Image sinogramSlice, int angleIdx, float s) {
+        sinogramSlice.setOrigin(0.f, -sinogram.physicalHeight * 0.5f);
         return sinogramSlice.interpolatedAt(angleIdx * sinogram.spacing, s) // * sinogram.spacing is necessary because spacing is not valid for our angle indices (actually each coordinate should have their own spacing. That's the revenge for us being lazy.).
                 / (volume.physicalWidth() * Math.sqrt(2)) // we guess that this is the size of our object, diagonal of our slice
                 / sinogramSlice.width()  // we will backproject for each angle. We can take the mean of all angle position that we have here.
