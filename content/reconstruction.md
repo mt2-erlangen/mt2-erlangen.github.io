@@ -57,7 +57,7 @@ You should now be able to reconstruct volumes.
 ## Project Report
 
 For the project, **describe how your iterative reconstruction algorithm works**. You should not mention implementation details
-like variable name or function names. **Compare it with the Filtered Backprojection** algorithm! It's not necessary to explain 
+like variable or function names. **Compare it with the Filtered Backprojection** algorithm! It's not necessary to explain 
 Filtered Backprojection Algorithm in detail. Just highlight the main difference.
 
 **Test your reconstruction algorithm** on a slice of a CT reconstruction of the Cancer Imaging Archive.
