@@ -195,6 +195,11 @@ You may also apply `projectSlice` on all slices and display the sinogram.
   <source src="../sinogram_ct_scan.webm" type="video/webm">
 </video> 
 
+Or of the test image above
+
+<video controls loop width="300">
+  <source src="../sinogram_rotation.webm" type="video/webm">
+</video> 
 
 [Previous section](../volume)
 
