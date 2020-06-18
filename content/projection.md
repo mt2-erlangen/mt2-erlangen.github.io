@@ -187,6 +187,15 @@ For simplicity, you do not need to change the spacing of the volume or the sinog
 When you are using less angles the width of your sinogram will be smaller.
 Use less angles to compute the results faster.*
 
+You may also apply `projectSlice` on all slices and display the sinogram.
+`Ctrl+Shift+H` should reveal a rotating torso when using one the Cancer Archive scans:
+
+
+<video controls loop width="300">
+  <source src="../sinogram_ct_scan.webm" type="video/webm">
+</video> 
+
+
 [Previous section](../volume)
 
 [Next section](../sinogram)
