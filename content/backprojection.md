@@ -6,6 +6,26 @@ title = "Project Work 5 – Backprojection"
 author = "Stephan Seitz"
 +++
 
+<h1 style="background-color:Tomato;">Backprojection</h1>
+
+- Beschreiung Rückprojektion *3P*
+    - inklusive benutzter Parameter
+
+- Test *2P*
+    - Ungefilterte Rückprojektion eines Testbild *1P*
+    - Ungefilterte Rückprojektion eines CT Rekonstruktion *1P*
+
+- Interpretierung der Ergebnisse *2P*
+    - Kommentar zur Qualität der Rekonstruktion. Gefilterte Rückprojektion erzeugt eine unscharfe Rekonstruktion *1P*
+    - Die Gefilterte Rückprojektion führt eine Filterung  mit einem Ableitungsfilter vor (oder nach der) Rückprojektion durch *1P*
+
+- Fehler *2P*
+    - Benenunng der Fehler *1P*
+    - Beschreibung wie die Fehler gemessen wurden (z.B. MSE mit Gleichung) *1P*
+
+**TOTAL: 9 Points**
+
+<h1 style="background-color:Tomato;">Backprojection</h1>
 
 ## Backprojection
 
