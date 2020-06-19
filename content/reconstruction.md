@@ -6,6 +6,38 @@ title = "Project Work 6 – Iterative Reconstruction and Conclusion"
 author = "Stephan Seitz"
 +++
 
+<h1 style="background-color:Tomato;">Iterative Rekonstruktion</h1>
+
+- Beschreiung Rückprojektion *3P*
+    - inklusive benutzter Parameter
+
+- Vergleich mit Gefilterter Rückprojektion (einen Unterschied hervorheben und erklären): *2P*
+    - z.B.
+    - FBP: Vorfilterung, hier: keine Filterung
+    - FBP: kein iteratives Verfahren, hier: iterative Rückprojektierung des Fehlers
+
+- Test
+    - Schöne Bilder (mindestes Ground truth vs Ungefiltert vs nach einigen Iterationen) *3P*
+    - Plot: Abhängigkeit des Fehlers von der Iterationsnummer
+
+- Kommentar und Reflexion des eigenen Ergebnisses *2P*
+
+- Länge *1P*
+
+**TOTAL: 11 Points**
+
+<h1 style="background-color:Tomato;">Iterative Rekonstruktion</h1>
+
+
+<h1 style="background-color:Tomato;">Conclusion</h1>
+
+- Zusammenfassung *2P*
+- Reflektion/Bewertung der eigenen Arbeit/Ausblick auf mögliche Erweiterungen*2P*
+- Fazit *1P*
+
+**TOTAL: 5 Points**
+
+<h1 style="background-color:Tomato;">Conclusion</h1>
 # Iterative Reconstruction
 
 Using backprojection, we could achieve a blurry reconstruction result.
