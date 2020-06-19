@@ -148,8 +148,8 @@ for (int i = 0; i< projector.numAngles(); i++ ) {
 }
 ```
 
-This will wait 500ms between each backprojection. Do your rays meet at the right points? Use a simple test image with only
-only a few white pixels if not. 
+This will wait 500ms between each backprojection. Do your rays meet at the right points? Use a simple test image with
+only a single white circle if not. This should help you debug the issue.
 
 <table>
     <tr>
@@ -165,8 +165,8 @@ only a few white pixels if not.
         </td>
     </tr>
     <tr>
-        <th>Using 9 views</th>
-        <th>Using 100 views</th>
+        <th>Backprojection using 9 views</th>
+        <th>Backprojection using 100 views</th>
     </tr>
 </table>
 
