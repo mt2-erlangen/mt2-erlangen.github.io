@@ -76,8 +76,9 @@ public class Projector {
 }
 ```
 Imlement a constructor for this class.
-It should call `this.volume.centerOrigin()` and set the origin of each sinogram slice to `0.0f, -sinogram.physicalHeight()` so we use the same coordinate
-systems as in our drawings.
+It should call `this.volume.centerOrigin()` and set the origin of each sinogram slice to `0.0f, -sinogram.physicalHeight() * 0.5f` so we use the same coordinate
+systems as in our drawings (it might be handy to set the origin of sinogram to `0.0f, -sinogram.physicalHeight() * 0.5f, -sinogram.physicalDepth() * 0.5f`, requires a `Volume.setOrigin` method)
+
 ```java
     public Projector(mt.Volume projectionVolume, mt.Volume sinogram) {
         ... // Implementation here
