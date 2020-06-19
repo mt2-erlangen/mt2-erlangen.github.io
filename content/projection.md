@@ -6,6 +6,45 @@ title = "Project Work 3 – Projection"
 author = "Stephan Seitz"
 +++
 
+
+
+
+<h1 style="background-color:Tomato;">Projections</h1>
+
+- Röntgenstrahlenabschwächung: *5P*
+    - Unterschiedliche Materialien dämpfen Röntgenstrahlung unterschiedlich stark.
+    Exponentielle Abschwächung mit Parameter $\mu$ (Röntgendichte, Abschwächungskoeffizient) *1P*
+    - Mindestens ein stark dämpfendes Material, ein schwach dämpfendes Material *1P*
+    - Lambert-Beer im Text genannt *1P*
+    - Gleichung mit Beleg *1P*
+    - Erklärung der Formelzeichen *1P*
+
+- Erklärung Projektionsgeometrie *5P*
+    - verständliche, informatike und übersichtlice Grafik(en) *3P*
+    - Gleichung $x_P$ *1P*
+    $$ ( r * \cos($\theta) , r * \sin($\theta) $$
+    - Gleichung $x_P'$ *1P*
+    $$ ( r * \cos($\theta) - s * \sin(\theta) , r * \sin($\theta) + s * \cos(\theta)$$
+
+- Kontrastierung Parallelstrahlgeometrie/Fächerstrahlgeometrie bzw. Helixtrajectorie *2P*
+    - Implementierung: Parallelstrahlgeometrie, Moderne CTs: Fächerstrahlgeometrie *1P*
+    - Grund: Parallelstrahlakquisition ist langsam, aber möglich (jeden Strahl einzeln abmessen).
+     Moderne Scanner wollen aber schnell aufnehmen. *1P*
+
+- Beschreibung der Implementierung *8P*
+    - Beschreibung der Implementierung. *3P*
+    - Formel für Aufnahmewinkel *1P*
+    - Formel für Berechnung des Sinogramwerte *1P*
+    - Drei nicht berücksichtigte physikalische Effekte *3P*
+        - z.B. (Sensor-)Rauschen, nicht-lineare Abschwächung, Streuung,
+
+- Länge *1P*
+    
+
+**TOTAL: 21P**
+
+<h1 style="background-color:Tomato;">END Projections</h1>
+
 # Projections
 
 To understand how we can reconstruct a volume from X-ray images, we will first go through the process of how these X-ray images

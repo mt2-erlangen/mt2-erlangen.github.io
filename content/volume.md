@@ -6,6 +6,13 @@ title = "Project Work 2 – Volumes"
 author = "Stephan Seitz"
 +++
 
+
+<h1 style="background-color:Tomato;">Volume</h1>
+
+- Dieser Teil nicht relevant für Bericht
+
+<h1 style="background-color:Tomato;">End Volume</h1>
+
 # Getting started
 
 **Important: You have to work alone on your project work. No team partners allowed anymore 😔!**
@@ -166,6 +173,7 @@ Here a short summary of handy functions of ImageJ when working with CT images.
 - After selecting a line: Ctrl+K Line Plot
 - Ctrl+I: Get patient information of a DICOM
 - Look at a [3-d rendering with ClearVolume](../clearvolume)
+
 
 [Previous: Introduction](../introduction) 
 

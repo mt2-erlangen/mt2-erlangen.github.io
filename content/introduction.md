@@ -5,6 +5,45 @@ title = "Project Work 1 – Introduction"
 author = "Stephan Seitz"
 +++
 
+
+<h1 style="background-color:Tomato;">Äußere Form</h1>
+
+- Inhaltsverzeichnis/Titelseite/Seitenlayout: *1P* 
+
+
+- Zitierstil: *4P* 
+
+    - Alle Textstellen, Abbildungen und Gleichung sind hinreichend mit Quellen belegt
+    - Das Literaturverzeichnis ist vollständig, sortiert und in einheitlichen Stil
+
+- Verständlichkeit: *4P* 
+
+<h1 style="background-color:Tomato;">END Äußere Form</h1>
+
+
+
+<h1 style="background-color:Tomato;">Intro</h1>
+
+- Passender Titel: *1P*
+- CT? *5P*
+    - Definition und Zweck *1P*
+    - Wann entdeckt *1P*
+    - Benutzt Röntgenstrahlen *1P*
+    - Mindenstens eine belegte Verbesserung von modernen CTs *1P*
+        - z.B. höhere Auflösung, schnellere Scanzeiten
+    - Räumliche Auflösung (Bruchteil von Millimetern) *1P*
+- Vor- / Nachteile *4P*
+    - 2P Vorteile, 2P Nachteile
+    - Halber Punkt Abzug, falls Vorteil ohne Vergleich mit anderer Modalität
+- Kurzer Überblick *2P*
+- 4 Refernzen *4P*
+    - Jede valide Referenz 1P falls sie existiert (Zitierstil wird in äußerer Form bewertet)
+- Länge und keine 1P
+
+**TOTAL: 17P**
+
+<h1 style="background-color:Tomato;">END Intro</h1>
+
 # Contents
 
 - [Introduction](../introduction) *Tafelübung 9. Juni*
@@ -58,12 +97,15 @@ Your first task is to find out more about CT and write an introduction for your 
 - Proof all your statements with **references**. You should use at least four distinct sources in your introduction that are
   not webpages.
 
+
 The introduction should not be longer than one page and but at least half a page. 
-<!--Whenever we refer to the maximum length of a section we're not counting figures and tables and just consider the length-->
-<!--of the text.-->
+
+
 Your introduction and conclusion should not contain any images.
 
 Please have a look on our [checklist for a good project report](../checklist).
+<!--Whenever we refer to the maximum length of a section we're not counting figures and tables and just consider the length-->
+<!--of the text.-->
 
 [Next task](../volume)
 
