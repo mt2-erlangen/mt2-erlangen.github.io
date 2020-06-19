@@ -22,11 +22,11 @@ author = "Stephan Seitz"
 - Erklärung Projektionsgeometrie *5P*
     - verständliche, informatike und übersichtlice Grafik(en) *3P*
     - Gleichung $x_P$ *1P*
-    $$ ( r * \cos($\theta) , r * \sin($\theta) $$
+    $$ ( r \cdot \cos(\theta) , r \cdot \sin(\theta) $$
     - Gleichung $x_P'$ *1P*
-    $$ ( r * \cos($\theta) - s * \sin(\theta) , r * \sin($\theta) + s * \cos(\theta)$$
+    $$ ( r \cdot \cos(\theta) - s \cdot \sin(\theta) , r \cdot \sin(\theta) + s \cdot \cos(\theta))$$
 
-- Kontrastierung Parallelstrahlgeometrie/Fächerstrahlgeometrie bzw. Helixtrajectorie *2P*
+- Kontrastierung Parallelstrahlgeometrie/Fächerstrahlgeometrie bzw. Helixtrajektorie *2P*
     - Implementierung: Parallelstrahlgeometrie, Moderne CTs: Fächerstrahlgeometrie *1P*
     - Grund: Parallelstrahlakquisition ist langsam, aber möglich (jeden Strahl einzeln abmessen).
      Moderne Scanner wollen aber schnell aufnehmen. *1P*
