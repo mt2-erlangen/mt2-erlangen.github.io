@@ -125,6 +125,53 @@ You can add the following method to `mt.Volume` to create copies.
 Create a new projector `reconstructionProjector` with the empty volume and the copy of our sinogram.
 Use `backprojectSlice(...)` to create your first reconstruction of a slice.
 
+A good way to test your implementation is to incremently apply more and more backprojections on your reconstruction.
+When you calculated the `sinogram` for `SLICE_IDX` you can use
+
+```java
+// in project.Playground.java
+
+// Choose the slice in the middle. Hopefully showing something interesting.
+final int SLICE_IDX = volume.depth() / 2;
+
+for (int i = 0; i< projector.numAngles(); i++ ) {
+    try {
+        TimeUnit.MILLISECONDS.sleep(500);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+    projector.backprojectSlice(SLICE_IDX, i);
+    projector.volume().getSlice(SLICE_IDX).show();
+
+    //// Optionally save the intermediate results to a file:
+    //DisplayUtils.saveImage(projector.volume().getSlice(SLICE_IDX), "/media/dos/shepp_9_"+i+".png");
+}
+```
+
+This will wait 500ms between each backprojection. Do your rays meet at the right points? Use a simple test image with only
+only a few white pixels if not. 
+
+<table>
+    <tr>
+        <td> 
+            <video controls loop width="300">
+            <source src="../shepp_9_cropped.webm" type="video/webm">
+            </video> 
+        </td>
+        <td> 
+            <video controls loop width="300">
+            <source src="../shepp_100_cropped.webm" type="video/webm">
+            </video> 
+        </td>
+    </tr>
+    <tr>
+        <th>Using 9 views</th>
+        <th>Using 100 views</th>
+    </tr>
+</table>
+
+
+
 ## Project Report
 
 For the project report, you should briefly describe your backprojection reconstruction algorithm.
