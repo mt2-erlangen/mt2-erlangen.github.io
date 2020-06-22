@@ -33,7 +33,7 @@ author = "Stephan Seitz"
 <h1 style="background-color:Tomato;">Conclusion</h1>
 
 - Zusammenfassung *2P*
-- Reflektion/Bewertung der eigenen Arbeit/Ausblick auf mögliche Erweiterungen*2P*
+- Reflexion/Bewertung der eigenen Arbeit/Ausblick auf mögliche Erweiterungen *2P*
 - Fazit *1P*
 
 **TOTAL: 5 Points**

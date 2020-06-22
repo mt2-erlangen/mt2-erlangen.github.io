@@ -27,18 +27,18 @@ author = "Stephan Seitz"
 - Zitierstil: *3P* 
 
     - Alle Textstellen, Abbildungen und Gleichung sind hinreichend mit wissenschaftlich Quellen angemessener Qualität belegt.
-Quellen sind wissenschaftlich gesichert und nur eine Minderheit der Quellen sind direkte Referenzen zu Internetseiten.*2P*
+Quellen sind wissenschaftlich gesichert und nur eine Minderheit der Quellen sind direkte Referenzen zu Internetseiten. *2P*
     - Das Literaturverzeichnis ist vollständig, sortiert und in einheitlichen Stil *1P*
 
 - Verständlichkeit: *3P* 
-    - Text ist als logisch zusammenhängender, prägnater Fließtextgeschrieben
+    - Text ist als logisch zusammenhängender, prägnater Fließtext geschrieben
     - Text ist ohne zusätzliche Hilfsmaterialien verständlich und stellt das implementierte Projekt sachgerecht da
     - Abbildungen und Diagramme sind passend gewählt, integrieren sich gut in den Text und werden vom Text aufgegriffen
 - Äußere Form *3P*
     - Text enthält nicht auffällig viele Rechtschreibfehler, die von einem Computerprogram erkannt werden können
 und die Sprache ist für einen wissenschaftlichen Text angemessen gewählt (keine Umgangssprache und korrekte Fachbegriffe gewählt)
     - Klares und einheitliches Layout, Grafiken sind nicht verschoben oder unscharf, es werden keine Fußnoten verwendet
-    - Grafiken/Diagramme/Gleichung sind durch nummeriert, Grafiken,Diagramme haben Unterschriften
+    - Grafiken/Diagramme/Gleichung sind durch nummeriert, Grafiken/Diagramme haben Unterschriften
 
 <h1 style="background-color:Tomato;">END Äußere Form</h1>
 
@@ -57,10 +57,10 @@ und die Sprache ist für einen wissenschaftlichen Text angemessen gewählt (kein
 - Vor- / Nachteile *4P*
     - 2P Vorteile, 2P Nachteile
     - Halber Punkt Abzug, falls Vorteil/Nachteil ohne Vergleich mit anderer Modalität
-- Kurzer Überblick *1P*
+- Kurzer Überblick (Wie ist der Bericht aufgebaut? Was steht in welchen Abschnitt?) *1P*
 - 4 Refernzen *2P*
     - Jede valide Referenz 0.5P falls sie existiert, wissenschaftlich gesichert und relevant für Textstelle (Zitierstil wird in äußerer Form bewertet)
-- Länge und keine **1P**
+- Länge wie in Anleitung und keine Bilder verwendet **1P**
 
 **TOTAL: 14P**
 

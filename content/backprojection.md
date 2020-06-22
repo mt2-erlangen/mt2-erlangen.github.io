@@ -22,7 +22,7 @@ author = "Stephan Seitz"
 
 - Fehler *2P*
     - Benenunng der Fehler *1P*
-    - Beschreibung wie die Fehler gemessen wurden (z.B. MSE mit Gleichung) *1P*
+    - Beschreibung, wie die Fehler gemessen wurden (z.B. MSE mit Gleichung) *1P*
 
 **TOTAL: 9 Points**
 
