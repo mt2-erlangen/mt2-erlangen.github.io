@@ -9,7 +9,8 @@ author = "Stephan Seitz"
 <h1 style="background-color:Tomato;">Backprojection</h1>
 
 - Beschreiung Rückprojektion *3P*
-    - inklusive benutzter Parameter
+    - Beschreibung *2P*
+    - inklusive benutzter Parameter *1P*
 
 - Test *2P*
     - Ungefilterte Rückprojektion eines Testbild *1P*

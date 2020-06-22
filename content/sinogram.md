@@ -10,15 +10,15 @@ author = "Stephan Seitz"
 
  - Ein Bild und ein Sinogram von einem Testbild *1P*
  - Ein Bild und ein Sinogram von einem CT-Schnittbild *1P*
- - Erklärung *4P*
-    - Sinogram: Eine Koordinatenache: Ort auf Detektorzeile 
-    - Radon-Transformation: Integraltransformation der orthografische Projektionen entlang einer Kreisbahn beschreibt.
-    - Radon-Trafo in der Theorie invertierbar
+ - Erklärung *3P*
+    - Sinogram: Eine Koordinatenache: Ort auf Detektorzeile, Koordinate Aufnahmewinkel *1P*
+    - Radon-Transformation: Integraltransformation der orthografische Projektionen entlang einer Kreisbahn beschreibt. *1P*
+    - Radon-Trafo in der Theorie invertierbar *1P*
 - Spalten der Randon-Transformation an einer Stelle $\theta$ symmetrisch zur Zeile $\theta + \pi$, da Positionen von Quelle und Detektor vertauscht.
 Gleiche Strahlenwege (nur spiegelverkehrt auf dem Detektor). 180°-Grad daher für Parallelstrahlen ausreichend. *2P*
 
 
-**Total: 8P**
+**Total: 7P**
 
 <h1 style="background-color:Tomato;">Sinogram</h1>
 

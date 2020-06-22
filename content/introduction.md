@@ -5,18 +5,38 @@ title = "Project Work 1 – Introduction"
 author = "Stephan Seitz"
 +++
 
+<h1 style="background-color:Blue;">Gesamt</h1>
+
+ - **50P** Code
+ - **10P** Äußere Form
+ - **60P** Fragen
+    - **14P** Teil 1
+    - **19P** Teil 2
+    - **7P** Teil 4
+    - **9P** Teil 5
+    - **11P** Teil 6
+
+<h1 style="background-color:Blue;">Gesamt</h1>
 
 <h1 style="background-color:Tomato;">Äußere Form</h1>
 
-- Inhaltsverzeichnis/Titelseite/Seitenlayout: *1P* 
+- Inhaltsverzeichnis/Titelseite/Generelles Seitenlayout nach Vorlage: *1P* 
 
+- Zitierstil: *3P* 
 
-- Zitierstil: *4P* 
+    - Alle Textstellen, Abbildungen und Gleichung sind hinreichend mit wissenschaftlich Quellen angemessener Qualität belegt.
+Quellen sind wissenschaftlich gesichert und nur eine Minderheit der Quellen sind direkte Referenzen zu Internetseiten.*2P*
+    - Das Literaturverzeichnis ist vollständig, sortiert und in einheitlichen Stil *1P*
 
-    - Alle Textstellen, Abbildungen und Gleichung sind hinreichend mit Quellen belegt
-    - Das Literaturverzeichnis ist vollständig, sortiert und in einheitlichen Stil
-
-- Verständlichkeit: *4P* 
+- Verständlichkeit: *3P* 
+    - Text ist als logisch zusammenhängender, prägnater Fließtextgeschrieben
+    - Text ist ohne zusätzliche Hilfsmaterialien verständlich und stellt das implementierte Projekt sachgerecht da
+    - Abbildungen und Diagramme sind passend gewählt, integrieren sich gut in den Text und werden vom Text aufgegriffen
+- Äußere Form *3P*
+    - Text enthält nicht auffällig viele Rechtschreibfehler, die von einem Computerprogram erkannt werden können
+und die Sprache ist für einen wissenschaftlichen Text angemessen gewählt (keine Umgangssprache und korrekte Fachbegriffe gewählt)
+    - Klares und einheitliches Layout, Grafiken sind nicht verschoben oder unscharf, es werden keine Fußnoten verwendet
+    - Grafiken/Diagramme/Gleichung sind durch nummeriert, Grafiken,Diagramme haben Unterschriften
 
 <h1 style="background-color:Tomato;">END Äußere Form</h1>
 
@@ -34,13 +54,13 @@ author = "Stephan Seitz"
     - Räumliche Auflösung (Bruchteil von Millimetern) *1P*
 - Vor- / Nachteile *4P*
     - 2P Vorteile, 2P Nachteile
-    - Halber Punkt Abzug, falls Vorteil ohne Vergleich mit anderer Modalität
-- Kurzer Überblick *2P*
-- 4 Refernzen *4P*
-    - Jede valide Referenz 1P falls sie existiert (Zitierstil wird in äußerer Form bewertet)
-- Länge und keine 1P
+    - Halber Punkt Abzug, falls Vorteil/Nachteil ohne Vergleich mit anderer Modalität
+- Kurzer Überblick *1P*
+- 4 Refernzen *2P*
+    - Jede valide Referenz 0.5P falls sie existiert, wissenschaftlich gesichert und relevant für Textstelle (Zitierstil wird in äußerer Form bewertet)
+- Länge und keine **1P**
 
-**TOTAL: 17P**
+**TOTAL: 14P**
 
 <h1 style="background-color:Tomato;">END Intro</h1>
 
