@@ -15,6 +15,7 @@ author = "Stephan Seitz"
     - **7P** Teil 4
     - **9P** Teil 5
     - **11P** Teil 6
+
 **TOTAL: 120P**
 
 <h1 style="background-color:Blue;">Gesamt</h1>
