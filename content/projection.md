@@ -158,11 +158,11 @@ The path integral goes along the path marked in yellow in the drawings.*
 
 We are only interested in the value of the line integral
 
-$$ P(s, \theta) = \intop_{-R}^{R}\mu\left(r, s, \theta\right)\textrm{d}r $$
+$$ P(\theta, s) = \intop_{-R}^{R}\mu\left(r, s, \theta\right)\textrm{d}r $$
 
 and we have to replace the integral by a sum (computers cannot calculate integrals directly)
 
-$$ P(s, \theta) = \sum_{r=-R}^{R}\mu\left(r,\theta, s\right) \cdot \mathtt{spacing}$$
+$$ P(\theta, s) = \sum_{r=-R}^{R}\mu\left(r,\theta, s\right) \cdot \mathtt{spacing}$$
 
 Calculate this sum for a fixed $s$ and $\theta$ on a slice of our volume!
 You can use `volumeSlice.interpolatedAt(x,y)` to deterime $\mu(\vec{x})$ and access values of our slice.
