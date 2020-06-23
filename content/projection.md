@@ -24,7 +24,8 @@ Exponentielle Abschwächung mit Parameter $\mu$ (Röntgendichte, Abschwächungsk
     - Gleichung $x_P$ *1P*
     $$ \left( r \cdot \cos\left(\theta\right) , r \cdot \sin\left(\theta\right) \right)$$
     - Gleichung $x_P'$ *1P*
-    $$ \left( r \cdot \cos\left(\theta\right) - s \cdot \sin\left(\theta\right) , r \cdot \sin\left(\theta\right) + s \cdot \cos\left(\theta\right)\right)$$
+    $$ \left( r \cdot \cos\left(\theta\right) + s \cdot \sin\left(\theta\right) , r \cdot \sin\left(\theta\right) - s \cdot \cos\left(\theta\right)\right)$$
+kann auch um 180° verschoben sein.
 
 - Kontrastierung Parallelstrahlgeometrie/Fächerstrahlgeometrie bzw. Helixtrajektorie *2P*
     - Implementierung: Parallelstrahlgeometrie, Moderne CTs: Fächerstrahlgeometrie *1P*
