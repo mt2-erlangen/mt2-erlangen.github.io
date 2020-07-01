@@ -20,7 +20,7 @@ Generate two sinograms from two volume slices:
 - Show both the volume slices and the sinograms.
 Explain to the reader what they are seeing. What is the radon transform?
 Can the radon transform be inverted?
-- Do the sinograms contain some kind of symmetry? What is the reason for that.
+- Do the sinograms contain some kind of symmetry? What is the reason for that?
 Do we really need a 360° degree scan?
 
 <!--How can the Fourier-Slice-Theorem be used to reconstruct.-->
