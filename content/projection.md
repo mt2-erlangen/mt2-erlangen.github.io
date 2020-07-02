@@ -89,7 +89,7 @@ systems as in our drawings (it might be handy to set the origin of sinogram to `
 Constructor and Setters/Getters:
 ```java
     public void setSinogram(Volume sinogram)
-    public Volume singogram()
+    public Volume sinogram()
 
     public void setVolume(Volume volume)
     public Volume volume()
