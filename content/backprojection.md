@@ -132,7 +132,7 @@ When you calculated the `sinogram` for `SLICE_IDX` you can use
 // in project.GroundTruthReconstruction.java
 
 // Choose the slice in the middle. Hopefully showing something interesting.
-final int SLICE_IDX = volume.depth() / 2;
+final int SLICE_IDX = ????; // < Use a index for which you already calculated `projectSlice`
 
 for (int i = 0; i< projector.numAngles(); i++ ) {
     try {
