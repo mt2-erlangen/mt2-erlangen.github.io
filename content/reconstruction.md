@@ -29,6 +29,8 @@ It should
 - call `backprojectSlice` with the current `sliceIdx`
 - repeat all this for `numIterations` iterations
 
+![pic alt](../iterative.png "Iterative Reconstruction")
+
 So we're now doing an reconstruction of the error sinogram and adding it to our blurry image.
 Does this reduce our error?
 
