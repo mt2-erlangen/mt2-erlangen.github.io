@@ -91,7 +91,8 @@ report. Decide which information is important for the reader to understand your 
   What physical effects were neglected in our simulation but are present in reality?
   Name at least three non-idealities of real systems.
 
-This part of the project work should be not longer than <strike>1.5 pages</strike>. **After some remarks from you: 2 pages are also ok.**.
+This part of the project work should be not longer than <strike>1.5 pages</strike>.
+**After some remarks from you: 2 pages are also ok.**.
 
 ## Implementation
 
