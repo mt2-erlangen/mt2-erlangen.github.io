@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://mt2-erlangen.github.io/sitemap.xml
