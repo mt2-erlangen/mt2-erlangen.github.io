@@ -10,11 +10,11 @@ author = "Stephan Seitz"
  - **50P** Code
  - **10P** Äußere Form
  - **60P** Fragen
-    - **14P** Teil 1
-    - **19P** Teil 2
-    - **7P** Teil 4
-    - **9P** Teil 5
-    - **11P** Teil 6
+    - **14P** Teil 1: Introduction
+    - **19P** Teil 3: Projection
+    - **7P** Teil 4: Sinogram
+    - **9P** Teil 5: Backprojection
+    - **11P** Teil 6: Iterative Reconstruction and Conclusion
 
 **TOTAL: 120P**
 
@@ -22,23 +22,28 @@ author = "Stephan Seitz"
 
 <h1 style="background-color:Tomato;">Äußere Form</h1>
 
-- Inhaltsverzeichnis/Titelseite/Generelles Seitenlayout nach Vorlage: *1P* 
 
-- Zitierstil: *3P* 
+- Zitierstil: *4P* 
 
-    - Alle Textstellen, Abbildungen und Gleichung sind hinreichend mit wissenschaftlich Quellen angemessener Qualität belegt.
-Quellen sind wissenschaftlich gesichert und nur eine Minderheit der Quellen sind direkte Referenzen zu Internetseiten. *2P*
+    - Alle Textstellen, Abbildungen (sofern nicht vollständig selbst erstellt) und Gleichung sind hinreichend mit wissenschaftlich Quellen angemessener Qualität belegt.
+Quellen sind wissenschaftlich gesichert und nur eine Minderheit der Quellen sind direkte Referenzen zu Internetseiten.
+Zitate und Referenzen dokumentieren diese Quellen ausreichend. *2P*
+    - Die Herkunft aller Grafiken inklusive eventuell verwendeter Datensätze ist dokumentiert. *1P*
     - Das Literaturverzeichnis ist vollständig, sortiert und in einheitlichen Stil *1P*
 
 - Verständlichkeit: *3P* 
-    - Text ist als logisch zusammenhängender, prägnater Fließtext geschrieben
-    - Text ist ohne zusätzliche Hilfsmaterialien verständlich und stellt das implementierte Projekt sachgerecht da
-    - Abbildungen und Diagramme sind passend gewählt, integrieren sich gut in den Text und werden vom Text aufgegriffen
+    - Text ist als logisch zusammenhängender, prägnater Fließtext geschrieben. Keine Stichpunkte. *1P*
+    - Text ist ohne zusätzliche Hilfsmaterialien verständlich und stellt das implementierte Projekt sachgerecht da. *1P*
+    - Abbildungen und Diagramme sind passend gewählt, integrieren sich gut in den Text und werden vom Text aufgegriffen *1P*
+
 - Äußere Form *3P*
     - Text enthält nicht auffällig viele Rechtschreibfehler, die von einem Computerprogram erkannt werden können
-und die Sprache ist für einen wissenschaftlichen Text angemessen gewählt (keine Umgangssprache und korrekte Fachbegriffe gewählt)
-    - Klares und einheitliches Layout, Grafiken sind nicht verschoben oder unscharf, es werden keine Fußnoten verwendet
-    - Grafiken/Diagramme/Gleichung sind durch nummeriert, Grafiken/Diagramme haben Unterschriften
+und die Sprache ist für einen wissenschaftlichen Text angemessen gewählt (keine Umgangssprache,
+keine nicht erklärten oder nicht angemessenen Abkürzungen und korrekte Fachbegriffe gewählt) *1P*
+    - Klares und einheitliches Layout nach Vorlage.
+Ein angemessenenes Inhaltsverzeichnis ist vorhanden.
+Grafiken sind weder verschoben noch unscharf, es werden keine Fußnoten verwendet *1P*
+    - Grafiken/Diagramme/Gleichung sind durchnummeriert, Grafiken/Diagramme haben Unterschriften. *1P*
 
 <h1 style="background-color:Tomato;">END Äußere Form</h1>
 

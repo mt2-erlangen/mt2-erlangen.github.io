@@ -20,7 +20,7 @@ Exponentielle Abschwächung mit Parameter $\mu$ (Röntgendichte, Abschwächungsk
     - Erklärung der Formelzeichen *1P*
 
 - Erklärung Projektionsgeometrie *4P*
-    - verständliche, informatike und übersichtlice Grafik(en) *2P*
+    - verständliche, informative und übersichtlice Grafik(en) *2P*
     - Gleichung $x_P$ *1P*
     $$ \left( r \cdot \cos\left(\theta\right) , r \cdot \sin\left(\theta\right) \right)$$
     - Gleichung $x_P'$ *1P*
