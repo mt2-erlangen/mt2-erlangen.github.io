@@ -17,6 +17,13 @@ line to your `gradle.build`.
 implementation 'sc.fiji:imglib-clearvolume:1.4.2'
 ```
 
+You need to start ImageJ with (instead of `(new ij.ImageJ()).exitWhenQuitting(true);`)
+
+```java
+    net.image.ImageJ ij = new net.imagej.ImageJ();
+    ij.launch();
+```
+
 I guess, this only works if you are running Java 1.8 (at least on my Linux machines)!
 
 ![](clearvolume_menu.png)
