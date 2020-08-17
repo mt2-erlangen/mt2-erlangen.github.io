@@ -21,9 +21,8 @@ Exponentielle Abschwächung mit Parameter $\mu$ (Röntgendichte, Abschwächungsk
 
 - Erklärung Projektionsgeometrie *4P*
     - verständliche, informative und übersichtlice Grafik(en) *2P*
-    - Gleichung $x_P$ *1P*
-    $$ \left( r \cdot \cos\left(\theta\right) , r \cdot \sin\left(\theta\right) \right)$$
-    - Gleichung $x_P'$ *1P*
+    - Gleichung $x_P$ $$ \left( r \cdot \cos\left(\theta\right) , r \cdot \sin\left(\theta\right) \right)$ *1P*
+        - Gleichung $x_P'$ *1P*
     $$ \left( r \cdot \cos\left(\theta\right) - s \cdot \sin\left(\theta\right) , r \cdot \sin\left(\theta\right) + s \cdot \cos\left(\theta\right)\right)$$
 
 - Kontrastierung Parallelstrahlgeometrie/Fächerstrahlgeometrie bzw. Helixtrajektorie *2P*

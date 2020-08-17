@@ -11,10 +11,13 @@ author = "Stephan Seitz"
  - **10P** Äußere Form
  - **60P** Fragen
     - **14P** Teil 1: Introduction
+    - -- Teil 2: Nicht für Bericht relevant
     - **19P** Teil 3: Projection
     - **7P** Teil 4: Sinogram
     - **9P** Teil 5: Backprojection
     - **11P** Teil 6: Iterative Reconstruction and Conclusion
+      - **8P** Iterative Reconstruction
+      - **3P** Conclusion
 
 **TOTAL: 120P**
 

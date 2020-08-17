@@ -8,8 +8,8 @@ author = "Stephan Seitz"
 
 <h1 style="background-color:Tomato;">Iterative Rekonstruktion</h1>
 
-- Beschreiung Rückprojektion *3P*
-    - Beschreiung *2P*
+- Beschreiung Rückprojektion *2P*
+    - Beschreiung *1P*
     - inklusive benutzter Parameter *1P*
 
 - Vergleich mit Gefilterter Rückprojektion (einen Unterschied hervorheben und erklären): *1P*
@@ -17,26 +17,24 @@ author = "Stephan Seitz"
     - FBP: Vorfilterung, hier: keine Filterung
     - FBP: kein iteratives Verfahren, hier: iterative Rückprojektierung des Fehlers
 
-- Test *4P*
-    - Schöne Bilder (mindestes Ground truth vs Ungefiltert vs nach einigen Iterationen) *3P*
+- Test *3P*
+    - Schöne Bilder (mindestes Ground truth vs Ungefiltert vs nach einigen Iterationen) *2P*
     - Plot: Abhängigkeit des Fehlers von der Iterationsnummer *1P*
 
 - Kommentar und Reflexion des eigenen Ergebnisses *2P*
 
-- Länge *1P*
-
-**TOTAL: 11 Points**
+**TOTAL: 8 Points**
 
 <h1 style="background-color:Tomato;">Iterative Rekonstruktion</h1>
 
 
 <h1 style="background-color:Tomato;">Conclusion</h1>
 
-- Zusammenfassung *2P*
-- Reflexion/Bewertung der eigenen Arbeit/Ausblick auf mögliche Erweiterungen *2P*
+- Zusammenfassung *1P*
+- Reflexion/Bewertung der eigenen Arbeit/Ausblick auf mögliche Erweiterungen *1P*
 - Fazit *1P*
 
-**TOTAL: 5 Points**
+**TOTAL: 3 Points**
 
 <h1 style="background-color:Tomato;">Conclusion</h1>
 
