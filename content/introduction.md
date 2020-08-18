@@ -44,7 +44,7 @@ Zitate und Referenzen dokumentieren diese Quellen ausreichend. *2P*
 und die Sprache ist für einen wissenschaftlichen Text angemessen gewählt (keine Umgangssprache,
 keine nicht erklärten oder nicht angemessenen Abkürzungen und korrekte Fachbegriffe gewählt) *1P*
     - Klares und einheitliches Layout nach Vorlage.
-Ein angemessenenes Inhaltsverzeichnis ist vorhanden.
+Ein angemessenes Inhaltsverzeichnis ist vorhanden.
 Grafiken sind weder verschoben noch unscharf, es werden keine Fußnoten verwendet *1P*
     - Grafiken/Diagramme/Gleichung sind durchnummeriert, Grafiken/Diagramme haben Unterschriften. *1P*
 
