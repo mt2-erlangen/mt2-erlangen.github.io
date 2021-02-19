@@ -1,9 +1,9 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
-* @param {string} query 
-* @param {number} num_results 
-* @returns {any} 
+* @param {string} query
+* @param {number} num_results
+* @returns {any}
 */
 export function search(query: string, num_results: number): any;
 
