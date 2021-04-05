@@ -93,10 +93,11 @@
     {{- macro::organization(itemprop=false) }}
     <header class="header">
         <div class="container">
-            <a class="title" href="{{config.base_url}}">
+            <!--<a href="{{config.base_url}}" >Anchor Text</a>-->
+            <a class="title" href=".">
                 {%- block header_title %}
                     {% if config.extra.blog_logo -%}
-                        <img src="{{ config.extra.blog_logo }}" alt="">
+                    <img src="{{ config.extra.blog_logo }}" alt="" href="{{config.base_url}}">
                     {%- endif %}
                     {% if config.extra.blog_title -%}
                         <h1 >{{config.extra.blog_title}}</h1>

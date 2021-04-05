@@ -1,34 +1,40 @@
 +++
 paginate_by = 20
 sort_by = "date"
+title = "Semester 2020"
+
 [extra]
 author = "Stephan Seitz"
 +++
 
 # Homework
 
-[Exercise 1](./exercise-1)
+[Exercise 1](/archive/2020/exercise-1)
 
-[Exercise 2](./exercise-2)
+[Exercise 2](/archive/2020/exercise-2)
 
-[Exercise 3](./exercise-3)
+[Exercise 3](/archive/2020/exercise-3)
 
-[Exercise 4](./exercise-4)
+[Exercise 4](/archive/2020/exercise-4)
 
-[Exercise 5](./exercise-5)
+[Exercise 5](/archive/2020/exercise-5)
 
-[Exercise 6](./exercise-6)
+[Exercise 6](/archive/2020/exercise-6)
 
 # Project Work
 
-[Introduction](./introduction)
+[Introduction](/archive/2020/introduction)
 
-[Volume](./volume)
+[Volume](/archive/2020/volume)
 
-[Projection](./projection)
+[Projection](/archive/2020/projection)
 
-[Sinogram](./sinogram)
+[Sinogram](/archive/2020/sinogram)
 
-[Backprojection](./backprojection.md)
+[Backprojection](/archive/2020/backprojection)
 
-[Reconstruction](./reconstruction)
+[Reconstruction](/archive/2020/reconstruction)
+
+# Current Semester
+
+[Go to current semester](/)
