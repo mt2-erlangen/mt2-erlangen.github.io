@@ -42,7 +42,6 @@ Signal should have the following members
 ```java
     protected float[] buffer; // Array to store signal values
     protected String name;    // Name of the signal
-    protected int minIndex;   // Index of first array element (should be 0 for signals)
 ```
 
 Implement two constructors for `Signal`
@@ -57,8 +56,6 @@ Implement the following getter methods for `Signal`
 ```java
     public int size()        // Size of the signal
     public float[] buffer()  // Get the internal array 
-    public int minIndex()    // Get lowest index of signal (that is stored in buffer)
-    public int maxIndex()    // Get highest index of signal (that is stored in buffer)
     public String name()     // Get the name of the signal
 ```
 
@@ -71,23 +68,23 @@ To test it, create a `Signal` with arbitray values in the main method of `src/ma
     }
 ```
 
-In our black board exercises, we agreed that we want to continue our signals with zeros where we don't have any values stored.
-If we access indices of our `Signal` with values smaller than `minIndex()` or larger `maxIndex()` we want to return `0.0f`.
-If a user accesses an index between `minIndex()` and `maxIndex()` we want to return the corresponding value stored in our array.
+<!--In our black board exercises, we agreed that we want to continue our signals with zeros where we don't have any values stored.-->
+<!--If we access indices of our `Signal` with values smaller than `minIndex()` or larger `maxIndex()` we want to return `0.0f`.-->
+<!--If a user accesses an index between `minIndex()` and `maxIndex()` we want to return the corresponding value stored in our array.-->
 
 
-![minIndex](../signal-min-max.png)
+<!--![minIndex](../signal-min-max.png)-->
 
-Implement the method `atIndex` and `setAtIndex`. Please be aware that `minIndex` can be smaller than 0 for subclasses of Signal.
-If `setAtIndex` is called with an invalid index (smaller than `minIndex` or greater than `maxIndex`), it's ok for the program to crash.
-This should not happen for `atIndex`.
+<!--Implement the method `atIndex` and `setAtIndex`. Please be aware that `minIndex` can be smaller than 0 for subclasses of Signal.-->
+<!--If `setAtIndex` is called with an invalid index (smaller than `minIndex` or greater than `maxIndex`), it's ok for the program to crash.-->
+<!--This should not happen for `atIndex`.-->
 
-```java
-    public float atIndex(int i)
-    public void setAtIndex(int i, float value)
-```
+<!--```java-->
+    <!--public float atIndex(int i)-->
+    <!--public void setAtIndex(int i, float value)-->
+<!--```-->
 
-You can check the correctness of `atIndex`/`setAtIndex` with the test `testAtIndex` in file `src/test/java/SignalTests.java`.
+<!--You can check the correctness of `atIndex`/`setAtIndex` with the test `testAtIndex` in file `src/test/java/SignalTests.java`.-->
 
 ### Waves
 
