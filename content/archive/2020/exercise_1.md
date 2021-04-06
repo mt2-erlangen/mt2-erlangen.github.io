@@ -27,7 +27,7 @@ If you want to, you can download a stand-alone version of the program [here](htt
 
 ImageJ can also be used as a Java library.
 We already created a Java project that uses ImageJ.
-You can download it from [https://github.com/mt2-erlangen/exercises-ss2020](https://github.com/mt2-erlangen/exercises-ss2020) and import with the IDE of your choice:
+You can download it from [https://github.com/mt2-erlangen/exercises-ss2021](https://github.com/mt2-erlangen/exercises-ss2021) and import with the IDE of your choice:
 
 
  - [Instructions for Eclipse](./import_eclipse)

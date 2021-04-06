@@ -6,9 +6,9 @@ title = "Import a Gradle project with IntelliJ"
 author="Stephan Seitz"
 +++
 
-- On Windows, [download the latest Java version (14.1) from Oracle](https://www.oracle.com/java/technologies/javase-jdk14-downloads.html).
-  On Ubuntu Linux, you can install `sudo apt install openjdk-14-jdk` (only on 19.10) or `sudo apt install openjdk-11-jdk`.
-  At least Java 11 is required.
+- On Windows, [download the latest Java version 16 from Oracle](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html).
+  On Ubuntu Linux, you can install `sudo apt install openjdk-14-jdk` or `sudo apt install openjdk-11-jdk`.
+  At least Java 8 is required.
 
 - You can [get IntelliJ from here](https://www.jetbrains.com/idea/). There's a free community edition and you can also 
   unlock the Ultimate Edition when applying with your FAU email adress [here](https://www.jetbrains.com/community/education/#students).
@@ -23,4 +23,6 @@ author="Stephan Seitz"
 - Wait until all dependencies are downloaded
 ![Run](intellij_3.png)
 
-[Back to exercise 01](../exercise-1)
+- Please make sure you enable auto-compilation: [https://www.jetbrains.com/help/idea/migrating-from-eclipse-to-intellij-idea.html#compilation](https://www.jetbrains.com/help/idea/migrating-from-eclipse-to-intellij-idea.html#compilation)
+
+[Back to exercise 00](../exercise-0)

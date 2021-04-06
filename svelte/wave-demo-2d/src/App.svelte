@@ -123,6 +123,7 @@
 		<td>
 			<Canvas
 				width={WIDTH}
+				margin={(0, 0, 0, 0)}
 				height={HEIGHT}
 				on:mouseup={e => {
 					if (e.button == 0) {
@@ -155,9 +156,10 @@
 		</td>
 	</tr>
 </table>
-
+k = ({kx.toFixed(2)},
+{ky.toFixed(2)})
 <label>
-	<h3>Magnitude ({magnitude})</h3>
+	<h3>Magnitude ({magnitude.toFixed(3)})</h3>
 	<input
 		bind:value={magnitude}
 		type="range"

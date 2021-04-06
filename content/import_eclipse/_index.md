@@ -1,6 +1,6 @@
 
 +++
-date= 2020-04-21
+date= 2021-04-06
 title = "Import a Gradle project with Eclipse"
 
 [extra]
@@ -8,9 +8,9 @@ author="Stephan Seitz"
 +++
 
 
-- On Windows, [download the latest Java version (14.1) from Oracle](https://www.oracle.com/java/technologies/javase-jdk14-downloads.html).
-  On Ubuntu Linux, you can install `sudo apt install openjdk-14-jdk` (only on 19.10) or `sudo apt install openjdk-11-jdk`.
-  At least Java 11 is required.
+- On Windows, [download the latest Java version 16 from Oracle](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html).
+  On Ubuntu Linux, you can install `sudo apt install openjdk-14-jdk` or `sudo apt install openjdk-11-jdk`.
+  At least Java 8 is required. If you have a working installtion from AuD, you can skip this step.
 
 - Install Eclipse from [https://www.eclipse.org/downloads/](https://www.eclipse.org/downloads/)
 
@@ -26,7 +26,7 @@ author="Stephan Seitz"
 
   ![ss](3.png)  
 
-- Chose path of the downloaded project and click `Next`
+- Chose path of the downloaded project and click `Next` (it must be the folder that contains `build.gradle`)
 
   ![ss](4.png)  
 
@@ -34,15 +34,16 @@ author="Stephan Seitz"
 
   ![ss](5.png)  
 
-- Try to run Exercise01
+- Try to run Exercise00
 
   ![ss](run.png)  
 
 - You are seeing red squiggles, you found a bug in a Eclipse plugin. Upgrade it in the Eclipse Marketplace! 
+  *Update: I think this bug is resolved on new Eclipse versions. So you don't have to upgrade "Buildship Gradle Integration" on new versions!*
 
   ![ss](marketplace.png)  
 
-- Search for `gradle build`! Then, click on the `Installed` button of "Buildship Gradle Integration.
+- Search for `gradle build`! Then, click on the `Installed` button of "Buildship Gradle Integration".
 
   ![ss](search_for_gradle_build.png)
 
@@ -61,8 +62,8 @@ author="Stephan Seitz"
 
   ![ss](6.png)
 
+Still facing problems? Are you sure you imported the folder that contains `build.gradle`.
+If you imported a subfolder or a folder that contain the folder that contains `build.gradle`, Eclipse will be very confused
+but does not yield an error.
 
-[Back to exercise 01](../exercise-1)
-
-<!--- Ensure that Eclipse can find your Java Runtime Enviroment-->
-  <!--![ss](../openproperties.png)  -->
+[Back to exercise 00](../exercise-0)
