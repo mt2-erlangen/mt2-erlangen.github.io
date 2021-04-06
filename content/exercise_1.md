@@ -90,7 +90,10 @@ Construct some objects of the two classes in `src/main/java/exercises/Exercise01
 
 <P align="right"><i>3 Points</i>
 
-Professor Maier said that you can create any signal just using waves. Try to 
+Professor Maier said that you can create any signal just using sine and cosine waves.
+Try to generate this signal by adding and scaling some sine and cosine waves (only needs to be similar).
+
+![](../coolwave3.png)
 
 Add to methods to the signal class in order to add and multipy signals.
 The methods should not modify the original signal but create a new signal with meaningful name.
@@ -105,6 +108,11 @@ The methods should not modify the original signal but create a new signal with m
 ```
 
 How many sine and cosine waves with what coefficients do you need?
+You can solve this exercise by trial and error. Maybe some part of the lecture is also helpful...
+
+<iframe allowfullscreen frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="680.54" height="443" type="text/html" src="https://www.youtube.com/embed/zHDZ5yKiQQE?autoplay=0&fs=1&iv_load_policy=3&showinfo=1&rel=0&cc_load_policy=0&start=269&end=0&origin=https://youtubeembedcode.com"></iframe>
+
+And another one?
 
 ## Submitting
 
