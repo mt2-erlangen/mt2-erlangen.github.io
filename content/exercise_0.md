@@ -111,7 +111,7 @@ is `null` (or of `very.complicated.expression[2]` when things get more complicat
 
 ![](../intellij_calculator.png)
 
-In Eclipse, the calculator are a pair of glasses (make sure you are in debug perspective).
+In Eclipse, the calculator are a pair of glasses (make sure you are in debug perspective, menu: `Window > Perspective > Open Perspective > Debug`).
 ![](../eclipse_watches.png)
 
 
