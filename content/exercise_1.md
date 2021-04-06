@@ -18,7 +18,7 @@ Each exercise has **10 points**. You have to achieve **30 of 60 points in six ho
 
 ### Signal.java
 
-<P align="right"><i>4 Points</i>
+<P align="right"><i>3 Points</i>
 
 As a first step, we will implement the class `Signal` 
 which should hold a signal of finite length.
@@ -106,7 +106,7 @@ Construct some objects of the two classes in `src/main/java/exercises/Exercise01
 
 ### The Perfect Wave
 
-<P align="right"><i>2 Points</i>
+<P align="right"><i>3 Points</i>
 
 Professor Maier said that you can create any signal just using waves. Try to 
 
