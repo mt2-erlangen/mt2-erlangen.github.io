@@ -66,6 +66,8 @@ public class Exercise00 {
 
 ## Debugging
 
+<i>Everything here should just be a recap of what you know about debugging from AuD. Feel free to skip if you know how debugging works!</i>
+
 To do the exercises during this semester, you will often need to use the debug mode to find errors in your code.
 Please make sure that you know how to run your program in debug mode, since you might not have seen it before (Shame on you AuD!).
 Please always try to debug an issue first before you ask a tutor for help!
@@ -84,27 +86,33 @@ Also set some breakpoints (where the program should stop) by clicking on the spa
 
 
 You should also know how to make the debugger stop on an exception (to see what's wrong when the program is crashing).
-This is explained for Eclispe in this [Stack Overflow post](https://stackoverflow.com/questions/3066199/break-when-exception-is-thrown)
 There is a bug in program! When you run it, you should see a crash:
 
-![](./exception_breakpoint_intellj.png)
+![](../exception_breakpoint_intellj.png)
 
 IntelliJ suggests to create a break point. Click `Create breakpoint`!
 
-![](./exception_breakpoint_intellij2.png)
+![](../exception_breakpoint_intellij2.png)
 
 Confirm with `Done`.
 
-![](./exception_breakpoint_intellij3.png)
+![](../exception_breakpoint_intellij3.png)
 
 When you run the program again in debug mode it will stop at the line where the error happened.
 This will help you to find out what is wrong at that point.
+
+Also Eclispe will stop automatically and indicate what the problem is (if it doesn't please upgrade to the newest version of Eclispe):
+
+![](../exception_breakpoint_eclipse.png)
 
 Very useful is also the calculator symbol, that let's you evaluate expressions.
 If you don't know, what is wrong in a line, you can tell the calculator to the termine the value of `a` or `a.x` to determine which one
 is `null` (or of `very.complicated.expression[2]` when things get more complicated and a variable is not shown in the list below).
 
 ![](../intellij_calculator.png)
+
+In Eclipse, the calculator are a pair of glasses (make sure you are in debug perspective).
+![](../eclipse_watches.png)
 
 
 Now you should be well prepared for the actual exercises!
