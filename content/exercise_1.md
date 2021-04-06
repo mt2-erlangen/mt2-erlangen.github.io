@@ -97,10 +97,11 @@ The methods should not modify the original signal but create a new signal with m
 
 ```java
     // Adds the signal with another one elementwise
-	public Signal plus(Signal other)
+    // Check that both signals have the same size! You can throw an error otherwise.
+    public Signal plus(Signal other)
 
     // Multiplies the signal with a scalar
-	public Signal times(float scalar)
+    public Signal times(float scalar)
 ```
 
 How many sine and cosine waves with what coefficients do you need?
