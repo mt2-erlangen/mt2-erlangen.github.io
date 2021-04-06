@@ -68,24 +68,6 @@ To test it, create a `Signal` with arbitray values in the main method of `src/ma
     }
 ```
 
-<!--In our black board exercises, we agreed that we want to continue our signals with zeros where we don't have any values stored.-->
-<!--If we access indices of our `Signal` with values smaller than `minIndex()` or larger `maxIndex()` we want to return `0.0f`.-->
-<!--If a user accesses an index between `minIndex()` and `maxIndex()` we want to return the corresponding value stored in our array.-->
-
-
-<!--![minIndex](../signal-min-max.png)-->
-
-<!--Implement the method `atIndex` and `setAtIndex`. Please be aware that `minIndex` can be smaller than 0 for subclasses of Signal.-->
-<!--If `setAtIndex` is called with an invalid index (smaller than `minIndex` or greater than `maxIndex`), it's ok for the program to crash.-->
-<!--This should not happen for `atIndex`.-->
-
-<!--```java-->
-    <!--public float atIndex(int i)-->
-    <!--public void setAtIndex(int i, float value)-->
-<!--```-->
-
-<!--You can check the correctness of `atIndex`/`setAtIndex` with the test `testAtIndex` in file `src/test/java/SignalTests.java`.-->
-
 ### Waves
 
 <P align="right"><i>4 Points</i>
@@ -129,6 +111,3 @@ Please ensure that all files you created also contain your name and your IDM ID 
 You only need to submit the code. No need to submit answers to the questions in the text.
 
 Then, compress your source code folder `src` to a zip archive (`src.zip`) and submit it and your PDF document via StudOn!
-
-
-
