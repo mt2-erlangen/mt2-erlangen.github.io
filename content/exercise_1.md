@@ -16,7 +16,7 @@ and also your partner's name and IDM ID if you're not working alone.
 
 Each exercise has **10 points**. You have to achieve **30 of 60 points in six homework exercises** to pass the module.
 
-### Signal.java
+### Signals
 
 <P align="right"><i>3 Points</i>
 
@@ -73,7 +73,7 @@ To test it, create a `Signal` with arbitray values in the main method of `src/ma
 <P align="right"><i>4 Points</i>
 
 As a first step, we will implement the classes `CosineWave` and `SineWave`
-which should hold a signal of finite length.
+which should hold a signal of finite length. `CosineWave` and `SineWave` inherit from `Signal`.
 Create two files `src/main/java/mt/CosineWave.java`/`src/main/java/mt/SineWave.java`.
 
 The two classes should represent the following two signals:
@@ -93,7 +93,7 @@ Construct some objects of the two classes in `src/main/java/exercises/Exercise01
 Professor Maier said that you can create any signal just using sine and cosine waves.
 Try to generate this signal by adding and scaling some sine and cosine waves (only needs to be similar).
 
-![](../coolwave3.png)
+[![](../coolwave3.png)](../coolwave3.png)
 
 Add to methods to the signal class in order to add and multipy signals.
 The methods should not modify the original signal but create a new signal with meaningful name.
