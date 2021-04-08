@@ -142,18 +142,18 @@ Well this looks very wavy... Let's filter this signal!
 
 Apply the following filters on your signal:
 
-$$ f_1 = \left[ \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}\right]
-$$ f_2 = \left[ 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0\right]
-
-
+$$ f_1 = \left[ \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}\right] $$
 ![rki data mean](../rki_data_mean.png)
+
+$$ f_2 = \left[ 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0 \right]$$
 ![rki data diff](../rki_data_diff.png)
 
 What happens when you apply $f_1$ and then $f_2$? What happens when you first apply $f_2$ and then $f_1$? 
+What do the individual filters calculate?
 
 ## Submitting
 
 Please ensure that all files you created also contain your name and your IDM ID and also your partner's name and IDM ID if you're not working alone.
 You only need to submit the code. No need to submit answers to the questions in the text.
 
-Then, compress your source code folder `src` to a zip archive (`src.zip`) and submit it and your PDF document via StudOn!
+Then, compress your source code folder `src` to a zip archive (`src.zip`) and submit it via StudOn!
