@@ -127,7 +127,8 @@ It contains the newest data from the Robert-Koch-Institute with the following JS
       "cases": 2,
       "date": "2020-01-29T00:00:00.000Z"
     },
-    ...
+    //...
+  ]
 }
 ```
 
