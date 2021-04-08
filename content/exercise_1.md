@@ -119,4 +119,4 @@ And another one?
 Please ensure that all files you created also contain your name and your IDM ID and also your partner's name and IDM ID if you're not working alone.
 You only need to submit the code. No need to submit answers to the questions in the text.
 
-Then, compress your source code folder `src` to a zip archive (`src.zip`) and submit it and your PDF document via StudOn!
+Then, compress your source code folder `src` to a zip archive (`src.zip`) and submit it via StudOn!

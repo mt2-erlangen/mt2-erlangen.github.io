@@ -88,12 +88,12 @@ Open the file
 
 
 ```java
-	public static void main(String[] args) throws MalformedURLException, IOException {
-		// <your name> <your idm>
-		// <your partner's name> <your partner's idm> (if you submit with a group partner)
-		JSONObject response = readJsonFromUrl("https://api.corona-zahlen.org/germany/history/cases");
+// <your name> <your idm>
+// <your partner's name> <your partner's idm> (if you submit with a group partner)
+public static void main(String[] args) throws MalformedURLException, IOException {
+    JSONObject response = readJsonFromUrl("https://api.corona-zahlen.org/germany/history/cases");
 
-    }
+}
 ```
 
 `response` will contain a [JSONObject](https://stleary.github.io/JSON-java/org/json/JSONObject.html) from the `org.json` library
