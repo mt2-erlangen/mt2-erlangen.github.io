@@ -86,7 +86,6 @@ Good test cases are:
 To see whether the Corona situation will ever improve we want to have a look at newest data from RKI institute.
 Open the file 
 
-
 ```java
 // <your name> <your idm>
 // <your partner's name> <your partner's idm> (if you submit with a group partner)
@@ -143,13 +142,13 @@ Well this looks very wavy... Let's filter this signal!
 
 Apply the following filters on your signal:
 
-$$ f_1 = \left[ \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}\right] $$
+$$ h_1 = \left[ \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}\right] $$
 ![rki data mean](../rki_data_mean.png)
 
-$$ f_2 = \left[ 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0 \right]$$
+$$ h_2 = \left[ 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0 \right]$$
 ![rki data diff](../rki_data_diff.png)
 
-What happens when you apply $f_1$ and then $f_2$? What happens when you first apply $f_2$ and then $f_1$? 
+What happens when you apply $h_1$ and then $h_2$? What happens when you first apply $h_2$ and then $h_1$? 
 What do the individual filters calculate?
 
 ## Submitting
