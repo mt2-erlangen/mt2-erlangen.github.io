@@ -6,4 +6,5 @@ title = "Exercise 3"
 author="Stephan Seitz"
 +++
 
+<!--Defined in svelte folder-->
 <div id="wave-demo-2d" ></div>
