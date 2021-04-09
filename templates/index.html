@@ -127,5 +127,9 @@
             </aside>
         {% endblock sidebar %}
     </div>
+
+    <div class="footer">
+    Last page update:  {{ now() | date(format="%Y-%m-%d %H:%M") }}
+    </div>
 </body>
 </html>
