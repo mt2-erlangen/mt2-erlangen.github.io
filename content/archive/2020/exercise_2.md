@@ -26,7 +26,7 @@ Each exercise has **10 points**. You have to achieve **30 of 60 points in six ho
 In this exercise, we want to have a look on how we can analyze signals using simple statistical measures.
 We will use a freely available ECG data set with the goal to distinguish healthy from patients with heart rythm problems.
 
-![ECG curve](./heartbeat.png)
+![ECG curve](../heartbeat.png)
 
 You can find the original data set [here](https://data.mendeley.com/datasets/7dybx7wyfn/3)
 but we recommend to use a post-processed version available on studOn.
@@ -82,8 +82,8 @@ It alread contain some code for parsing the program parameters:
 
 Launch `Exercise02` with the one of the files of the data set as an argument (e.g. `<where_you_saved_your_data_set>/MLII/1 NSR/100m (0).mat`)!
 
-- [How to do that in Eclipse](./set_args_eclipse)
-- [How to do that in IntelliJ](./set_args_intellij)
+- [How to do that in Eclipse](../set_args_eclipse)
+- [How to do that in IntelliJ](../set_args_intellij)
 
 Your program should print now the file name you selected:
 
@@ -112,7 +112,7 @@ You should now see the signal. However, this plot does not have any labels with 
 We will change that later.
 
 
-![dimensionless ECG curve](./dimensionless.png)
+![dimensionless ECG curve](../dimensionless.png)
 
 
 # Extension of Signal.java
@@ -143,7 +143,7 @@ In the last exercise, we treated signals as pure sequence of numbers without any
 But for medical measurements physical dimensions are important.
 We want to extend our plot to look like this with the horizontal axis labeled with seconds:
 
-![pic alt](./find_peaks.png)
+![pic alt](../find_peaks.png)
 
 To do this we will add a new member to our signal that's describing the physical distance between two samples
 

@@ -140,7 +140,7 @@ Let's also provide some getters!
 
 Remember how we calculated the indices in the exercise slides. You have to apply that formula in `atIndex`/`setAtIndex`.
 
-![Constructor](./smile_extended.png)
+![Constructor](../smile_extended.png)
 <!--**TODO: Nice image here. With width and height and buffer_size=width * height**-->
 
 Add the method `show` to display the image
@@ -173,7 +173,7 @@ public class Exercise03 {
 
 The image is from [our open access book](https://www.springer.com/gp/book/9783319965192).
 
-![pacemaker.png](./pacemaker.png)
+![pacemaker.png](../pacemaker.png)
 
 ## mt.ImageFilter
 

@@ -18,7 +18,7 @@ Each exercise has **10 points**. You have to achieve **30 of 60 points in six ho
 
 <P align="right"><i>3 Points</i>
 
-In [Exercise03](./exercise-3), we have seen that we can use linear low-pass filters, like the Gauss filter, to reduce 
+In [Exercise03](../exercise-3), we have seen that we can use linear low-pass filters, like the Gauss filter, to reduce 
 the amount of noise in images. Let's test that!
 
 Add two static methods to the `Image` class:
@@ -218,10 +218,10 @@ Can you reduce the error even more using the bilateral filter? My results look l
 
  <table style="width:100% text-align:;">
   <tr>
-    <th><a href="./shepp_logan_original.png" ><img align="center" src="./shepp_logan_original.png" ></a></th>
-    <th><a href="./shepp_logan_noisy.png" ><img align="center" src="./shepp_logan_noisy.png" ></a></th>
-    <th><a href="./shepp_logan_gauss.png" ><img align="center" src="./shepp_logan_gauss.png" ></a></th>
-    <th><a href="./shepp_logan_bilateral.png" ><img align="center" src="./shepp_logan_bilateral.png" ></a></th>
+    <th><a href="../shepp_logan_original.png" ><img align="center" src="../shepp_logan_original.png" ></a></th>
+    <th><a href="../shepp_logan_noisy.png" ><img align="center" src="../shepp_logan_noisy.png" ></a></th>
+    <th><a href="../shepp_logan_gauss.png" ><img align="center" src="../shepp_logan_gauss.png" ></a></th>
+    <th><a href="../shepp_logan_bilateral.png" ><img align="center" src="../shepp_logan_bilateral.png" ></a></th>
   </tr>
   <tr>
     <th>Original</th>
@@ -231,9 +231,9 @@ Can you reduce the error even more using the bilateral filter? My results look l
   </tr>
   <tr>
     <th></th>
-    <th><a href="./error_noise.png" ><img align="center" src="./error_noise.png" ></a></th>
-    <th><a href="./error_gauss.png" ><img align="center" src="./error_gauss.png" ></a></th>
-    <th><a href="./error_bilateral.png" ><img align="center" src="./error_bilateral.png" ></a></th>
+    <th><a href="../error_noise.png" ><img align="center" src="../error_noise.png" ></a></th>
+    <th><a href="../error_gauss.png" ><img align="center" src="../error_gauss.png" ></a></th>
+    <th><a href="../error_bilateral.png" ><img align="center" src="../error_bilateral.png" ></a></th>
   </tr>
   <tr>
     <th></th>

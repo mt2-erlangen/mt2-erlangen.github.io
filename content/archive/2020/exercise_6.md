@@ -37,7 +37,7 @@ public class Exercise06 {
 We will use the [Sobel Filter](https://en.wikipedia.org/wiki/Sobel_operator), to estimate the gradient of the image.
 The Sobel Filter uses two filter kernels. One to estimate the x-component of the gradient and one for the y-component.
 
-![Sobel](./sobel.png)
+![Sobel](../sobel.png)
 
 Create two `LinearImageFilter`s with those coeffients. You can use `filterX.setBuffer(new float[]{...})`
 or `setAtIndex` to do that.
@@ -63,12 +63,12 @@ Use those two images to calculate the norm of the gradient for each pixel!
 $$ \left|\left| \nabla I \right|\right| =\left|\left| \left(\delta_x,\\ \delta_x \right) \right|\right| = \sqrt{ \delta_x^2 + \delta_y^2}$$
 
 
-![Gradient](./cell2_GradientMagnitude.png)
+![Gradient](../cell2_GradientMagnitude.png)
 
 Find a good threshold and set all gradient magnitude values to zero that are below this values and all other to `1.f` to
 obtain an image like this with a clear segmentation in edge pixels and non-edge pixels.
 
-![Gradient Segmented](./cell2_GradientSegmented.png)
+![Gradient Segmented](../cell2_GradientSegmented.png)
 
 ## Segmentation
 
@@ -91,7 +91,7 @@ You can use the following method to overlay your segmentation with the original 
 ```
 
 
-![cells](./SegmentationOnImageNoWatershed.png)
+![cells](../SegmentationOnImageNoWatershed.png)
 
 ## Improving your Segmentation
 *This is optional and not required for the exercise.
@@ -100,7 +100,7 @@ You might want to go directly to the evaluation of this year's exercises:
 
 You may notice that by just choosing a threshold you may not be able to separate each individual structure.
 
-![cells](./cell2_segmented.png)
+![cells](../cell2_segmented.png)
 
 You can try out some operations from the menu *Process > Binary* while you have your 0/1 segmentation focused.
 You have to convert to 8-bit first. E.g.
@@ -122,7 +122,7 @@ Or "click" on menu items in your program code.
     DisplayUtils.showSegmentedCells(cells, segmentation);
 ```
 
-![cells](./SegmentationOnImage.png)
+![cells](../SegmentationOnImage.png)
 
 ## Evaluation
 

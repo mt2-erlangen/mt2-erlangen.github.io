@@ -29,7 +29,7 @@ In all these scenarios we use image registration bring the different images toge
 
 In the below image, two x-ray views (1) and (2) are fused together to obtain the combined view(3)
 which produces more information for diagnosis. This is achieved using image registration between view(1) and view
-![Hand X-ray fusion](./x_ray_bone_fusion.png) 
+![Hand X-ray fusion](../x_ray_bone_fusion.png) 
 
 [Image Source: Hawkes, David J., et al. "Registration and display of the combined bone scan and 
 radiograph in the diagnosis and management of wrist injuries." European journal of nuclear medicine 
@@ -44,14 +44,14 @@ interpolation method to find out the image intensity values at the transformed c
 
 ## Overview of tasks
 
-![List of tasks](./transformations.png)
+![List of tasks](../transformations.png)
 
 We will implement the following tasks for this exercise.
 
 1. __Helper functions__ (_a. Image origin_, _b. Interpolation_)
 2. __Image Transformation__ (_a. Translation_, _b. Rotation_, _c. Scaling_)
 
-We introduce the basic theory about image transformations in [theoretical background section](./img_transform_theory).
+We introduce the basic theory about image transformations in [theoretical background section](../img_transform_theory).
 Please read the theory before proceeding since we don't re-introduce everything in the task description. 
 
 ## Task Description
@@ -66,7 +66,7 @@ and [```src/main/java/mt/ImageTransformer.java```](https://github.com/mt2-erlang
 <P align="right"><i>1 Point</i>
 
 * For Exercise 4 we provide a GUI that displays the image with different image transformation options.
-![Visualize GUI](./x_ray_gui.png)
+![Visualize GUI](../x_ray_gui.png)
 
 * Once you have all the transformations implemented you should be able to adjust the sliders and perform the desired transformations in an interactive manner.
 
@@ -100,7 +100,7 @@ and [```src/main/java/mt/ImageTransformer.java```](https://github.com/mt2-erlang
 * ```public float interpolatedAt(float x, float y)  ```
 
 * The method takes in a physical $(x,y)$ coordinate and returns the image intensity at that position.
-We use bilinear interpolation to find the value at $(x,y)$ (described in the [theory](./img_transform_theory)).
+We use bilinear interpolation to find the value at $(x,y)$ (described in the [theory](../img_transform_theory)).
 
 * We can rewrite the interpolation equation using the linear interpolation formula when we want to interpolate between two points $x_1,x_2$ with function value $f(x_1),f(x_2)$ to find out the function value $f(x)$ at $x$.
 
@@ -224,7 +224,7 @@ implements (translation,rotation and scaling). In addition, once we have the tra
 interpolate the value at this coordinate to set the output value of the new image.
 
 * We can implement the transformations and interpolation using the equations defined 
-in the [theory section](./img_transform_theory). 
+in the [theory section](../img_transform_theory). 
 
 * However, from the implementation perspective it is much easier to ask what will be my output image value 
 at the current position $(x',y')$  for the given  transformations parameters.

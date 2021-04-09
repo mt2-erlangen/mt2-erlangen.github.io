@@ -30,8 +30,8 @@ We already created a Java project that uses ImageJ.
 You can download it from [https://github.com/mt2-erlangen/exercises-ss2021](https://github.com/mt2-erlangen/exercises-ss2021) and import with the IDE of your choice:
 
 
- - [Instructions for Eclipse](./import_eclipse)
- - [Instructions for IntelliJ](./import_intellij)
+ - [Instructions for Eclipse](../import_eclipse)
+ - [Instructions for IntelliJ](../import_intellij)
 
 # Tasks
 <!--Standard project layout-->
@@ -113,7 +113,7 @@ If we access indices of our `Signal` with values smaller than `minIndex()` or la
 If a user accesses an index between `minIndex()` and `maxIndex()` we want to return the corresponding value stored in our array.
 
 
-![minIndex](./signal-min-max.png)
+![minIndex](../signal-min-max.png)
 
 Implement the method `atIndex` and `setAtIndex`. Please be aware that `minIndex` can be smaller than 0 for subclasses of Signal.
 If `setAtIndex` is called with an invalid index (smaller than `minIndex` or greater than `maxIndex`), it's ok for the program to crash.
@@ -133,7 +133,7 @@ You can check the correctness of `atIndex`/`setAtIndex` with the test `testAtInd
  Implement `LinearFilter` in file `src/main/java/LinearFilter.java` as a subclass of `Signal`.
  `LinearFilter` should work like `Signal` except its `minIndex` should be at `- floor(coefficients.length/2)` as in the exercise slides.
 
- ![tip2](./tip2.png)
+ ![tip2](../tip2.png)
 
 `LinearFilter` should have a constructor that checks that coefficients is an array of odd size or throws an error otherwise (any error is ok).
 ```java
@@ -154,7 +154,7 @@ and a method that executes the discrete convolution on another `Signal input` an
 
 Be sure that you use `atIndex` to access the values of `input` and the filter.
 
- ![tip3](./tip3.png)
+ ![tip3](../tip3.png)
 
 You can test your convolution function with the tests provided in `src/test/java/LinearFilterTests.java`.
 
