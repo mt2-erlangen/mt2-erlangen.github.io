@@ -27,5 +27,6 @@ You can also edit the contents of the markdown file using Gitlab's/Github's web 
 https://github.com/mre/tinysearch
 
 ```bash
+zola build
 tinysearch --optimize --path static public/json/index.html
 ```
