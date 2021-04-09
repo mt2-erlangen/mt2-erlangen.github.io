@@ -111,12 +111,12 @@ $$ \frac{f(x) - f(x_1)}{x-x_1} = \frac{f(x_2) - f(x_1)}{x_2 - x_1} $$
 <!--$$ \frac{f(x) - f(x_1)}{x-x_1} = \frac{f(x_2) - f(x_1)}{x_2 - x_1} $$-->
 
 
-<!--![bilinear]( ./bilinear.png )-->
+<!--![bilinear]( ../bilinear.png )-->
 * Since we already know the difference $x_2 - x_1$ is either 1.0 if we have a pixel spacing of 1.0 or pixel spacing, we can simplify the above equation as follows:
 
 $$f(x) = f(x_1) + (x-x_1) (f(x_2) - f(x_1))$$
 
-![bilinear]( ./bilinear_simplified.png )
+![bilinear](../bilinear_simplified.png )
 
 * You can use the function below to compute linear interpolation between two points $x_1,x_2$ at $x$
 

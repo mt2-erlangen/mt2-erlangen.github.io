@@ -125,7 +125,7 @@ Save it the opened DICOM as a `*.tif` file (*File > Save As > Tiff...*).
 There are more smaller test volumes on studOn.
 
 <video controls loop width="700">
-  <source src="./dicom_import_demo.webm" type="video/webm">
+  <source src="../dicom_import_demo.webm" type="video/webm">
 </video> 
 <!--- [Volume 1](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.4320.5030.411911859032422710586149276741)-->
 <!--- [Volume 2](https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.4320.5030.300069571844254433153455037441)-->

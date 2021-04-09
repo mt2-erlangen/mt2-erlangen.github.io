@@ -246,7 +246,7 @@ Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the fo
     public void apply(Image image, Image result)
 ```
 
-![filtering](./filtering.png)
+![filtering](../filtering.png)
 ![Animation](https://raw.githubusercontent.com/vdumoulin/conv_arithmetic/master/gif/same_padding_no_strides.gif)
 
 <P align="right"><i>Source: https://github.com/vdumoulin/conv_arithmetic</i>
