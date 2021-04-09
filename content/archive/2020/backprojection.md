@@ -11,13 +11,13 @@ author = "Stephan Seitz"
 If we have a look at the sinogram values corresponding to one detector position we get some information about the projected object.
 For instance, we can see the profile of the projected circle in the following image.
 
-![sinogram](./sinogram.png)
+![sinogram](../sinogram.png)
 
 However, if we have no access to the original volume slice we can not tell anything about the distance of the object to the detector.
 All the following situations would generate the same projection!
 
 
-![sinogram](./projection_distance.png)
+![sinogram](../projection_distance.png)
 
 So apparently, we get some information in the direction of the detector plane, but all information orthogonal to the detector plane
 is lost.
@@ -27,7 +27,7 @@ We call this process **backprojection**.
 
 <table>
 <tr>
-    <th><img align="center" src="./backprojection.png" ></th>
+    <th><img align="center" src="../backprojection.png" ></th>
 <tr>
 <tr>
     <td>The backprojection smears the value of the projection uniformly over the paths of the rays</td>
@@ -154,12 +154,12 @@ only a single white circle if not. This should help you debug the issue.
     <tr>
         <td> 
             <video controls loop width="300">
-            <source src="./shepp_9_cropped.webm" type="video/webm">
+            <source src="../shepp_9_cropped.webm" type="video/webm">
             </video> 
         </td>
         <td> 
             <video controls loop width="300">
-            <source src="./shepp_100_cropped.webm" type="video/webm">
+            <source src="../shepp_100_cropped.webm" type="video/webm">
             </video> 
         </td>
     </tr>
@@ -190,6 +190,6 @@ a formula defining it.
 
 The content for this section should be about one page long. 
 
-[Previous section](./sinogram)
+[Previous section](../sinogram)
 
-[Next section](./reconstruction)
+[Next section](../reconstruction)

@@ -16,7 +16,7 @@ It turns out that we can interpret our projections and our volume just as a list
 
 <table>
 <tr>
-<td><img align="center" src="./volume_slices.png" ></td>
+<td><img align="center" src="../volume_slices.png" ></td>
 </tr>
 <tr>
 <th>A volume: very much just multiple images stacked one over another</th>
@@ -165,9 +165,9 @@ Here a short summary of handy functions of ImageJ when working with CT images.
 - Ctrl+Shift+H: Orthogonal Views (view volume from three sides)
 - After selecting a line: Ctrl+K Line Plot
 - Ctrl+I: Get patient information of a DICOM
-- Look at a [3-d rendering with ClearVolume](./clearvolume)
+- Look at a [3-d rendering with ClearVolume](../clearvolume)
 
 
-[Previous: Introduction](./introduction) 
+[Previous: Introduction](../introduction) 
 
-[Next: Forward Projection](./projection)
+[Next: Forward Projection](../projection)

@@ -25,7 +25,7 @@ In this project work, we will make some simplifying assumptions on the acquisiti
 I made a drawing of the path of a single X-ray through a slice of our volume.
 Since this ray crosses the origin of our coordinate system we call it the **principal ray**.
 
-![drawing](./drawing_compressed.jpg)
+![drawing](../drawing_compressed.jpg)
 
 What are the coordinates $\vec{x}_{P}$ of a point $P$ on the line of the principal ray in dependency of the angle $\theta$ ($\alpha$ in drawing) and the distance
 from origin $r$?
@@ -36,7 +36,7 @@ We assume parallel rays.
 
 *Hint: What vector do you have to add to $P$ to get to $P'$?*
 
-![drawing](./drawing_parallel_compressed.jpg)
+![drawing](../drawing_parallel_compressed.jpg)
 
 Unfortunally, the figure was written on paper and you shouldn't use hand drawn figures in the project report (as you can see they look ugly).
 Please create one or two plots on the computer that are explaining your derived the ray equations to the reader of the project
@@ -137,7 +137,7 @@ You can use `volumeSlice.interpolatedAt(x,y)` to deterime $\mu(\vec{x})$ and acc
 We have now calculated one value of one of the gray rays on our slice which translates to one point in our sinogram.
 
 
-![sinogram](./sinogram.png)
+![sinogram](../sinogram.png)
 
 Next we want to call this function for every ray and every pixel of our sinogram in the following method:
 
@@ -176,8 +176,8 @@ For simplicity, you do not need to change the spacing of the volume or the sinog
 
 <table>
 <tr> 
-    <td><a href="./dot.png" ><img align="center" src="./dot.png" ></a></ts>
-    <td><a href="./sinogram_dot.png" ><img align="center" src="./sinogram_dot.png" ></a></ts>
+    <td><a href="../dot.png" ><img align="center" src="../dot.png" ></a></ts>
+    <td><a href="../sinogram_dot.png" ><img align="center" src="../sinogram_dot.png" ></a></ts>
 </tr>
 <tr> 
     <th>Simple test slice</th>
@@ -194,15 +194,15 @@ You may also apply `projectSlice` on all slices and display the sinogram.
 
 
 <video controls loop width="300">
-  <source src="./sinogram_ct_scan.webm" type="video/webm">
+  <source src="../sinogram_ct_scan.webm" type="video/webm">
 </video> 
 
 Or of the test image above
 
 <video controls loop width="300">
-  <source src="./sinogram_rotation.webm" type="video/webm">
+  <source src="../sinogram_rotation.webm" type="video/webm">
 </video> 
 
-[Previous section](./volume)
+[Previous section](../volume)
 
-[Next section](./sinogram)
+[Next section](../sinogram)

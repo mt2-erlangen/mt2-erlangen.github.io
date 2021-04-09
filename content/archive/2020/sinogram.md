@@ -8,7 +8,7 @@ author = "Stephan Seitz"
 
 # Sinogram
 
-![sinogram](./sinogram.png)
+![sinogram](../sinogram.png)
 
 Now, you should be able to generate sinograms from volume slice.
 Generate two sinograms from two volume slices:
@@ -28,6 +28,6 @@ Do we really need a 360° degree scan?
 
 This section should not be longer than one page.
 
-[Previous section](./projection)
+[Previous section](../projection)
 
-[Next section](./backprojection)
+[Next section](../backprojection)

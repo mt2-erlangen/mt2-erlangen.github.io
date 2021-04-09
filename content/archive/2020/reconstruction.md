@@ -29,7 +29,7 @@ It should
 - call `backprojectSlice` with the current `sliceIdx`
 - repeat all this for `numIterations` iterations
 
-![pic alt](./iterative.png "Iterative Reconstruction")
+![pic alt](../iterative.png "Iterative Reconstruction")
 
 So we're now doing an reconstruction of the error sinogram and adding it to our blurry image.
 Does this reduce our error?
@@ -84,7 +84,7 @@ This part of the project work should be about a quarter page long and should con
 
 Submit your project report as a PDF and your entire project folder of your code until **August 16 23:55h**.
 Your project must compile as a whole!
-Make sure that you had a last look at our [checklist](./checklist).
+Make sure that you had a last look at our [checklist](../checklist).
 
 
 # Evaluation
@@ -92,4 +92,4 @@ Make sure that you had a last look at our [checklist](./checklist).
 We hope you had a fun project work!
 [You can help us to improve the instructions for next year!](https://forms.gle/EZZsFXz5QrgTAutu9)
 
-[Previous section](./backprojection)
+[Previous section](../backprojection)

@@ -7,12 +7,12 @@ author = "Stephan Seitz"
 
 # Contents
 
-- [Introduction](./introduction) *Tafelübung 9. Juni*
-- [Volumes](./volume)
-- [Projection](./projection) *Tafelübung 16. Juni*
-- [Sinogram](./sinogram)
-- [Backprojection and Reconstruction](./backprojection) *Tafelübung 23. Juni*
-- [Iterative Reconstruction and Conclusion](./reconstruction)
+- [Introduction](../introduction) *Tafelübung 9. Juni*
+- [Volumes](../volume)
+- [Projection](../projection) *Tafelübung 16. Juni*
+- [Sinogram](../sinogram)
+- [Backprojection and Reconstruction](../backprojection) *Tafelübung 23. Juni*
+- [Iterative Reconstruction and Conclusion](../reconstruction)
 
 # Introduction
 
@@ -36,9 +36,9 @@ The introduction should not be longer than one page and but at least half a page
 
 Your introduction and conclusion should not contain any images.
 
-Please have a look on our [checklist for a good project report](./checklist).
+Please have a look on our [checklist for a good project report](../checklist).
 <!--Whenever we refer to the maximum length of a section we're not counting figures and tables and just consider the length-->
 <!--of the text.-->
 
-[Next task](./volume)
+[Next task](../volume)
 
