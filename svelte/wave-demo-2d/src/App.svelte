@@ -15,7 +15,9 @@
 	let x;
 	let y;
 	let magnitude = 1.0;
-	let isCos = true;
+	let isCos = writable(true);
+	$: ok = isCos;
+	$: lol = points;
 
 	coords.subscribe(coords => {
 		x = coords.x;
@@ -137,7 +139,11 @@
 				}}
 				on:mouseleave={_ => (inScreen = false)}
 				on:mousemove={e => {
-					coords.set({ x: e.clientX, y: e.clientY });
+					const rect = e.currentTarget.getBoundingClientRect();
+					coords.set({
+						x: e.clientX - rect.x,
+						y: e.clientY - rect.y
+					});
 					inScreen = true;
 				}}>
 				<Layer render={renderKSpace} />
@@ -155,9 +161,17 @@
 			</Canvas>
 		</td>
 	</tr>
+	<tr>
+		<td>$k = (${kx.toFixed(2)} $,$ {ky.toFixed(2)} $)$</td>
+		<td>
+			{magnitude.toFixed(2)}$\cdot${#if ok}cos{:else}sin{/if}
+			$\left(\langle k,x\rangle\cdot 2 \pi\right)$
+		</td>
+
+		<td />
+	</tr>
 </table>
-k = ({kx.toFixed(2)},
-{ky.toFixed(2)})
+
 <label>
 	<h3>Magnitude ({magnitude.toFixed(3)})</h3>
 	<input

@@ -1,9 +1,10 @@
 import App from './App.svelte';
 
-const app = new App({
-	target: document.body,
+let div = document.querySelector('#wave-demo-2d');
+const app = div && new App({
+	target: div,
 	props: {
-	}
+	},
 });
 
 export default app;

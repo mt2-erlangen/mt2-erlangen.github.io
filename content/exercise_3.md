@@ -6,4 +6,4 @@ title = "Exercise 3"
 author="Stephan Seitz"
 +++
 
- <iframe src="../wave-demo-2d" height="200" width="300" title="Iframe Example"></iframe> 
+<div id="wave-demo-2d" ></div>
