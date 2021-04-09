@@ -19,21 +19,8 @@ You can also edit the contents of the markdown file using Gitlab's/Github's web 
 
 ## Content
 
-Execises
-- [Exercise01](content/exercise_1.md)
-- [Exercise02](content/exercise_2.md)
-- [Exercise03](content/exercise_3.md)
-- [Exercise04](content/exercise_4.md)
-- [Exercise05](content/exercise_5.md)
-- [Exercise06](content/exercise_6.md)
-
-Project (2020)
-- [Introduction](content/archive/2020/introduction.md)
-- [Volume](content/archive/2020/volume.md)
-- [Projection](content/archive/2020/projection.md)
-- [Sinogram](content/archive/2020/sinogram.md)
-- [Backprojection](content/archive/2020/backprojection.md)
-- [Iterative Reconstruction and Conclusion](content/archive/2020/reconstruction.md)
+- [2021](content)
+- [2020](content/archive/2020)
 
 ## Rebuild Search Index 
 
