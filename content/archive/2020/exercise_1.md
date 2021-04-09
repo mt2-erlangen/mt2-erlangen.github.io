@@ -38,8 +38,8 @@ You can download it from [https://github.com/mt2-erlangen/exercises-ss2021](http
 <!--http://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html-->
 You should now be able to execute the file `src/main/java/exercises/Exercise01.java`
 
-![ImageJ](./import_eclipse/run.png)
-![ImageJ](./import_eclipse/imagej.png)
+![ImageJ](../import_eclipse/run.png)
+![ImageJ](../import_eclipse/imagej.png)
 
 The following code is opening the ImageJ main window and exits the running program when the window is closed.
 ```java
