@@ -87,7 +87,7 @@ Launch `Exercise02` with the one of the files of the data set as an argument (e.
 
 Your program should print now the file name you selected:
 
-![Stared with arguments](./start_with_args.png)
+![Stared with arguments](../start_with_args.png)
 
 **Remember to never put file names directly in your code. Your program will then only work on your machine!**
 
