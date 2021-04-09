@@ -108,7 +108,7 @@ As shown in the exercise slides, we will store all the pixels in one array, like
 The array should have the size `width * height`.
 `minIndexX`,`minIndexY` should be 0 for normal images.
 
-![Constructor](./image_constructor.png)
+![Constructor](../image_constructor.png)
 <!--**TODO: Nice image here. With width and height and buffer_size=width * height**-->
 
 Call the constructors of the super class `Signal` in the constructors of `Image`.
@@ -290,7 +290,7 @@ Test your Gauss filter in `Exercise03.java`.
 Use arbitray values for `sigma` and `filterSize`.
 The Gauss filter will blur your input image clearly if you chose a large value for sigma.
 
-![Blurred image](./pacemaker-blurred.png)
+![Blurred image](../pacemaker-blurred.png)
 
 There is also a unit test file that you can use: [`src/test/java/mt/GaussFilter2dTests.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/test/java/mt/GaussFilter2dTests.java)
 
@@ -316,7 +316,7 @@ You can implement this with only one loop over the elements of the `buffer`s of 
  Place the file [`src/main/java/exercises/Exercise03Demo.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/exercises/Exercise03Demo.java)
  in your project folder and run it.
 
- ![Demo](./exercise3demo.png)
+ ![Demo](../exercise3demo.png)
 
  You should see an interactive demo applying your Gauss filter to a noisy image.
  You change change the used parameters.
