@@ -6,7 +6,7 @@ title = "Import a Gradle project with IntelliJ"
 author="Stephan Seitz"
 +++
 
-- On Windows, [download the latest Java version 16 from Oracle](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html).
+- On Windows, macOS [download the latest Java version 15 from Oracle](https://www.oracle.com/java/technologies/javase-jdk15-downloads.html).
   On Ubuntu Linux, you can install `sudo apt install openjdk-14-jdk` or `sudo apt install openjdk-11-jdk`.
   At least Java 8 is required.
 
