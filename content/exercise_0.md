@@ -16,7 +16,7 @@ This is just a test to make sure your Java installation is working before the ac
 The actual exercises start **April 26th**.
 
 If you encounter any problem please create a post in the channel **"Java and Project Installation"** on Microsoft Teams.
-There will be a video conference for questions regarding the installtion of Java and ImageJ on this channel on **April 23th 14h**.
+There will be a video conference for questions regarding the installtion of Java and ImageJ on this channel on **April 23th 10h**.
 If everything is working for you, you just need to wait for next week when the actual exercises start.
 
 ## ImageJ
