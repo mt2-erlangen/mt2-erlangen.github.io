@@ -117,7 +117,7 @@ You can solve this exercise by trial and error. Maybe some part of the lecture i
 And another one?
 
 *PS: I wouldn't trust the factor $\frac{2}{5\pi}$ in the video.
-Just leave away the $\pi$. It's already fixed in your slides on studOn.*
+Just omit the $\pi$. It's already fixed in your slides on studOn.*
 
 ## Submitting
 
