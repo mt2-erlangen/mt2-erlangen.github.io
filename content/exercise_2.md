@@ -8,7 +8,7 @@ author="Stephan Seitz"
 
 # Will Corona Ever End?
 
-**Submission deadline: 17.05.21 23:59h**
+**Submission deadline: 16.05.21 23:59h**
 
 Please ensure that all files you created also contain **your name and your IDM ID**
 and also your partner's name and IDM ID if you're not working alone.
@@ -20,7 +20,7 @@ Each exercise has **10 points**. You have to achieve **30 of 60 points in six ho
 <P align="right"><i>3 Points</i>
 
 Right now our Signal class only represent a signal of finite length.
-But in many algorithms that have values at all integer positions.
+Now we want to extend our signal class.
 
 In our black board exercises, we agreed that we want to continue our signals with zeros where we don't have any values stored.
 If we access indices of our `Signal` with values smaller than `minIndex()` or larger `maxIndex()` we want to return `0.0f`.
@@ -33,12 +33,22 @@ Please be aware that `minIndex` can be smaller than 0 for subclasses of Signal.
 If `setAtIndex` is called with an invalid index (smaller than `minIndex` or greater than `maxIndex`), it's ok for the program to crash.
 This should not happen for `atIndex`.
 
+`Signal` should add the following member
+
 ```java
-    public float atIndex(int i)
-    public void setAtIndex(int i, float value)
+protected int minIndex; //Index of first array element (should be 0 for signals)
 ```
 
-You can check the correctness of `atIndex`/`setAtIndex` with the test `testAtIndex` in file `src/test/java/SignalTests.java`.
+Implement the methods explained above for `Signal`	
+
+```java
+public int minIndex() // Get lowest index of signal (that is stored in buffer)
+public int maxIndex()	// Get highest index of signal (that is stored in buffer)	
+public float atIndex(int i)
+public void setAtIndex(int i, float value)
+```
+
+You can check the correctness of `atIndex`/`setAtIndex` with the test `testAtIndex` in file [`src/test/java/SignalTests.java`](https://github.com/mt2-erlangen/exercises-ss2021/blob/main/src/test/java/mt/SignalTests.java)
 
 ## LinearFilter
 
@@ -70,7 +80,7 @@ Be sure that you use `atIndex` to access the values of `input` and the filter.
 
  ![tip3](../tip3.png)
 
-You can test your convolution function with the tests provided in `src/test/java/LinearFilterTests.java`.
+You can test your convolution function with the tests provided in [`src/test/java/LinearFilterTests.java`](https://github.com/mt2-erlangen/exercises-ss2021/blob/main/src/test/java/mt/LinearFilterTests.java).
 
 Good test cases are:
 
@@ -96,8 +106,8 @@ public static void main(String[] args) throws MalformedURLException, IOException
 ```
 
 `response` will contain a [JSONObject](https://stleary.github.io/JSON-java/org/json/JSONObject.html) from the `org.json` library
-(it was installed by adding `implementation 'org.json:json:20201115'` to your `build.gradle`).
-It contains the newest data from the Robert-Koch-Institute with the following JSON schema
+(it was installed by adding `implementation 'org.json:json:20201115'` to your `build.gradle`). The template for `Exercise 2` to use the function above can be downloaded from here: [Exercise2.java](https://github.com/mt2-erlangen/exercises-ss2021/blob/main/src/main/java/exercises/Exercise02.java)<br>
+It contains the newest data from the Robert-Koch-Institute with the following JSON schema:
 
 ```json
 {
