@@ -56,7 +56,7 @@ You can check the correctness of `atIndex`/`setAtIndex` with the test `testAtInd
 
  Implement `LinearFilter` in file `src/main/java/LinearFilter.java` as a subclass of `Signal`.
  `LinearFilter` should work like `Signal` except its `minIndex` should be at <br> 
- `- float(coefficients.length/2)` as in the exercise slides.
+ `- (coefficients.length/2)` as in the exercise slides.
 
  ![tip2](../tip2.png)
 
