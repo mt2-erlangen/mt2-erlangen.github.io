@@ -8,7 +8,7 @@ author="Stephan Seitz"
 
 # Will Corona Ever End?
 
-**Submission deadline: 16.05.21 23:59h**
+**Submission deadline: 16.05.21 23:55h**
 
 Please ensure that all files you created also contain **your name and your IDM ID**
 and also your partner's name and IDM ID if you're not working alone.
@@ -54,7 +54,7 @@ You can check the correctness of `atIndex`/`setAtIndex` with the test `testAtInd
 
 <P align="right"><i>3 Points</i>
 
- Implement `LinearFilter` in file `src/main/java/LinearFilter.java` as a subclass of `Signal`.
+ Implement `LinearFilter` in file `src/main/java/mt/LinearFilter.java` as a subclass of `Signal`.
  `LinearFilter` should work like `Signal` except its `minIndex` should be at <br> 
  `- (coefficients.length/2)` as in the exercise slides.
 
