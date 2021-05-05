@@ -81,7 +81,7 @@ Be sure that you use `atIndex` to access the values of `input` and the filter.
 
  ![tip3](../tip3.png)
 
-You can test your convolution function with the tests provided in [`src/test/java/LinearFilterTests.java`](https://github.com/mt2-erlangen/exercises-ss2021/blob/main/src/test/java/mt/LinearFilterTests.java).
+You can test your convolution function with the tests provided in [`src/test/java/LinearFilterTests.java`](https://github.com/mt2-erlangen/exercises-ss2021/blob/main/src/test/java/mt/LinearFilterTests.java). For the test you will also need to download the file [`src/main/java/lme/Algorithms.java`](https://github.com/mt2-erlangen/exercises-ss2021/blob/main/src/main/java/lme/Algorithms.java). 
 
 Good test cases are:
 
