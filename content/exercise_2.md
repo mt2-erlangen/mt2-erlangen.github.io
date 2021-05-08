@@ -108,7 +108,7 @@ public static void main(String[] args) throws MalformedURLException, IOException
 
 `response` will contain a [JSONObject](https://stleary.github.io/JSON-java/org/json/JSONObject.html) from the `org.json` library
 (it was installed by adding `implementation 'org.json:json:20201115'` to your `build.gradle`). The template for `Exercise 2` to use the function above can be downloaded from here: [Exercise2.java](https://github.com/mt2-erlangen/exercises-ss2021/blob/main/src/main/java/exercises/Exercise02.java)<br>
-It contains the newest data from the Robert-Koch-Institute (via https://github.com/marlon360/rki-covid-api) with the following JSON schema:
+It contains the newest data from the Robert-Koch-Institute (via [https://github.com/marlon360/rki-covid-api](https://github.com/marlon360/rki-covid-api)) with the following JSON schema:
 
 ```json
 {
