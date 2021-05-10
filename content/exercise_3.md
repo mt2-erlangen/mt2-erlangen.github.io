@@ -6,7 +6,7 @@ title = "Exercise 3"
 author="Paul Stöwer"
 +++
 
-**Submission deadline: 23.05.21 23:59h**
+**Submission deadline: 23.05.21 23:55h**
 
 Please ensure that all files you created also contain **your name and your IDM ID**
 and also your partner's name and IDM ID if you're not working alone.
