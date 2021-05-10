@@ -160,7 +160,7 @@ The image is from [our open access book](https://www.springer.com/gp/book/978331
 
 ![pacemaker.png](../pacemaker.png)
 
-You can check the correctness of `atIndex` with the `ImageTest`in the file [`src/test/java/ImageTests.java`](https://github.com/mt2-erlangen/exercises-ss2021/blob/main/src/test/java/mt/ImageTests.java). 
+You can check the correctness of `atIndex` with the `ImageTest`in the file [src/test/java/ImageTests.java](https://github.com/mt2-erlangen/exercises-ss2021/blob/main/src/test/java/mt/ImageTests.java). 
 
 # 2D Waves
 
