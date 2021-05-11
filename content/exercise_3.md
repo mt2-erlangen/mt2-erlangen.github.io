@@ -170,7 +170,7 @@ We implemented a 1D Sin and Cos function in `Exercise01`. Now we want to build t
 
 Additionally we are building a class `Vector2d`, which sets the frequency and orientation of our waves. Create therefore the file  `src/main/java/mt/Vector2d`.
 
-The class has two members `$k_x$`and `$k_y$` and a simple constructor.
+The class has two members `k_x`and `k_y` and a simple constructor.
 
 ```java
 
@@ -211,7 +211,7 @@ public class SineWave2d extends Image {
     
 }    
 ```
-The `min` and `max` indices of the wave functions should be set to $-[\frac{Width}{2}]$, $[\frac{With}{2}]$ and $-[\frac{Height}{2}]$, $[\frac{Height}{2}]$.
+The `min` and `max` indices of the wave functions should be set to $-[\frac{Width}{2}]$, $[\frac{Width}{2}]$ and $-[\frac{Height}{2}]$, $[\frac{Height}{2}]$.
 
 Both classes have a constructor in which you need set the pixel intensity in the buffer with the hep of the vector k:
 
