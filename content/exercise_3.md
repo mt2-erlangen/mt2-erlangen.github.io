@@ -170,16 +170,16 @@ We implemented a 1D Sin and Cos function in `Exercise01`. Now we want to build t
 
 Additionally we are building a class `Vector2d`, which sets the frequency and orientation of our waves. Create therefore the file  `src/main/java/mt/Vector2d`.
 
-The class has two members `x`and `y` and a simple constructor.
+The class has two members `$k_x$`and `$k_y$` and a simple constructor.
 
 ```java
 
 package mt;
 
 public class Vector2d {
-    float x,y;
+    float kx,ky;
 
-    public Vector2d(float x, float y){
+    public Vector2d(float kx, float ky){
         ...
 
     }
@@ -211,9 +211,9 @@ public class SineWave2d extends Image {
     
 }    
 ```
-The `min` and `max` indices of the wave functions should be set to $-[\frac{L}{2}]$ and $[\frac{L}{2}]$.
+The `min` and `max` indices of the wave functions should be set to $-[\frac{Width}{2}]$, $[\frac{With}{2}]$ and $-[\frac{Height}{2}]$, $[\frac{Height}{2}]$.
 
-Both classes have a constructor:
+Both classes have a constructor in which you need set the pixel intensity in the buffer with the hep of the vector k:
 
 ```java
     public CosineWave2d(Vector2d k, int width, int height, String name)
@@ -223,9 +223,9 @@ Both classes have a constructor:
 
 To get the intensity of each pixel of the 2D Wave Image we can use the following formulas:
 
-$$IntensityCos\left[x,y\right] = \cos\left((\frac{x}{N}\cdot k_x+\frac{y}{N}\cdot k_y) \cdot 2\pi\right) $$
+$$IntensityCos\left[x,y\right] = \cos\left((\frac{x}{Width}\cdot k_x+\frac{y}{Height}\cdot k_y) \cdot 2\pi\right) $$
 
-$$IntensitySin\left[x,y\right] = \sin\left((\frac{x}{N}\cdot k_x+\frac{y}{N}\cdot k_y) \cdot 2\pi\right) $$
+$$IntensitySin\left[x,y\right] = \sin\left((\frac{x}{Width}\cdot k_x+\frac{y}{Height}\cdot k_y) \cdot 2\pi\right) $$
 
 # Adding up waves and looking at the Fourier Transform
 <P align="right"><i>2 Points</i>
