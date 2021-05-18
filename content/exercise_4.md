@@ -141,7 +141,7 @@ It has the following constructor
 In the constructor, set the coefficients according to the unormalized 2-d normal distribution with standard deviation $\sigma$ (`sigma`).
 `Math.exp` is the exponetial function.  Use `setAtIndex`: $x$ should run from `minIndexX` to `maxIndexX` and $y$ from `minIndexY` to `maxIndexY`.
 
-$$ h[x,y] = \mathrm{e}^{-\frac{x^2+y^2}{2 \sigma^2}}$$
+$$ h[x,y] = \frac{1}{2 \pi \sigma}\mathrm{e}^{-\frac{x^2+y^2}{2 \sigma^2}}$$
 
 
 Call `normalize()` at the end of the constructor to ensure that all coefficients sum up to one.
@@ -182,7 +182,7 @@ It has the following constructor
 
 Use `setAtIndex`: $x$ should run from `minIndexX` to `maxIndexX` and $y$ from `minIndexY` to `maxIndexY`. The filter takes the average around its neighbours.
 
-$$ h[x,y] = \frac{1}{filterSize}$$
+$$ h[x,y] = \frac{1}{filterSize*filterSize}$$
 
 
 *The code for the Derivative filter should go to `src/main/java/mt/Derivativefilter2d.java`.*
