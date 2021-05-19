@@ -141,7 +141,7 @@ It has the following constructor
 In the constructor, set the coefficients according to the unormalized 2-d normal distribution with standard deviation $\sigma$ (`sigma`).
 `Math.exp` is the exponetial function.  Use `setAtIndex`: $x$ should run from `minIndexX` to `maxIndexX` and $y$ from `minIndexY` to `maxIndexY`.
 
-$$ h[x,y] = \frac{1}{2 \pi \sigma}\mathrm{e}^{-\frac{x^2+y^2}{2 \sigma^2}}$$
+$$ h[x,y] = \frac{1}{2 \pi \sigma^2}\mathrm{e}^{-\frac{x^2+y^2}{2 \sigma^2}}$$
 
 
 Call `normalize()` at the end of the constructor to ensure that all coefficients sum up to one.
