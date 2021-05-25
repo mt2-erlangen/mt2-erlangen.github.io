@@ -111,7 +111,6 @@ and [```src/main/java/mt/ImageTransformer.java```](https://github.com/mt2-erlang
     }
 ```
 
-* To ensure that everything is running, run the main function.
 * We already set the origin point for you in the file ```src/main/java/exercises/Exercise05.java```
 * To ensure that everything is running, run the main function of `Exercise05`.
 
