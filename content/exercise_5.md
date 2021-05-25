@@ -217,7 +217,7 @@ already given in the [theory](./img_transform_theory) section.
 
 Now we can start with the implementation of ```ImageTransformer``` class.
 
-* The class consists of the following member functions for translation
+* The class consists of the following member functions for translation, which will be altered in our apply method.
 
 ```java
 // Transformation parameters
