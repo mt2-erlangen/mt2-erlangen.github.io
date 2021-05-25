@@ -8,7 +8,7 @@ author="Srikrishna Jaganathan"
 
 # Submission
 
-**Submission deadline: 06.06.20 23:55h**
+**Submission deadline: 07.06.20 16:15h**
 
 Please ensure that all files you created also contain **your name and your IDM ID** and also your partner's name and IDM ID if you're not working alone.
 
