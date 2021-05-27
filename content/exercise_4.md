@@ -152,7 +152,7 @@ The Gauss filter will blur your input image clearly if you chose a large value f
 
 ![Blurred image](../pacemaker-blurred.png)
 
-There is also a unit test file that you can use: [`src/test/java/mt/GaussFilter2dTests.java`](https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/test/java/mt/GaussFilter2dTests.java)
+There is also a unit test file that you can use: [`src/test/java/mt/GaussFilter2dTests.java`](https://github.com/mt2-erlangen/exercises-ss2021/blob/master/src/test/java/mt/GaussFilter2dTests.java)
 
 ## More Filters!
 
