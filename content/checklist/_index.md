@@ -30,8 +30,8 @@ They should not overlap with the text.
 - All figures should have **captions** giving a brief description what the figure shows. The caption should be below the figure.
 - All **figures should be full-width**, not next text. A figure can contain multiple images next to each other.
 - A list of figures is not needed.
-- Do not use **abbreviation** without introducing them. The first time you should write *computer tomography (CT)*.
-After that, *CT* is enough.
+- Do not use **abbreviation** without introducing them. The first time you should write *Magnetic resonance imaging (MRI )*.
+After that, *MRI* is enough.
 - **Label all axes** in all plots and coordinate systems!
 - Never use "Ich" or "I". In English texts it's acceptable to use "we" even though you did all the work alone.
 
@@ -39,4 +39,4 @@ After that, *CT* is enough.
 To obtain all the points for the content of your report
 
 - Check whether you have addressed all the **questions** in the task description.
-- Check for **numbers in the questions**. Do you really have **two** advantages and **two** disadvanges of using computer tomography?
+- Check for **numbers in the questions**. Do you really have **two** advantages and **two** disadvanges of using magnetic resonance imaging?
