@@ -279,7 +279,7 @@ output.setAtIndex(xPrime, yPrime, pixelValue);
     
  * Rotation
     * $x= x' \cos\theta + y' \sin\theta$
-    * $y= - x \sin\theta + y' \cos\theta$            
+    * $y= - x' \sin\theta + y' \cos\theta$            
  * Scaling
     * $x=  \frac{x'}{s}$
     * $y=  \frac{y'}{s}$
