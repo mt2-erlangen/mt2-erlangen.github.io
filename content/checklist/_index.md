@@ -28,9 +28,9 @@ Use the same citation style for all your references.
 They should not be blurry or hand-drawn and images should not have a window border of ImageJ.
 They should not overlap with the text.
 - All figures should have **captions** giving a brief description what the figure shows. The caption should be below the figure.
-- All **figures should be full-width**, not next text. A figure can contain multiple images next to each other.
+- All **figures should be full-width**, not next to the text. A figure can contain multiple images next to each other.
 - A list of figures is not needed.
-- Do not use **abbreviation** without introducing them. The first time you should write *Magnetic resonance imaging (MRI )*.
+- Do not use **abbreviations** without introducing them. The first time you should write *Magnetic resonance imaging (MRI )*.
 After that, *MRI* is enough.
 - **Label all axes** in all plots and coordinate systems!
 - Never use "Ich" or "I". In English texts it's acceptable to use "we" even though you did all the work alone.
