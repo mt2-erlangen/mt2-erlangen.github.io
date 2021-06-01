@@ -31,6 +31,7 @@ Open a test image in a new file `src/main/java/exercise/Exercise06.java`.
 // Team parnter name
 package exercises;
 
+import ij.IJ;
 import lme.DisplayUtils;
 import mt.LinearImageFilter;
 
