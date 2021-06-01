@@ -92,7 +92,7 @@ You can write your own helper functions for the tasks.
 For histologic examinations colored subtances called stains are used to enhance the constrast
 of different portions of the tissue.
 
-Now ee are trying to segmnet the image of our cells directly. Use a suitable threshold to segment the individual sites with high contrast (0 background, 1 contrasted cells).
+Now we are trying to segmnet the image of our cells directly. Use a suitable threshold to segment the individual sites with high contrast (0 background, 1 contrasted cells).
 You can use the following method to overlay your segmentation with the original image.
 
 ```java
