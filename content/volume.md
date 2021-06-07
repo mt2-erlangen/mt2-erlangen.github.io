@@ -47,6 +47,9 @@ public class Volume {
 
     // A name for the volume
     protected String name;
+    
+    //Boolean for the k-space
+    protected boolean kspace = false;
 
 }
 ```
