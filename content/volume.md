@@ -37,6 +37,7 @@ import java.util.stream.IntStream;
 public class Volume {
     // Here we store our images
     protected mt.Image[] slices;
+    protected ImagePlus [] kslices; // will be needed for the projections
 
     // Dimensions of our volume
     protected int width, height, depth;
@@ -72,6 +73,10 @@ Getters/setters...
 
     public mt.Image getSlice(int z) 
     public void setSlice(int z, mt.Image slice)
+    
+    //The same for our kspace
+    public ImagePlus getkSlice(int z) 
+    public void setSlice(int z, ImagePlus slice)
 
     public float spacing()
     public void setSpacing(float spacing) // should also set spacing also for all slices!
