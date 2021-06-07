@@ -128,8 +128,8 @@ You should now have your MRI volume and salso as a k-space volume!
 
 <table>
 <tr>
-<td><image align="center" src="/bc.gif" ></td>
- <td><image align="center" src="/bc_kspace.gif" ></td>
+<td><image align="center" src="https://media.giphy.com/media/Ov5R3vGIvyXA8ia4BB/giphy.gif" ></td>
+ <td><image align="center" src="https://media.giphy.com/media/f4FVUzT92S4gyYkUhJ/giphy.gif" ></td>
 </tr>
 </table>
 
