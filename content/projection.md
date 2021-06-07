@@ -35,15 +35,15 @@ We organized image slices of MRI images to volumes in the previous part of the p
 
 Due to properties of the frequency domain our k-space images will be not part of our `Image` class and will stay as `ImagePlus` objects from our ImageJ library. `ImagePlus` Objects can use many functions for different purposes: [https://imagej.net/developer/api/ij/ImagePlus.html](https://imagej.net/developer/api/ij/ImagePlus.html).
 
-Wel will need to add therefore some ImagePlus features to our `Volume` class:
+Wel added therefore already some ImagePlus features to our `Volume` class:
 
 ```java
 protected ImagePlus [] kslices;
 boolean kspace;
-
+public ImagePlus getkSlice(int z)
 ```
 
-And an extra constructor if we have images from our frequency domain:
+Add an extra constructor if we have images from our frequency domain:
 
 ```java
 public Volume(int width, int height, int depth, String name, boolean kspace)
