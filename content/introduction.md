@@ -11,7 +11,7 @@ author = "Paul Stöwer"
 - [Volumes](../volume)
 - [Projection](../projection) *Tafelübung 14. Juni*
 - [k-Space](../projectiondomain)
-- [Post-Processing](../postProcessing) *Tafelübung 21. Juni*
+- [Post-Processing](../postprocessing) *Tafelübung 21. Juni*
 - [Outlook and Conclusion](../conclusion)
 
 # Introduction
