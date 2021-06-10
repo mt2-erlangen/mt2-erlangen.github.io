@@ -70,6 +70,7 @@ Getters/setters...
     public float physicalWidth() // width * spacing()
     public float physicalHeight() // height * spacing()
     public float physicalDepth() // depth * spacing()
+    public boolean kspace() 
 
     public mt.Image getSlice(int z) 
     public void setSlice(int z, mt.Image slice)
