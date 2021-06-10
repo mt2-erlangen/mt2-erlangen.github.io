@@ -33,7 +33,7 @@ In the report we are trying to explore the basic behavior of MRI imaging. The si
 
 We organized image slices of MRI images to volumes in the previous part of the project already. As you can see above, the Fourier transform plays again a role in the image reconstruction. To get raw data we are reversing the image reconstruction process and creating our own frequency domain images. The frequency domain images will be called k-space images.
 
-Due to properties of the frequency domain our k-space images will be not part of our `Image` class and will stay as `ImagePlus` objects from our ImageJ library. `ImagePlus` Objects can use many functions for different purposes: [https://imagej.net/developer/api/ij/ImagePlus.html](https://imagej.net/developer/api/ij/ImagePlus.html).
+Due to properties of the frequency domain our k-space images will be not part of our `Image` class and will stay as `ImagePlus` objects from our ImageJ library. `ImagePlus` Objects can use many functions for different purposes: [https://imagej.nih.gov/ij/developer/api/ij/ij/ImagePlus.html](https://imagej.nih.gov/ij/developer/api/ij/ij/ImagePlus.html).
 
 We added therefore already some ImagePlus features to our `Volume` class:
 
