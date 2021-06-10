@@ -33,6 +33,7 @@ package mt;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
+import ij.ImagePlus;
 
 public class Volume {
     // Here we store our images
