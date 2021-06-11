@@ -129,6 +129,7 @@ Or "click" on menu items in your program code.
 
 ```java
     segmentation.show();
+    IJ.run("Make Binary");
     IJ.run("8-bit");
     IJ.run("Watershed");
     DisplayUtils.showSegmentedCells(cells, segmentation);
