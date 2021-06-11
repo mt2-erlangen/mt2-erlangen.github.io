@@ -20,7 +20,7 @@ implementation 'sc.fiji:imglib-clearvolume:1.4.2'
 You need to start ImageJ with (instead of `(new ij.ImageJ()).exitWhenQuitting(true);`)
 
 ```java
-    net.image.ImageJ ij = new net.imagej.ImageJ();
+    net.imagej.ImageJ ij = new net.imagej.ImageJ();
     ij.launch();
 ```
 
