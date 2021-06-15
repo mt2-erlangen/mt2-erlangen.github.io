@@ -11,7 +11,7 @@ author = "Paul Stöwer"
 - [Volumes](../volume)
 - [Projection](../projection) *Tafelübung 14. Juni*
 - [k-Space](../projectiondomain)
-- [Post-Processing](../postprocessing) *Tafelübung 21. Juni*
+- [Post-Processing](../postprocessing) <del>*Tafelübung 21. Juni*<\del> Q&A 18.06 - [https://fau.zoom.us/j/66435169703](https://fau.zoom.us/j/66435169703)
 - [Outlook and Conclusion](../conclusion)
 
 # Introduction
