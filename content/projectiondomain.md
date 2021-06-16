@@ -19,13 +19,16 @@ Below are two videos which show how different parts of the k-space correspond to
 
 * Construction from the center outward:
 
-![kspacerendering](http://www-mrsrl.stanford.edu/%7Ebrian/mri-movies/kspace-outward.mov)
-[Source](http://www-mrsrl.stanford.edu/%7Ebrian/mri-movies/kspace-outward.mov)
+<image align="center" src="/rad_kspace.gif" >
+
+[Courtesy by Brian Hargreaves From http://www-mrsrl.stanford.edu/~brian/mri-movies/kspace-outward.mov](http://www-mrsrl.stanford.edu/~brian/mri-movies/kspace-outward.mov)
 
 * Construction from top to bottom:
 
-![kspacerenderingsequential](http://www-mrsrl.stanford.edu/~brian/mri-movies/kspace-sequential.mov)
-[Source](http://www-mrsrl.stanford.edu/~brian/mri-movies/kspace-sequential.mov)
+<image align="center" src="/rect_kspace.gif" >
+
+[Courtesy by Brian Hargreaves.
+From http://www-mrsrl.stanford.edu/~brian/mri-movies/kspace-sequential.mov](http://www-mrsrl.stanford.edu/~brian/mri-movies/kspace-sequential.mov)
 
 
 ## Masking Up!
