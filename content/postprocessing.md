@@ -63,7 +63,7 @@ After the transformation we have three different image planes!
 
 *Note: The reconstructed images might have some distortions in them. Can you improve it with an image filter? You might need to adjust the contrast via the ImageJ menu for a proper display of the new volume.*
 
-*Additional Note: You might need to adjust the Contrast/Brightness of the Image via the ImageJ Menu to see the proper transformed Volume: Image->Adjust *
+*Additional Note: You might need to adjust the Contrast/Brightness of the Image via the ImageJ Menu to see the proper transformed Volume: Image->Adjust.*
 
 ## Maximum Intensity Projection
 
