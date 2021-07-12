@@ -17,7 +17,7 @@ In the project report you should answer the following questions:
 * How do we get a signal from the MRI scanner and how is it stored?
 * What is the difference between T1 and T2 imaging?
 
-This section should all in all be about one page long.
+This section should all in all be about ~~one page long~~ 1-1,5 pages long.
 
 
 In the report we are trying to explore the basic behavior of MRI imaging. The simplified steps to create an image from the scanner to an actual image can be seen below:
