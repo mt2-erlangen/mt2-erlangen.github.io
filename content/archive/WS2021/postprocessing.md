@@ -44,17 +44,17 @@ public static Image MaximumIntensityProjection(Volume volume)
 
 The basic mechanism of the MIP is that we are creating a 2D image from our 3D Volume. We are only taking the maximum values of every slice and saving them into our resulting image. We are going through all our different slices and comparing our image values element by element and saving the highest pixel values in our resulting image:
 
-<img align="center"  src="/mip_z.png"  >
+<img align="center"  src="../mip_z.png"  >
 
 
 If we scroll again through our MRA image set we see again only small white areas:
 
-<image align="center" src="/brain_axial.gif" >
+<image align="center" src="../brain_axial.gif" >
 
 
 After we apply our MIP algorithm we can see all the blood vessels!
 
-<image align="center" src="./MIP.png" >
+<image align="center" src="../MIP.png" >
 
 
 Explain in your project report:
@@ -84,6 +84,6 @@ Consider the following points in your report:
 
 This section should be around one page long.
 
-[Previous: Volume](./volume)
+[Previous: Volume](../volume)
 
-[Next: Method of Otsu's](./otsu)
+[Next: Method of Otsu's](../otsu)
