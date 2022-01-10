@@ -22,7 +22,7 @@ Explain in you report the method of slice selection:
 
 <table>
 <tr>
-<td><img align="center" src="./volume_slices.png" ></td>
+<td><img align="center" src="../volume_slices.png" ></td>
 </tr>
 <tr>
 <th>A volume: very much just multiple images stacked one over another</th>
@@ -147,6 +147,6 @@ Here a short summary of handy functions of ImageJ when working with MRI images.
 - Look at a [3-d rendering with ClearVolume](../clearvolume)
 
 
-[Previous: Introduction](./introduction) 
+[Previous: Introduction](../introduction) 
 
-[Next: Post-Processing](./postprocessing)
+[Next: Post-Processing](../postprocessing)
