@@ -39,5 +39,5 @@ Please have a look on our [checklist for a good project report](../checklist).
 <!--Whenever we refer to the maximum length of a section we're not counting figures and tables and just consider the length-->
 <!--of the text.-->
 
-[Next task](./volume)
+[Next task](../volume)
 
