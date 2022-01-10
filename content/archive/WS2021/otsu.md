@@ -41,8 +41,8 @@ Now you can iterate over your normalized input image and increase the entry of t
 
  <p style="text-align: center;">
 <table><tr>
-<td> <img src="./MIP.png" alt="MIP.png"  style="width: 256;"/> </td>
-<td> <img src="./histogramMIP.png" alt="histogramMIP.png" style="width: 256;"/> </td>
+<td> <img src="../MIP.png" alt="MIP.png"  style="width: 256;"/> </td>
+<td> <img src="../histogramMIP.png" alt="histogramMIP.png" style="width: 256;"/> </td>
 </tr>
 <tr>
 <th>MIP Image of Volume1</th> 
@@ -88,6 +88,6 @@ Consider the following points in your report:
 
 This section should be half a page to one page long.
 
-[Previous: Post-Processing](./postprocessing)
+[Previous: Post-Processing](../postprocessing)
 
-[Next: Statistical Evaluation](./evaluation)
+[Next: Statistical Evaluation](../evaluation)
