@@ -12,8 +12,8 @@ Lets try to evaluate the Method Otsu's with our MIP image and a picture of cultu
 
 <p style="text-align: center;">
 <table><tr>
-<td> <img src="./MIP.png" alt="MIP.png"  style="width: 256;"/> </td>
-<td> <img src="nuclei.jpg" style="width: 256;"/> </td>
+<td> <img src="../MIP.png" alt="MIP.png"  style="width: 256;"/> </td>
+<td> <img src="../nuclei.jpg" style="width: 256;"/> </td>
 </tr>
 <tr>
 <th>MIP Image of Volume1</th> 
@@ -23,8 +23,8 @@ Lets try to evaluate the Method Otsu's with our MIP image and a picture of cultu
  <p>
 <p style="text-align: center;">
 <table><tr>
-<td> <img src="./mip_otsu.png" alt="mip_otsu.png"  style="width: 256;"/> </td>
-<td> <img src="./segmentationNuclei.png" style="width: 256;"/> </td>
+<td> <img src="../mip_otsu.png" alt="mip_otsu.png"  style="width: 256;"/> </td>
+<td> <img src="../segmentationNuclei.png" style="width: 256;"/> </td>
 </tr>
 <tr>
 <th>MIP Image Segmentation with Otsu Threshold</th> 
@@ -56,7 +56,7 @@ The Root Mean Square Error is defined as following: $RMSE(\theta)=\sqrt{E((\hat{
 
 We can now use the following Image as ground truth Image $\hat{\theta}$:
 
-<image align="center" src="./MIP_gt.png" >
+<image align="center" src="../MIP_gt.png" >
 
 
 
@@ -74,6 +74,6 @@ Describe in your report:
 
 The content for this section should be about half a page long. 
 
-[Previous: Method of Otsu's](./otsu)
+[Previous: Method of Otsu's](../otsu)
 
-[Next: Outlook and Conclusion](./conclusion)
+[Next: Outlook and Conclusion](../conclusion)
