@@ -27,7 +27,7 @@ This part of the project work should be about a quarter page long and should con
 
 # Submission
 
-Submit your project report as a PDF and your entire project folder of your code until **April 16 23:55h** via email to: paul.stoewer@fau.de.
+Submit your project report as a PDF and your entire project folder of your code until **April 11 23:55h** via email to: paul.stoewer@fau.de.
 Your project must compile as a whole!
 Make sure that you had a last look at our [checklist](../checklist).
 
