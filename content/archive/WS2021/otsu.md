@@ -35,7 +35,7 @@ public static Image normalizeToGreyScale(Image image)
 
 ```
 <br>You can normalize the image with the formula: $I_N=(I-Min)\frac{newMax-newMin}{Max-Min}+newMin$. 
-<br> *Hint: Make sure that you have even pixel values!*
+<br> *Hint: Make sure that you have integer pixel values!*
 
 Now you can iterate over your normalized input image and increase the entry of the histogram according to the pixel value of the image. Due to the fact that the histogram is `Signal` we can use the `show()`) method to display it: 
 
