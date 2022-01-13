@@ -20,6 +20,8 @@ Explain in you report the method of slice selection:
 * How is a specific slice selected?
 
 
+This part should be about a quarter to half a page long.
+
 <table>
 <tr>
 <td><img align="center" src="../volume_slices.png" ></td>
