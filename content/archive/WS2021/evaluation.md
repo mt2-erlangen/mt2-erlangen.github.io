@@ -52,21 +52,21 @@ public static float RootMeanSquareError(Image reference, Image result)
 ```
 
 The Root Mean Square Error is defined as following: $RMSE(\theta)=\sqrt{E((\hat{\theta}-\theta)^2)}$.
-<br>We want to compare our segmented images. Therefore our estimated value $\theta$ can be described by our pixel values: $RMSE=\sqrt{\frac{1}{n}\sum_{i=1}^n(x_i-\hat{x}_i)^2}$
+<br>We want to compare our segmented images. Therefore our estimated value $\theta$ can be described by our pixel values: $RMSE=\sqrt{\frac{1}{n}\sum_{i=1}^n(\hat{x}_i-x_i)^2}$, where $\hat{x_i}$ are the pixel values of our ground truth image and $x_i$ the pixel values from our segmentation.
 
 We can now use the following Image as ground truth Image $\hat{\theta}$:
 
 <image align="center" src="../MIP_gt.png" >
 
+[Download](https://faubox.rrze.uni-erlangen.de/getlink/fiJxq2dDqhVQXUxZoN1JrdZ6/GroundTruth)
 
-
-We can make use of our Signal Class in our Framework again: You can create a `Signal` with the size of possible thresholds in your image. Afterwards you can show a graph with the different errors. Which threshold has the lowest RSME in comparison with our ground truth image $\hat{\theta}$?
+We can make use of our Signal Class in our Framework again: Create a `Signal` with the size of all possible thresholds in your image. Afterwards you can show a graph with the different errors in comparison to the corresponding threshold. Which threshold has the lowest RSME in comparison with our ground truth image $\hat{\theta}$?
 
 
 Describe in your report:
 
 * Why do we need statistical evaluation methods in science?
-    - Include a graph with at all possible threshold of the grey value image
+    - Include a graph wich shows the relationship between threshold and RSME for all possible grey values.
     - Describe the graph and compare the RSME with the according threshold
     - What is the big disadvantage of the RSME in our case? 
 
