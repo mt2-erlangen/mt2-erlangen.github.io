@@ -15,6 +15,7 @@ Artificial intelligence and deep neural networks also influence this process:
 * Describe the methods shortly and give a citation for each method. 
 * Make an educated guess on how the future of segmentation methods might look like!
 
+This part of the project should be about half a page long.
 
 # Conclusion
 
