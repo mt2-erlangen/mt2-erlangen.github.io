@@ -18,7 +18,7 @@ theme = "dinkleberg"
 #theme = "book"
 
 [extra]
-blog_logo="/imgs/common/idea_logo_small.png" #will appear on top header
+blog_logo="/imgs/common/joint_logo_small.png" #will appear on top header
 blog_title="Medizintechnik II – Exercises" #will appear on top header after logo
 
 ## i18n words
