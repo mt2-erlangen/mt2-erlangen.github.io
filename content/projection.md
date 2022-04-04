@@ -2,7 +2,7 @@
 date= 2022-06-20T08:05:00Z
 title = "Project Work 3"
 [extra]
-author = "Bruno Riemenschneider"
+author= "Bruno Riemenschneider"
 +++
 
 # TBA

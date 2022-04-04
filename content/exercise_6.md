@@ -3,7 +3,7 @@ date= 2022-06-13
 title = "Exercise 6"
 
 [extra]
-author="Mischa Dombrowski, Stephan Seitz"
+author= "Mischa Dombrowski, Stephan Seitz"
 +++
 
 

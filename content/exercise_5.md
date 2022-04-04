@@ -3,7 +3,7 @@ date= 2022-06-06
 title = "Exercise 5"
 
 [extra]
-author="Mischa Dombrowski, Srikrishna Jaganathan"
+author= "Mischa Dombrowski, Srikrishna Jaganathan"
 +++
 
 # Submission
