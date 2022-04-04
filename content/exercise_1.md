@@ -1,15 +1,15 @@
 +++
-date= 2021-04-26
+date= 2022-05-09
 title = "Exercise 1"
 
 [extra]
-author="Stephan Seitz"
+author="Mischa Dombrowski, Stephan Seitz"
 +++
 
 
 # Signals and Waves
 
-**Submission deadline: 09.05.21 23:59h**
+**Submission deadline: 22.05.22 23:59h**
 
 Please ensure that all files you created also contain **your name and your IDM ID**
 and also your partner's name and IDM ID if you're not working alone.
