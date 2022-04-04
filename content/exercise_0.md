@@ -3,7 +3,7 @@ date= 2021-04-19
 title = "Exercise 0"
 
 [extra]
-author="Stephan Seitz"
+author="Mischa Dombrowski, Stephan Seitz"
 +++
 
 
@@ -13,10 +13,10 @@ author="Stephan Seitz"
 
 
 This is just a test to make sure your Java installation is working before the actual exercises start.
-The actual exercises start **April 26th**.
+The actual exercises start **May 9th**.
 
 If you encounter any problem please create a post in the channel **"Java and Project Installation"** on Microsoft Teams.
-There will be a video conference for questions regarding the installtion of Java and ImageJ on this channel on **April 23th 10h**.
+For questions regarding the installtion of Java and ImageJ please visit one of the computer exercises.
 If everything is working for you, you just need to wait for next week when the actual exercises start.
 
 ## ImageJ
