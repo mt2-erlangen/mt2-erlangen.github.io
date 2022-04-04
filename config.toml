@@ -18,7 +18,7 @@ theme = "dinkleberg"
 #theme = "book"
 
 [extra]
-blog_logo="/imgs/common/prl_logo_small.png" #will appear on top header
+blog_logo="/imgs/common/idea_logo_small.png" #will appear on top header
 blog_title="Medizintechnik II – Exercises" #will appear on top header after logo
 
 ## i18n words
@@ -39,7 +39,7 @@ og_site_name="" # Site Name for Open Graphic
 keywords="" # Keywords for SEO
 
 educational_use="knowledge share" # OPTIONAL
-copyright_year="2021" # OPTIONAL
+copyright_year="2022" # OPTIONAL
 
 fb_app_id="???" # OPTIONAL, Facebook App Id to help in metrics
 twitter_username="@???" # OPTIONAL, Twitter User to help with metrics
@@ -48,7 +48,7 @@ twitter_username="@???" # OPTIONAL, Twitter User to help with metrics
 sidebar = [
     {name = "Materials", urls=[
         {name="Github (Java project template)", url="https://github.com/mt2-erlangen/exercises-ss2021"},
-        {name="StudOn", url="https://www.studon.fau.de/crs3726709.html"},
+        {name="StudOn", url="https://www.studon.fau.de/crs4223415.html"},
         {name="LaTeX Template", url="https://github.com/mt2-erlangen/latex-template"},
         {name="Exercises 2020", url="./archive/2020"},
     ]},
