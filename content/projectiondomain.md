@@ -1,6 +1,6 @@
 +++
-date= TBA 
-title = "Project Work 4 – K-Space"
+date= 2022-06-20T08:05:00Z
+title = "Project Work 4" 
 [extra]
 author = "Bruno Riemenschneider"
 +++
