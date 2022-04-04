@@ -1,13 +1,13 @@
 +++
-date= 2021-05-31
+date= 2022-06-13
 title = "Exercise 6"
 
 [extra]
-author="Stephan Seitz"
+author="Mischa Dombrowski, Stephan Seitz"
 +++
 
 
-**Submission deadline: 13.06.20 23:55h**
+**Submission deadline: 26.06.22 23:59h**
 
 In the last exercise, we want to have a look at edge detection and segmentation.
 

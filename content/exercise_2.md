@@ -1,14 +1,14 @@
 +++
-date= 2021-05-03
+date= 2022-05-16
 title = "Exercise 2"
 
 [extra]
-author="Stephan Seitz"
+author="Mischa Dombrowski, Stephan Seitz"
 +++
 
 # Will Corona Ever End?
 
-**Submission deadline: 16.05.21 23:55h**
+**Submission deadline: 29.05.22 23:55h**
 
 Please ensure that all files you created also contain **your name and your IDM ID**
 and also your partner's name and IDM ID if you're not working alone.

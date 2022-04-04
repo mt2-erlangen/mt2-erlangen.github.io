@@ -1,9 +1,9 @@
 +++
-date= 2020-06-03T08:06:00Z
+date= 2022-06-20T08:01:00Z 
 title = "Checklist – Project Report"
 
 [extra]
-author = "Stephan Seitz"
+author = "Mischa Dombrowski, Stephan Seitz"
 +++
 
 We've collected a small checklist for things that you might forget when writing your project work.

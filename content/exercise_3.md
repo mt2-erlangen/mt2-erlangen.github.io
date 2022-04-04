@@ -1,12 +1,12 @@
 +++
-date= 2021-05-10
+date= 2022-05-23
 title = "Exercise 3"
 
 [extra]
-author="Paul Stöwer"
+author="Mischa Dombrowski, Paul Stöwer"
 +++
 
-**Submission deadline: 23.05.21 23:55h**
+**Submission deadline: 05.06.22 23:55h**
 
 Please ensure that all files you created also contain **your name and your IDM ID**
 and also your partner's name and IDM ID if you're not working alone.
