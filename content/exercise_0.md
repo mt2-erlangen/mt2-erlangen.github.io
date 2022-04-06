@@ -32,7 +32,7 @@ This is not necessary for the exercises.
 
 ImageJ can also be used as a Java library.
 We already created a Java project that uses ImageJ.
-You can download it from [https://github.com/mt2-erlangen/exercises-ss2021](https://github.com/mt2-erlangen/exercises-ss2021)
+You can download it from [https://github.com/mt2-erlangen/exercises-ss2022](https://github.com/mt2-erlangen/exercises-ss2022)
 and import with the IDE of your choice:
 
 
