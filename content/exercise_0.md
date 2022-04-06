@@ -114,5 +114,10 @@ is `null` (or of `very.complicated.expression[2]` when things get more complicat
 In Eclipse, the calculator are a pair of glasses (make sure you are in debug perspective, menu: `Window > Perspective > Open Perspective > Debug`).
 ![](../eclipse_watches.png)
 
-
 Now you should be well prepared for the actual exercises!
+
+## Java Basics
+
+To complete the exercises we recommend that you have a look at the Java basics before they start. We assume that you already know the syntax and have enough background knowledge to write a simple program. If you don't have any knowledge yet, online resources such as [https://www.codecademy.com/learn/learn-java](https://www.codecademy.com/learn/learn-java) or [https://www.learnjavaonline.org/](https://www.learnjavaonline.org/) are a good starting point. 
+
+
