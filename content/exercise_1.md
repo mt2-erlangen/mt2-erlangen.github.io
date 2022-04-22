@@ -60,7 +60,7 @@ Implement the following getter methods for `Signal`
 ```
 
 Next, we want to visualize our Signal in the method `show`. You can use provided function `lme.DisplayUtils.showArray`.
-The file DisplayUtils.java can be downloaded:[https://github.com/mt2-erlangen/exercises-ss2021/blob/main/src/main/java/lme/DisplayUtils.java](https://github.com/mt2-erlangen/exercises-ss2021/blob/main/src/main/java/lme/DisplayUtils.java)
+The file DisplayUtils.java can be downloaded:[https://github.com/mt2-erlangen/exercises-ss2022/blob/master/src/main/java/lme/DisplayUtils.java](https://github.com/mt2-erlangen/exercises-ss2022/blob/master/src/main/java/lme/DisplayUtils.java)
 
 To test it, create a `Signal` with arbitray values in the main method of `src/main/java/exercises/Exercise01.java` and call its `show` method.
 
