@@ -8,4 +8,4 @@ author= "Mischa Dombrowski, Srikrishna Jaganathan"
 
 # TBA 
 
-**Submission deadline: 19.06.22 23:59h**
+**Submission deadline: 19.06.22 23:55h**

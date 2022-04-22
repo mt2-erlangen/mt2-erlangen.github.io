@@ -8,4 +8,4 @@ author= "Mischa Dombrowski, Stephan Seitz"
 
 # TBA 
 
-**Submission deadline: 26.06.22 23:59h**
+**Submission deadline: 26.06.22 23:55h**
