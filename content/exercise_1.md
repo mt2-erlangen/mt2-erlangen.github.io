@@ -18,6 +18,16 @@ Each exercise has **10 points**. You have to achieve **30 of 60 points in six ho
 
 ### Signals
 
+For this exercise you will need to download two files provided by us and place them in your repo. 
+
+The file Exercise01.java can be downloaded here: [https://github.com/mt2-erlangen/exercises-ss2022/blob/exercise1/src/main/java/exercises/Exercise01.java](https://github.com/mt2-erlangen/exercises-ss2022/blob/exercise1/src/main/java/exercises/Exercise01.java).
+It should be located in `src/main/java/exercises/Exercise01.java`
+
+
+The file DisplayUtils.java can be downloaded here:[https://github.com/mt2-erlangen/exercises-ss2022/blob/exercise1/src/main/java/lme/DisplayUtils.java](https://github.com/mt2-erlangen/exercises-ss2022/blob/exercise1/src/main/java/lme/DisplayUtils.java).
+This file should be located in `src/main/java/mt/DisplayUtils.java`
+
+
 <P align="right"><i>3 Points</i>
 
 As a first step, we will implement the class `Signal` 
@@ -60,8 +70,6 @@ Implement the following getter methods for `Signal`
 ```
 
 Next, we want to visualize our Signal in the method `show`. You can use provided function `lme.DisplayUtils.showArray`.
-The file DisplayUtils.java can be downloaded:[https://github.com/mt2-erlangen/exercises-ss2021/blob/main/src/main/java/lme/DisplayUtils.java](https://github.com/mt2-erlangen/exercises-ss2021/blob/main/src/main/java/lme/DisplayUtils.java)
-
 To test it, create a `Signal` with arbitray values in the main method of `src/main/java/exercises/Exercise01.java` and call its `show` method.
 
 ```java
