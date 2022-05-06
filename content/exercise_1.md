@@ -21,7 +21,7 @@ Each exercise has **10 points**. You have to achieve **30 of 60 points in six ho
 For this exercise you will need to download two files provided by us and place them in your project. 
 
 The files Exercise01.java and DisplayUtils.java can be downloaded on StudOn: [https://www.studon.fau.de/studon/goto.php?target=fold_4523518](https://www.studon.fau.de/studon/goto.php?target=fold_4523518).
-Copy the files to  `src/main/java/exercises/Exercise01.java` and `src/main/java/mt/DisplayUtils.java`
+Copy the files to  `src/main/java/exercises/Exercise01.java` and `src/main/java/lme/DisplayUtils.java`
 
 
 <P align="right"><i>3 Points</i>
@@ -96,7 +96,7 @@ Construct some objects of the two classes in `src/main/java/exercises/Exercise01
 
 <P align="right"><i>3 Points</i>
 
-Professor Maier said that you can create any signal just using sine and cosine waves.
+Professor Kainz said that you can create any signal just using sine and cosine waves.
 Try to generate this signal by adding and scaling some sine and cosine waves (only needs to be similar).
 
 [![](../coolwave3.png)](../coolwave3.png)
