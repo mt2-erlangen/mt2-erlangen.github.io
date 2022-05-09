@@ -1,5 +1,5 @@
 +++
-date= 2022-06-13
+date= 2022-06-09
 title = "Exercise 6"
 
 [extra]
