@@ -48,7 +48,7 @@ public float atIndex(int i)
 public void setAtIndex(int i, float value)
 ```
 
-You can check the correctness of `atIndex`/`setAtIndex` with the test `testAtIndex` in file [`src/test/java/SignalTests.java`](https://github.com/mt2-erlangen/exercises-ss2022/blob/master/src/test/java/mt/SignalTests.java)
+You can check the correctness of `atIndex`/`setAtIndex` with the test `testAtIndex` that you can download from [StudOn](https://www.studon.fau.de/fold4531348.html) by placing it in `src/test/java/SignalTests.java`.
 
 ## LinearFilter
 
@@ -81,7 +81,7 @@ Be sure that you use `atIndex` to access the values of `input` and the filter.
 
  ![tip3](../tip3.png)
 
-You can test your convolution function with the tests provided in [`src/test/java/LinearFilterTests.java`](https://github.com/mt2-erlangen/exercises-ss2022/blob/master/src/test/java/mt/LinearFilterTests.java). For the test you will also need to download the file [`src/main/java/lme/Algorithms.java`](https://github.com/mt2-erlangen/exercises-ss2021/blob/main/src/main/java/lme/Algorithms.java). 
+You can test your convolution function with the tests provided on  [StudOn](https://www.studon.fau.de/fold4531348.html) by placing them into `src/test/java/LinearFilterTests.java` and `src/main/java/lme/Algorithms.java`. 
 
 Good test cases are:
 
@@ -107,7 +107,7 @@ public static void main(String[] args) throws MalformedURLException, IOException
 ```
 
 `response` will contain a [JSONObject](https://stleary.github.io/JSON-java/org/json/JSONObject.html) from the `org.json` library
-(it was installed by adding `implementation 'org.json:json:20201115'` to your `build.gradle`). The template for `Exercise 2` to use the function above can be downloaded from here: [Exercise2.java](https://github.com/mt2-erlangen/exercises-ss2022/blob/master/src/main/java/exercises/Exercise02.java)<br>
+(it was installed by adding `implementation 'org.json:json:20201115'` to your `build.gradle`). The template for `Exercise 2` to use the function above can be downloaded from [here](https://www.studon.fau.de/fold4531348.html). Place the file in `src/main/java/exercises/`. <br>
 It contains the newest data from the Robert-Koch-Institute (via [https://github.com/marlon360/rki-covid-api](https://github.com/marlon360/rki-covid-api)) with the following JSON schema:
 
 ```json
