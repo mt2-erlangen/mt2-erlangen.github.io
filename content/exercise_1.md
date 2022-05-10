@@ -16,6 +16,11 @@ and also your partner's name and IDM ID if you're not working alone.
 
 Each exercise has **10 points**. You have to achieve **30 of 60 points in six homework exercises** to pass the module.
 
+### Preperation 
+
+Please start by going through exercise 0 first if you haven't done so, yet. 
+The files you downloaded in the previous exercise are necessary to run the current exercise. 
+
 ### Signals
 
 For this exercise you will need to download two files provided by us and place them in your project. 
