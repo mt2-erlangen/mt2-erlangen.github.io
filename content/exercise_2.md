@@ -20,9 +20,9 @@ Each exercise has **10 points**. You have to achieve **30 of 60 points in six ho
 <P align="right"><i>3 Points</i>
 
 Right now our Signal class only represent a signal of finite length.
-Now we want to extend our signal class.
+Now we are going to extend our signal class.
 
-In our black board exercises, we agreed that we want to continue our signals with zeros where we don't have any values stored.
+The signals are padded with zeros where we don't have any values stored.
 If we access indices of our `Signal` with values smaller than `minIndex()` or larger `maxIndex()` we want to return `0.0f`.
 If a user accesses an index between `minIndex()` and `maxIndex()` we want to return the corresponding value stored in our array.
 
@@ -48,7 +48,7 @@ public float atIndex(int i)
 public void setAtIndex(int i, float value)
 ```
 
-You can check the correctness of `atIndex`/`setAtIndex` with the test `testAtIndex` that you can download from [StudOn](https://www.studon.fau.de/fold4531348.html) by placing it in `src/test/java/SignalTests.java`.
+You can check the correctness of `atIndex` with the test `testAtIndex`. You can download the corresponding file from [StudOn](https://www.studon.fau.de/fold4531348.html) and move it to `src/test/java/SignalTests.java`.
 
 ## LinearFilter
 
