@@ -89,9 +89,9 @@ Create two files `src/main/java/mt/CosineWave.java`/`src/main/java/mt/SineWave.j
 
 The two classes should represent the following two signals:
 
-$$a\left[i\right] = \cos\left(\frac{k}{N}\cdot 2\pi\right) $$
+$$a\left[i\right] = \cos\left(i \cdot \frac{k}{N}\cdot 2\pi\right) $$
 
-$$b\left[i\right] = \sin\left(\frac{k}{N}\cdot 2\pi\right) $$
+$$b\left[i\right] = \sin\left(i \cdot \frac{k}{N}\cdot 2\pi\right) $$
 
 $N$ should be the length (number of samples) of the signal and $k$ is parameter. Add $k$ and $N$ to the constructors of the two classes.
 
