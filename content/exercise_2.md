@@ -15,7 +15,7 @@ and also your partner's name and IDM ID if you're not working alone.
 
 Each exercise has **10 points**. You have to achieve **30 of 60 points in six homework exercises** to pass the module.
 
-## Infinite Signals!
+## Padded Signals
 
 <P align="right"><i>3 Points</i>
 
@@ -142,7 +142,6 @@ It contains the newest data from the Robert-Koch-Institute (via [https://github.
 }
 ```
 
-Yes, on `2020-01-07` the situation was still pretty good. But what is the situation right now?
 
 Create a `Signal` from the `JSONObject` with the number of cases for each day! Display the signal with
 its `show()` method.
@@ -151,7 +150,7 @@ its `show()` method.
 
 Well this looks very wavy... Let's filter this signal!
 
-Apply the following filters on your signal:
+Apply the following filters on your signal by defining the filters with your `LinearFilter` class and using the `apply(signal)` method:
 
 $$ h_1 = \left[ \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}\right] $$
 ![rki data mean](../rki_data_mean.png)
@@ -159,7 +158,7 @@ $$ h_1 = \left[ \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.0}, \frac{1.0}{7.
 $$ h_2 = \left[ 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0 \right]$$
 ![rki data diff](../rki_data_diff.png)
 
-What happens when you apply $h_1$ and then $h_2$? What happens when you first apply $h_2$ and then $h_1$? 
+What happens when you apply $h_1$ and then $h_2$? What happens when you first apply $h_2$ and then $h_1$? `show()` both combinations.
 What do the individual filters calculate?
 
 ## Submitting
