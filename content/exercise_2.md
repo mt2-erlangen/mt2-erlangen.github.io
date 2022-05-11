@@ -15,12 +15,16 @@ and also your partner's name and IDM ID if you're not working alone.
 
 Each exercise has **10 points**. You have to achieve **30 of 60 points in six homework exercises** to pass the module.
 
+## Correction of the repository
+
+Before starting this weeks exercise, please empty the folder `src/test/java/mt/` from the downloaded tree you have been provided in exercise 0. Building your tests will not work otherwise.
+
 ## Padded Signals
 
 <P align="right"><i>3 Points</i>
 
 As of now our Signal class only represents a signal of defined finite length.
-Next, we are going to extend our signal class to access areas outside of the defined support.
+Next, we are going to extend our signal class to allow access areas outside of the defined support.
 
 The signals will be padded with zeros in areas where we don't have any values stored.
 So, if we access indices of our `Signal` with values smaller than `minIndex()` or larger `maxIndex()` we want to return `0.0f`.
@@ -48,7 +52,7 @@ public int minIndex() // Get lowest index of signal (that is stored in buffer)
  public void setAtIndex(int i, float value) // Set signal at index i
 ```
 
-You can check the correctness of `atIndex` with the test `testAtIndex`. You can download the corresponding file from [StudOn](https://www.studon.fau.de/fold4531348.html) and move it to `src/test/java/SignalTests.java`.
+You can check the correctness of `atIndex` with the test `testAtIndex`. You can download the corresponding file from [StudOn](https://www.studon.fau.de/fold4531348.html) and move it to `src/test/java/mt/SignalTests.java`.
 
 ## LinearFilter
 
