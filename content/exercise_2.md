@@ -19,11 +19,11 @@ Each exercise has **10 points**. You have to achieve **30 of 60 points in six ho
 
 <P align="right"><i>3 Points</i>
 
-Right now our Signal class only represent a signal of finite length.
-Now we are going to extend our signal class.
+As of now our Signal class only represents a signal of defined finite length.
+Next, we are going to extend our signal class to access areas outside of the defined support.
 
-The signals are padded with zeros where we don't have any values stored.
-If we access indices of our `Signal` with values smaller than `minIndex()` or larger `maxIndex()` we want to return `0.0f`.
+The signals will be padded with zeros in areas where we don't have any values stored.
+So, if we access indices of our `Signal` with values smaller than `minIndex()` or larger `maxIndex()` we want to return `0.0f`.
 If a user accesses an index between `minIndex()` and `maxIndex()` we want to return the corresponding value stored in our array.
 
 ![minIndex](../signal-min-max.png)
@@ -43,9 +43,9 @@ Implement the methods explained above for `Signal`
 
 ```java
 public int minIndex() // Get lowest index of signal (that is stored in buffer)
-public int maxIndex()	// Get highest index of signal (that is stored in buffer)	
-public float atIndex(int i)
-public void setAtIndex(int i, float value)
+ public int maxIndex()	// Get highest index of signal (that is stored in buffer)	
+ public float atIndex(int i) // Get signal at index i
+ public void setAtIndex(int i, float value) // Set signal at index i
 ```
 
 You can check the correctness of `atIndex` with the test `testAtIndex`. You can download the corresponding file from [StudOn](https://www.studon.fau.de/fold4531348.html) and move it to `src/test/java/SignalTests.java`.
@@ -69,12 +69,12 @@ and a method that executes the discrete convolution on another `Signal input` an
     public Signal apply(Signal input);
  ```
 
- You should be able to directly use the formula from the exercise slides (f is the input signal, h our filter, $L$ the filter length)
+ You can implement the formula for the discrete convolution from the exercise slides (f is the input signal, h our filter, $L$ the filter length) by rewriting
 
  $$K = \lfloor L/2 \rfloor$$
  $$g[k] = \sum_{\kappa=-K}^{K} f[k-\kappa] \cdot h[ \kappa ]$$
 
- or with our `minIndex`/`maxIndex` methods for each index $k$ of the output signal.
+ with our `minIndex`/`maxIndex` methods for each index $k$ of the output signal:
  $$g[k] = \sum_{\kappa=h.\text{minIndex}}^{h.\text{maxIndex}} f[k-\kappa] \cdot h[\kappa] $$
 
 Be sure that you use `atIndex` to access the values of `input` and the filter.
