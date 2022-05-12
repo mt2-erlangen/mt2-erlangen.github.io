@@ -62,7 +62,7 @@ You can check the correctness of `atIndex` with the test `testAtIndex`. You can 
  `LinearFilter` should work like `Signal` except its `minIndex` should be at <br> 
  `- (coefficients.length/2)` as in the exercise slides.
 
- ![tip2](../tip2.png)
+ ![tip2](../tip2_corrected.png)
 
 `LinearFilter` should have a constructor that checks that coefficients is an array of odd size or throws an error otherwise (any error is ok).
 ```java
