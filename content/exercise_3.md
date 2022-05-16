@@ -15,7 +15,10 @@ Each exercise has **10 points**. You have to achieve **30 of 60 points in six ho
 
 # Images and 2D Waves
 
-In this exercise, we finally work with images. It's time to update the file `src/main/java/lme/DisplayUtils.java` [to the newest version](https://github.com/mt2-erlangen/exercises-ss2022/blob/main/src/main/java/lme/DisplayUtils.java).
+Please note that to build the project you first have to create the classes for the rest of the exercises (see below). You can wait with the implementation of the logic.
+
+In this exercise, we finally work with images. It's time to update the file `src/main/java/lme/DisplayUtils.java` [to the newest version](https://www.studon.fau.de/studon/goto.php?target=fold_4543435).
+  
 
 This should provide you the following methods to work with images:
 
@@ -160,7 +163,7 @@ The image is from [our open access book](https://www.springer.com/gp/book/978331
 
 ![pacemaker.png](../pacemaker.png)
 
-You can check the correctness of `atIndex` with the `ImageTest`in the file [src/test/java/ImageTests.java](https://github.com/mt2-erlangen/exercises-ss2022/blob/master/src/test/java/mt/ImageTests.java). 
+You can check the correctness of `atIndex` with the `ImageTest`in the file [src/test/java/ImageTests.java](https://www.studon.fau.de/studon/goto.php?target=fold_4543435). 
 
 # 2D Waves
 
