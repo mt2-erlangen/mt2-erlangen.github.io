@@ -242,7 +242,7 @@ public Image add(Image image)
 The method `add` should add up two images element wise. Return the addition with a new image. Be careful with the `min` and `max` indices of the images. Check if the images differ in size and throw an exception otherwise. <br>
 Can you create an Image with checkerboard like patterns, by adding up multiple waves?
 
- <p style="text-align: center;"><img src="../ResultAdd.tif" alt="ResultAdd.tif" width="256"/><p>
+ <p style="text-align: center;"><img src="../ResultAdd.png" alt="ResultAdd.png" width="256"/><p>
  
  Additionally we want to look at the Fourier transformation of our waves. As you saw in the lecture, the Fourier transform analysis the frequency spectrum of our signal. <br>
  Add the function `fft` to the `mt.image` class, which calls a function from `DisplayUtils.java`:
