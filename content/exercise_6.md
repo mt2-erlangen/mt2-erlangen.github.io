@@ -137,14 +137,6 @@ Or "click" on menu items in your program code.
 
 ![cells](../SegmentationOnImage.png)
 
-## Evaluation
-
-We redesigned the exercises from scratch for this semester.
-Therefore, some of the exercises might have been difficult to understand or too much work. 
-We are glad for your feedback to help future semesters' students😊:
-[https://forms.gle/EhzUoPx9s5Adk1G46](https://forms.gle/EhzUoPx9s5Adk1G46)
-
-
 ## Submitting
 
 Please ensure that all files you created also contain your name and your IDM ID and also your partner's name and IDM ID if you're not working alone.

@@ -57,8 +57,8 @@ Please read the theory before proceeding since we don't re-introduce everything 
 ## Task Description
 
 * We provide the main method for the task with an interactive ImageJ plug-in in the files
-[```src/main/java/exercises/Exercise05.java```](https://github.com/mt2-erlangen/exercises-ss2022/blob/master/src/main/java/exercises/Exercise05.java)
-and [```src/main/java/mt/ImageTransformer.java```](https://github.com/mt2-erlangen/exercises-ss2022/blob/master/src/main/java/mt/ImageTransformer.java)
+[```src/main/java/exercises/Exercise05.java```
+and ```src/main/java/mt/ImageTransformer.java```](https://www.studon.fau.de/studon/goto.php?target=fold_4553485)
 
 
 ### 0. Getting started

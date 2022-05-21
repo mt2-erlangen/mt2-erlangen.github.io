@@ -46,7 +46,7 @@ public interface ImageFilter {
 }
 ```
 
-Ok. Now the convolution. The class has already a method `normailze` that we will need later. It uses a method `sum()`, which we need to implement in our `Signal` class. The method sums up all values of our signal:
+Ok. Now the convolution. The class has already a method `normalize` that we will need later. It uses a method `sum()`, which we need to implement in our `Signal` class. The method sums up all values of our signal:
 
 ```java
 public float sum() //< sum of all signal values 
@@ -112,7 +112,7 @@ for (int i = 0; i < buffer.length; i++) {
  }
 
 ```
-Now you can use the file [`src/test/java/mt/LinearImageFilterTests.java`](https://github.com/mt2-erlangen/exercises-ss2022/blob/main/src/test/java/mt/LinearImageFilterTests.java).
+Now you can use the file [`src/test/java/mt/LinearImageFilterTests.java`](https://www.studon.fau.de/studon/goto.php?target=fold_4553479).
 
 ## Gauss Filter
 
@@ -152,7 +152,7 @@ The Gauss filter will blur your input image clearly if you chose a large value f
 
 ![Blurred image](../pacemaker-blurred.png)
 
-There is also a unit test file that you can use: [`src/test/java/mt/GaussFilter2dTests.java`](https://github.com/mt2-erlangen/exercises-ss2022/blob/master/src/test/java/mt/GaussFilter2dTests.java)
+There is also a unit test file that you can use: [`src/test/java/mt/GaussFilter2dTests.java`](https://www.studon.fau.de/studon/goto.php?target=fold_4553479)
 
 ## More Filters!
 
