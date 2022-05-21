@@ -47,7 +47,7 @@ This should provide you the following methods to work with images:
 
 *The code for this section should go to `src/main/java/mt/Image.java`*
 
-Our goal is to share as much code with our `mt.Signal` class. So `mt.Image` will be a subclass of `mt.Signal`.
+Our goal is to share as much code as possible with our `mt.Signal` class. So `mt.Image` will be a subclass of `mt.Signal`.
 
 ```java
 // <your name> <your idm>
@@ -121,7 +121,7 @@ Let's also provide some getters!
     public float atIndex(int x, int y)
     public void setAtIndex(int x, int y, float value) 
     
-    //We need a method to set our buffer for the show() function
+    //We need a method to fill the buffer for the openImage() function
     public void setBuffer(float[] buffer)
 	
 ```
