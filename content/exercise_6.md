@@ -7,7 +7,7 @@ author= "Mischa Dombrowski, Stephan Seitz"
 +++
 
 
-**Submission deadline: 26.06.22 23:59h**
+**Submission deadline: 26.06.22 23:55h**
 
 In the last exercise, we want to have a look at edge detection and segmentation.
 

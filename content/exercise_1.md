@@ -9,7 +9,7 @@ author= "Mischa Dombrowski, Stephan Seitz"
 
 # Signals and Waves
 
-**Submission deadline: 22.05.22 23:59h**
+**Submission deadline: 22.05.22 23:55h**
 
 Please ensure that all files you created also contain **your name and your IDM ID**
 and also your partner's name and IDM ID if you're not working alone.

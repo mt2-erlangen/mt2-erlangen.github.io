@@ -8,7 +8,7 @@ author= "Mischa Dombrowski, Srikrishna Jaganathan"
 
 # Submission
 
-**Submission deadline: 19.06.22 23:59h**
+**Submission deadline: 19.06.22 23:55h**
 
 Please ensure that all files you created also contain **your name and your IDM ID** and also your partner's name and IDM ID if you're not working alone.
 
