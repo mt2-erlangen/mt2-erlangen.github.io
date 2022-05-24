@@ -15,7 +15,7 @@ Each exercise has **10 points**. You have to achieve **30 of 60 points in six ho
 
 # 2D Convoultion and Image Filters
 
-In this exercise, we are using our image class from `exercise 3` to build the 2D convolution, which you already implement for the 1D case in `exercise 2`. 
+In this exercise, we are using our `Image` class from `exercise 3` to build a 2D convolution, which you already implemented for the 1D case in `exercise 2`. 
 
 
 # mt.Image Filter
@@ -23,10 +23,8 @@ In this exercise, we are using our image class from `exercise 3` to build the 2D
 <P align="right"><i>4  Points</i>:
 
 
-Like in Exercise 2, we want to be able to convolve our image signal.
-Infact, we will learn a lot of new ways to process images.
-Often, we need to create an output image of same size.
-Let's create an interface (`src/main/java/mt/ImageFilter.java`) for that, so we only need to implement this once.
+Analog in Exercise 2, we want to be able to convolve an image signal. In fact, we will learn multiple ways to process images.
+Let's create an interface (`src/main/java/mt/ImageFilter.java`) as a template for the image filters to be implemented, so we only need to implement this once.
 
 ```java
 package mt;
@@ -46,7 +44,9 @@ public interface ImageFilter {
 }
 ```
 
-Ok. Now the convolution. The class has already a method `normalize` that we will need later. It uses a method `sum()`, which we need to implement in our `Signal` class. The method sums up all values of our signal:
+In application, an output image of same size as the input is often needed. This is implemented in the template. The default method `void apply` of the interface needs to be overwritten in the class definition further down.
+
+Next, the image convolution. The class to be implemented will have a method `normalize` that we will need later. It uses a method `sum()`, which we need to implement in our `Signal` class. The method sums up all values of our signal:
 
 ```java
 public float sum() //< sum of all signal values 
@@ -88,9 +88,9 @@ Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the fo
  $$g[x,y] = \sum_{y'=\text{h.minIndexY}}^{\text{h.maxIndexY}} \sum_{x'=\text{h.minIndexX}}^{\text{h.maxIndexX}} f[x-x', y-y'] \cdot h[ x', y' ] $$
 
  Remember to use `atIndex` and `setAtIndex` to get and set the values.
- Implement the convolution in the method `apply`.
- The `result` image was already created by our interface `ImageFilter`.
-
+	
+ Implement the convolution again in a method called `apply`.
+ 
 ```java
     public void apply(Image image, Image result)
 ```
@@ -100,7 +100,9 @@ Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the fo
 
 <P align="right"><i>Source: https://github.com/vdumoulin/conv_arithmetic</i>
 
- Now it's almost time to test. We just need to add another method to our `Signal` class:
+ The `Image` named `result` is an empty array that is (already) created by our interface `ImageFilter`. It will be initialized empty as defined in the interface in `default Image apply`, and will be filled with the result once the actual filter (futher below) is implemented and called.
+	
+It's time to test. We just need to add another method to our `Signal` class:
 
 ```java
 // Needs: import java.util.Random
@@ -120,6 +122,8 @@ Now you can use the file [`src/test/java/mt/LinearImageFilterTests.java`](https:
 
 *The code for the Gauss filter should go to `src/main/java/mt/GaussFilter2d.java`.*
 
+Recap for a second here. Note: at this point your actual filter class (to be implemented, in this case for the Gauss filter) is a subclass of the class `LinearImageFilter` which is a subclass of class `Image` as well as of the interface `ImageFilter`. Map that out in your head (or on paper), and remember that all methods are inherited through the parent classes/interface. Recap end.
+	
 The Gauss filter is a `LinearImageFilter` with special coefficients (the filter has the same height and width).
 
 ```java
@@ -139,11 +143,11 @@ It has the following constructor
 ```
 
 In the constructor, set the coefficients according to the unormalized 2-d normal distribution with standard deviation $\sigma$ (`sigma`).
-`Math.exp` is the exponetial function.  Use `setAtIndex`: $x$ should run from `minIndexX` to `maxIndexX` and $y$ from `minIndexY` to `maxIndexY`.
+`Math.exp` is the exponetial function.  Use `setAtIndex` to set:
 
 $$ h[x,y] = \frac{1}{2 \pi \sigma^2}\mathrm{e}^{-\frac{x^2+y^2}{2 \sigma^2}}$$
 
-
+where $x$ should run from `minIndexX` to `maxIndexX` and $y$ from `minIndexY` to `maxIndexY`.
 Call `normalize()` at the end of the constructor to ensure that all coefficients sum up to one.
 
 Test your Gauss filter in `Exercise04.java`.
@@ -180,11 +184,13 @@ It has the following constructor
     public AverageFilter2d(int filterSize)
 ```
 
-Use `setAtIndex`: $x$ should run from `minIndexX` to `maxIndexX` and $y$ from `minIndexY` to `maxIndexY`. The filter takes the average around its neighbours.
+Use `setAtIndex`: $x$ should run from `minIndexX` to `maxIndexX` and $y$ from `minIndexY` to `maxIndexY`. This filter takes the average around its neighbours.
 
 $$ h[x,y] = \frac{1}{filterSize*filterSize}$$
 
 
+	
+	
 *The code for the Derivative filter should go to `src/main/java/mt/Derivativefilter2d.java`.*
 
 The **Derivative filter** is a `LinearImageFilter` and has always a fixed size of $3$.
@@ -211,6 +217,8 @@ $$ \partial x = [-1,0,1] , \partial y = [-1,0,1]^T$$
 <br>
 The last filter we implement is a sharpening filter.
 
+	
+	
 *The code for the Sharpening filter should go to `src/main/java/mt/Sharpeningfilter2d.java`.*
 
 The **Sharpening filter** is a `LinearImageFilter` with a kernel size of $3x3$.
