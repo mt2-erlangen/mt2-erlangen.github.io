@@ -23,12 +23,13 @@ In this exercise we will build on top of the image class and implement methods f
 
 In many medical applications there is a need to align two images so that we 
 can combine the information between the images. This can be due to the images coming from 
-different modalities like (CT and MRI) or in scenarios were you have an patient data at from 
-different time (before and after an surgery)  and you want to compare between these two images. 
+different modalities like (CT and MRI) or in scenarios were you have patient data at from 
+different time points (before and after an surgery) and you want to compare between these two images. 
 In all these scenarios we use image registration bring the different images together.
 
-In the below image, two x-ray views (1) and (2) are fused together to obtain the combined view(3)
-which produces more information for diagnosis. This is achieved using image registration between view(1) and view
+In the image below, two x-ray views (1) and (2) are fused together to obtain the combined view(3)
+which produces more information for diagnosis. 
+
 ![Hand X-ray fusion](../x_ray_bone_fusion.png) 
 
 [Image Source: Hawkes, David J., et al. "Registration and display of the combined bone scan and 
