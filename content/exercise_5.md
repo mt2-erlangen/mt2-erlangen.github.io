@@ -152,7 +152,7 @@ $$f(x) = f(x_1) + (x-x_1) (f(x_2) - f(x_1))$$
      // fx_2 = f(x_2), pixel value at point x_2 
 
      float linearInterpolation(float fx_1, float fx_2, float diff_x_x1) {
-         return fx_1 + diff_x_x1 * (fx_1 - fx_2);
+         return fx_1 + diff_x_x1 * (fx_2 - fx_1);
      }
      
     ```
