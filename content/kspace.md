@@ -1,30 +1,30 @@
-+++ 
-date= 2022-06-20T08:00:00Z 
-title= "Project Work 2"
++++
+date= 2022-06-20T08:00:10Z
+title = "Project Work 2 - k-Space"
 [extra]
 author= "Zhengguo Tan, Jinho Kim, Bruno Riemenschneider"
 +++
 
 # Overview
 
-1) [Introduction](./introduction.md) *(Tafelübung 24. Juni)*
+1) [Introduction](../introduction) *(Tafelübung 24. Juni)*
 2) *k*-Space
-3) [Image Reconstruction](./fftshift.md) *(Tafelübung 08. Juli)*
-4) [Filters](./filters.md) *(Tafelübung 15. Juli)*
-5) [Outlook and Conclusion](./conclusion.md)
+3) [Image Reconstruction](../fftshift) *(Tafelübung 08. Juli)*
+4) [Filters](../filters) *(Tafelübung 15. Juli)*
+5) [Outlook and Conclusion](../conclusion)
 
 # 2. Complex Numbers and *k*-Space
 
 Measured MRI signals are essentially radiofrequency waves summed over the imaged volume. Due to the nature of these waves
 and the underlying spin precession, the most convenient way of the mathematical formulation is the framework of complex numbers.
-Complex numbers are very well suited to describe the magnitude and phase of an oscillation/precession. 
+Complex numbers are very well suited to describe the magnitude and phase of an oscillation/precession.
 
 ## 2.1 Complex Numbers
 
 ### 2.1.1 A Single Complex Number by Itself
 
 <p align="center">
-  <img src="figures/complex_number.png" alt="Trulli" style="width:50%" align="center">
+  <img src="../complex_number.png" alt="Trulli" style="width:50%" align="center">
 </p>
 <p align="center">
   <b>Figure 2.1.</b> A complex number can be visually represented as a pair of numbers (a, b) forming a vector
@@ -37,7 +37,7 @@ As illustrated in Figure 2.1, a complex number $z$ is defined as,
 $$ z = a + i \cdot b $$
 
 Here, both $a$ and $b$ are real numbers. $i$ is the "imaginary unit", which is multiplied with the imaginary part of the complex
-number to denote the "2<sup>nd</sup> dimension" of the complex number. (Side note: For mathematical convenience of this powerful number framework, 
+number to denote the "2<sup>nd</sup> dimension" of the complex number. (Side note: For mathematical convenience of this powerful number framework,
 it satisfies $i^2 = -1$.) Likewise, you can think
 of the "real unit" as being $1$. One can also denote the complex number $z$ as an ordered pair,
 
@@ -56,21 +56,21 @@ $$ z = |z| \cdot e^{i\varphi} $$
 
 ### 2.1.2 The Relation to MR Images
 
-At every location of the object that is imaged in the MR scanner, the signal that is measured is produced by precessing 
-(rotating) spins. Complex numbers are very well suited to capture the state of a precessing volume of spins by describing the magnitude and phase of the precession. 
-The precessing spins create a precessing magnetization that results in radiofrequency radiation and can 
+At every location of the object that is imaged in the MR scanner, the signal that is measured is produced by precessing
+(rotating) spins. Complex numbers are very well suited to capture the state of a precessing volume of spins by describing the magnitude and phase of the precession.
+The precessing spins create a precessing magnetization that results in radiofrequency radiation and can
 be measured with radiofrequency coils.
 <p align="center">
-  <img src="figures/fig22-MR_signal_detection.jpg" alt="Trulli" style="width:50%" align="center">
+  <img src="../fig22-MR_signal_detection.jpg" alt="Trulli" style="width:50%" align="center">
 </p>
 <p align="center">
-  <b>Figure 2.2.</b> The precessing magnetization M that produces the MR signal is detected from two orthogonal directions, 
-then demodulated using the multiplication of sinusoid or cosinusoid signals. They can be detected from two orthogonal 
-directions to fully capture the signal rotation. In reality, only one coil can be used and demodulated to capture the 
+  <b>Figure 2.2.</b> The precessing magnetization M that produces the MR signal is detected from two orthogonal directions,
+then demodulated using the multiplication of sinusoid or cosinusoid signals. They can be detected from two orthogonal
+directions to fully capture the signal rotation. In reality, only one coil can be used and demodulated to capture the
 rotation. (Reference: <a href="https://mriquestions.com/real-v-imaginary.html">Real vs. Imaginary Signals</a>)
 </p>
 
-In consequence, the MR image can be described by complex numbers, i.e., a 2D plane of complex numbers. After digitization, 
+In consequence, the MR image can be described by complex numbers, i.e., a 2D plane of complex numbers. After digitization,
 we can then treat MR images as 2D arrays of complex numbers, i.e., every element of the array is a complex number.
 
 ### 2.1.3 MR Signals Are Measured in $k$-Space
@@ -84,19 +84,19 @@ is what matters for the measured signal. The magic of MRI is that it can be mani
 in such a way that the resulting signal is a Fourier transform of the image to be measured. (Making MRI feasible by using
 this method is a Nobel price idea!)
 
-The Fourier transform of an image (space) represents the spatial frequencies and is usually called $k$-space. 
+The Fourier transform of an image (space) represents the spatial frequencies and is usually called $k$-space.
 As such, the result of the MR measurement process and subsequent demodulation is an array storing complex $k$-space values
-(also known as spatial frequencies of the MR images). 
-To reconstruct the MR images, the (inverse) *Fourier transform* is used to transform the signal from the frequency domain to the 
+(also known as spatial frequencies of the MR images).
+To reconstruct the MR images, the (inverse) *Fourier transform* is used to transform the signal from the frequency domain to the
 spatial domain. In other words, $k$-space is an intermediate step between MR scan and reconstructed image.
 
 (Not mandatory: If you are interested in the Fourier transform, we encourage you to look at this page: [Discrete Fourier Transform](dft.md).)
 
 ## 2.2 The ComplexImage Class
 
-In order to deal with 2D arrays of complex numbers in this project, we need to implement a new class, ```ComplexImage```, 
+In order to deal with 2D arrays of complex numbers in this project, we need to implement a new class, ```ComplexImage```,
 in ```complexImage.java```. For the sake of consistency and efficiency, we will utilize the code base of exercises 1-4.
-Consequently, we will implement the real part and the imaginary part of our complex image each into an ```Image``` object. 
+Consequently, we will implement the real part and the imaginary part of our complex image each into an ```Image``` object.
 
 ```java
 package project;
@@ -112,13 +112,13 @@ public class ComplexImage {
 }
 ```
 
-Create constructors and getters. Remember: class objects, ```real```, ```imag```, and ```name```, and class variables, ```width``` and ```height```,  must be set in the constructor. Since ```Image``` class contains two types of constructors, there will be two types of constructors in ```complexImage``` class as well. 
+Create constructors and getters. Remember: class objects, ```real```, ```imag```, and ```name```, and class variables, ```width``` and ```height```,  must be set in the constructor. Since ```Image``` class contains two types of constructors, there will be two types of constructors in ```complexImage``` class as well.
 ```java
 public ComplexImage(int width, int height, String name)
-public ComplexImage(int width, int height, String name, float[] bufferReal, float[] bufferImag) 
+public ComplexImage(int width, int height, String name, float[] bufferReal, float[] bufferImag)
 
-public int getWidth() 
-public int getHeight() 
+public int getWidth()
+public int getHeight()
 public String getName()
 ```
 
@@ -135,16 +135,16 @@ One very important aspect of MRI images is the following: while both real and im
 are needed to compute the image, the diagnostic information for the radiologist is mostly just visible in the magnitude image.\
 Therefore, let's implement methods to compute magnitude and phase images from real and imaginary parts.
 
-Implement two methods ```calculateMagnitude()``` and ```calculatePhase()``` as methods of the ```ComplexImage``` class 
+Implement two methods ```calculateMagnitude()``` and ```calculatePhase()``` as methods of the ```ComplexImage``` class
 for calculating magnitude and phase, respectively. Refer to the related equations above in subsection 2.1.1.
 ```java
 private Image calculateMagnitude(ComplexImage input, boolean logFlag)
 private Image calculatePhase(ComplexImage input)
 ```
 
-We are implementing a *logFlag* in the ```calculateMagnitude()``` method because the magnitude of $k$-space has a huge 
-image intensity range between the center (low-frequency part, very large) and the periphery (high-frequency part, very small). 
-As a result, taking a logarithm of the magnitude of $k$-space can reduce the huge image intensity range for better 
+We are implementing a *logFlag* in the ```calculateMagnitude()``` method because the magnitude of $k$-space has a huge
+image intensity range between the center (low-frequency part, very large) and the periphery (high-frequency part, very small).
+As a result, taking a logarithm of the magnitude of $k$-space can reduce the huge image intensity range for better
 visualization of the magnitude of $k$-space.\
 Once we compute the magnitude and phase, we get them by getters.
 ```java
@@ -153,20 +153,20 @@ public float[] getLogMagnitude()
 public float[] getPhase()
 ```
 
-Eventually, You can show the magnitude and phase images using the given method ```DisplayUtils.showImage()```. Please use this method in the ```Project.java``` 
+Eventually, You can show the magnitude and phase images using the given method ```DisplayUtils.showImage()```. Please use this method in the ```Project.java```
 
 <p align="center">
-  <img src="figures/fig23-kspace_mag.jpg" alt="Trulli" style="width:40%" align="center">
+  <img src="../fig23-kspace_mag.jpg" alt="Trulli" style="width:40%" align="center">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="figures/fig23-kspace_mag_log.jpg" alt="Trulli" style="width:40%" align="center">
+  <img src="../fig23-kspace_mag_log.jpg" alt="Trulli" style="width:40%" align="center">
 </p>
 <p align="center">
-  <b>Figure 2.3.</b> Magnitude images of <i>k</i>-space without (left) and with (right) logarithmic scale. The left figure shows only one small dot in the middle due to a huge image intensity range, while the right figure displays a better image intensity range. 
+  <b>Figure 2.3.</b> Magnitude images of <i>k</i>-space without (left) and with (right) logarithmic scale. The left figure shows only one small dot in the middle due to a huge image intensity range, while the right figure displays a better image intensity range.
 </p>
 
 <p align="center">
-  <img src="figures/fig24-phase.jpg" alt="Trulli" style="width:40%" align="center">
-  
+  <img src="../fig24-phase.jpg" alt="Trulli" style="width:40%" align="center">
+
 <p align="center">
   <b>Figure 2.4.</b> A phase image of <i>k</i>-space.
 </p>
@@ -178,5 +178,4 @@ In the project report, you should
 * Explain what those mean. Can you elaborate on why the phase does not show the same intensity variation as the magnitude?
 
 
-[Next task: Image Reconstruction](./fftshift.md)
-
+[Next task: Image Reconstruction](../fftshift)

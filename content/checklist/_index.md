@@ -1,5 +1,5 @@
 +++
-date= 2022-06-20T08:01:00Z 
+date= 2022-06-20T08:01:00Z
 title = "Checklist – Project Report"
 
 [extra]
@@ -20,7 +20,7 @@ The project report can be written in either English or German. Please write betw
 We expect you to:
 
 - Use the **LaTeX template** we provide
-  - [LaTeX template link](https://github.com/mt2-erlangen/latex-template) 
+  - [LaTeX template link](https://github.com/mt2-erlangen/latex-template)
   - Do not modify the style or the formatting. No ornaments for page numbers!
 
 
@@ -29,7 +29,7 @@ We expect you to:
       The bibliography must be sorted (either alphabetically when using the Name/Year citation style or
       by the order you use them in the text when numbering the sources).
   - Do not use more than two references that are websites only. If you have to cite a website use the recommended style from
-    the exercise slides. 
+    the exercise slides.
 
 
 - All **symbols in equations** need to be **explained** in the text.
@@ -51,6 +51,6 @@ After that, "MRI" is enough.
 To obtain all the points for the content of your report, additional to the above
 
 - Check whether you have addressed all the questions in the task description.
-- Check whether you have provided all the result figures and a detailed explanation of them. 
+- Check whether you have provided all the result figures and a detailed explanation of them.
 
-[Back to the Introduction](../introduction.md)
+[Back to the Introduction](../introduction)

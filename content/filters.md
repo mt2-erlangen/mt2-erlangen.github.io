@@ -1,17 +1,17 @@
 +++
-date= 2022-06-20T08:00:00Z
-title = "Project Work 4"
+date= 2022-06-20T08:00:15Z
+title = "Project Work 4 - Filters"
 [extra]
 author= "Zhengguo Tan, Jinho Kim, Bruno Riemenschneider"
 +++
 
 # Overview
- 
-1) [Introduction](./introduction.md) *(Tafelübung 24. Juni)*
-2) [*k*-Space](./kspace.md)
-3) [Image Reconstruction](./fftshift.md) *(Tafelübung 08. Juli)*
+
+1) [Introduction](../introduction) *(Tafelübung 24. Juni)*
+2) [*k*-Space](../kspace)
+3) [Image Reconstruction](../fftshift) *(Tafelübung 08. Juli)*
 4) Filters *(Tafelübung 15. Juli)*
-5) [Outlook and Conclusion](./conclusion.md)
+5) [Outlook and Conclusion](../conclusion)
 
 
 # 4. Filters
@@ -67,19 +67,19 @@ So far, you have learned to implement image filters and use the ```apply``` func
 Now we switch to the box filter for $k$-space data, which instead performs pointwise multiplication between the input $k$-space matrix and the box filter, as shown in Figure 4.1.
 ​
 <p align="center">
-  <img src="figures/pointwise_mult.png" alt="Trulli" style="width:90%" align="center">
+  <img src="../pointwise_mult.png" alt="Trulli" style="width:90%" align="center">
 </p>
 <p align="center">
-  <b>Figure 4.1.</b> Illustration of box filtering, which performs pointwise multiplication between (Left) the example <i>k</i>-space array and (middle) the box filter. 
+  <b>Figure 4.1.</b> Illustration of box filtering, which performs pointwise multiplication between (Left) the example <i>k</i>-space array and (middle) the box filter.
 </p>
 ​
 
 ​
-Please implement 2D box filtering. In practice, we want to implement the ```setOuterToZero()``` method in ```ComplexImage.java```. Think about which index should be set to zero. You will need to use the ```SetAtIndex()``` method for this. 
+Please implement 2D box filtering. In practice, we want to implement the ```setOuterToZero()``` method in ```ComplexImage.java```. Think about which index should be set to zero. You will need to use the ```SetAtIndex()``` method for this.
 ```Java
 public void setOuterToZero(int lines, int axis)
 ```
-Here, the parameter ```lines``` defines the zero-padding size of the box filter, and the parameter ```axis``` defines on which axis the box filter is applied. 
+Here, the parameter ```lines``` defines the zero-padding size of the box filter, and the parameter ```axis``` defines on which axis the box filter is applied.
 
 With this function, you can perform box filtering on ```kSpace```:
 ```Java
@@ -90,10 +90,10 @@ kSpace.setOuterToZero(96,1); // ky-direction
 Figure 4.2 shows the geometrical overview of the parameter ```lines``` in two axes as well as the result of ```setOuterToZero()``` applied to ```kSpace```. $0$ in the Figure 4.2 means where you should set to $0$
 
 <p align="center">
-<img src="figures/fig4-box.png" alt="Trulli" style="width:40%" align="center">
+<img src="../fig4-box.png" alt="Trulli" style="width:40%" align="center">
 </p>
 <p align="center">
-<b>Figure 4.2.</b> The overview of the setOuterToZero() method 
+<b>Figure 4.2.</b> The overview of the setOuterToZero() method
 </p>
 
 Apply it onto the $k$-space matrix ```kSpace``` in ```Project.java```.
@@ -113,15 +113,15 @@ When the grid size of $k$-space is reduced, so does the resolution of the recons
         bufferReal:   Buffer of the real of the original image
         bufferImag:   Buffer of the imaginary of the original image
         inputWidth:   Width of the original image
-        inputHeight:  Height of the original image 
+        inputHeight:  Height of the original image
 */
 public ComplexImage(int width, int height, String name, float[] bufferReal, float[] bufferImag, int inputWidth, int inputHeight)
 ```
 
-To set the buffer of the cropped $k$-space from the center area of the original $k$-space, you need to implement a new method ```setBufferFromCenterArea()``` in the ```Image``` class in ```Image.java```. You need to create two integer variables, ```offsetWidth``` and ```offsetHeight```, to calculate the index where the original $k$-space is cropped. Once you find where to be cropped, set the value where you find to the cropped $k$-space using ```setAtIndex()```. Figure 4.3 shows parameters in a geometrical way to better understand them. 
+To set the buffer of the cropped $k$-space from the center area of the original $k$-space, you need to implement a new method ```setBufferFromCenterArea()``` in the ```Image``` class in ```Image.java```. You need to create two integer variables, ```offsetWidth``` and ```offsetHeight```, to calculate the index where the original $k$-space is cropped. Once you find where to be cropped, set the value where you find to the cropped $k$-space using ```setAtIndex()```. Figure 4.3 shows parameters in a geometrical way to better understand them.
 
 <p align="center">
-  <img src="figures/fig4-setBufferFromCenterArea.png" alt="Trulli" style="width:40%" align="center">
+  <img src="../fig4-setBufferFromCenterArea.png" alt="Trulli" style="width:40%" align="center">
 </p>
 <p align="center">
   <b>Figure 4.3.</b> Visualization of parameters. The blue-edged image is the original <i>k</i>-space, and the red-edged image is the cropped <i>k</i>-space.
@@ -131,23 +131,23 @@ To set the buffer of the cropped $k$-space from the center area of the original 
 public void setBufferFromCenterArea(int width, int height, float[] buffer, int inputWidth, int inputHeight)
 ```
 
-When you are done with implementing the method ```setBufferFromCenterArea()``` in the ```Image``` class, utilize this method in the third constructor of the ```ComplexImage``` class to set the cropped $k$-space from the original. 
+When you are done with implementing the method ```setBufferFromCenterArea()``` in the ```Image``` class, utilize this method in the third constructor of the ```ComplexImage``` class to set the cropped $k$-space from the original.
 
 Show the cropped $k$-space as well as a reconstructed image like Figure 4.4.
 <p align="center">
-  <img src="figures/fig4-kspace_crop.jpg" alt="Trulli" style="width:40%" align="center">
+  <img src="../fig4-kspace_crop.jpg" alt="Trulli" style="width:40%" align="center">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="figures/fig4-img_crop.jpg" alt="Trulli" style="width:40%" align="center">  
+  <img src="../fig4-img_crop.jpg" alt="Trulli" style="width:40%" align="center">  
 </p>
 <p align="center">
-  <b>Figure 4.4.</b> Cropped <i>k</i>-space(left) and MR Reconstructed image(right). Since the grid size of <i>k</i>-space gets small, the resolution of the reconstructed image decreases as well. 
+  <b>Figure 4.4.</b> Cropped <i>k</i>-space(left) and MR Reconstructed image(right). Since the grid size of <i>k</i>-space gets small, the resolution of the reconstructed image decreases as well.
 </p>
 
 ## 4.3 Max Pooling
 Alternatively, you can decrease the image resolution directly via pooling operation. For instance, **max pooling** is a pooling operation that calculates the maximum value for patches (blocks) of a feature map and uses it to create a downsampled (pooled) feature map. [(source: max pooling explained)](https://paperswithcode.com/method/max-pooling#:~:text=Max%20Pooling%20is%20a%20pooling,used%20after%20a%20convolutional%20layer.)
 
 <p align="center">
-  <img src="figures/MaxpoolSample2.png" alt="Trulli" style="width:100%" align="center">
+  <img src="../MaxpoolSample2.png" alt="Trulli" style="width:100%" align="center">
 </p>
 <p align="center">
   <b>Figure 4.5.</b> Illustration of the Max-Pooling operation. (source: <a href="https://production-media.paperswithcode.com/methods/MaxpoolSample2.png">Max-Pool</a>)
@@ -275,9 +275,9 @@ Image mrMagImage_MP = mp.apply(mrMagImage);
 
 You should get something like this:
 <p align="center">
-<img src="figures/MaxPooling2d_input.png" alt="Trulli" style="width:40%" align="center">
+<img src="../MaxPooling2d_input.png" alt="Trulli" style="width:40%" align="center">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="figures/MaxPooling2d_output.png" alt="Trulli" style="width:40%" align="center">
+<img src="../MaxPooling2d_output.png" alt="Trulli" style="width:40%" align="center">
 </p>
 <p align="center">
 <b>Figure 4.5.</b> Input and output images to the max-pooling operation. The input image is of size [256, 256], whereas the output image is of size [64, 64].
@@ -291,4 +291,4 @@ In your Project report, you should:
 * Explain how to improve the resolution of the MR image. What is the trade-off for that? Scan time? Cost?
 * Compare reconstructed images of cropping $k$-space and Max pooling in terms of image contents. Which result is closer to the original reconstructed image? Why do you think so?
 
-[Next task: Conclusion](./conclusion.md)
+[Next task: Conclusion](../conclusion)

@@ -1,5 +1,5 @@
 +++
-date= 2022-06-20T08:00:00Z
+date= 2022-06-20T08:00:20Z
 title = "Project Work Optional"
 [extra]
 author= "Zhengguo Tan"
@@ -19,9 +19,9 @@ It is worth noting from this equation that,
 
 * the MR signal is sampled is a point-by-point manner, which is an important reason why MRI is slow.
 
-In short, Fourier transform plays an important role in MRI. The exploration of Fourier transform properties has fostered many crucial MRI developments and innovations. 
+In short, Fourier transform plays an important role in MRI. The exploration of Fourier transform properties has fostered many crucial MRI developments and innovations.
 
-**Task Optional.1:** The equation above shows how a 2D image $\rho(x,y)$ can be formed in MRI. Can this equation be extended to 3D acquisition? In other words, instead of acquiring one 2D plane, can we use MRI to acquire 3D volume such as to cover a whole organ (like brain)? May you try to write down the equation for 3D Fourier transform? What may be the difficulties in reconstructing 3D volume images? Think about computational time and organ motion during acquisition. 
+**Task Optional.1:** The equation above shows how a 2D image $\rho(x,y)$ can be formed in MRI. Can this equation be extended to 3D acquisition? In other words, instead of acquiring one 2D plane, can we use MRI to acquire 3D volume such as to cover a whole organ (like brain)? May you try to write down the equation for 3D Fourier transform? What may be the difficulties in reconstructing 3D volume images? Think about computational time and organ motion during acquisition.
 
 ## Simple example: one-dimensional (1D) Fourier transform
 
@@ -37,9 +37,9 @@ Therefore, given the dicretized signal $\rho(x)$, we can compute its correspondi
 
 **Task Optional.2:** Suppose we have a rectangular signal,
 
-$$\rho(x) = 1$$ 
+$$\rho(x) = 1$$
 
-for $x \in [-10, 9]$ and $x$ is an integer. That is, $x=-10,-9,-8,-7,\cdots,9$. 
+for $x \in [-10, 9]$ and $x$ is an integer. That is, $x=-10,-9,-8,-7,\cdots,9$.
 
 Therefore, the Fourier transform of $\rho(x)$ at $k_x = 0$ is simply
 
@@ -50,7 +50,7 @@ If we define $k_x \in [-0.3, 0.3]$ with a step size of $0.01$. That is, $k_x = -
 import org.apache.commons.math3.analysis.function.Sinc;
 
 public class project_box1d {
-    
+
     public static void main(String[] args) {
 
         double kx_min = -0.3;
@@ -91,7 +91,7 @@ To potential prepare you for scientific computing, we also provide the ```Python
 ```Python
 # %% Import packages
 import numpy as np
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
 
 # %% Compute the signal integral (Fourier transform)
 x = np.arange(-10, 10, 1)

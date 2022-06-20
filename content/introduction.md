@@ -1,17 +1,17 @@
 +++
 date= 2022-06-20T08:00:00Z
-title = "Project Work 1"
+title = "Project Work 1 - Introduction"
 [extra]
 author= "Bruno Riemenschneider, Zhengguo Tan, Jinho Kim"
 +++
 
-# Overview 
+# Overview
 
 1) Introduction *(Tafelübung 24. Juni)*
-2) [*k*-Space](./kspace.md)
-3) [Image Reconstruction](./fftshift.md) *(Tafelübung 08. Juli)*
-4) [Filters](./filters.md) *(Tafelübung 15. Juli)*
-5) [Outlook and Conclusion](./conclusion.md)
+2) [*k*-Space](../kspace)
+3) [Image Reconstruction](../fftshift) *(Tafelübung 08. Juli)*
+4) [Filters](../filters) *(Tafelübung 15. Juli)*
+5) [Outlook and Conclusion](../conclusion)
 
 # 1. Introduction
 
@@ -26,8 +26,8 @@ Your first task is to write an introduction, which should include:
 Use **references** when necessary. Try to cite scientific publications (e.g. journal papers) in your introduction.
 Your introduction and conclusion should not contain any images.
 
-Please have a look at our [project report guidelines](./checklist/_index.md).
+Please have a look at our [project report guidelines](../checklist).
 <!--Whenever we refer to the maximum length of a section we're not counting figures and tables and just consider the length-->
 <!--of the text.-->
 
-[Next task: *k*-Space](./kspace.md)
+[Next task: *k*-Space](../kspace)

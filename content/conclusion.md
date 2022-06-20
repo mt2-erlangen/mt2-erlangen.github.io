@@ -1,16 +1,16 @@
 +++
-date= 2022-06-20T08:06:00Z
-title = "Project Work 5"
+date= 2022-06-20T08:00:25Z
+title = "Project Work 5 - Outlook and Conclusion"
 [extra]
 author= "Zhengguo Tan, Jinho Kim, Bruno Riemenschneider"
 +++
 
 # Overview
 
-1) [Introduction](./introduction.md) *(Tafelübung 24. Juni)*
-2) [*k*-Space](./kspace.md)
-3) [Image Reconstruction](./fftshift.md) *(Tafelübung 08. Juli)*
-4) [Filters](./filters.md) *(Tafelübung 15. Juli)*
+1) [Introduction](../introduction) *(Tafelübung 24. Juni)*
+2) [*k*-Space](../kspace)
+3) [Image Reconstruction](../fftshift) *(Tafelübung 08. Juli)*
+4) [Filters](../filters) *(Tafelübung 15. Juli)*
 5) Outlook and Conclusion
 
 
