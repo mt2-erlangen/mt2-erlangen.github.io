@@ -1,6 +1,6 @@
 +++ 
 date= 2022-06-20T08:00:00Z 
-title = "Project Work 2"
+title= "Project Work 2"
 [extra]
 author= "Zhengguo Tan, Jinho Kim, Bruno Riemenschneider"
 +++
