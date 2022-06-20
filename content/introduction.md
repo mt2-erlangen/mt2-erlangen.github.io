@@ -2,17 +2,32 @@
 date= 2022-06-20T08:00:00Z
 title = "Project Work 1"
 [extra]
-author= "Bruno Riemenschneider"
+author= "Bruno Riemenschneider, Zhengguo Tan, Jinho Kim"
 +++
 
 # Overview 
 
-- [Introduction](../introduction) *Tafelübung 11. Juni*
-- [Volumes](../volume)
-- [Projection](../projection) *Tafelübung 18. Juni*
-- [k-Space](../projectiondomain)
-- [Post-Processing](../postprocessing) *Tafelübung 25. Juni*
-- [Outlook and Conclusion](../conclusion)
+1) Introduction *(Tafelübung 24. Juni)*
+2) [*k*-Space](./kspace.md)
+3) [Image Reconstruction](./fftshift.md) *(Tafelübung 08. Juli)*
+4) [Filters](./filters.md) *(Tafelübung 15. Juli)*
+5) [Outlook and Conclusion](./conclusion.md)
 
-[Next task](../volume)
+# 1. Introduction
 
+In this semester's project work, you will learn some basic concepts of magnetic resonance imaging (MRI). The MRI scanner acquires data in the spatial frequency domain, known as *k*-space. MR image reconstruction requires the (inverse) Fourier transform of the acquired *k*-space data.
+
+Your first task is to write an introduction, which should include:
+
+* What are the **advantages and disadvantages of MRI** compared to other imaging modalities, like computer tomography (CT)? e.g. Does MRI require ionizing radiation? Does MRI provide better soft-tissue contrast? Is the acquisition speed of MRI as fast as CT? If not, why?
+* **What is MRI?**  Why is a strong magnetic field needed? What does the word "resonance" in MRI mean? Why is an antenna (receiver coil) needed? From a signal processing point of view, what is the relationship between the data acquired from an MRI machine and MR images?
+* Give a **brief overview** of the contents of the following tasks.
+
+Use **references** when necessary. Try to cite scientific publications (e.g. journal papers) in your introduction.
+Your introduction and conclusion should not contain any images.
+
+Please have a look at our [project report guidelines](./checklist/_index.md).
+<!--Whenever we refer to the maximum length of a section we're not counting figures and tables and just consider the length-->
+<!--of the text.-->
+
+[Next task: *k*-Space](./kspace.md)
