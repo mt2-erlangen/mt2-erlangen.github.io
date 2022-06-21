@@ -303,4 +303,4 @@ In your Project report, you should:
 * Explain how to improve the resolution of the MR image. What is the trade-off for that? Scan time? Cost?
 * Compare reconstructed images of cropping $k$-space and Max pooling in terms of image contents. Which result is closer to the original reconstructed image? Why do you think so?
 
-[Next task: Conclusion](../conclusion)
+[Next task: Outlook and Conclusion](../conclusion)
