@@ -26,7 +26,7 @@ In this section, you will load a measured and provided MRI $k$-space into an arr
 ### 2.1.1 A Single Complex Number by Itself
 
 <p align="center">
-  <img src="../complex_number.png" alt="Trulli" style="width:50%" align="center">
+  <img src="../complex_number.png" alt="Trulli" style="width:80%" align="center">
 </p>
 <p align="center">
   <b>Figure 2.1.</b> A complex number can be visually represented as a pair of numbers (a, b) forming a vector
@@ -63,7 +63,7 @@ At every location of the object that is imaged in the MR scanner, the signal tha
 The precessing spins create a precessing magnetization that results in radiofrequency radiation and can
 be measured with radiofrequency coils.
 <p align="center">
-  <img src="../fig22-MR_signal_detection.jpg" alt="Trulli" style="width:50%" align="center">
+  <img src="../fig22-MR_signal_detection.jpg" alt="Trulli" style="width:80%" align="center">
 </p>
 <p align="center">
   <b>Figure 2.2.</b> The precessing magnetization M that produces the MR signal is detected from two orthogonal directions,
@@ -158,16 +158,16 @@ public float[] getPhase()
 Eventually, You can show the magnitude and phase images using the given method ```DisplayUtils.showImage()```. Please use this method in the ```Project.java```
 
 <p align="center">
-  <img src="../fig23-kspace_mag.jpg" alt="Trulli" style="width:40%" align="center">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="../fig23-kspace_mag_log.jpg" alt="Trulli" style="width:40%" align="center">
+  <img src="../fig23-kspace_mag.jpg" alt="Trulli" style="width:48%" align="center">
+  &nbsp;
+  <img src="../fig23-kspace_mag_log.jpg" alt="Trulli" style="width:48%" align="center">
 </p>
 <p align="center">
   <b>Figure 2.3.</b> Magnitude images of <i>k</i>-space without (left) and with (right) logarithmic scale. The left figure shows only one small dot in the middle due to a huge image intensity range, while the right figure displays a better image intensity range.
 </p>
 
 <p align="center">
-  <img src="../fig24-phase.jpg" alt="Trulli" style="width:40%" align="center">
+  <img src="../fig24-phase.jpg" alt="Trulli" style="width:48%" align="center">
 
 <p align="center">
   <b>Figure 2.4.</b> A phase image of <i>k</i>-space.

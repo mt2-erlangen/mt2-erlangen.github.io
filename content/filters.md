@@ -16,8 +16,7 @@ author= "Zhengguo Tan, Jinho Kim, Bruno Riemenschneider"
 
 # 4. Filters
 
-In your exercises you have learned the process of filtering an image. In this section, we'll look at the relation of
-image and $k$-space with respect to applying a filter or multiplication operation on one of them. Feel free to use and 
+In your exercises, you have learned the process of filtering an image. In this section, we'll look at the relation between image and $k$-space with respect to applying a filter or multiplication operation on one of them. Feel free to use and 
 look at the code base from exercise 4 to get inspired.
 
 We'll first decrease the resolution (sharpness) of the image by manipulating the image itself or the $k$-space. Then, 
@@ -120,7 +119,7 @@ Figure 4.2 shows a schematic of the use of the parameter ```lines```=96 as used 
 The black "$0$"-areas in Figure 4.2 show where you should set $k$-space to $0$.
 
 <p align="center">
-<img src="../fig4-box.png" alt="Trulli" style="width:40%" align="center">
+<img src="../fig4-box.png" alt="Trulli" style="width:80%" align="center">
 </p>
 <p align="center">
 <b>Figure 4.2.</b> A schematic of $k$-space after running the setOuterToZero() method.
@@ -176,7 +175,7 @@ to calculate the index where the original $k$-space is cropped. Once you find wh
 set the value where you find to the cropped $k$-space using ```setAtIndex()```. Figure 4.3 shows parameters in a geometrical way to better understand them.
 
 <p align="center">
-  <img src="../fig4-setBufferFromCenterArea.png" alt="Trulli" style="width:40%" align="center">
+  <img src="../fig4-setBufferFromCenterArea.png" alt="Trulli" style="width:80%" align="center">
 </p>
 <p align="center">
   <b>Figure 4.3.</b> Visualization of suggested use of parameters. The blue-edged image is the original <i>k</i>-space, and the red-edged image is the cropped <i>k</i>-space.
@@ -188,9 +187,9 @@ method in the third constructor of the ```ComplexImage``` class to set the cropp
 
 Show the cropped $k$-space as well as a reconstructed image from that $k$-space, see Figure 4.4.
 <p align="center">
-  <img src="../fig4-kspace_crop.jpg" alt="Trulli" style="width:40%" align="center">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="../fig4-img_crop.jpg" alt="Trulli" style="width:40%" align="center">  
+  <img src="../fig4-kspace_crop.jpg" alt="Trulli" style="width:48%" align="center">
+  &nbsp;
+  <img src="../fig4-img_crop.jpg" alt="Trulli" style="width:48%" align="center">  
 </p>
 <p align="center">
   <b>Figure 4.4.</b> Cropped <i>k</i>-space (top) and MR Reconstructed image (bottom). 
@@ -286,9 +285,9 @@ Image mrMagImage_MP = mp.apply(mrMagImage);
 
 You should get something like this:
 <p align="center">
-<img src="../MaxPooling2d_input.png" alt="Trulli" style="width:40%" align="center">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="../MaxPooling2d_output.png" alt="Trulli" style="width:40%" align="center">
+<img src="../MaxPooling2d_input.png" alt="Trulli" style="width:48%" align="center">
+&nbsp;
+<img src="../MaxPooling2d_output.png" alt="Trulli" style="width:48%" align="center">
 </p>
 <p align="center">
 <b>Figure 4.5.</b> Input and output images to the max-pooling operation. The input image is of size [256, 256], whereas the output image is of size [64, 64].
