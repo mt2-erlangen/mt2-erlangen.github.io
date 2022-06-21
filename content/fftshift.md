@@ -39,9 +39,9 @@ For the sake of simplicity, let's first look at a 1D representation by looking a
 in the middle of the $k$-space.
 
 <p align="center">
-  <img src="../fig32-kspace_redline.png" alt="Trulli" style="width:35%" align="center">
-  &nbsp;&nbsp;
-  <img src="../fig32-kspace_traj.jpg" alt="Trulli" style="width:45%" align="center">
+  <img src="../fig32-kspace_redline.png" alt="Trulli" style="width:38%" align="center">
+  &nbsp;
+  <img src="../fig32-kspace_traj.jpg" alt="Trulli" style="width:55%" align="center">
 </p>
 <p align="center">
   <b>Figure 3.1.</b> A magnitude  image of <i>k</i>-space (left) and its corresponding signal intensity along the
@@ -60,7 +60,7 @@ Samples in a range of $[0, \frac{N}{2}-1]$ are then shifted to the other half sp
 
 
 <p align="center">
-  <img src="../fig31-fftshift1d.jpg" alt="Trulli" align="center" style="width:70%">  
+  <img src="../fig31-fftshift1d.jpg" alt="Trulli" align="center" style="width:90%">  
 </p>
 <p align="center">
   <b>Figure 3.2.</b> A graphical representation of the <i>FFT shift</i>.  
@@ -114,9 +114,9 @@ public void generateSine(int numWaves)
 You can plot your sinusoid wave using the given method ```DisplayUtils.showArray()```. In this case, the signal legnth is $256$
 
 <p align="center">
-  <img src="../fig33-sine_real.jpg" alt="Trulli" style="width:45%" align="center">
-  &nbsp;&nbsp;
-  <img src="../fig33-sine_imag.jpg" alt="Trulli" style="width:45%" align="center">
+  <img src="../fig33-sine_real.jpg" alt="Trulli" style="width:48%" align="center">
+  &nbsp;
+  <img src="../fig33-sine_imag.jpg" alt="Trulli" style="width:48%" align="center">
 </p>
 <p align="center">
   <b>Figure 3.3.</b> The real(left) and imaginary(right) parts of the sinusolidal wave composed of five different sine waves. The x-axis for both plots indicates the sample index, while the y-axes represent the real and the imaginary values of the signal, <b>s</b>, for the left and right plots, respectively. 
@@ -129,7 +129,7 @@ private Signal calculateMagnitude(ComplexSignal input)
 public float[] getMagnitude()
 ```
 <p align="center">
-  <img src="../fig34-sine_magnitude.jpg" alt="Trulli" style="width:45%" align="center">
+  <img src="../fig34-sine_magnitude.jpg" alt="Trulli" style="width:48%" align="center">
 </p>
 <p align="center">
   <b>Figure 3.4.</b> The manitude of the complex sinusoid signal. The x- and y-axis mean the sample index and the magnitude of the signal, <b>s</b>, respectively. 
@@ -138,7 +138,7 @@ public float[] getMagnitude()
 Now, you will apply an FFT to the signal using the given method ```FFT1D()``` from ```ProjectHelpers.java``` and plot the magnitude signal. For this, you have to comment out methods related to ```ComplexSignal()``` in ```ProjectHelpers.java```, such as ```FFT1D()```, ```toComplex()```, ```fromComplex()```, and ```fft()```.
 
 <p align="center">
-  <img src="../fig35-FFT.jpg" alt="Trulli" style="width:45%" align="center">
+  <img src="../fig35-FFT.jpg" alt="Trulli" style="width:48%" align="center">
 </p>
 <p align="center">
   <b>Figure 3.5.</b> The magnitude of <i>FFT</i>. Since the complex sinusoid signal is composed of five different sine waves, there are five peaks at the low-frequency part. The x- and y-axis mean the sample index and the magnitude of the FFT signal, respectively.
@@ -162,9 +162,9 @@ You can plot the *FFT shift* result and play around with the result, shifting th
 ```fftShift1d()``` multiple times.
 
 <p align="center">
-  <img src="../fig36-FFTshift.jpg" alt="Trulli" style="width:45%" align="center">
-  &nbsp;&nbsp;
-  <img src="../fig36-FFTshift2.jpg" alt="Trulli" style="width:45%" align="center">
+  <img src="../fig36-FFTshift.jpg" alt="Trulli" style="width:48%" align="center">
+  &nbsp;
+  <img src="../fig36-FFTshift2.jpg" alt="Trulli" style="width:48%" align="center">
 </p>
 <p align="center">
   <b>Figure 3.6.</b> <i>FFTshift</i> is carried out once(left) and twice(right) to the <i>FFT</i> result. The right figure shows the same as Figure 3.5, meaning that if <i>FFTshift</i> is applied twice, the signal comes back to the original position. This property is important when you reconstruct <i>k</i>-space. The x-axis for both plots indicates the sample index. Moreover, the y-axes represent the magnitude of the FFTshifted S and S' for the left and right plots, respectively, where S and S' stand for FFT(s) and FFTshift(FFT(s)). 
@@ -176,7 +176,7 @@ Expanding the concept of the FFT shift from the 1D problem to the 2D problem is 
 of doing an FFT shift along the first dimension and then the second.
 
 <p align="center">
-  <img src="../fig37-fftshift2d.jpg" alt="Trulli" style="width:70%" align="center">
+  <img src="../fig37-fftshift2d.jpg" alt="Trulli" style="width:80%" align="center">
 </p>
 <p align="center">
   <b>Figure 3.7.</b> Graphical example of the 2D <i>FFT shift</i>. One quadrant is swapped with another quadrant in the diagonal direction. This is due to the fact of swapping one sample along the x and y directions.
@@ -197,9 +197,9 @@ You can expand your implementation in the 1D case to the 2D problem for ```swapQ
 Display the result of your 2D FFT shift.
 
 <p align="center">
-  <img src="../fig38-kspace.jpg" alt="Trulli" style="width:40%" align="center">
-  &nbsp;&nbsp;
-  <img src="../fig38-kspace_fftshift.jpg" alt="Trulli" style="width:40%" align="center">
+  <img src="../fig38-kspace.jpg" alt="Trulli" style="width:48%" align="center">
+  &nbsp;
+  <img src="../fig38-kspace_fftshift.jpg" alt="Trulli" style="width:48%" align="center">
 </p>
 <p align="center">
   <b>Figure 3.8.</b> <i>k</i>-spaces before(left) and after(right) applying <I>FFTshift</i>.
@@ -228,12 +228,12 @@ Reconstruct the MR image from the measured $k$-space data.
 Show image magnitude, image phase, image real part, and image imaginary part as  below.
 
 <p align="center">
-  <img src="../fig310-img_mag.jpg" alt="Trulli" style="width:45%" align="center">
-  &nbsp;&nbsp;
-  <img src="../fig310-img_phase.jpg" alt="Trulli" style="width:45%" align="center">
-  <img src="../fig310-img_real.jpg" alt="Trulli" style="width:45%" align="center">
-  &nbsp;&nbsp;
-  <img src="../fig310-img_imag.jpg" alt="Trulli" style="width:45%" align="center">
+  <img src="../fig310-img_mag.jpg" alt="Trulli" style="width:48%" align="center">
+  &nbsp;
+  <img src="../fig310-img_phase.jpg" alt="Trulli" style="width:48%" align="center">
+  <img src="../fig310-img_real.jpg" alt="Trulli" style="width:48%" align="center">
+  &nbsp;
+  <img src="../fig310-img_imag.jpg" alt="Trulli" style="width:48%" align="center">
 </p>
 <p align="center">
   <b>Figure 3.10.</b> Reconstructed images. Image titles are presented at the left top corner of the each figure.
@@ -242,9 +242,9 @@ Show image magnitude, image phase, image real part, and image imaginary part as 
 Then, let's check if a forward FFT works fine with the reconstructed image. The original $k$-space should be reproduced from the FFT on the reconstructed image.
 
 <p align="center">
-  <img src="../fig311-kspace_reprod_mag.jpg" alt="Trulli" style="width:45%" align="center">
-  &nbsp;&nbsp;
-  <img src="../fig311-kspace_reprod_phase.jpg" alt="Trulli" style="width:45%" align="center">
+  <img src="../fig311-kspace_reprod_mag.jpg" alt="Trulli" style="width:48%" align="center">
+  &nbsp;
+  <img src="../fig311-kspace_reprod_phase.jpg" alt="Trulli" style="width:48%" align="center">
 </p>
 <p align="center">
   <b>Figure 3.11.</b> Reproducted <i>k</i>-space from the reconstructed image. The reproducted <i>k</i>-space shows as the same as the original <i>k</i>-space.
