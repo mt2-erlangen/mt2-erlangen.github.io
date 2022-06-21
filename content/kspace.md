@@ -19,6 +19,8 @@ Measured MRI signals are essentially radiofrequency waves summed over the imaged
 and the underlying spin precession, the most convenient way of the mathematical formulation is the framework of complex numbers.
 Complex numbers are very well suited to describe the magnitude and phase of an oscillation/precession.
 
+In this section, you will load a measured and provided MRI $k$-space into an array, using a provided function, and save it in an instance of a class for complex images, written by you. This class also provides calculation of magnitude and phase of the complex images from its real and imaginary parts.
+
 ## 2.1 Complex Numbers
 
 ### 2.1.1 A Single Complex Number by Itself
