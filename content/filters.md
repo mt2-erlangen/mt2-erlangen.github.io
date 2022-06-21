@@ -41,12 +41,8 @@ public class SincFilter2d extends LinearImageFilter{
 
         var s = new Sinc(true);
 
-        for (int y = minIndexY; y < minIndexY + height(); ++y) {
-
-            for (int x = minIndexX; x < minIndexX + width(); ++x) {
-                /* */
-            }
-        }
+        /* your code here */
+        
         normalize();
     }
 }
@@ -185,64 +181,9 @@ public class MaxPooling2d {
     }
 
     public Image apply(Image input) {
+    
+    /* your code here */
 
-        int out_width = (input.width() - this.block_width) / this.stride_width + 1;
-
-        int out_height = (input.height() - this.block_height) / this.stride_height + 1;
-
-        Image output = new Image(out_width, out_height, input.name + " processed with " + this.name);
-
-        int input_indy = 0;
-        int input_indx = 0;
-
-        int output_indy = 0;
-        int output_indx = 0;
-
-        // loop over the 2D image vertically
-        while (input_indy < input.height()) {
-
-            int y_start = input_indy;
-            int y_end = input_indy + this.block_height;
-
-            // block boundary
-            if (y_end > input.height())
-                break;
-
-            // loop over the 2D image horizontally
-            while (input_indx < input.width()) {
-
-                int x_start = input_indx;
-                int x_end = input_indx + this.block_width;
-
-                // block boundary
-                if (x_end > input.width())
-                    break;
-
-                // update the maximal value within block (patch)
-                float omax = Float.NEGATIVE_INFINITY;
-                for (int yi = y_start; yi < y_end; ++yi) {
-                    for (int xi = x_start; xi < x_end; ++xi) {
-
-                        float ival = input.atIndex(xi, yi);
-                        omax = /* */;
-                    }
-                }
-
-                output.setAtIndex(output_indx, output_indy, omax);
-
-                input_indx += /* */;
-                output_indx++;
-            }
-
-            input_indy += /* */;
-            output_indy++;
-
-            // re-start the x indices
-            /* */
-            /* */
-        }
-
-        return output;
     }
 }
 ```
