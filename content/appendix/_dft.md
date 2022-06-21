@@ -128,3 +128,5 @@ plt.show()
 ```
 You should be able to get the following plots:
 What happens if you change the scaling factor of the ```sinc``` function. For instance, instead of using ```np.sinc(kx*10)```, what does the green curve look like if you change $10$ to $1$?
+
+[Back to the Introduction](../introduction)

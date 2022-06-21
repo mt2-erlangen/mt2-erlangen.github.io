@@ -182,6 +182,5 @@ In the project report, you should
 * Show the magnitude and phase images of the $k$-space
 * Explain what those mean. Can you elaborate on why the phase does not show the same intensity variation as the magnitude?
 
-**Note**: If you are interested in Fourier transform, I encourage you have a look at this page: [discrete Fourier transform](../dft).
 
 [Next task: Image Reconstruction](../fftshift)
