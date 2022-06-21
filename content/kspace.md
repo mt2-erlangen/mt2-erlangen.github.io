@@ -90,7 +90,7 @@ As such, the result of the MR measurement process and subsequent demodulation is
 To reconstruct the MR images, the (inverse) *Fourier transform* is used to transform the signal from the frequency domain to the
 spatial domain. In other words, $k$-space is an intermediate step between MR scan and reconstructed image.
 
-(Not mandatory: If you are interested in the Fourier transform, we encourage you to look at this page: [Discrete Fourier Transform](dft.md).)
+(Not mandatory: If you are interested in the Fourier transform, we encourage you to look at this page: [Discrete Fourier Transform](../dft).)
 
 ## 2.2 The ComplexImage Class
 
