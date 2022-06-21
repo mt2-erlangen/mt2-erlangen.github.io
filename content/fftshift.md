@@ -33,7 +33,7 @@ To be precise, the DFT / FFT describes the measurement process of the MRI proces
 The inverse operation of that, which you need to reconstruct the image from the spatial frequencies is the inverse DFT / iDFT
 or inverse FFT / iFFT. They only differ by a minus sign in the equation, but let's stick to proper wording.
 
-**Note**: If you are interested in Fourier transform, I encourage you have a look at this page: [discrete Fourier transform](../appendix).
+**Note**: If you are interested in Fourier transform, I encourage you have a look at this page: [discrete Fourier transform](../appendix/_dft).
 
 ### 3.1.2 $k$-space and the FFT Shift
 
