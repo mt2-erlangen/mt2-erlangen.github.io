@@ -157,11 +157,14 @@ public float[] getPhase()
 
 Eventually, You can show the magnitude and phase images using the given method ```DisplayUtils.showImage()```. Please use this method in the ```Project.java```
 
-<p align="center">
-  <img src="../fig23-kspace_mag.jpg" alt="Trulli" style="width:48%" align="center">
-  &nbsp;
-  <img src="../fig23-kspace_mag_log.jpg" alt="Trulli" style="width:48%" align="center">
-</p>
+
+ <p style="text-align: center;">
+<table><tr>
+<td> <img src="../fig23-kspace_mag.jpg" alt="Trulli" align="center"> </td>
+<td> <img src="../fig23-kspace_mag_log.jpg" alt="Trulli" align="center"> </td>
+</tr></table>
+ <p>
+
 <p align="center">
   <b>Figure 2.3.</b> Magnitude images of <i>k</i>-space without (left) and with (right) logarithmic scale. The left figure shows only one small dot in the middle due to a huge image intensity range, while the right figure displays a better image intensity range.
 </p>

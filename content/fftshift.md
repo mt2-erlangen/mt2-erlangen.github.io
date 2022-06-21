@@ -40,11 +40,12 @@ As stated above, MRI $k$-space is measured with its low-frequency components in 
 For the sake of simplicity, let's first look at a 1D representation by looking at one line of the 2D matrix
 in the middle of the $k$-space.
 
-<p align="center">
-  <img src="../fig32-kspace_redline.png" alt="Trulli" style="width:38%" align="center">
-  &nbsp;
-  <img src="../fig32-kspace_traj.jpg" alt="Trulli" style="width:55%" align="center">
-</p>
+<p style="text-align: center;">
+<table><tr>
+<td> <img src="../fig32-kspace_redline.png" alt="fig32-kspace_redline.png"  style="width: 80%;"/> </td>
+<td> <img src="../fig32-kspace_traj.jpg" alt="fig32-kspace_traj.jpg"/> </td>
+</tr></table>
+ <p>
 <p align="center">
   <b>Figure 3.1.</b> A magnitude  image of <i>k</i>-space (left) and its corresponding signal intensity along the
 red-line direction (right). The x- and y-axis represent the sample index and the logarithm of the magnitude of the <i>k</i>-space, respectively.
@@ -115,11 +116,12 @@ public void generateSine(int numWaves)
 
 You can plot your sinusoid wave using the given method ```DisplayUtils.showArray()```. In this case, the signal legnth is $256$
 
-<p align="center">
-  <img src="../fig33-sine_real.jpg" alt="Trulli" style="width:48%" align="center">
-  &nbsp;
-  <img src="../fig33-sine_imag.jpg" alt="Trulli" style="width:48%" align="center">
-</p>
+ <p style="text-align: center;">
+<table><tr>
+<td> <img src="../fig33-sine_real.jpg" alt="fig33-sine_real.jpg"  style="width: 256;"/> </td>
+<td> <img src="../fig33-sine_imag.jpg" alt="fig33-sine_imag.jpg" style="width: 256;"/> </td>
+</tr></table>
+ <p>
 <p align="center">
   <b>Figure 3.3.</b> The real(left) and imaginary(right) parts of the sinusolidal wave composed of five different sine waves. The x-axis for both plots indicates the sample index, while the y-axes represent the real and the imaginary values of the signal, <b>s</b>, for the left and right plots, respectively. 
 </p>
@@ -130,6 +132,7 @@ To show the magnitude of the signal, you need to implement ```calculateMagnitude
 private Signal calculateMagnitude(ComplexSignal input)
 public float[] getMagnitude()
 ```
+
 <p align="center">
   <img src="../fig34-sine_magnitude.jpg" alt="Trulli" style="width:48%" align="center">
 </p>
@@ -163,11 +166,13 @@ private Signal swap(Signal input)
 You can plot the *FFT shift* result and play around with the result, shifting the signal back and forth using
 ```fftShift1d()``` multiple times.
 
-<p align="center">
-  <img src="../fig36-FFTshift.jpg" alt="Trulli" style="width:48%" align="center">
-  &nbsp;
-  <img src="../fig36-FFTshift2.jpg" alt="Trulli" style="width:48%" align="center">
-</p>
+ <p style="text-align: center;">
+<table><tr>
+<td> <img src="../fig36-FFTshift.jpg" alt="fig36-FFTshift.jpg"  style="width: 256;"/> </td>
+<td> <img src="../fig36-FFTshift2.jpg" alt="fig36-FFTshift2.jpg" style="width: 256;"/> </td>
+</tr></table>
+ <p>
+
 <p align="center">
   <b>Figure 3.6.</b> <i>FFTshift</i> is carried out once(left) and twice(right) to the <i>FFT</i> result. The right figure shows the same as Figure 3.5, meaning that if <i>FFTshift</i> is applied twice, the signal comes back to the original position. This property is important when you reconstruct <i>k</i>-space. The x-axis for both plots indicates the sample index. Moreover, the y-axes represent the magnitude of the FFTshifted S and S' for the left and right plots, respectively, where S and S' stand for FFT(s) and FFTshift(FFT(s)). 
 </p>
@@ -198,11 +203,13 @@ You can expand your implementation in the 1D case to the 2D problem for ```swapQ
 
 Display the result of your 2D FFT shift.
 
-<p align="center">
-  <img src="../fig38-kspace.jpg" alt="Trulli" style="width:48%" align="center">
-  &nbsp;
-  <img src="../fig38-kspace_fftshift.jpg" alt="Trulli" style="width:48%" align="center">
-</p>
+ <p style="text-align: center;">
+<table><tr>
+<td> <img src="../fig38-kspace.jpg" alt="fig38-kspace.jpg"  style="width: 256;"/> </td>
+<td> <img src="../fig38-kspace_fftshift.jpg" alt="fig38-kspace_fftshift.jpg" style="width: 256;"/> </td>
+</tr></table>
+ <p>
+
 <p align="center">
   <b>Figure 3.8.</b> <i>k</i>-spaces before(left) and after(right) applying <I>FFTshift</i>.
 Low-frequency components are shifted to the edge after applying <i>FFTshift</i>,
@@ -219,6 +226,7 @@ Play around with (i)FFTs and the shifts and you will see.
 
 ```InverseFFT2D()``` and ```FFT2D()``` methods are provided in ```ProjectHelpers.java```.
 
+
 <p align="center">
   <img src="../fig39-recon_flow.jpg" alt="Trulli" style="width:80%" align="center">
 </p>
@@ -229,25 +237,29 @@ Play around with (i)FFTs and the shifts and you will see.
 Reconstruct the MR image from the measured $k$-space data.
 Show image magnitude, image phase, image real part, and image imaginary part as  below.
 
-<p align="center">
-  <img src="../fig310-img_mag.jpg" alt="Trulli" style="width:48%" align="center">
-  &nbsp;
-  <img src="../fig310-img_phase.jpg" alt="Trulli" style="width:48%" align="center">
-  <img src="../fig310-img_real.jpg" alt="Trulli" style="width:48%" align="center">
-  &nbsp;
-  <img src="../fig310-img_imag.jpg" alt="Trulli" style="width:48%" align="center">
-</p>
+<p style="text-align: center;">
+<table><tr>
+<td> <img src="../fig310-img_mag.jpg" alt="fig310-img_mag.jpg"  style="width: 256;"/> </td>
+<td> <img src="../fig310-img_phase.jpg" alt="fig310-img_phase.jpg" style="width: 256;"/> </td>
+</tr>
+<tr>
+<td> <img src="../fig310-img_real.jpg" alt="fig310-img_real.jpg"  style="width: 256;"/> </td>
+<td> <img src="../fig310-img_imag.jpg" alt="fig310-img_imag.jpg" style="width: 256;"/> </td>
+</tr>
+</table>
+ <p>
 <p align="center">
   <b>Figure 3.10.</b> Reconstructed images. Image titles are presented at the left top corner of the each figure.
 </p>
 
 Then, let's check if a forward FFT works fine with the reconstructed image. The original $k$-space should be reproduced from the FFT on the reconstructed image.
 
-<p align="center">
-  <img src="../fig311-kspace_reprod_mag.jpg" alt="Trulli" style="width:48%" align="center">
-  &nbsp;
-  <img src="../fig311-kspace_reprod_phase.jpg" alt="Trulli" style="width:48%" align="center">
-</p>
+ <p style="text-align: center;">
+<table><tr>
+<td> <img src="../fig311-kspace_reprod_mag.jpg" alt="fig311-kspace_reprod_mag.jpg"  style="width: 256;"/> </td>
+<td> <img src="../fig311-kspace_reprod_phase.jpg" alt="fig311-kspace_reprod_phase.jpg" style="width: 256;"/> </td>
+</tr></table>
+ <p>
 <p align="center">
   <b>Figure 3.11.</b> Reproducted <i>k</i>-space from the reconstructed image. The reproducted <i>k</i>-space shows as the same as the original <i>k</i>-space.
 </p>

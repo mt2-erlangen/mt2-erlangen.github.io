@@ -284,12 +284,12 @@ Image mrMagImage_MP = mp.apply(mrMagImage);
 ```
 
 You should get something like this:
-<p align="center">
-<img src="../MaxPooling2d_input.png" alt="Trulli" style="width:48%" align="center">
-&nbsp;
-<img src="../MaxPooling2d_output.png" alt="Trulli" style="width:48%" align="center">
-</p>
-<p align="center">
+ <p style="text-align: center;">
+<table><tr>
+<td> <img src="../MaxPooling2d_input.png" alt="Trulli" align="center"> </td>
+<td> <img src="../MaxPooling2d_output.png" alt="Trulli" align="center"> </td>
+</tr></table>
+ <p>
 <b>Figure 4.5.</b> Input and output images to the max-pooling operation. The input image is of size [256, 256], whereas the output image is of size [64, 64].
 </p>
 
