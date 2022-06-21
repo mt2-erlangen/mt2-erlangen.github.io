@@ -15,6 +15,8 @@ author= "Jinho Kim, Zhengguo Tan, Bruno Riemenschneider"
 
 # 3. Image Reconstruction
 
+In the last section, you made an acquired $k$-space Java-manipulatable. Now, we want to actually work with it. To reconstruct an MR image from it, we need to use an inverse Fourier transform. The method for the Fourier transform itself is provided by us, but you need to implement the workflow, which also involves shifting the buffer array, as explained below. By the end of the section, you will have implemented a framework to reconstruct an image from $k$-space and to calculate a $k$-space from an image.
+
 ## 3.1 FFT and FFT Shift
 
 ### 3.1.1 What is an FFT / iFFT?
