@@ -15,13 +15,13 @@ It is worth noting from this equation that,
 
 * the image content $\rho$ is discretized into a two-dimensional (2D) matrix with its spatial coordinates $x$ and $y$.
 
-* the MR signal $s$ is sampled at the $k$-space points $(k_x, k_y)$, and is an integral over all discrete points $(x, y)$ in image domain.
+* the MR signal $s$ is sampled at the $k$-space points ($k_x$, $k_y$), and is an integral over all discrete points ($x$, $y$) in image domain.
 
 * the MR signal is sampled is a point-by-point manner, which is an important reason why MRI is slow.
 
 In short, Fourier transform plays an important role in MRI. The exploration of Fourier transform properties has fostered many crucial MRI developments and innovations.
 
-**Task Optional.1:** The equation above shows how a 2D image $\rho(x,y)$ can be formed in MRI. Can this equation be extended to 3D acquisition? In other words, instead of acquiring one 2D plane, can we use MRI to acquire 3D volume such as to cover a whole organ (like brain)? May you try to write down the equation for 3D Fourier transform? What may be the difficulties in reconstructing 3D volume images? Think about computational time and organ motion during acquisition.
+**Task Optional.1:** The equation above shows how a 2D image $\rho(x,y)$ can be formed in MRI. Can this equation be extended to 3D acquisition? In other words, instead of acquiring one 2D plane, can we use MRI to acquire 3D volume such as to cover a whole organ (like the brain)? May you try to write down the equation for the 3D Fourier transform? What may be the difficulties in reconstructing 3D volume images? Think about computational time and organ motion during acquisition.
 
 ## Simple example: one-dimensional (1D) Fourier transform
 
@@ -127,7 +127,4 @@ ax[2].set_title('sinc(kx * 10)')
 plt.show()
 ```
 You should be able to get the following plots:
-
-![](box1d_scatter_plot.png)
-
-* What happen if you change the scaling factor of the sinc function. For instance, instead of using ```np.sinc(kx*10)```, how does the green curve look like if you change $10$ to $1$?
+What happens if you change the scaling factor of the ```sinc``` function. For instance, instead of using ```np.sinc(kx*10`)`, what does the green curve look like if you change $10$ to $1$?
