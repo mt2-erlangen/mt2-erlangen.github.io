@@ -40,15 +40,15 @@ As stated above, MRI $k$-space is measured with its low-frequency components in 
 For the sake of simplicity, let's first look at a 1D representation by looking at one line of the 2D matrix
 in the middle of the $k$-space.
 
-<p style="text-align: center;">
-<table><tr>
-<td> <img src="../fig32-kspace_redline.png" alt="fig32-kspace_redline.png"  style="width: 80%;"/> </td>
-<td> <img src="../fig32-kspace_traj.jpg" alt="fig32-kspace_traj.jpg"/> </td>
-</tr></table>
- <p>
 <p align="center">
-  <b>Figure 3.1.</b> A magnitude  image of <i>k</i>-space (left) and its corresponding signal intensity along the
-red-line direction (right). The x- and y-axis represent the sample index and the logarithm of the magnitude of the <i>k</i>-space, respectively.
+  <img src="../fig32-kspace_redline.png" alt="Trulli" align="center" style="width:80%">  
+</p>
+<p align="center">
+  <img src="../fig32-kspace_traj.jpg" alt="Trulli" align="center" style="width:100%">  
+</p>
+<p align="center">
+  <b>Figure 3.1.</b> A magnitude  image of <i>k</i>-space (top) and its corresponding signal intensity along the
+red-line direction (bottom). The x- and y-axis represent the sample index and the logarithm of the magnitude of the <i>k</i>-space, respectively.
 </p>
 
 Figure 3.1 shows signal intensities concentrate in the middle of the spectrum, which is the DC component,
@@ -116,14 +116,14 @@ public void generateSine(int numWaves)
 
 You can plot your sinusoid wave using the given method ```DisplayUtils.showArray()```. In this case, the signal legnth is $256$
 
- <p style="text-align: center;">
-<table><tr>
-<td> <img src="../fig33-sine_real.jpg" alt="fig33-sine_real.jpg"  style="width: 256;"/> </td>
-<td> <img src="../fig33-sine_imag.jpg" alt="fig33-sine_imag.jpg" style="width: 256;"/> </td>
-</tr></table>
- <p>
 <p align="center">
-  <b>Figure 3.3.</b> The real(left) and imaginary(right) parts of the sinusolidal wave composed of five different sine waves. The x-axis for both plots indicates the sample index, while the y-axes represent the real and the imaginary values of the signal, <b>s</b>, for the left and right plots, respectively. 
+  <img src="../fig33-sine_real.jpg" alt="Trulli" align="center" style="width:100%">  
+</p>
+<p align="center">
+  <img src="../fig33-sine_imag.jpg" alt="Trulli" align="center" style="width:100%">  
+</p>
+<p align="center">
+  <b>Figure 3.3.</b> The real(top) and imaginary(bottom) parts of the sinusoidal  wave are composed of five different sine waves. The x-axis for both plots indicates the sample index, while the y-axes represent the real and the imaginary values of the signal, <b>s</b>, for plots above and below, respectively. 
 </p>
 
 To show the magnitude of the signal, you need to implement ```calculateMagnitude()``` and ```getMagnitude()``` for displaying with ```DisplayUtils.showArray()```. You can use ```atIndex()``` and ```setAtIndex()``` for ```calculateMagnitude()```.
@@ -134,7 +134,7 @@ public float[] getMagnitude()
 ```
 
 <p align="center">
-  <img src="../fig34-sine_magnitude.jpg" alt="Trulli" style="width:48%" align="center">
+  <img src="../fig34-sine_magnitude.jpg" alt="Trulli" style="width:100%" align="center">
 </p>
 <p align="center">
   <b>Figure 3.4.</b> The manitude of the complex sinusoid signal. The x- and y-axis mean the sample index and the magnitude of the signal, <b>s</b>, respectively. 
@@ -143,7 +143,7 @@ public float[] getMagnitude()
 Now, you will apply an FFT to the signal using the given method ```FFT1D()``` from ```ProjectHelpers.java``` and plot the magnitude signal. For this, you have to comment out methods related to ```ComplexSignal()``` in ```ProjectHelpers.java```, such as ```FFT1D()```, ```toComplex()```, ```fromComplex()```, and ```fft()```.
 
 <p align="center">
-  <img src="../fig35-FFT.jpg" alt="Trulli" style="width:48%" align="center">
+  <img src="../fig35-FFT.jpg" alt="Trulli" style="width:100%" align="center">
 </p>
 <p align="center">
   <b>Figure 3.5.</b> The magnitude of <i>FFT</i>. Since the complex sinusoid signal is composed of five different sine waves, there are five peaks at the low-frequency part. The x- and y-axis mean the sample index and the magnitude of the FFT signal, respectively.
@@ -166,15 +166,14 @@ private Signal swap(Signal input)
 You can plot the *FFT shift* result and play around with the result, shifting the signal back and forth using
 ```fftShift1d()``` multiple times.
 
- <p style="text-align: center;">
-<table><tr>
-<td> <img src="../fig36-FFTshift.jpg" alt="fig36-FFTshift.jpg"  style="width: 256;"/> </td>
-<td> <img src="../fig36-FFTshift2.jpg" alt="fig36-FFTshift2.jpg" style="width: 256;"/> </td>
-</tr></table>
- <p>
-
 <p align="center">
-  <b>Figure 3.6.</b> <i>FFTshift</i> is carried out once(left) and twice(right) to the <i>FFT</i> result. The right figure shows the same as Figure 3.5, meaning that if <i>FFTshift</i> is applied twice, the signal comes back to the original position. This property is important when you reconstruct <i>k</i>-space. The x-axis for both plots indicates the sample index. Moreover, the y-axes represent the magnitude of the FFTshifted S and S' for the left and right plots, respectively, where S and S' stand for FFT(s) and FFTshift(FFT(s)). 
+  <img src="../fig36-FFTshift.jpg" alt="Trulli" style="width:100%" align="center">
+</p>
+<p align="center">
+  <img src="../fig36-FFTshift2.jpg" alt="Trulli" style="width:100%" align="center">
+</p>
+<p align="center">
+  <b>Figure 3.6.</b> <i>FFTshift</i> is carried out once(top) and twice(bottom) to the <i>FFT</i> result. The figure at the bottom shows the same as Figure 3.5, meaning that if <i>FFTshift</i> is applied twice, the signal comes back to the original position. This property is important when you reconstruct <i>k</i>-space. The x-axis for both plots indicates the sample index. Moreover, the y-axes represent the magnitude of the FFTshifted S and S' for plots above and below, respectively, where S and S' stand for FFT(s) and FFTshift(FFT(s)). 
 </p>
 
 ## 3.3 Expand FFT shift to 2D in ComplexImage
@@ -228,7 +227,7 @@ Play around with (i)FFTs and the shifts and you will see.
 
 
 <p align="center">
-  <img src="../fig39-recon_flow.jpg" alt="Trulli" style="width:80%" align="center">
+  <img src="../fig39-recon_flow.jpg" alt="Trulli" style="width:100%" align="center">
 </p>
 <p align="center">
   <b>Figure 3.9.</b> An overview of the MR reconstruction process.

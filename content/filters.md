@@ -186,13 +186,15 @@ As said above, when you are done with implementing the method ```setBufferFromCe
 method in the third constructor of the ```ComplexImage``` class to set the cropped $k$-space from the original.
 
 Show the cropped $k$-space as well as a reconstructed image from that $k$-space, see Figure 4.4.
+
+<p style="text-align: center;">
+<table><tr>
+<td> <img src="../fig4-kspace_crop.jpg" alt="fig4-kspace_crop.jpg"  style="width: 256;"/> </td>
+<td> <img src="../fig4-img_crop.jpg" alt="fig4-img_crop.jpg" style="width: 256;"/> </td>
+</tr></table>
+ <p>
 <p align="center">
-  <img src="../fig4-kspace_crop.jpg" alt="Trulli" style="width:48%" align="center">
-  &nbsp;
-  <img src="../fig4-img_crop.jpg" alt="Trulli" style="width:48%" align="center">  
-</p>
-<p align="center">
-  <b>Figure 4.4.</b> Cropped <i>k</i>-space (top) and MR Reconstructed image (bottom). 
+  <b>Figure 4.4.</b> Cropped <i>k</i>-space (left) and MR Reconstructed image (right). 
 Since the grid size of <i>k</i>-space gets small, the resolution of the reconstructed image decreases as well.
 </p>
 
@@ -301,4 +303,4 @@ In your Project report, you should:
 * Explain how to improve the resolution of the MR image. What is the trade-off for that? Scan time? Cost?
 * Compare reconstructed images of cropping $k$-space and Max pooling in terms of image contents. Which result is closer to the original reconstructed image? Why do you think so?
 
-[Next task: Conclusion](../conclusion.md)
+[Next task: Conclusion](../conclusion)
