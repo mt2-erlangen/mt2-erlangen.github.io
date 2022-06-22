@@ -26,20 +26,18 @@ we're going to decrease the array size (sometimes also called resolution, this t
 
 ### 4.1.1 Sinc Filter Applied on Image
 
-The [sinc function](https://en.wikipedia.org/wiki/Sinc_function) is defined in two forms,
+The (normalized) [sinc function](https://en.wikipedia.org/wiki/Sinc_function) is defined as follows
 
-1. unnormalized: $ \mathrm{sinc} (x) = \frac{\mathrm{sin}(x)}{x} $
+$$ \mathrm{sinc} (x) = \frac{\mathrm{sin}(\pi x)}{\pi x} $$
 
-2. normalized: $ \mathrm{sinc} (x) = \frac{\mathrm{sin}(\pi x)}{\pi x} $
-
-Please implement a 2D sinc filter such that it is working as a filter in $x$ and a filter in $y$ direction independently.
+Please implement a 2D sinc filter such that it is working as a filter in $x$- and a filter in $y$-direction independently.
 This means that during filtering you can multiply a sinc in $x$ and a sinc in $y$ direction 
-(as opposed to using a 2D distance from the point that the filter is applied to, e.g.). 
+(as opposed to, e.g., using an absolute 2D distance from the point that the filter is applied to). 
 
 According to exercise 4, implement
 the class in ```SincFilter2d.java```. This filter has two parameters: ```filterSize``` and ```downScale```. Suppose 
 we have input $x$, with $x$ being an integer and $x \in [-\mathrm{filterSize}/2, \mathrm{filterSize}/2)$, 
-the output is: $$y = \mathrm{sinc}(x/\mathrm{downScale})$$
+the output is: $$out = \mathrm{sinc}(x/\mathrm{downScale})$$
 
 ```Java
 package project;
@@ -62,7 +60,7 @@ public class SincFilter2d extends LinearImageFilter{
 }
 ```
 
-You can evaluate the sinc function from the used library with the ```s.value()``` method.
+You can evaluate the sinc function from the used library with the ```s.value(...input here...)``` method.
 
 You should now apply the ```SincFilter2d``` filter to the complex MR image. But how? The filter is real valued, and 
 the convolution operation with a certain filter is a linear operation. Consequently, you can apply the real filter
@@ -83,11 +81,11 @@ of 1 is actually a factor of 10 difference.
 
 ### 4.1.2 Box Function Applied to $k$-Space
 
-So far, you should have implemented a filter for the complex image and used the ```apply``` function. 
-This operation is related to the Fourier transform of the image by the so-called convolution theorem, but let's not dive
+So far, you should have implemented a filter for the complex image and used the ```apply()``` method. 
+The effect on $k$-space by filtering the image is described by the so-called convolution theorem, but let's not dive
 into theory here..
 
-Now let's manipulate $k$-space data and observe how it changes the image. We're choosing a box multiplication, 
+Now let's do it the other way around: manipulate $k$-space data and observe how it changes the image. We're choosing a box multiplication, 
 which instead performs point-wise multiplication between the input $k$-space matrix and a box function, as shown in Figure 4.1.
 
 <p align="center">
@@ -128,14 +126,14 @@ after application of the method.
 </p>
 
 Apply the code shown above in your ```Project.java```.
-Please show the zeroed $k$-space and its corresponding image! 
+Please show the zeroed $k$-space (use the previously unfiltered $k$-space for zeroing) and its corresponding image! 
 Is the image similar to the sinc-filtered image? If so, why?
 
 
 ## 4.2 Reducing the Image Size 
 
 We'd like you to understand the conceptional difference between the "sharpness" of an image, which is determined by the
-information content it represents (visible in $k$-space, e.g.), and it's array size, which also represents the amount
+information content it represents (visible in $k$-space, e.g.), and it's array size, which confines the amount
 of information that can be represented.
 
 ### 4.2.1 Cropping $k$-Space
