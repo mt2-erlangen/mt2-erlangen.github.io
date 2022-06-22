@@ -88,7 +88,7 @@ Now let's do it the other way around: manipulate $k$-space data and observe how 
 which instead performs point-wise multiplication between the input $k$-space matrix and a box function, as shown in Figure 4.1.
 
 <p align="center">
-  <img src="../pointwise_mult.png" alt="Trulli" style="width:90%" align="center">
+  <img src="./pointwise_mult.png" alt="Trulli" style="width:90%" align="center">
 </p>
 <p align="center">
   <b>Figure 4.1.</b> Illustration of point-wise multiplication of a box function, 
@@ -116,7 +116,7 @@ Figure 4.2 shows a schematic of the use of the parameter ```lines```= 96 as used
 The black "0"-areas in Figure 4.2 show where you should set $k$-space to 0.
 
 <p align="center">
-<img src="../fig4-box.png" alt="Trulli" style="width:80%" align="center">
+<img src="./fig4-box.png" alt="Trulli" style="width:80%" align="center">
 </p>
 <p align="center">
 <b>Figure 4.2.</b> A schematic of $k$-space after running the setOuterToZero() method.
@@ -172,7 +172,7 @@ to calculate the index where the original $k$-space is cropped. Once you find wh
 set the value where you find to the cropped $k$-space using ```setAtIndex()```. Figure 4.3 shows parameters in a geometrical way to better understand them.
 
 <p align="center">
-  <img src="../fig4-setBufferFromCenterArea.png" alt="Trulli" style="width:80%" align="center">
+  <img src="./fig4-setBufferFromCenterArea.png" alt="Trulli" style="width:80%" align="center">
 </p>
 <p align="center">
   <b>Figure 4.3.</b> Visualization of suggested use of parameters. The blue-edged image is the original <i>k</i>-space, and the red-edged image is the cropped <i>k</i>-space.
@@ -186,8 +186,8 @@ Show the cropped $k$-space as well as a reconstructed image from that $k$-space,
 
 <p style="text-align: center;">
 <table><tr>
-<td> <img src="../fig4-kspace_crop.jpg" alt="fig4-kspace_crop.jpg"  style="width: 256;"/> </td>
-<td> <img src="../fig4-img_crop.jpg" alt="fig4-img_crop.jpg" style="width: 256;"/> </td>
+<td> <img src="./fig4-kspace_crop.jpg" alt="fig4-kspace_crop.jpg"  style="width: 256;"/> </td>
+<td> <img src="./fig4-img_crop.jpg" alt="fig4-img_crop.jpg" style="width: 256;"/> </td>
 </tr></table>
  <p>
 <p align="center">
@@ -207,7 +207,7 @@ the maximum value of patches (blocks) of an image (or feature map) and uses it t
 (or feature map). [(source: max pooling explained)](https://paperswithcode.com/method/max-pooling#:~:text=Max%20Pooling%20is%20a%20pooling,used%20after%20a%20convolutional%20layer.)
 
 <p align="center">
-  <img src="../MaxpoolSample2.png" alt="Trulli" style="width:100%" align="center">
+  <img src="./MaxpoolSample2.png" alt="Trulli" style="width:100%" align="center">
 </p>
 <p align="center">
   <b>Figure 4.5.</b> Illustration of the Max-Pooling operation we are implementing. The maximum value of each 2x2 block/patch
@@ -283,8 +283,8 @@ Image mrMagImage_MP = mp.apply(mrMagImage);
 You should get something like this:
  <p style="text-align: center;">
 <table><tr>
-<td> <img src="../MaxPooling2d_input.png" alt="Trulli" align="center"> </td>
-<td> <img src="../MaxPooling2d_output.png" alt="Trulli" align="center"> </td>
+<td> <img src="./MaxPooling2d_input.png" alt="Trulli" align="center"> </td>
+<td> <img src="./MaxPooling2d_output.png" alt="Trulli" align="center"> </td>
 </tr></table>
  <p>
 <b>Figure 4.5.</b> Input and output images to the max-pooling operation. The input image is of size [256, 256], whereas the output image is of size [64, 64].
