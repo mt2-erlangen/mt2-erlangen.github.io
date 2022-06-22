@@ -302,3 +302,4 @@ In your Project report, you should:
 * Compare reconstructed images of cropping $k$-space and Max pooling in terms of image contents. Which result is closer to the original reconstructed image? Why do you think so?
 
 [Next task: Outlook and Conclusion](../conclusion)
+
