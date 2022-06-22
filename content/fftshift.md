@@ -117,7 +117,7 @@ You can use ```setAtIndex()``` to assign corresponding values to the real and im
 public void generateSine(int numWaves)
 ```
 
-You can plot your sinusoid wave using the given method ```DisplayUtils.showArray()```. In this case, the signal legnth is $256$
+You can plot your sinusoid wave using the given method ```DisplayUtils.showArray()```. In this case, the signal legnth is $256$.
 
 <p align="center">
   <img src="../fig33-sine_real.jpg" alt="Trulli" align="center" style="width:100%">  
@@ -156,7 +156,7 @@ Now, apply an FFT to the signal using the given method ```FFT1D()``` from ```Pro
 Once you have created the FFT result, it is time to implement the FFT shift.  
 If you shift the FFT signal to the right by one sample, the rightmost signal shifts to the leftmost index: it's a cyclical shift.
 Take your time to understand this, referring to Figure 3.2. If you shift by $N/2$,
-half of the left and right parts are swapped with each other. In other words, you can implement the ```fftShift1d()```
+the left and right half of the signal are swapped with each other. In other words, you can implement the ```fftShift1d()```
 method using a ```swap()``` method, which only swaps the left and right half of the array.
 You will need to use ```setAtIndex()``` and ```AtIndex()```.
 Additionally, as signals are complex numbers, you must consider both the real and imaginary parts.
