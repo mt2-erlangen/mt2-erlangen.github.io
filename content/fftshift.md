@@ -15,13 +15,13 @@ author= "Jinho Kim, Zhengguo Tan, Bruno Riemenschneider"
 
 # 3. Image Reconstruction
 
-In the last section, you made an acquired $k$-space Java-manipulatable. Now, we want to actually work with it. To reconstruct an MR image from it, we need to use an inverse Fourier transform. The method for the Fourier transform itself is provided by us, but you need to implement the workflow, which also involves shifting the buffer array, as explained below. By the end of the section, you will have implemented a framework to reconstruct an image from $k$-space and to calculate a $k$-space from an image.
+In the last section, you made an acquired $k$-space Java-manipulatable. Now, we want to actually work with it. To reconstruct an MR image from it, we need to use an inverse Fourier Transform. The method for the Fourier Transform itself is provided by us, but you need to implement the workflow, which also involves shifting the buffer array, as explained below. By the end of the section, you will have implemented a framework to reconstruct an image from $k$-space and to calculate a $k$-space from an image.
 
 ## 3.1 FFT and FFT Shift
 
 ### 3.1.1 What is an FFT / iFFT?
 
-The Discrete Fourier transform is an extremely important tool in all engineering contexts. One of the reasons why it had such
+The Discrete Fourier Transform is an extremely important tool in all engineering contexts. One of the reasons why it had such
 great success as an analysis tool and also as an MRI reconstruction tool is a very pragmatic one: it has an extremely fast and efficient
 implementation algorithm: the Fast Fourier Transform (FFT).\
 One of the computational particularities of the FFT is that it uses a representation of the $k$-space where the so-called
@@ -31,7 +31,8 @@ algorithm to do its work.
 
 To be precise, the DFT / FFT describes the measurement process of the MRI process (getting the spatial frequencies from the measured object).
 The inverse operation of that, which you need to reconstruct the image from the spatial frequencies is the inverse DFT / iDFT
-or inverse FFT / iFFT. They only differ by a minus sign in the equation, but let's stick to proper wording.
+or inverse FFT / iFFT. They forward and inverse Fourier Transforms only differ by a minus sign in front of one variable in their 
+definition, but let's stick to proper wording.
 
 
 ### 3.1.2 $k$-space and the FFT Shift
@@ -47,19 +48,19 @@ in the middle of the $k$-space.
   <img src="../fig32-kspace_traj.jpg" alt="Trulli" align="center" style="width:100%">  
 </p>
 <p align="center">
-  <b>Figure 3.1.</b> A magnitude  image of <i>k</i>-space (top) and its corresponding signal intensity along the
-red-line direction (bottom). The x- and y-axis represent the sample index and the logarithm of the magnitude of the <i>k</i>-space, respectively.
+  <b>Figure 3.1.</b> A magnitude image of <i>k</i>-space (top) in logarithmic scale, and the signal intensity along the
+red-line direction (bottom).
 </p>
 
-Figure 3.1 shows signal intensities concentrate in the middle of the spectrum, which is the DC component,
-as given by the nature of the MRI acquisition. From a technical point of view, however,
+Figure 3.1 shows signal intensities concentrate in the middle of the spectrum - around the DC component -
+as given by the nature of the MRI acquisition. From an implementation point of view, however,
 the DC component should be shifted to the first index before applying an iFFT. Let's not go too deep into Fourier transform
-theory here and the specifics of the FFT algorithm. Just keep in mind, (i)FFT wants the DC component at index 0, MRI measures
+theory or the specifics of the FFT algorithm here. Just keep in mind, (i)FFT wants the DC component at index 0, MRI measures
 the DC component at index $\frac{N}{2}$
 
-The so-called *FFT shift* is a construct that is often used (not only in MRI). It simply shifts samples in one half of
+The so-called *FFT shift* is a construct that is often used (not only in MRI). It simply shifts samples from one half of
 the spectrum to the other half. Figure 3.2 shows an example of the *1D FFT shift*. A full spectrum lies in an index range of $[0, N-1]$, where $N$ represents the vector length.
-Samples in a range of $[0, \frac{N}{2}-1]$ are then shifted to the other half spectrum of $[\frac{N}{2}, N]$ and vice versa.
+Samples in a range of $[0, \frac{N}{2}-1]$ are then shifted to the other half spectrum of $[\frac{N}{2}, N-1]$ and vice versa.
 
 
 <p align="center">
@@ -89,10 +90,9 @@ public class ComplexSignal {
 ```
 
 Create constructors and getters. Remember: class objects, ```real```, ```imag```, and ```name```,
-must be set in the constructor. Since ```Signal``` class contains two types of constructors,
-there will be two types of constructors in ```ComplexSignal``` class as well. Since the FFT works for only the signal
-length of 2 to the power of n, we consider the signal length only as 2 to the power of n.
-This will apply to the 2D problem as well.
+must be set in the constructor. Use the usual constructors for ```ComplexSignal```, as shown below. 
+(Side note: since the FFT only works for signal lengths of 2 to the power of $n \in \mathbb{N}$, 
+our implementation restricts to those cases. This will apply to the 2D case as well.)
 
 ```java
 public ComplexSignal(int length, String name)
@@ -103,11 +103,14 @@ public float[] getImag() // get the buffer of the imag
 public String getName()
 public int getSize()
 ```
-Generate a sinusoid wave composed of five sine waves with different frequencies in the ```generateSine()``` method.
-Frequencies for five sine waves are $[\text{numWaves}, 2 \times \text{numWaves}, \cdots, 5 \times \text{numWaves}]$,
-and the number of samples is equal to the size of the ```ComplexSignal```. You can refer to the previous exercise 1 for this.
-Since the generated sinusoid wave is float type, you will set *the real part* of the ```ComplexSignal``` as the sine wave
-and *the imaginary parts* to zeros. You can use ```setAtIndex()``` to assign corresponding values to the real and imaginary parts.
+Generate a sawtooth-like wave (remember exercise 1), composed of five sine waves with different frequencies in a ```generateSine()``` method.
+Frequencies for five sine waves are 
+
+$[\text{numWaves}, 2 \cdot \text{numWaves}, \cdots, 5 \cdot \text{numWaves}]$,
+
+and the number of samples is equal to the size of the ```ComplexSignal```. 
+Set the real part of the ```ComplexSignal``` as the constructed signal and the imaginary parts to zero. 
+You can use ```setAtIndex()``` to assign corresponding values to the real and imaginary parts.
 
 
 ```java
@@ -123,7 +126,7 @@ You can plot your sinusoid wave using the given method ```DisplayUtils.showArray
   <img src="../fig33-sine_imag.jpg" alt="Trulli" align="center" style="width:100%">  
 </p>
 <p align="center">
-  <b>Figure 3.3.</b> The real(top) and imaginary(bottom) parts of the sinusoidal  wave are composed of five different sine waves. The x-axis for both plots indicates the sample index, while the y-axes represent the real and the imaginary values of the signal, <b>s</b>, for plots above and below, respectively. 
+  <b>Figure 3.3.</b> The real (top) and imaginary (bottom) parts of the sinusoidal  wave are composed of five different sine waves. 
 </p>
 
 To show the magnitude of the signal, you need to implement ```calculateMagnitude()``` and ```getMagnitude()``` for displaying with ```DisplayUtils.showArray()```. You can use ```atIndex()``` and ```setAtIndex()``` for ```calculateMagnitude()```.
@@ -137,22 +140,22 @@ public float[] getMagnitude()
   <img src="../fig34-sine_magnitude.jpg" alt="Trulli" style="width:100%" align="center">
 </p>
 <p align="center">
-  <b>Figure 3.4.</b> The manitude of the complex sinusoid signal. The x- and y-axis mean the sample index and the magnitude of the signal, <b>s</b>, respectively. 
+  <b>Figure 3.4.</b> The manitude of the sinusoid signal.
 </p>
 
-Now, you will apply an FFT to the signal using the given method ```FFT1D()``` from ```ProjectHelpers.java``` and plot the magnitude signal. For this, you have to comment out methods related to ```ComplexSignal()``` in ```ProjectHelpers.java```, such as ```FFT1D()```, ```toComplex()```, ```fromComplex()```, and ```fft()```.
+Now, apply an FFT to the signal using the given method ```FFT1D()``` from ```ProjectHelpers.java``` and plot the magnitude signal. For this, you have to comment out methods related to ```ComplexSignal()``` in ```ProjectHelpers.java```, such as ```FFT1D()```, ```toComplex()```, ```fromComplex()```, and ```fft()```.
 
 <p align="center">
   <img src="../fig35-FFT.jpg" alt="Trulli" style="width:100%" align="center">
 </p>
 <p align="center">
-  <b>Figure 3.5.</b> The magnitude of <i>FFT</i>. Since the complex sinusoid signal is composed of five different sine waves, there are five peaks at the low-frequency part. The x- and y-axis mean the sample index and the magnitude of the FFT signal, respectively.
+  <b>Figure 3.5.</b> The magnitude of <i>FFT</i>. Since the complex sinusoid signal is composed of five different sine waves, there are five peaks at the low-frequency part.
 </p>
 
 
 Once you have created the FFT result, it is time to implement the FFT shift.  
-If you shift the FFT signal to the right by one sample, the most right signal comes to the most left index: it's a cyclical shift.
-Take your time to understand this, referring to Figure 3.2. If you think of the input and the output of the FFTshift,
+If you shift the FFT signal to the right by one sample, the rightmost signal shifts to the leftmost index: it's a cyclical shift.
+Take your time to understand this, referring to Figure 3.2. If you shift by $\frac{N}{2}$,
 half of the left and right parts are swapped with each other. In other words, you can implement the ```fftShift1d()```
 method using a ```swap()``` method, which only swaps the left and right half of the array.
 You will need to use ```setAtIndex()``` and ```AtIndex()```.
@@ -163,7 +166,7 @@ public void fftShift1d()
 private Signal swap(Signal input)
 ```
 
-You can plot the *FFT shift* result and play around with the result, shifting the signal back and forth using
+You can plot the FFT shift result and play around, shifting the signal back and forth using
 ```fftShift1d()``` multiple times.
 
 <p align="center">
@@ -173,12 +176,12 @@ You can plot the *FFT shift* result and play around with the result, shifting th
   <img src="../fig36-FFTshift2.jpg" alt="Trulli" style="width:100%" align="center">
 </p>
 <p align="center">
-  <b>Figure 3.6.</b> <i>FFTshift</i> is carried out once(top) and twice(bottom) to the <i>FFT</i> result. The figure at the bottom shows the same as Figure 3.5, meaning that if <i>FFTshift</i> is applied twice, the signal comes back to the original position. This property is important when you reconstruct <i>k</i>-space. The x-axis for both plots indicates the sample index. Moreover, the y-axes represent the magnitude of the FFTshifted S and S' for plots above and below, respectively, where S and S' stand for FFT(s) and FFTshift(FFT(s)). 
+  <b>Figure 3.6.</b> Shown is the result of an FFT shift applied out once (top) and twice (bottom) to the FFT result. The figure at the bottom shows the same as Figure 3.5, meaning that if the FFT shift is applied twice, the signal comes back to the original position (this is valid for even length signals). This property is important when you reconstruct <i>k</i>-space. Moreover, the y-axes represent the magnitude of the FFT-shifted S and S' for plots above and below, respectively, where S and S' stand for FFT(s) and FFTshift(FFT(s)). 
 </p>
 
 ## 3.3 Expand FFT shift to 2D in ComplexImage
 
-Expanding the concept of the FFT shift from the 1D problem to the 2D problem is not so complicated. It is the result
+Expanding the concept of the FFT shift from the 1D case to the 2D case is not so complicated. It is the result
 of doing an FFT shift along the first dimension and then the second.
 
 <p align="center">
@@ -188,17 +191,17 @@ of doing an FFT shift along the first dimension and then the second.
   <b>Figure 3.7.</b> Graphical example of the 2D <i>FFT shift</i>. One quadrant is swapped with another quadrant in the diagonal direction. This is due to the fact of swapping one sample along the x and y directions.
 </p>
 
-You need to consider that swapping one sample is carried out along both x and y directions in the 2D problem, meaning that one quadrant is swapped with another in the diagonal direction. We move the working ```java``` script to the ```ComplexImage.java```. You will add new methods called ```fftShift()``` and ```swapQuadrants()```
+You need to consider that swapping one sample is carried out along both $x$- and $y$-directions in the 2D case, meaning that one quadrant is swapped with another in the diagonal direction. We move the working ```java``` script to the ```ComplexImage.java```. You will add new methods called ```fftShift()``` and ```swapQuadrants()```
 
  ```java
 public void fftShift()
 private Image swapQuadrants(Image input)
 ```
 
-In ```fftShift()```, you will use ```swapQuadrants()``` to swap samples and ```setBuffer()```,
+In ```fftShift()```, use ```swapQuadrants()``` to swap samples and ```setBuffer()```,
 which is a member method of the ```Image``` class, to set swapped samples to the buffer. Always consider that you are
 dealing with complex numbers, using both ```real``` and ```imag```.
-You can expand your implementation in the 1D case to the 2D problem for ```swapQuadrants()```.
+You can expand your implementation in the 1D case to the 2D case with ```swapQuadrants()```.
 
 Display the result of your 2D FFT shift.
 
@@ -210,10 +213,10 @@ Display the result of your 2D FFT shift.
  <p>
 
 <p align="center">
-  <b>Figure 3.8.</b> <i>k</i>-spaces before(left) and after(right) applying <I>FFTshift</i>.
-Low-frequency components are shifted to the edge after applying <i>FFTshift</i>,
-and vice versa. To match <i>k</i>-space size to 2 to the power of n to carry out <i>FFT</i>,
-both edges are zero-padded, and such appear as black strips.
+  <b>Figure 3.8.</b> <i>k</i>-spaces before (left) and after (right) applying the FFT shift.
+Low-frequency components are shifted to the edge after the shift,
+and vice versa. To match <i>k</i>-space size to an integer-power of 2 for the FFT,
+one dimension needed to be zero-padded, and such shows black strips.
 </p>
 
 ## 3.4 Reconstruct MR image
@@ -260,7 +263,7 @@ Then, let's check if a forward FFT works fine with the reconstructed image. The 
 </tr></table>
  <p>
 <p align="center">
-  <b>Figure 3.11.</b> Reproducted <i>k</i>-space from the reconstructed image. The reproducted <i>k</i>-space shows as the same as the original <i>k</i>-space.
+  <b>Figure 3.11.</b> Reproduced <i>k</i>-space from the reconstructed image. The reproduced <i>k</i>-space shows as the same as the original <i>k</i>-space.
 </p>
 
 In your Project report, you should:
