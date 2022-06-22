@@ -143,7 +143,8 @@ public float[] getMagnitude()
   <b>Figure 3.4.</b> The magnitude of the summed-sinusoids signal.
 </p>
 
-Now, apply an FFT to the signal using the given method ```FFT1D()``` from ```ProjectHelpers.java``` and plot the magnitude signal. For this, you have to comment out methods related to ```ComplexSignal()``` in ```ProjectHelpers.java```, such as ```FFT1D()```, ```toComplex()```, ```fromComplex()```, and ```fft()```.
+Now, apply an FFT to the signal using the given method ```FFT1D()``` from ```ProjectHelpers.java``` and plot the magnitude signal. The methods are commented out
+to avoid conflicts when running the program prior to this point. Remove the comment symbols for the methods related to ```ComplexSignal()``` in ```ProjectHelpers.java```: ```FFT1D()```, ```toComplex()```, ```fromComplex()```, and ```fft()```.
 
 <p align="center">
   <img src="../fig35-FFT.jpg" alt="Trulli" style="width:100%" align="center">
