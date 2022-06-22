@@ -117,7 +117,7 @@ You can use ```setAtIndex()``` to assign corresponding values to the real and im
 public void generateSine(int numWaves)
 ```
 
-You can plot your sinusoid wave using the given method ```DisplayUtils.showArray()```. In this case, the signal legnth is $256$.
+You can plot your sinusoid wave using the given method ```DisplayUtils.showArray()```. In this case, the signal length is 256.
 
 <p align="center">
   <img src="../fig33-sine_real.jpg" alt="Trulli" align="center" style="width:100%">  
