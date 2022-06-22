@@ -62,11 +62,10 @@ public class SincFilter2d extends LinearImageFilter{
 
 You can evaluate the sinc function from the used library with the ```s.value(...input here...)``` method.
 
-You should now apply the ```SincFilter2d``` filter to the complex MR image. But how? The filter is real valued, and 
-the convolution operation with a certain filter is a linear operation. Consequently, you can apply the real filter
-to the real and imaginary part of your signal to be filtered separately.\
-Please implement a class ```LinearComplexImageFilter``` which does exactly that: applying a filter to real and imaginary
-part separately. Your application of the filter will look like the following:
+You should now apply the ```SincFilter2d``` filter to the complex MR image. But how? The filter is real-valued, and 
+the convolution operation with a certain filter is linear. Consequently, you can apply the real filter
+to the real and imaginary parts of your signal to be filtered separately.\
+Please implement a class ```LinearComplexImageFilter``` which does exactly that: applying a filter to real and imaginary parts separately. Your application of the filter will look like the following:
 
 ```Java
 SincFilter2d realFilter = new SincFilter2d(31, 4.0f);
@@ -75,7 +74,7 @@ ComplexImage filteredImage = complexFilter.apply(mrImage);
 ```
 
 Please show the filtered MR image (magnitude is enough) and its corresponding $k$-space! Please describe the difference 
-between the original and the filtered $k$-space. Look at both in logarithmic scale, so that you can see the differences.
+between the original and the filtered $k$-space. Look at both on a logarithmic scale, so that you can see the differences.
 Mind that the intensity differences you can see on a logarithmic scale are huge, so if you use ```log10```, a difference
 of 1 is actually a factor of 10 difference.
 
@@ -83,7 +82,7 @@ of 1 is actually a factor of 10 difference.
 
 So far, you should have implemented a filter for the complex image and used the ```apply()``` method. 
 The effect on $k$-space by filtering the image is described by the so-called convolution theorem, but let's not dive
-into theory here..
+into theory here.
 
 Now let's do it the other way around: manipulate $k$-space data and observe how it changes the image. We're choosing a box multiplication, 
 which instead performs point-wise multiplication between the input $k$-space matrix and a box function, as shown in Figure 4.1.
@@ -133,7 +132,7 @@ Is the image similar to the sinc-filtered image? If so, why?
 ## 4.2 Reducing the Image Size 
 
 We'd like you to understand the conceptional difference between the "sharpness" of an image, which is determined by the
-information content it represents (visible in $k$-space, e.g.), and it's array size, which confines the amount
+information content it represents (visible in $k$-space, e.g.), and its array size, which confines the amount
 of information that can be represented.
 
 ### 4.2.1 Cropping $k$-Space
@@ -142,7 +141,7 @@ When the (array) size of $k$-space is reduced, so is the (array) size and resolu
 (i)DFT / (i)FFT always connects 2 spaces of equal length.
 We can perform this operation by cropping $k$-space to its center frequencies.
 
-For this experiment, you will add another constructor to the ```ComplexImage``` class in order to extract a cropped $k$-space
+For this experiment, you will add another constructor to the `ComplexImage` class to extract a cropped $k$-space
 from the full acquired array. 
 This third constructor works only when the size of the cropped image is smaller than that of the original image.
 
@@ -261,7 +260,7 @@ Furthermore, we provide a test function ```test_MaxPooling2d.java``` to help you
 run the ```test_MaxPooling2d.java``` function. Please report whether you get the expected output:
 ```Java
 {{173, 173, 146},
-    {173, 173, 146}}
+ {173, 173, 146}}
 ```
 
 Please explain what happens in the case of incomplete blocks in the boundary. For instance, change the pooling parameters in ```test_MaxPooling2d.java```:
