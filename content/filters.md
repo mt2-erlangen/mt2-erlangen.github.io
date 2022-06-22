@@ -28,7 +28,7 @@ we're going to decrease the array size (sometimes also called resolution, this t
 
 The (normalized) [sinc function](https://en.wikipedia.org/wiki/Sinc_function) is defined as follows
 
-$$ \mathrm{sinc} (x) = \frac{\mathrm{sin}(\pi x)}{\pi x} $$
+$$ \mathrm{sinc} (x) := \frac{\mathrm{sin}(\pi x)}{\pi x} $$
 
 Please implement a 2D sinc filter such that it is working as a filter in $x$- and a filter in $y$-direction independently.
 This means that during filtering you can multiply a sinc in $x$ and a sinc in $y$ direction 
@@ -113,8 +113,8 @@ kSpace.setOuterToZero(96,0); // kx-direction
 kSpace.setOuterToZero(96,1); // ky-direction
 ```
 
-Figure 4.2 shows a schematic of the use of the parameter ```lines```=96 as used in our code example. 
-The black "$0$"-areas in Figure 4.2 show where you should set $k$-space to $0$.
+Figure 4.2 shows a schematic of the use of the parameter ```lines```= 96 as used in our code example. 
+The black "0"-areas in Figure 4.2 show where you should set $k$-space to 0.
 
 <p align="center">
 <img src="../fig4-box.png" alt="Trulli" style="width:80%" align="center">
@@ -215,16 +215,16 @@ the maximum value of patches (blocks) of an image (or feature map) and uses it t
 is extracted. (source: <a href="https://production-media.paperswithcode.com/methods/MaxpoolSample2.png">Max-Pool</a>)
 </p>
 
-Figure 4.5 shows a small example of max pooling. Here, the image patch (block) has a width and height of $2$, 
+Figure 4.5 shows a small example of max pooling. Here, the image patch (block) has a width and height of 2, 
 defined as ```block_width``` and ```block_height```, respectively. The algorithm:
 
-1. The max-pooling operation extracts the maximum value of the red block, yielding $20$;
+1. The max-pooling operation extracts the maximum value of the red block, yielding 20;
 
-2. This $2x2$ block then moves horizontally to the yellow block. The step length of this horizontal move is $2$. 
+2. This $2\times2$ block then moves horizontally to the yellow block. The step length of this horizontal move is 2. 
     This parameter is defined as ```stride_width``` in the implementation;
 
 3. After looping over all blocks in the horizontal direction, the max pooling operation moves vertically and starts again 
-   in the left-most, which finds the purple block. The step length of this vertical moving is also $2$ in this example and is defined as ```stride_height```.
+   in the left-most, which finds the purple block. The step length of this vertical moving is also 2 in this example and is defined as ```stride_height```.
 
 4. Loop through all horizontal blocks in every vertical move until the end of the input matrix (feature map). In this example, the final block is the green one.
 
@@ -257,10 +257,8 @@ public class MaxPooling2d {
 }
 ```
 
-Secondly, we provide a test function ```test_MaxPooling2d.java``` to help you test your implementation.
-
-
-Please fill in the above blanks ```/* */``` and run the ```test_MaxPooling2d.java``` function. Please report whether you get the expected output:
+Furthermore, we provide a test function ```test_MaxPooling2d.java``` to help you test your implementation. After implementation of ```MaxPooling2d.java```
+run the ```test_MaxPooling2d.java``` function. Please report whether you get the expected output:
     ```Java
     {{173, 173, 146},
      {173, 173, 146}}
@@ -271,7 +269,7 @@ Please explain what happens in the case of incomplete blocks in the boundary. Fo
     MaxPooling2d mp = new MaxPooling2d(2, 2, 1, 2);
     ```
 
-Please apply the function ```MaxPooling2d``` to the brain MR image and show the output image you get.
+Please apply ```MaxPooling2d``` to the brain MR image and show the output image you get.
 ```Java
 // MaxPooling2d
 float[] mag = mrImage.getMagnitude();
