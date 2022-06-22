@@ -37,7 +37,7 @@ definition, but let's stick to proper wording.
 
 ### 3.1.2 $k$-space and the FFT Shift
 
-As stated above, MRI $k$-space is measured with its low-frequency components in the middle of the matrix (see Fig 2.3).
+As stated above, MRI $k$-space is measured with its low-frequency components in the middle of the matrix.
 For the sake of simplicity, let's first look at a 1D representation by looking at one line of the 2D matrix
 in the middle of the $k$-space.
 
@@ -56,11 +56,11 @@ Figure 3.1 shows signal intensities concentrate in the middle of the spectrum - 
 as given by the nature of the MRI acquisition. From an implementation point of view, however,
 the DC component should be shifted to the first index before applying an iFFT. Let's not go too deep into Fourier transform
 theory or the specifics of the FFT algorithm here. Just keep in mind, (i)FFT wants the DC component at index 0, MRI measures
-the DC component at index $\frac{N}{2}$
+the DC component at index $N/2$.
 
 The so-called *FFT shift* is a construct that is often used (not only in MRI). It simply shifts samples from one half of
-the spectrum to the other half. Figure 3.2 shows an example of the *1D FFT shift*. A full spectrum lies in an index range of $[0, N-1]$, where $N$ represents the vector length.
-Samples in a range of $[0, \frac{N}{2}-1]$ are then shifted to the other half spectrum of $[\frac{N}{2}, N-1]$ and vice versa.
+the spectrum to the other half. Figure 3.2 shows an example of the 1D FFT shift. A full spectrum lies in an index range of $[0, N-1]$, where $N$ represents the vector length.
+Samples in a range of $[0, N/2-1]$ are then shifted to the other half spectrum of $[N/2, N-1]$ and vice versa.
 
 
 <p align="center">
@@ -72,7 +72,7 @@ Samples in a range of $[0, \frac{N}{2}-1]$ are then shifted to the other half sp
 
 
 
-## 3.2 Apply FFT Shift to the 1D Problem
+## 3.2 Apply FFT Shift to the 1D Case
 
 To get a better understanding of the FFT shift, you will start in 1D and implement a new class ```ComplexSignal```.
 
@@ -92,7 +92,7 @@ public class ComplexSignal {
 Create constructors and getters. Remember: class objects, ```real```, ```imag```, and ```name```,
 must be set in the constructor. Use the usual constructors for ```ComplexSignal```, as shown below. 
 (Side note: since the FFT only works for signal lengths of 2 to the power of $n \in \mathbb{N}$, 
-our implementation restricts to those cases. This will apply to the 2D case as well.)
+our implementation restricts to those cases. This applies to the 2D case as well.)
 
 ```java
 public ComplexSignal(int length, String name)
@@ -140,7 +140,7 @@ public float[] getMagnitude()
   <img src="../fig34-sine_magnitude.jpg" alt="Trulli" style="width:100%" align="center">
 </p>
 <p align="center">
-  <b>Figure 3.4.</b> The manitude of the sinusoid signal.
+  <b>Figure 3.4.</b> The magnitude of the summed-sinusoids signal.
 </p>
 
 Now, apply an FFT to the signal using the given method ```FFT1D()``` from ```ProjectHelpers.java``` and plot the magnitude signal. For this, you have to comment out methods related to ```ComplexSignal()``` in ```ProjectHelpers.java```, such as ```FFT1D()```, ```toComplex()```, ```fromComplex()```, and ```fft()```.
@@ -149,13 +149,13 @@ Now, apply an FFT to the signal using the given method ```FFT1D()``` from ```Pro
   <img src="../fig35-FFT.jpg" alt="Trulli" style="width:100%" align="center">
 </p>
 <p align="center">
-  <b>Figure 3.5.</b> The magnitude of <i>FFT</i>. Since the complex sinusoid signal is composed of five different sine waves, there are five peaks at the low-frequency part.
+  <b>Figure 3.5.</b> The magnitude of the FFT of the signal. Since the complex sinusoid signal is composed of five different sine waves, there are five peaks at the low-frequency part.
 </p>
 
 
 Once you have created the FFT result, it is time to implement the FFT shift.  
 If you shift the FFT signal to the right by one sample, the rightmost signal shifts to the leftmost index: it's a cyclical shift.
-Take your time to understand this, referring to Figure 3.2. If you shift by $\frac{N}{2}$,
+Take your time to understand this, referring to Figure 3.2. If you shift by $N/2$,
 half of the left and right parts are swapped with each other. In other words, you can implement the ```fftShift1d()```
 method using a ```swap()``` method, which only swaps the left and right half of the array.
 You will need to use ```setAtIndex()``` and ```AtIndex()```.
