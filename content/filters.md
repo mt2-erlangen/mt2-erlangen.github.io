@@ -37,7 +37,7 @@ This means that during filtering you can multiply a sinc in $x$ and a sinc in $y
 According to exercise 4, implement
 the class in ```SincFilter2d.java```. This filter has two parameters: ```filterSize``` and ```downScale```. Suppose 
 we have input $x$, with $x$ being an integer and $x \in [-\mathrm{filterSize}/2, \mathrm{filterSize}/2)$, 
-the output is: $$out = \mathrm{sinc}(x/\mathrm{downScale})$$
+the output is: $$\mathrm{out} = \mathrm{sinc}(x/\mathrm{downScale})$$
 
 ```Java
 package project;
