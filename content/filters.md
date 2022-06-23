@@ -230,7 +230,7 @@ defined as ```block_width``` and ```block_height```, respectively. The algorithm
 To help you implement max pooling, we provide its core structure. To begin with, you can copy the following code block and save it as ```MaxPooling2d.java```:
 
 ```Java
-package mt;
+package project;
 
 public class MaxPooling2d {
 
