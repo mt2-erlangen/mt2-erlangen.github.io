@@ -256,14 +256,14 @@ public class MaxPooling2d {
 }
 ```
 
-Furthermore, we provide a test function ```test_MaxPooling2d.java``` to help you test your implementation. After implementation of ```MaxPooling2d.java```
-run the ```test_MaxPooling2d.java``` function. Please report whether you get the expected output:
+Furthermore, we provide a test file ```MaxPooling2dTests.java``` located in ```src/test/java/project``` to help you test your implementation. The test is commented out to avoid conflicts when running the program prior to this points, so you need to remove the comment symbols around the test function in ```MaxPooling2dTests.java```. After implementation of ```MaxPooling2d.java```
+run the test and report whether you get the expected output:
 ```Java
 {{173, 173, 146},
  {173, 173, 146}}
 ```
 
-Please explain what happens in the case of incomplete blocks in the boundary. For instance, change the pooling parameters in ```test_MaxPooling2d.java```:
+Please explain what happens in the case of incomplete blocks in the boundary. For instance, change the pooling parameters in ```MaxPooling2dTests.java```:
 ```Java
 MaxPooling2d mp = new MaxPooling2d(2, 2, 1, 2);
 ```
