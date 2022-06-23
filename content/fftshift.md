@@ -132,7 +132,7 @@ You can plot your sinusoid wave using the given method ```DisplayUtils.showArray
 To show the magnitude of the signal, you need to implement ```calculateMagnitude()``` and ```getMagnitude()``` for displaying with ```DisplayUtils.showArray()```. You can use ```atIndex()``` and ```setAtIndex()``` for ```calculateMagnitude()```.
 
 ```java
-private Signal calculateMagnitude(ComplexSignal input)
+private Signal calculateMagnitude()
 public float[] getMagnitude()
 ```
 

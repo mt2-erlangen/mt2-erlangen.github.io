@@ -139,8 +139,8 @@ Therefore, let's implement methods to compute magnitude and phase images from re
 Implement two methods ```calculateMagnitude()``` and ```calculatePhase()``` as methods of the ```ComplexImage``` class
 for calculating magnitude and phase, respectively. Refer to the related equations above in subsection 2.1.1.
 ```java
-private Image calculateMagnitude(ComplexImage input, boolean logFlag)
-private Image calculatePhase(ComplexImage input)
+private Image calculateMagnitude(boolean logFlag)
+private Image calculatePhase()
 ```
 
 We are implementing a *logFlag* in the ```calculateMagnitude()``` method because we'd like to be able to indicate output of linear or logarithmic
