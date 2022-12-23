@@ -13,6 +13,18 @@ author= "Bruno Riemenschneider, Zhengguo Tan, Jinho Kim"
 4) [Filters](../filters) *(Tafelübung 15. Juli)*
 5) [Outlook and Conclusion](../conclusion)
 
+# 0. Disclaimer
+During the winter term we don't offer in person blackboard exercises.
+All the illustrations are done using an mri scan of a brain, however, you are required to do reimplement the project using a scan of a knee:
+
+<p style="text-align: center;">
+<table><tr>
+<td> <img src="../kneescan.png" alt="Trulli" align="center"> </td>
+</tr></table>
+<p>
+
+For the report we prepared a **new template** that you should use. It provides a more detailed structure for the report. Don't change the order.
+
 # 1. Introduction
 
 In this semester's project work, you will learn some basic concepts of magnetic resonance imaging (MRI). The MRI scanner acquires data in the spatial frequency domain, known as *k*-space. MR image reconstruction requires the (inverse) Fourier transform of the acquired *k*-space data.
@@ -30,6 +42,6 @@ Please have a look at our [project report guidelines](../checklist).
 <!--Whenever we refer to the maximum length of a section we're not counting figures and tables and just consider the length-->
 <!--of the text.-->
 
-We also provide you with a basic [java template](https://github.com/mt2-erlangen/project-ss2022) including some useful helper functions, similar to what you saw during the exercises. You have to use this template as the starting point of your own project.
+We also provide you with a basic [java template](https://github.com/mt2-erlangen/project-ss2022) including some useful helper functions, similar to what you saw during the exercises. You have to use this template as the starting point of your project.
 
 [Next task: *k*-Space](../kspace)

@@ -22,6 +22,8 @@ We expect you to:
 - Use the **LaTeX template** we provide
   - [LaTeX template link](https://github.com/mt2-erlangen/latex-template)
   - Do not modify the style or the formatting. No ornaments for page numbers!
+  - The template defines the overall structure of your project. You have to fill in all the gaps.
+  - You can rewrite titles and sentences of the document but you are not allowed to change the structure (e.g. you may write 'As seen in Figure ...' instead of 'In Figures ...' if it fits). **Don't modify the location of intormation**
 
 
 - Use **scientific references** in your explanations to clearly separate your work from the work of others:
