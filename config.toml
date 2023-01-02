@@ -49,7 +49,7 @@ sidebar = [
     {name = "Materials", urls=[
         {name="Github (Java project template)", url="https://github.com/mt2-erlangen/exercises-ss2022"},
         {name="StudOn", url="https://www.studon.fau.de/crs4223415.html"},
-        {name="LaTeX Template", url="https://github.com/mt2-erlangen/latex-template"},
+        {name="LaTeX Template", url="https://github.com/mt2-erlangen/project-ws2022"},
         {name="Exercises 2020", url="./archive/2020"},
     ]},
 ]

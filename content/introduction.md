@@ -42,6 +42,6 @@ Please have a look at our [project report guidelines](../checklist).
 <!--Whenever we refer to the maximum length of a section we're not counting figures and tables and just consider the length-->
 <!--of the text.-->
 
-We also provide you with a basic [java template](https://github.com/mt2-erlangen/project-ss2022) including some useful helper functions, similar to what you saw during the exercises. You have to use this template as the starting point of your project.
+We also provide you with a basic [java template](https://github.com/mt2-erlangen/project-ws2022) including some useful helper functions, similar to what you saw during the exercises. You have to use this template as the starting point of your project.
 
 [Next task: *k*-Space](../kspace)
