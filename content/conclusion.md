@@ -1,16 +1,16 @@
 +++
-date= 2022-06-20T08:00:25Z
+date= 2023-06-20T08:00:25Z
 title = "Project Work 5 - Outlook and Conclusion"
 [extra]
-author= "Zhengguo Tan, Jinho Kim, Bruno Riemenschneider"
+author= "Zhengguo Tan, Jinho Kim, Mischa Dombrowski"
 +++
 
 # Overview
 
-1) [Introduction](../introduction) *(Tafelübung 24. Juni)*
+1) [Introduction](../introduction)
 2) [*k*-Space](../kspace)
-3) [Image Reconstruction](../fftshift) *(Tafelübung 08. Juli)*
-4) [Filters](../filters) *(Tafelübung 15. Juli)*
+3) [Image Reconstruction](../fftshift)
+4) [Filters](../filters) 
 5) Outlook and Conclusion
 
 

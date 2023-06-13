@@ -1,16 +1,16 @@
 +++
-date= 2022-06-20T08:00:10Z
+date= 2023-06-20T08:00:10Z
 title = "Project Work 3 - Image Reconstruction"
 [extra]
-author= "Jinho Kim, Zhengguo Tan, Bruno Riemenschneider"
+author= "Mischa Dombrowski, Jinho Kim, Zhengguo Tan, Bruno Riemenschneider"
 +++
 
 # Overview
 
-1) [Introduction](../introduction) *(Tafelübung 24. Juni)*
+1) [Introduction](../introduction)
 2) [*k*-Space](../kspace)
-3) Image Reconstruction *(Tafelübung 08. Juli)*
-4) [Filters](../filters) *(Tafelübung 15. Juli)*
+3) Image Reconstruction
+4) [Filters](../filters)
 5) [Outlook and Conclusion](../conclusion)
 
 # 3. Image Reconstruction
@@ -31,7 +31,7 @@ algorithm to do its work.
 
 To be precise, the DFT / FFT describes the measurement process of the MRI process (getting the spatial frequencies from the measured object).
 The inverse operation of that, which you need to reconstruct the image from the spatial frequencies is the inverse DFT / iDFT
-or inverse FFT / iFFT. They forward and inverse Fourier Transforms only differ by a minus sign in front of one variable in their 
+or inverse FFT / iFFT. They forward and inverse Fourier Transforms only differ by a minus sign in front of one variable in their
 definition, but let's stick to proper wording.
 
 
@@ -90,8 +90,8 @@ public class ComplexSignal {
 ```
 
 Create constructors and getters. Remember: class objects, ```real```, ```imag```, and ```name```,
-must be set in the constructor. Use the usual constructors for ```ComplexSignal```, as shown below. 
-(Side note: since the FFT only works for signal lengths of 2 to the power of $n \in \mathbb{N}$, 
+must be set in the constructor. Use the usual constructors for ```ComplexSignal```, as shown below.
+(Side note: since the FFT only works for signal lengths of 2 to the power of $n \in \mathbb{N}$,
 our implementation restricts to those cases. This applies to the 2D case as well.)
 
 ```java
@@ -104,12 +104,12 @@ public String getName()
 public int getSize()
 ```
 Generate a sawtooth-like wave (remember exercise 1), composed of five sine waves with different frequencies in a ```generateSine()``` method.
-Frequencies for five sine waves are 
+Frequencies for five sine waves are
 
 $[\text{numWaves}, 2 \cdot \text{numWaves}, \cdots, 5 \cdot \text{numWaves}]$,
 
-and the number of samples is equal to the size of the ```ComplexSignal```. 
-Set the real part of the ```ComplexSignal``` as the constructed signal and the imaginary parts to zero. 
+and the number of samples is equal to the size of the ```ComplexSignal```.
+Set the real part of the ```ComplexSignal``` as the constructed signal and the imaginary parts to zero.
 You can use ```setAtIndex()``` to assign corresponding values to the real and imaginary parts.
 
 
@@ -126,7 +126,7 @@ You can plot your sinusoid wave using the given method ```DisplayUtils.showArray
   <img src="../fig33-sine_imag.jpg" alt="Trulli" align="center" style="width:100%">  
 </p>
 <p align="center">
-  <b>Figure 3.3.</b> The real (top) and imaginary (bottom) parts of the sinusoidal  wave are composed of five different sine waves. 
+  <b>Figure 3.3.</b> The real (top) and imaginary (bottom) parts of the sinusoidal  wave are composed of five different sine waves.
 </p>
 
 To show the magnitude of the signal, you need to implement ```calculateMagnitude()``` and ```getMagnitude()``` for displaying with ```DisplayUtils.showArray()```. You can use ```atIndex()``` and ```setAtIndex()``` for ```calculateMagnitude()```.
@@ -177,7 +177,7 @@ You can plot the FFT shift result and play around, shifting the signal back and 
   <img src="../fig36-FFTshift2.jpg" alt="Trulli" style="width:100%" align="center">
 </p>
 <p align="center">
-  <b>Figure 3.6.</b> Shown is the result of an FFT shift applied out once (top) and twice (bottom) to the FFT result. The figure at the bottom shows the same as Figure 3.5, meaning that if the FFT shift is applied twice, the signal comes back to the original position (this is valid for even length signals). This property is important when you reconstruct <i>k</i>-space. Moreover, the y-axes represent the magnitude of the FFT-shifted S and S' for plots above and below, respectively, where S and S' stand for FFT(s) and FFTshift(FFT(s)). 
+  <b>Figure 3.6.</b> Shown is the result of an FFT shift applied out once (top) and twice (bottom) to the FFT result. The figure at the bottom shows the same as Figure 3.5, meaning that if the FFT shift is applied twice, the signal comes back to the original position (this is valid for even length signals). This property is important when you reconstruct <i>k</i>-space. Moreover, the y-axes represent the magnitude of the FFT-shifted S and S' for plots above and below, respectively, where S and S' stand for FFT(s) and FFTshift(FFT(s)).
 </p>
 
 ## 3.3 Expand FFT shift to 2D in ComplexImage
@@ -268,12 +268,12 @@ Then, let's check if a forward FFT works fine with the reconstructed image. The 
 </p>
 
 In your Project report, you should:
-
-* Explain why an FFT shift needs to be carried out on $k$-space before and after the iFFT is applied.
+* **Reconstruction** (2.2): Describe reconstruction in your own words. Why is FFT-Shift necessary?
+* **FFT** (2.2.1): Explain why an FFT shift needs to be carried out on $k$-space before and after the iFFT is applied.
 What is the purpose of the FFT shift? Where are low-frequency components located in $k$-space?
 What happens if you only apply the FFT shift before, but not after performing the iFFT on the $k$-space?
 (explain this with figures)
-* Interpret the reconstruction results. Which image do radiologists view and diagnose among images of
+* **Interpretation** (2.2.2): Interpret the reconstruction results. Which image do radiologists view and diagnose among images of
 magnitude, phase, real part, and imaginary part?
 Can $k$-space be reproduced from the reconstructed image like the original $k$-space?
 If so, what is the procedure for that? Please explain the reasons why or why not.

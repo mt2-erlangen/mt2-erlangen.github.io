@@ -1,5 +1,5 @@
 +++
-date= 2022-06-20T08:00:15Z
+date= 2023-06-20T08:00:15Z
 title = "Project Work 4 - Filters"
 [extra]
 author= "Zhengguo Tan, Jinho Kim, Bruno Riemenschneider"
@@ -7,19 +7,19 @@ author= "Zhengguo Tan, Jinho Kim, Bruno Riemenschneider"
 
 # Overview
 
-1) [Introduction](../introduction) *(Tafelübung 24. Juni)*
+1) [Introduction](../introduction)
 2) [*k*-Space](../kspace)
-3) [Image Reconstruction](../fftshift) *(Tafelübung 08. Juli)*
-4) Filters *(Tafelübung 15. Juli)*
+3) [Image Reconstruction](../fftshift)
+4) Filters
 5) [Outlook and Conclusion](../conclusion)
 
 
 # 4. Filters
 
-In your exercises, you have learned the process of filtering an image. In this section, we'll look at the relation between image and $k$-space with respect to applying a filter or multiplication operation on one of them. Feel free to use and 
+In your exercises, you have learned the process of filtering an image. In this section, we'll look at the relation between image and $k$-space with respect to applying a filter or multiplication operation on one of them. Feel free to use and
 look at the code base from exercise 4 to get inspired.
 
-We'll first decrease the resolution (sharpness) of the image by manipulating the image itself or the $k$-space. Then, 
+We'll first decrease the resolution (sharpness) of the image by manipulating the image itself or the $k$-space. Then,
 we're going to decrease the array size (sometimes also called resolution, this term is ambiguous) in 2 different ways.
 
 ## 4. 1 Sinc Filter and Box Multiplication
@@ -31,12 +31,12 @@ The (normalized) [sinc function](https://en.wikipedia.org/wiki/Sinc_function) is
 $$ \mathrm{sinc} (x) := \frac{\mathrm{sin}(\pi x)}{\pi x} $$
 
 Please implement a 2D sinc filter such that it is working as a filter in $x$- and a filter in $y$-direction independently.
-This means that during filtering you can multiply a sinc in $x$ and a sinc in $y$ direction 
-(as opposed to, e.g., using an absolute 2D distance from the point that the filter is applied to). 
+This means that during filtering you can multiply a sinc in $x$ and a sinc in $y$ direction
+(as opposed to, e.g., using an absolute 2D distance from the point that the filter is applied to).
 
 According to exercise 4, implement
-the class in ```SincFilter2d.java```. This filter has two parameters: ```filterSize``` and ```downScale```. Suppose 
-we have input $x$, with $x$ being an integer and $x \in [-\mathrm{filterSize}/2, \mathrm{filterSize}/2)$, 
+the class in ```SincFilter2d.java```. This filter has two parameters: ```filterSize``` and ```downScale```. Suppose
+we have input $x$, with $x$ being an integer and $x \in [-\mathrm{filterSize}/2, \mathrm{filterSize}/2)$,
 the output is: $$\mathrm{out} = \mathrm{sinc}(x/\mathrm{downScale})$$
 
 ```Java
@@ -54,7 +54,7 @@ public class SincFilter2d extends LinearImageFilter{
         var s = new Sinc(true);
 
         /* your code here, get inspiration in exercise 4 if you don't remember */
-        
+
         normalize();
     }
 }
@@ -62,7 +62,7 @@ public class SincFilter2d extends LinearImageFilter{
 
 You can evaluate the sinc function from the used library with the ```s.value(...input here...)``` method.
 
-You should now apply the ```SincFilter2d``` filter to the complex MR image. But how? The filter is real-valued, and 
+You should now apply the ```SincFilter2d``` filter to the complex MR image. But how? The filter is real-valued, and
 the convolution operation with a certain filter is linear. Consequently, you can apply the real filter
 to the real and imaginary parts of your signal to be filtered separately.\
 Please implement a class ```LinearComplexImageFilter``` which does exactly that: applying a filter to real and imaginary parts separately. Your application of the filter will look like the following:
@@ -73,36 +73,36 @@ var complexFilter = new LinearComplexImageFilter(realFilter);
 ComplexImage filteredImage = complexFilter.apply(mrImage);
 ```
 
-Please show the filtered MR image (magnitude is enough) and its corresponding $k$-space! Please describe the difference 
+Please show the filtered MR image (magnitude is enough) and its corresponding $k$-space! Please describe the difference
 between the original and the filtered $k$-space. Look at both on a logarithmic scale, so that you can see the differences.
 Mind that the intensity differences you can see on a logarithmic scale are huge, so if you use ```log10```, a difference
 of 1 is actually a factor of 10 difference.
 
 ### 4.1.2 Box Function Applied to $k$-Space
 
-So far, you should have implemented a filter for the complex image and used the ```apply()``` method. 
+So far, you should have implemented a filter for the complex image and used the ```apply()``` method.
 The effect on $k$-space by filtering the image is described by the so-called convolution theorem, but let's not dive
 into theory here.
 
-Now let's do it the other way around: manipulate $k$-space data and observe how it changes the image. We're choosing a box multiplication, 
+Now let's do it the other way around: manipulate $k$-space data and observe how it changes the image. We're choosing a box multiplication,
 which instead performs point-wise multiplication between the input $k$-space matrix and a box function, as shown in Figure 4.1.
 
 <p align="center">
   <img src="../pointwise_mult.png" alt="Trulli" style="width:90%" align="center">
 </p>
 <p align="center">
-  <b>Figure 4.1.</b> Illustration of point-wise multiplication of a box function, 
+  <b>Figure 4.1.</b> Illustration of point-wise multiplication of a box function,
 which performs point-wise multiplication between the example <i>k</i>-space array (left) and the box function (middle).
 </p>
 
-To implement 2D box multiplication, we implement the ```setOuterToZero()``` method in ```ComplexImage.java```. 
-For practical implementation, we're suggesting the method of setting certain lines to zero, then certain columns. 
+To implement 2D box multiplication, we implement the ```setOuterToZero()``` method in ```ComplexImage.java```.
+For practical implementation, we're suggesting the method of setting certain lines to zero, then certain columns.
 You will need to use the ```SetAtIndex()``` method for this.
 
 ```Java
 public void setOuterToZero(int lines, int axis)
 ```
-Here, the parameter ```lines``` defines the zero-padding size of the box function (in Figure 4.1, this was set to 1), 
+Here, the parameter ```lines``` defines the zero-padding size of the box function (in Figure 4.1, this was set to 1),
 and the parameter ```axis``` defines on which axis the box filter is applied (0 is the "first" axis, $x$, and 1 is the
 second axis, $y$).
 
@@ -112,7 +112,7 @@ kSpace.setOuterToZero(96,0); // kx-direction
 kSpace.setOuterToZero(96,1); // ky-direction
 ```
 
-Figure 4.2 shows a schematic of the use of the parameter ```lines```= 96 as used in our code example. 
+Figure 4.2 shows a schematic of the use of the parameter ```lines```= 96 as used in our code example.
 The black "0"-areas in Figure 4.2 show where you should set $k$-space to 0.
 
 <p align="center">
@@ -120,16 +120,22 @@ The black "0"-areas in Figure 4.2 show where you should set $k$-space to 0.
 </p>
 <p align="center">
 <b>Figure 4.2.</b> A schematic of $k$-space after running the setOuterToZero() method.
-Shown here is the parameter lines = 96 in both dimensions as used in our code example, as well as the k-Space 
+Shown here is the parameter lines = 96 in both dimensions as used in our code example, as well as the k-Space
 after application of the method.
 </p>
 
 Apply the code shown above in your ```Project.java```.
-Please show the zeroed $k$-space (use the previously unfiltered $k$-space for zeroing) and its corresponding image! 
+Please show the zeroed $k$-space (use the previously unfiltered $k$-space for zeroing) and its corresponding image!
 Is the image similar to the sinc-filtered image? If so, why?
 
+**In your Project report (2.3), you should**:
+* (2.3) Explain the properties of high-frequency and low-frequency components in $k$-space. What components are relevant for the image contrast? What about the image details?
+* (2.3.1) Explain the effect of the 2D Sinc filter on the MR image and on $k$-space. What can be seen in $k$-space?
+* (2.3.2) Explain the effect on the MR image when setting high-frequency parts of $k$-space to zero and compare the result with that of the 2D Sinc filter.
+* (2.3.2) Play around with different values for ```lines```. How large can you set this value without a visible loss in image quality? At what value can the brain no longer be recognized? Explain how this could be used for image compression.
 
-## 4.2 Reducing the Image Size 
+
+## 4.2 Reducing the Image Size
 
 We'd like you to understand the conceptional difference between the "sharpness" of an image, which is determined by the
 information content it represents (visible in $k$-space, e.g.), and its array size, which confines the amount
@@ -142,7 +148,7 @@ When the (array) size of $k$-space is reduced, so is the (array) size and resolu
 We can perform this operation by cropping $k$-space to its center frequencies.
 
 For this experiment, you will add another constructor to the `ComplexImage` class to extract a cropped $k$-space
-from the full acquired array. 
+from the full acquired array.
 This third constructor works only when the size of the cropped image is smaller than that of the original image.
 
 ```java
@@ -159,16 +165,16 @@ This third constructor works only when the size of the cropped image is smaller 
 public ComplexImage(int width, int height, String name, float[] bufferReal, float[] bufferImag, int inputWidth, int inputHeight)
 ```
 
-To set the buffer of the cropped $k$-space from the center area of the original $k$-space, you need to implement a new 
+To set the buffer of the cropped $k$-space from the center area of the original $k$-space, you need to implement a new
 method ```setBufferFromCenterArea()``` in the ```Image``` class in ```Image.java```. This method can then be called by
-the constructor. 
+the constructor.
 
 ```java
 public void setBufferFromCenterArea(int width, int height, float[] buffer, int inputWidth, int inputHeight)
 ```
 
-You need to create two integer variables, ```offsetWidth``` and ```offsetHeight```, 
-to calculate the index where the original $k$-space is cropped. Once you find where to be cropped, 
+You need to create two integer variables, ```offsetWidth``` and ```offsetHeight```,
+to calculate the index where the original $k$-space is cropped. Once you find where to be cropped,
 set the value where you find to the cropped $k$-space using ```setAtIndex()```. Figure 4.3 shows parameters in a geometrical way to better understand them.
 
 <p align="center">
@@ -179,7 +185,7 @@ set the value where you find to the cropped $k$-space using ```setAtIndex()```. 
 </p>
 
 
-As said above, when you are done with implementing the method ```setBufferFromCenterArea()``` in the ```Image``` class, utilize this 
+As said above, when you are done with implementing the method ```setBufferFromCenterArea()``` in the ```Image``` class, utilize this
 method in the third constructor of the ```ComplexImage``` class to set the cropped $k$-space from the original.
 
 Show the cropped $k$-space as well as a reconstructed image from that $k$-space, see Figure 4.4.
@@ -191,19 +197,19 @@ Show the cropped $k$-space as well as a reconstructed image from that $k$-space,
 </tr></table>
  <p>
 <p align="center">
-  <b>Figure 4.4.</b> Cropped <i>k</i>-space (left) and MR Reconstructed image (right). 
+  <b>Figure 4.4.</b> Cropped <i>k</i>-space (left) and MR Reconstructed image (right).
 Since the grid size of <i>k</i>-space gets small, the resolution of the reconstructed image decreases as well.
 </p>
 
 ### 4.2.2 Max Pooling
 
 This subsection deals with another operation that can be used to create low-resolution images. Beware! This is usually not
-the way of choice for decreasing image resolution if you want to maintain image information to be shown. However, this 
+the way of choice for decreasing image resolution if you want to maintain image information to be shown. However, this
 is a method often used (at this time, at least) in deep learning algorithms that decrease and increase the images they
 work on for feature extraction.
 
 The method is on of several pooling operations. In this case, **max pooling**, which is a pooling operation that extracts
-the maximum value of patches (blocks) of an image (or feature map) and uses it to create a downsampled (pooled) image 
+the maximum value of patches (blocks) of an image (or feature map) and uses it to create a downsampled (pooled) image
 (or feature map). [(source: max pooling explained)](https://paperswithcode.com/method/max-pooling#:~:text=Max%20Pooling%20is%20a%20pooling,used%20after%20a%20convolutional%20layer.)
 
 <p align="center">
@@ -214,15 +220,15 @@ the maximum value of patches (blocks) of an image (or feature map) and uses it t
 is extracted. (source: <a href="https://production-media.paperswithcode.com/methods/MaxpoolSample2.png">Max-Pool</a>)
 </p>
 
-Figure 4.5 shows a small example of max pooling. Here, the image patch (block) has a width and height of 2, 
+Figure 4.5 shows a small example of max pooling. Here, the image patch (block) has a width and height of 2,
 defined as ```block_width``` and ```block_height```, respectively. The algorithm:
 
 1. The max-pooling operation extracts the maximum value of the red block, yielding 20;
 
-2. This $2\times2$ block then moves horizontally to the yellow block. The step length of this horizontal move is 2. 
+2. This $2\times2$ block then moves horizontally to the yellow block. The step length of this horizontal move is 2.
     This parameter is defined as ```stride_width``` in the implementation;
 
-3. After looping over all blocks in the horizontal direction, the max pooling operation moves vertically and starts again 
+3. After looping over all blocks in the horizontal direction, the max pooling operation moves vertically and starts again
    in the left-most, which finds the purple block. The step length of this vertical moving is also 2 in this example and is defined as ```stride_height```.
 
 4. Loop through all horizontal blocks in every vertical move until the end of the input matrix (feature map). In this example, the final block is the green one.
@@ -249,7 +255,7 @@ public class MaxPooling2d {
     }
 
     public Image apply(Image input) {
-    
+
     /* your code here */
 
     }
@@ -291,12 +297,9 @@ You should get something like this:
 </p>
 
 
-In your Project report, you should:
-* Explain the properties of high-frequency and low-frequency components in $k$-space. What components are relevant for the image contrast? What about the image details?
-* Explain the effect of the 2D Sinc filter on the MR image and on $k$-space. What can be seen in $k$-space?
-* Explain the effect on the MR image when setting high-frequency parts of $k$-space to zero and compare the result with that of the 2D Sinc filter.
-* Explain how to improve the resolution of the MR image. What is the trade-off for that? Scan time? Cost?
-* Compare reconstructed images of cropping $k$-space and Max pooling in terms of image contents. Which result is closer to the original reconstructed image? Why do you think so?
+In your Project report (2.4), you should:
+* (2.4.2) Explain how to improve the resolution of the MR image. What is the trade-off for that? Scan time? Cost?
+* (2.4.2) Compare reconstructed images of cropping $k$-space and Max pooling in terms of image contents. Which result is closer to the original reconstructed image? Why do you think so?
+
 
 [Next task: Outlook and Conclusion](../conclusion)
-

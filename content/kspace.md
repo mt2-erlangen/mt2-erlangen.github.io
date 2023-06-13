@@ -1,16 +1,16 @@
 +++
-date= 2022-06-20T08:00:10Z
+date= 2023-06-20T08:00:10Z
 title = "Project Work 2 - k-Space"
 [extra]
-author= "Zhengguo Tan, Jinho Kim, Bruno Riemenschneider"
+author= "Mischa Dombrowski, Zhengguo Tan, Jinho Kim"
 +++
 
 # Overview
 
-1) [Introduction](../introduction) *(Tafelübung 24. Juni)*
+1) [Introduction](../introduction)
 2) *k*-Space
-3) [Image Reconstruction](../fftshift) *(Tafelübung 08. Juli)*
-4) [Filters](../filters) *(Tafelübung 15. Juli)*
+3) [Image Reconstruction](../fftshift)
+4) [Filters](../filters)
 5) [Outlook and Conclusion](../conclusion)
 
 # 2. Complex Numbers and *k*-Space
@@ -45,7 +45,7 @@ of the "real unit" as being $1$. One can also denote the complex number $z$ as a
 
 $$ z = (\mathrm{Re}(z), \mathrm{Im}(z)) $$
 
-where its real and imaginary part is $\mathrm{Re}(z) = a$ and $\mathrm{Im}(z) = b$, respectively. Noteworthy, the blue vector 
+where its real and imaginary part is $\mathrm{Re}(z) = a$ and $\mathrm{Im}(z) = b$, respectively. Noteworthy, the blue vector
 representation of $z$ in Figure 2.1 can be characterized by
 
 1. the length of the vector, i.e., the absolute value or **magnitude**, $$ r = |z| = \sqrt{a^2 + b^2} $$
@@ -144,8 +144,8 @@ private Image calculatePhase()
 ```
 
 We are implementing a *logFlag* in the ```calculateMagnitude()``` method because we'd like to be able to indicate output of linear or logarithmic
-scale. The magnitude of $k$-space has a huge image intensity range between the center (low-frequency part, very large) 
-and the periphery (high-frequency part, very small). Taking a logarithm of the magnitude of $k$-space (point-wise) can reduce the huge image 
+scale. The magnitude of $k$-space has a huge image intensity range between the center (low-frequency part, very large)
+and the periphery (high-frequency part, very small). Taking a logarithm of the magnitude of $k$-space (point-wise) can reduce the huge image
 intensity range for better visualization of the magnitude of $k$-space.\
 
 For access to the magnitude and phase images, we use getters:
