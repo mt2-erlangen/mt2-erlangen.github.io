@@ -19,6 +19,7 @@ You can also edit the contents of the markdown file using Gitlab's/Github's web 
 
 ## Content
 
+- [2022](content) (part of the solutions) 
 - [2021](content)
 - [2020](content/archive/2020)
 
