@@ -29,6 +29,10 @@ We also provide you with a basic [java template](https://github.com/mt2-erlangen
 
 Furthermore, we provide a [**latex-template**](https://github.com/mt2-erlangen/latex-template) that you should use. It gives a more detailed structure for the report. Don't change the order and replace all images with images generated from your own implementation.
 
+In case you are working on CIP machines you may run into quota issues due to large packages loaded by gradle. You can fix these issues with our [guide](../quota).
+
+Please also note that you can connect remotely to CIP machines using a [remote SSH connection](https://wwwcip.informatik.uni-erlangen.de/documentation/services.de.html)
+
 # 1. Introduction
 
 In this semester's project work, you will learn some basic concepts of magnetic resonance imaging (MRI). The MRI scanner acquires data in the spatial frequency domain, known as *k*-space. MR image reconstruction requires the (inverse) Fourier transform of the acquired *k*-space data.
