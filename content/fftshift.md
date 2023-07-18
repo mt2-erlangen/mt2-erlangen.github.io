@@ -217,7 +217,7 @@ Display the result of your 2D FFT shift.
   <b>Figure 3.8.</b> <i>k</i>-spaces before (left) and after (right) applying the FFT shift.
 Low-frequency components are shifted to the edge after the shift,
 and vice versa. To match <i>k</i>-space size to an integer-power of 2 for the FFT,
-one dimension needed to be zero-padded, and such shows black strips.
+one dimension needed to be zero-padded, and such shows black strips (Not necessary in in our case so the implementation is optional).
 </p>
 
 ## 3.4 Reconstruct MR image
