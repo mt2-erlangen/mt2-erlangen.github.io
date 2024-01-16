@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Project Work 1 - Introduction </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Project Work 1 - Introduction ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;introduction&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Project Work 1 - Introduction">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Project Work 1 - Introduction</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Mischa Dombrowski, Zhengguo Tan, Jinho Kim</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <h1 id="overview">Overview</h1>
+<ol>
+<li>Introduction</li>
+<li><a href="../kspace"><em>k</em>-Space</a></li>
+<li><a href="../fftshift">Image Reconstruction</a></li>
+<li><a href="../filters">Filters</a></li>
+<li><a href="../conclusion">Outlook and Conclusion</a></li>
+</ol>
+<h1 id="0-disclaimer">0. Disclaimer</h1>
+<p>All the illustrations are done using an mri scan of a brain, however, you are required to reimplement the project using a scan of a heart:</p>
+<p style="text-align: center;">
+<table><tr>
+<td> <img src="../heart_magnitudeImage.PNG" alt="Trulli" align="center"> </td>
+</tr></table>
+<p>
+<p>Please replace the figures in the report with results from your own implementation.
+For general information and best practices have a look at our <a href="../checklist">project report guidelines</a>.</p>
+<p>We also provide you with a basic <a href="https://github.com/mt2-erlangen/project-ws2023_24">java template</a> including some useful helper functions, similar to what you saw during the exercises. You have to use this template as the starting point of your project. For more information on the <strong>installation</strong> have a look at our <a href="../installation">getting started guide</a>.</p>
+<p>Furthermore, we provide a <a href="https://github.com/mt2-erlangen/latex-template"><strong>latex-template</strong></a> that you should use. It gives a more detailed structure for the report. Don't change the order and replace all images with images generated from your own implementation.</p>
+<p>In case you are working on CIP machines you may run into quota issues due to large packages loaded by gradle. You can fix these issues with our <a href="../quota">guide</a>.</p>
+<p>Please also note that you can connect remotely to CIP machines using a <a href="https://wwwcip.informatik.uni-erlangen.de/documentation/services.de.html">remote SSH connection</a></p>
+<h1 id="1-introduction">1. Introduction</h1>
+<p>In this semester's project work, you will learn some basic concepts of magnetic resonance imaging (MRI). The MRI scanner acquires data in the spatial frequency domain, known as <em>k</em>-space. MR image reconstruction requires the (inverse) Fourier transform of the acquired <em>k</em>-space data.</p>
+<p>Your first task is to write an introduction, which should include:</p>
+<ul>
+<li><strong>What is MRI?</strong>  Motivation an purpose of MRI.</li>
+<li><strong>Image acquisition</strong>:  Why is a strong magnetic field needed? What does the word &quot;resonance&quot; in MRI mean? Why is an antenna (receiver coil) needed? From a signal processing point of view, what is the relationship between the data acquired from an MRI machine and MR images?</li>
+<li>What are the <strong>advantages and disadvantages of MRI</strong> compared to other imaging modalities, like computer tomography (CT)? e.g. Does MRI require ionizing radiation? Does MRI provide better soft-tissue contrast? Is the acquisition speed of MRI as fast as CT? If not, why?</li>
+<li>Give a <strong>brief overview</strong> of the contents of the following tasks.</li>
+</ul>
+<p>Use <strong>references</strong> when necessary. Try to cite scientific publications (e.g. journal papers) in your introduction.
+Your introduction and conclusion should not contain any images.</p>
+<p><a href="../kspace">Next task: <em>k</em>-Space</a></p>
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2024-01-16 14:15
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Project Work 3 - Image Reconstruction </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Project Work 3 - Image Reconstruction ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;fftshift&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Project Work 3 - Image Reconstruction">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Project Work 3 - Image Reconstruction</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Mischa Dombrowski, Jinho Kim, Zhengguo Tan, Bruno Riemenschneider</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <h1 id="overview">Overview</h1>
+<ol>
+<li><a href="../introduction">Introduction</a></li>
+<li><a href="../kspace"><em>k</em>-Space</a></li>
+<li>Image Reconstruction</li>
+<li><a href="../filters">Filters</a></li>
+<li><a href="../conclusion">Outlook and Conclusion</a></li>
+</ol>
+<h1 id="3-image-reconstruction">3. Image Reconstruction</h1>
+<p>In the last section, you made an acquired $k$-space Java-manipulatable. Now, we want to actually work with it. To reconstruct an MR image from it, we need to use an inverse Fourier Transform. The method for the Fourier Transform itself is provided by us, but you need to implement the workflow, which also involves shifting the buffer array, as explained below. By the end of the section, you will have implemented a framework to reconstruct an image from $k$-space and to calculate a $k$-space from an image.</p>
+<h2 id="3-1-fft-and-fft-shift">3.1 FFT and FFT Shift</h2>
+<h3 id="3-1-1-what-is-an-fft-ifft">3.1.1 What is an FFT / iFFT?</h3>
+<p>The Discrete Fourier Transform is an extremely important tool in all engineering contexts. One of the reasons why it had such
+great success as an analysis tool and also as an MRI reconstruction tool is a very pragmatic one: it has an extremely fast and efficient
+implementation algorithm: the Fast Fourier Transform (FFT).<br />
+One of the computational particularities of the FFT is that it uses a representation of the $k$-space where the so-called
+DC component - the value in $k$-space that refers to $k=0$ - is at the index 0 of the transformed array. In MRI, however,
+the DC component is located at the center of the acquired data. So we first need to rearrange $k$-space in order for the FFT
+algorithm to do its work.</p>
+<p>To be precise, the DFT / FFT describes the measurement process of the MRI process (getting the spatial frequencies from the measured object).
+The inverse operation of that, which you need to reconstruct the image from the spatial frequencies is the inverse DFT / iDFT
+or inverse FFT / iFFT. They forward and inverse Fourier Transforms only differ by a minus sign in front of one variable in their
+definition, but let's stick to proper wording.</p>
+<h3 id="3-1-2-k-space-and-the-fft-shift">3.1.2 $k$-space and the FFT Shift</h3>
+<p>As stated above, MRI $k$-space is measured with its low-frequency components in the middle of the matrix.
+For the sake of simplicity, let's first look at a 1D representation by looking at one line of the 2D matrix
+in the middle of the $k$-space.</p>
+<p align="center">
+  <img src="../fig32-kspace_redline.png" alt="Trulli" align="center" style="width:80%">  
+</p>
+<p align="center">
+  <img src="../fig32-kspace_traj.jpg" alt="Trulli" align="center" style="width:100%">  
+</p>
+<p align="center">
+  <b>Figure 3.1.</b> A magnitude image of <i>k</i>-space (top) in logarithmic scale, and the signal intensity along the
+red-line direction (bottom).
+</p>
+<p>Figure 3.1 shows signal intensities concentrate in the middle of the spectrum - around the DC component -
+as given by the nature of the MRI acquisition. From an implementation point of view, however,
+the DC component should be shifted to the first index before applying an iFFT. Let's not go too deep into Fourier transform
+theory or the specifics of the FFT algorithm here. Just keep in mind, (i)FFT wants the DC component at index 0, MRI measures
+the DC component at index $N/2$.</p>
+<p>The so-called <em>FFT shift</em> is a construct that is often used (not only in MRI). It simply shifts samples from one half of
+the spectrum to the other half. Figure 3.2 shows an example of the 1D FFT shift. A full spectrum lies in an index range of $[0, N-1]$, where $N$ represents the vector length.
+Samples in a range of $[0, N/2-1]$ are then shifted to the other half spectrum of $[N/2, N-1]$ and vice versa.</p>
+<p align="center">
+  <img src="../fig31-fftshift1d.jpg" alt="Trulli" align="center" style="width:90%">  
+</p>
+<p align="center">
+  <b>Figure 3.2.</b> A graphical representation of the <i>FFT shift</i>.  
+</p>
+<h2 id="3-2-apply-fft-shift-to-the-1d-case">3.2 Apply FFT Shift to the 1D Case</h2>
+<p>To get a better understanding of the FFT shift, you will start in 1D and implement a new class <code>ComplexSignal</code>.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">package </span><span>project;
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>mt.</span><span style="color:#ebcb8b;">Signal</span><span>;
+</span><span style="color:#b48ead;">import </span><span>java.util.</span><span style="color:#ebcb8b;">Objects</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">ComplexSignal </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">protected </span><span style="color:#eff1f5;">mt.</span><span style="color:#ebcb8b;">Signal </span><span style="color:#eff1f5;">real;    </span><span style="color:#65737e;">//Image object to store real part
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">protected </span><span style="color:#eff1f5;">mt.</span><span style="color:#ebcb8b;">Signal </span><span style="color:#eff1f5;">imag;    </span><span style="color:#65737e;">//Image object to store imaginary part
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">protected </span><span style="color:#ebcb8b;">String </span><span style="color:#eff1f5;">name;      </span><span style="color:#65737e;">//Name of the image
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p>Create constructors and getters. Remember: class objects, <code>real</code>, <code>imag</code>, and <code>name</code>,
+must be set in the constructor. Use the usual constructors for <code>ComplexSignal</code>, as shown below.
+(Side note: since the FFT only works for signal lengths of 2 to the power of $n \in \mathbb{N}$,
+our implementation restricts to those cases. This applies to the 2D case as well.)</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public </span><span style="color:#bf616a;">ComplexSignal</span><span>(</span><span style="color:#b48ead;">int</span><span> length, </span><span style="color:#ebcb8b;">String</span><span> name)
+</span><span style="color:#b48ead;">public </span><span style="color:#bf616a;">ComplexSignal</span><span>(</span><span style="color:#b48ead;">float[]</span><span> signalReal, </span><span style="color:#b48ead;">float[]</span><span> signalImag, </span><span style="color:#ebcb8b;">String</span><span> name)
+</span><span>
+</span><span style="color:#b48ead;">public float[] </span><span style="color:#bf616a;">getReal</span><span>() </span><span style="color:#65737e;">// get the buffer of the real
+</span><span style="color:#b48ead;">public float[] </span><span style="color:#bf616a;">getImag</span><span>() </span><span style="color:#65737e;">// get the buffer of the imag
+</span><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">String </span><span style="color:#bf616a;">getName</span><span>()
+</span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">getSize</span><span>()
+</span></code></pre>
+<p>Generate a sawtooth-like wave (remember exercise 1), composed of five sine waves with different frequencies in a <code>generateSine()</code> method.
+Frequencies for five sine waves are</p>
+<p>$[\text{numWaves}, 2 \cdot \text{numWaves}, \cdots, 5 \cdot \text{numWaves}]$,</p>
+<p>and the number of samples is equal to the size of the <code>ComplexSignal</code>.
+Set the real part of the <code>ComplexSignal</code> as the constructed signal and the imaginary parts to zero.
+You can use <code>setAtIndex()</code> to assign corresponding values to the real and imaginary parts.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">generateSine</span><span>(</span><span style="color:#b48ead;">int</span><span> numWaves)
+</span></code></pre>
+<p>You can plot your sinusoid wave using the given method <code>DisplayUtils.showArray()</code>. In this case, the signal length is 256.</p>
+<p align="center">
+  <img src="../fig33-sine_real.jpg" alt="Trulli" align="center" style="width:100%">  
+</p>
+<p align="center">
+  <img src="../fig33-sine_imag.jpg" alt="Trulli" align="center" style="width:100%">  
+</p>
+<p align="center">
+  <b>Figure 3.3.</b> The real (top) and imaginary (bottom) parts of the sinusoidal  wave are composed of five different sine waves.
+</p>
+<p>To show the magnitude of the signal, you need to implement <code>calculateMagnitude()</code> and <code>getMagnitude()</code> for displaying with <code>DisplayUtils.showArray()</code>. You can use <code>atIndex()</code> and <code>setAtIndex()</code> for <code>calculateMagnitude()</code>.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">private </span><span style="color:#ebcb8b;">Signal </span><span style="color:#bf616a;">calculateMagnitude</span><span>()
+</span><span style="color:#b48ead;">public float[] </span><span style="color:#bf616a;">getMagnitude</span><span>()
+</span></code></pre>
+<p align="center">
+  <img src="../fig34-sine_magnitude.jpg" alt="Trulli" style="width:100%" align="center">
+</p>
+<p align="center">
+  <b>Figure 3.4.</b> The magnitude of the summed-sinusoids signal.
+</p>
+<p>Now, apply an FFT to the signal using the given method <code>FFT1D()</code> from <code>ProjectHelpers.java</code> and plot the magnitude signal. The methods are commented out
+to avoid conflicts when running the program prior to this point. Remove the comment symbols for the methods related to <code>ComplexSignal()</code> in <code>ProjectHelpers.java</code>: <code>FFT1D()</code>, <code>toComplex()</code>, <code>fromComplex()</code>, and <code>fft()</code>.</p>
+<p align="center">
+  <img src="../fig35-FFT.jpg" alt="Trulli" style="width:100%" align="center">
+</p>
+<p align="center">
+  <b>Figure 3.5.</b> The magnitude of the FFT of the signal. Since the complex sinusoid signal is composed of five different sine waves, there are five peaks at the low-frequency part.
+</p>
+<p>Once you have created the FFT result, it is time to implement the FFT shift.<br />
+If you shift the FFT signal to the right by one sample, the rightmost signal shifts to the leftmost index: it's a cyclical shift.
+Take your time to understand this, referring to Figure 3.2. If you shift by $N/2$,
+the left and right half of the signal are swapped with each other. In other words, you can implement the <code>fftShift1d()</code>
+method using a <code>swap()</code> method, which only swaps the left and right half of the array.
+You will need to use <code>setAtIndex()</code> and <code>AtIndex()</code>.
+Additionally, as signals are complex numbers, you must consider both the real and imaginary parts.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">fftShift1d</span><span>()
+</span><span style="color:#b48ead;">private </span><span style="color:#ebcb8b;">Signal </span><span style="color:#bf616a;">swap</span><span>(</span><span style="color:#ebcb8b;">Signal</span><span> input)
+</span></code></pre>
+<p>You can plot the FFT shift result and play around, shifting the signal back and forth using
+<code>fftShift1d()</code> multiple times.</p>
+<p align="center">
+  <img src="../fig36-FFTshift.jpg" alt="Trulli" style="width:100%" align="center">
+</p>
+<p align="center">
+  <img src="../fig36-FFTshift2.jpg" alt="Trulli" style="width:100%" align="center">
+</p>
+<p align="center">
+  <b>Figure 3.6.</b> Shown is the result of an FFT shift applied out once (top) and twice (bottom) to the FFT result. The figure at the bottom shows the same as Figure 3.5, meaning that if the FFT shift is applied twice, the signal comes back to the original position (this is valid for even length signals). This property is important when you reconstruct <i>k</i>-space. Moreover, the y-axes represent the magnitude of the FFT-shifted S and S' for plots above and below, respectively, where S and S' stand for FFT(s) and FFTshift(FFT(s)).
+</p>
+<h2 id="3-3-expand-fft-shift-to-2d-in-compleximage">3.3 Expand FFT shift to 2D in ComplexImage</h2>
+<p>Expanding the concept of the FFT shift from the 1D case to the 2D case is not so complicated. It is the result
+of doing an FFT shift along the first dimension and then the second.</p>
+<p align="center">
+  <img src="../fig37-fftshift2d.jpg" alt="Trulli" style="width:80%" align="center">
+</p>
+<p align="center">
+  <b>Figure 3.7.</b> Graphical example of the 2D <i>FFT shift</i>. One quadrant is swapped with another quadrant in the diagonal direction. This is due to the fact of swapping one sample along the x and y directions.
+</p>
+<p>You need to consider that swapping one sample is carried out along both $x$- and $y$-directions in the 2D case, meaning that one quadrant is swapped with another in the diagonal direction. We move the working <code>java</code> script to the <code>ComplexImage.java</code>. You will add new methods called <code>fftShift()</code> and <code>swapQuadrants()</code></p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">fftShift</span><span>()
+</span><span style="color:#b48ead;">private </span><span style="color:#ebcb8b;">Image </span><span style="color:#bf616a;">swapQuadrants</span><span>(</span><span style="color:#ebcb8b;">Image</span><span> input)
+</span></code></pre>
+<p>In <code>fftShift()</code>, use <code>swapQuadrants()</code> to swap samples and <code>setBuffer()</code>,
+which is a member method of the <code>Image</code> class, to set swapped samples to the buffer. Always consider that you are
+dealing with complex numbers, using both <code>real</code> and <code>imag</code>.
+You can expand your implementation in the 1D case to the 2D case with <code>swapQuadrants()</code>.</p>
+<p>Display the result of your 2D FFT shift.</p>
+<p style="text-align: center;">
+<table><tr>
+<td> <img src="../fig38-kspace.jpg" alt="fig38-kspace.jpg"  style="width: 256;"/> </td>
+<td> <img src="../fig38-kspace_fftshift.jpg" alt="fig38-kspace_fftshift.jpg" style="width: 256;"/> </td>
+</tr></table>
+ <p>
+<p align="center">
+  <b>Figure 3.8.</b> <i>k</i>-spaces before (left) and after (right) applying the FFT shift.
+Low-frequency components are shifted to the edge after the shift,
+and vice versa. To match <i>k</i>-space size to an integer-power of 2 for the FFT,
+one dimension needed to be zero-padded, and such shows black strips (Not necessary in in our case so the implementation is optional).
+</p>
+<h2 id="3-4-reconstruct-mr-image">3.4 Reconstruct MR image</h2>
+<p>Now, we are ready to reconstruct an MR image. The overview of the MR reconstruction process is depicted in Figure 3.9.
+One key point here is that after applying an FFT shift to the $k$-space or the image once,
+you have to apply the FFT shift one more time after applying the (i)FFT to bring it back to its original signal.
+Play around with (i)FFTs and the shifts and you will see.</p>
+<p><code>InverseFFT2D()</code> and <code>FFT2D()</code> methods are provided in <code>ProjectHelpers.java</code>.</p>
+<p align="center">
+  <img src="../fig39-recon_flow.jpg" alt="Trulli" style="width:100%" align="center">
+</p>
+<p align="center">
+  <b>Figure 3.9.</b> An overview of the MR reconstruction process.
+</p>
+<p>Reconstruct the MR image from the measured $k$-space data.
+Show image magnitude, image phase, image real part, and image imaginary part as  below.</p>
+<p style="text-align: center;">
+<table><tr>
+<td> <img src="../fig310-img_mag.jpg" alt="fig310-img_mag.jpg"  style="width: 256;"/> </td>
+<td> <img src="../fig310-img_phase.jpg" alt="fig310-img_phase.jpg" style="width: 256;"/> </td>
+</tr>
+<tr>
+<td> <img src="../fig310-img_real.jpg" alt="fig310-img_real.jpg"  style="width: 256;"/> </td>
+<td> <img src="../fig310-img_imag.jpg" alt="fig310-img_imag.jpg" style="width: 256;"/> </td>
+</tr>
+</table>
+ <p>
+<p align="center">
+  <b>Figure 3.10.</b> Reconstructed images. Image titles are presented at the left top corner of the each figure.
+</p>
+<p>Then, let's check if a forward FFT works fine with the reconstructed image. The original $k$-space should be reproduced from the FFT on the reconstructed image.</p>
+<p style="text-align: center;">
+<table><tr>
+<td> <img src="../fig311-kspace_reprod_mag.jpg" alt="fig311-kspace_reprod_mag.jpg"  style="width: 256;"/> </td>
+<td> <img src="../fig311-kspace_reprod_phase.jpg" alt="fig311-kspace_reprod_phase.jpg" style="width: 256;"/> </td>
+</tr></table>
+ <p>
+<p align="center">
+  <b>Figure 3.11.</b> Reproduced <i>k</i>-space from the reconstructed image. The reproduced <i>k</i>-space shows as the same as the original <i>k</i>-space.
+</p>
+<p>In your Project report, you should:</p>
+<ul>
+<li><strong>Reconstruction</strong> (2.2): Describe reconstruction in your own words. Why is FFT-Shift necessary?</li>
+<li><strong>FFT</strong> (2.2.1): Explain why an FFT shift needs to be carried out on $k$-space before and after the iFFT is applied.
+What is the purpose of the FFT shift? Where are low-frequency components located in $k$-space?
+What happens if you only apply the FFT shift before, but not after performing the iFFT on the $k$-space?
+(explain this with figures)</li>
+<li><strong>Interpretation</strong> (2.2.2): Interpret the reconstruction results. Which image do radiologists view and diagnose among images of
+magnitude, phase, real part, and imaginary part?
+Can $k$-space be reproduced from the reconstructed image like the original $k$-space?
+If so, what is the procedure for that? Please explain the reasons why or why not.</li>
+</ul>
+<p><a href="../filters">Next task: Filters</a></p>
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2024-01-16 14:15
+    </div>
+
+</body>
+</html>

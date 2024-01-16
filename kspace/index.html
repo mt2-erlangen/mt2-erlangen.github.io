@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Project Work 2 - k-Space </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Project Work 2 - k-Space ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;kspace&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Project Work 2 - k-Space">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Project Work 2 - k-Space</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Mischa Dombrowski, Zhengguo Tan, Jinho Kim</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <h1 id="overview">Overview</h1>
+<ol>
+<li><a href="../introduction">Introduction</a></li>
+<li><em>k</em>-Space</li>
+<li><a href="../fftshift">Image Reconstruction</a></li>
+<li><a href="../filters">Filters</a></li>
+<li><a href="../conclusion">Outlook and Conclusion</a></li>
+</ol>
+<h1 id="2-complex-numbers-and-k-space">2. Complex Numbers and <em>k</em>-Space</h1>
+<p>Measured MRI signals are essentially radiofrequency waves summed over the imaged volume. Due to the nature of these waves
+and the underlying spin precession, the most convenient way of the mathematical formulation is the framework of complex numbers.
+Complex numbers are generally very well suited to describe the magnitude and phase of an oscillation/precession.</p>
+<p>In this section, you will load a measured and provided MRI $k$-space into an array, using a provided function, and save it in an instance of a class for complex images, written by you. This class also provides calculation of magnitude and phase of the complex images from its real and imaginary parts.</p>
+<h2 id="2-1-complex-numbers">2.1 Complex Numbers</h2>
+<h3 id="2-1-1-a-single-complex-number-by-itself">2.1.1 A Single Complex Number by Itself</h3>
+<p align="center">
+  <img src="../complex_number.png" alt="Trulli" style="width:80%" align="center">
+</p>
+<p align="center">
+  <b>Figure 2.1.</b> A complex number can be visually represented as a pair of numbers (a, b) forming a vector
+ in the so-called complex plane. <i>Re</i> stands for the real part, shown on the horizontal axis,
+ <i>Im</i> stands for the imaginary part, shown on the vertical axis, and <i>i</i> is the "imaginary unit". (reference: <a href="https://en.wikipedia.org/wiki/Complex_number">complex numbers on wiki</a>)
+</p>
+<p>As illustrated in Figure 2.1, a complex number $z$ is defined as,</p>
+<p>$$ z = a + i \cdot b $$</p>
+<p>Here, both $a$ and $b$ are real numbers. $i$ is the &quot;imaginary unit&quot;, which is multiplied with the imaginary part of the complex
+number to denote the &quot;2<sup>nd</sup> dimension&quot; of the complex number. (Side note: For mathematical convenience of this powerful number framework,
+it satisfies $i^2 = -1$.) Likewise, you can think
+of the &quot;real unit&quot; as being $1$. One can also denote the complex number $z$ as an ordered pair,</p>
+<p>$$ z = (\mathrm{Re}(z), \mathrm{Im}(z)) $$</p>
+<p>where its real and imaginary part is $\mathrm{Re}(z) = a$ and $\mathrm{Im}(z) = b$, respectively. Noteworthy, the blue vector
+representation of $z$ in Figure 2.1 can be characterized by</p>
+<ol>
+<li>
+<p>the length of the vector, i.e., the absolute value or <strong>magnitude</strong>, $$ r = |z| = \sqrt{a^2 + b^2} $$</p>
+</li>
+<li>
+<p>its angle to the positive $\mathrm{Re}$-axis, i.e., the argument or <strong>phase</strong>, $$\varphi = \mathrm{atan2}({b},{a})$$</p>
+</li>
+</ol>
+<p>Therefore, using Euler notation, one can write the complex number $z$ in the form</p>
+<p>$$ z = |z| \cdot e^{i\varphi} $$</p>
+<h3 id="2-1-2-the-relation-to-mr-images">2.1.2 The Relation to MR Images</h3>
+<p>At every location of the object that is imaged in the MR scanner, the signal that is measured is produced by precessing
+(rotating) spins. The precessing spins create a precessing magnetization that results in radiofrequency radiation and can
+be measured with radiofrequency coils.</p>
+<p align="center">
+  <img src="../fig22-MR_signal_detection.jpg" alt="Trulli" style="width:80%" align="center">
+</p>
+<p align="center">
+  <b>Figure 2.2.</b> The precessing magnetization M that produces the MR signal is detected from two orthogonal directions,
+then demodulated using the multiplication of sinusoid or cosinusoid signals. They can be detected from two orthogonal
+directions to fully capture the signal rotation. In reality, only one coil can be used and demodulated to capture the
+rotation. (Reference: <a href="https://mriquestions.com/real-v-imaginary.html">Real vs. Imaginary Signals</a>)
+</p>
+<p>In consequence, the MR image can be described by complex numbers, i.e., a 2D plane of oscillations that are complex numbers. After digitization,
+we can then treat MR images as 2D arrays of complex numbers, i.e., every element of the array is a complex number.</p>
+<h3 id="2-1-3-mr-signals-are-measured-in-k-space">2.1.3 MR Signals Are Measured in $k$-Space</h3>
+<p>As mentioned in Section 2.1.2, MR signals are generated by precession of magnetization. In the context of the measurement
+process, this happens after a radiofrequency pulse excitation of the measured volume, which causes the magnetization
+to precess.</p>
+<p>As covered in the lecture, the sum of the total magnetization of the excited spins that are apparent in the measured volume
+is what matters for the measured signal. The magic of MRI is that the volume can be manipulated by external magnet field gradients
+in such a way that the resulting signal is a Fourier transform of the image to be measured. (Making MRI feasible by using
+this method is a Nobel price idea!)</p>
+<p>The <em>Fourier transform</em> of an image (space) represents the spatial frequencies and is usually called $k$-space.
+As such, the result of the MR measurement process and subsequent demodulation is an array storing complex $k$-space values
+(also known as spatial frequencies of the MR images).
+To reconstruct the MR images, the <em>inverse Fourier transform</em> is used to transform the signal from the frequency domain to the
+spatial/image domain. In other words, $k$-space is an intermediate step between MR scan and reconstructed image.</p>
+<p>(Not mandatory: If you are interested in the Fourier transform, we encourage you to look at this page: <a href="../appendix">Discrete Fourier Transform</a>.)</p>
+<h2 id="2-2-the-compleximage-class">2.2 The ComplexImage Class</h2>
+<p>In order to deal with 2D arrays of complex numbers in this project, we need to implement a new class, <code>ComplexImage</code>,
+in <code>ComplexImage.java</code>. For the sake of consistency and efficiency, we will use the code base of exercises 1-4.
+Accordingly, we will implement the real part and the imaginary part of our complex image each into an <code>Image</code> object.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">package </span><span>project;
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>mt.</span><span style="color:#ebcb8b;">Image</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">ComplexImage </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">protected </span><span style="color:#eff1f5;">mt.</span><span style="color:#ebcb8b;">Image </span><span style="color:#eff1f5;">real;    </span><span style="color:#65737e;">//Image object to store real part
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">protected </span><span style="color:#eff1f5;">mt.</span><span style="color:#ebcb8b;">Image </span><span style="color:#eff1f5;">imag;    </span><span style="color:#65737e;">//Image object to store imaginary part
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">protected </span><span style="color:#ebcb8b;">String </span><span style="color:#eff1f5;">name;      </span><span style="color:#65737e;">//Name of the image
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">protected int </span><span style="color:#eff1f5;">width;       
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">protected int </span><span style="color:#eff1f5;">height;
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p>Create constructors and getters. Remember: class objects, <code>real</code>, <code>imag</code>, and <code>name</code>, and class variables, <code>width</code> and <code>height</code>,  must be set in the constructor. As in the <code>Image</code> class, there will be two types of constructors in <code>complexImage</code> class:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public </span><span style="color:#bf616a;">ComplexImage</span><span>(</span><span style="color:#b48ead;">int</span><span> width, </span><span style="color:#b48ead;">int</span><span> height, </span><span style="color:#ebcb8b;">String</span><span> name)
+</span><span style="color:#b48ead;">public </span><span style="color:#bf616a;">ComplexImage</span><span>(</span><span style="color:#b48ead;">int</span><span> width, </span><span style="color:#b48ead;">int</span><span> height, </span><span style="color:#ebcb8b;">String</span><span> name, </span><span style="color:#b48ead;">float[]</span><span> bufferReal, </span><span style="color:#b48ead;">float[]</span><span> bufferImag)
+</span><span>
+</span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">getWidth</span><span>()
+</span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">getHeight</span><span>()
+</span><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">String </span><span style="color:#bf616a;">getName</span><span>()
+</span></code></pre>
+<p>For the project, $k$-space data is provided in the widely used <em>HDF5</em> data format. You can read $k$-space data using the <code>LoadKSpace()</code>
+method in the given class <code>ProjectHelpers.java</code></p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#ebcb8b;">ComplexImage</span><span> kSpace = </span><span style="color:#ebcb8b;">ProjectHelpers</span><span>.</span><span style="color:#ebcb8b;">LoadKSpace</span><span>(&quot;</span><span style="color:#a3be8c;">kdata.h5</span><span>&quot;);
+</span></code></pre>
+<h2 id="2-3-images-of-magnitude-and-phase-of-complex-arrays">2.3 Images of Magnitude and Phase of Complex Arrays</h2>
+<p>We learned in Section 2.1 that both MR images and their spatial frequencies, i.e., $k$-space, are complex arrays, and are made up of and usually stored as real and imaginary parts. Also, that complex numbers can be characterized by their <em>magnitude</em> and <em>phase</em>.<br />
+One very important aspect of MRI images is the following: while both real and imaginary parts, or both magnitude and phase,
+are needed to compute the image, the diagnostic information for the radiologist is mostly just visible in the magnitude image.<br />
+Therefore, let's implement methods to compute magnitude and phase images from real and imaginary parts.</p>
+<p>Implement two methods <code>calculateMagnitude()</code> and <code>calculatePhase()</code> as methods of the <code>ComplexImage</code> class
+for calculating magnitude and phase, respectively. Refer to the related equations above in subsection 2.1.1.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">private </span><span style="color:#ebcb8b;">Image </span><span style="color:#bf616a;">calculateMagnitude</span><span>(</span><span style="color:#b48ead;">boolean</span><span> logFlag)
+</span><span style="color:#b48ead;">private </span><span style="color:#ebcb8b;">Image </span><span style="color:#bf616a;">calculatePhase</span><span>()
+</span></code></pre>
+<p>We are implementing a <em>logFlag</em> in the <code>calculateMagnitude()</code> method because we'd like to be able to indicate output of linear or logarithmic
+scale (log10). The magnitude of $k$-space has a huge image intensity range between the center (low-frequency part, very large)
+and the periphery (high-frequency part, very small). Taking a logarithm (log10) of the magnitude of $k$-space (point-wise) can reduce the huge image
+intensity range for better visualization of the magnitude of $k$-space.</p>
+<p>For access to the magnitude and phase images, we use getters:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public float[] </span><span style="color:#bf616a;">getMagnitude</span><span>()
+</span><span style="color:#b48ead;">public float[] </span><span style="color:#bf616a;">getLogMagnitude</span><span>()
+</span><span style="color:#b48ead;">public float[] </span><span style="color:#bf616a;">getPhase</span><span>()
+</span></code></pre>
+<p>Eventually, You can show the magnitude and phase images using the given method <code>DisplayUtils.showImage()</code>. Please use this method in the <code>Project.java</code></p>
+<p style="text-align: center;">
+<table><tr>
+<td> <img src="../fig23-kspace_mag.jpg" alt="Trulli" align="center"> </td>
+<td> <img src="../fig23-kspace_mag_log.jpg" alt="Trulli" align="center"> </td>
+</tr></table>
+ <p>
+<p align="center">
+  <b>Figure 2.3.</b> Magnitude images of <i>k</i>-space without (left) and with (right) logarithmic scale. The left figure shows only one small dot in the middle due to a huge image intensity range, while the right figure displays the whole intensity range on a scale that is visible to the human eye.
+</p>
+<p align="center">
+  <img src="../fig24-phase.jpg" alt="Trulli" style="width:48%" align="center">
+<p align="center">
+  <b>Figure 2.4.</b> A phase image of <i>k</i>-space.
+</p>
+<p>In the project report, you should</p>
+<ul>
+<li>Show the real and imaginary parts of the $k$-space</li>
+<li>Show the magnitude and phase images of the $k$-space</li>
+<li>Explain what those mean. Can you elaborate on why the phase does not show the same intensity variation as the magnitude?</li>
+</ul>
+<p><a href="../fftshift">Next task: Image Reconstruction</a></p>
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2024-01-16 14:15
+    </div>
+
+</body>
+</html>
