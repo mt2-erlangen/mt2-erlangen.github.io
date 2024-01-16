@@ -132,7 +132,7 @@ Is the image similar to the sinc-filtered image? If so, why?
 * (2.3) Explain the properties of high-frequency and low-frequency components in $k$-space. What components are relevant for the image contrast? What about the image details?
 * (2.3.1) Explain the effect of the 2D Sinc filter on the MR image and on $k$-space. What can be seen in $k$-space?
 * (2.3.2) Explain the effect on the MR image when setting high-frequency parts of $k$-space to zero and compare the result with that of the 2D Sinc filter.
-* (2.3.2) Play around with different values for ```lines```. How large can you set this value without a visible loss in image quality? At what value can the knee no longer be recognized? Explain how this could be used for image compression.
+* (2.3.2) Play around with different values for ```lines```. How large can you set this value without a visible loss in image quality? At what value can the heart no longer be recognized? Explain how this could be used for image compression.
 
 
 ## 4.2 Reducing the Image Size
@@ -274,7 +274,7 @@ Please explain what happens in the case of incomplete blocks in the boundary. Fo
 MaxPooling2d mp = new MaxPooling2d(2, 2, 1, 2);
 ```
 
-Please apply ```MaxPooling2d``` to the knee MR image and show the output image you get.
+Please apply ```MaxPooling2d``` to the heart MR image and show the output image you get.
 ```Java
 // MaxPooling2d
 float[] mag = mrImage.getMagnitude();
