@@ -144,8 +144,8 @@ private Image calculatePhase()
 ```
 
 We are implementing a *logFlag* in the ```calculateMagnitude()``` method because we'd like to be able to indicate output of linear or logarithmic
-scale. The magnitude of $k$-space has a huge image intensity range between the center (low-frequency part, very large)
-and the periphery (high-frequency part, very small). Taking a logarithm of the magnitude of $k$-space (point-wise) can reduce the huge image
+scale (log10). The magnitude of $k$-space has a huge image intensity range between the center (low-frequency part, very large)
+and the periphery (high-frequency part, very small). Taking a logarithm (log10) of the magnitude of $k$-space (point-wise) can reduce the huge image
 intensity range for better visualization of the magnitude of $k$-space.\
 
 For access to the magnitude and phase images, we use getters:
