@@ -14,7 +14,7 @@ author= "Mischa Dombrowski, Zhengguo Tan, Jinho Kim"
 5) [Outlook and Conclusion](../conclusion)
 
 # 0. Disclaimer
-All the illustrations are done using an mri scan of a brain, however, you are required to reimplement the project using a scan of a knee:
+All the illustrations are done using an mri scan of a brain, however, you are required to reimplement the project using a scan of a heart:
 
 <p style="text-align: center;">
 <table><tr>
@@ -25,7 +25,7 @@ All the illustrations are done using an mri scan of a brain, however, you are re
 Please replace the figures in the report with results from your own implementation.
 For general information and best practices have a look at our [project report guidelines](../checklist).
 
-We also provide you with a basic [java template](https://github.com/mt2-erlangen/project-ws2022) including some useful helper functions, similar to what you saw during the exercises. You have to use this template as the starting point of your project. For more information on the **installation** have a look at our [getting started guide](../installation).
+We also provide you with a basic [java template](https://github.com/mt2-erlangen/project-ws2023_24) including some useful helper functions, similar to what you saw during the exercises. You have to use this template as the starting point of your project. For more information on the **installation** have a look at our [getting started guide](../installation).
 
 Furthermore, we provide a [**latex-template**](https://github.com/mt2-erlangen/latex-template) that you should use. It gives a more detailed structure for the report. Don't change the order and replace all images with images generated from your own implementation.
 
