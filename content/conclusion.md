@@ -27,5 +27,5 @@ In the last part, summarize what you have implemented and explained in your proj
 
 # Submission
 
-Submit your project report as a PDF and your entire project folder of your code until **August 21<sup>st</sup> 23:55h** via **StudOn**.
+Submit your project report as a PDF and your entire project folder of your code until **April 3<sup>rd</sup> 23:55h** via **StudOn**.
 Your project must compile as a whole!
