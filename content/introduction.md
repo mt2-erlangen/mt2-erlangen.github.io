@@ -18,7 +18,7 @@ All the illustrations are done using an mri scan of a brain, however, you are re
 
 <p style="text-align: center;">
 <table><tr>
-<td> <img src="../kneescan.png" alt="Trulli" align="center"> </td>
+<td> <img src="../heart_magnitudeImage.PNG" alt="Trulli" align="center"> </td>
 </tr></table>
 <p>
 
