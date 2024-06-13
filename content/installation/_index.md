@@ -1,6 +1,6 @@
 +++
-date= 2022-05-02
-title = "Exercise 0"
+date= 2024-06-23T07:00:00Z
+title = "Installation"
 
 [extra]
 author= "Mischa Dombrowski, Stephan Seitz"
@@ -28,7 +28,7 @@ This is not necessary for the exercises.
 
 ImageJ can also be used as a Java library.
 We already created a Java project that uses ImageJ.
-You can download it from [https://github.com/mt2-erlangen/exercises-ss2022](https://github.com/mt2-erlangen/exercises-ss2022)
+You can download it from [https://github.com/mt2-erlangen/project_ss2024](https://github.com/mt2-erlangen/project_ss2024)
 and import with the IDE of your choice **we highly recommend you to use intellij**:
 
  - [Instructions for Eclipse](../import_eclipse)

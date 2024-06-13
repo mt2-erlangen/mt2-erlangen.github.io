@@ -1,51 +1,90 @@
 +++
-date= 2023-06-12T08:00:00Z
-title = "Project Work 1 - Introduction"
+date= 2024-06-24T05:00:00Z
+title = "Project Work 0 - Introduction"
 [extra]
 author= "Mischa Dombrowski, Zhengguo Tan, Jinho Kim"
 +++
 
 # Overview
 
-1) Introduction
-2) [*k*-Space](../kspace)
-3) [Image Reconstruction](../fftshift)
-4) [Filters](../filters)
-5) [Outlook and Conclusion](../conclusion)
+0) [Introduction](../introduction)
+1) [Thresholding](../thresholding)
+2) [Segmentation](../segmentation)
+3) [Otsu's Method](../otsu)
+4) [Edge Detection](../edgedetection) 
+5) [Canny Edge](../cannyedge) 
+6) [Outlook and Conclusion](../conclusion)
 
-# 0. Disclaimer
-All the illustrations are done using an mri scan of a brain, however, you are required to reimplement the project using a scan of a heart:
+# Disclaimer
+This is a short introduction with general information and best practices including project report guidelines. __Thoroughly read it and stricly follow all rules__. We have also prepared a video with all necessary information about the report. Additionally, there will be a Q&A session for further questions. 
 
-<p style="text-align: center;">
-<table><tr>
-<td> <img src="../heart_magnitudeImage.PNG" alt="Trulli" align="center"> </td>
-</tr></table>
-<p>
+We also provide you with a basic [java template](https://github.com/mt2-erlangen/LaTeX-template-2024) including some useful helper functions. You have to use this template as the starting point of your project. For more information on the **installation** have a look at our [getting started guide](../installation).
 
-Please replace the figures in the report with results from your own implementation.
-For general information and best practices have a look at our [project report guidelines](../checklist).
-
-We also provide you with a basic [java template](https://github.com/mt2-erlangen/project-ws2023_24) including some useful helper functions, similar to what you saw during the exercises. You have to use this template as the starting point of your project. For more information on the **installation** have a look at our [getting started guide](../installation).
-
-Furthermore, we provide a [**latex-template**](https://github.com/mt2-erlangen/latex-template) that you should use. It gives a more detailed structure for the report. Don't change the order and replace all images with images generated from your own implementation.
+Furthermore, we provide a [**latex-template**](https://github.com/mt2-erlangen/LaTeX-template-2024) that you should use. It gives a more detailed structure for the report. Don't change the order and replace all images with images generated from your own implementation.
 
 In case you are working on CIP machines you may run into quota issues due to large packages loaded by gradle. You can fix these issues with our [guide](../quota).
 
 Please also note that you can connect remotely to CIP machines using a [remote SSH connection](https://wwwcip.informatik.uni-erlangen.de/documentation/services.de.html)
 
-# 1. Introduction
 
-In this semester's project work, you will learn some basic concepts of magnetic resonance imaging (MRI). The MRI scanner acquires data in the spatial frequency domain, known as *k*-space. MR image reconstruction requires the (inverse) Fourier transform of the acquired *k*-space data.
+# General Information
 
-Your first task is to write an introduction, which should include:
+The project report, as well as the coding, are individual work. As such, you need to submit them individually. Also, do not use any built-in methods that we do not specifically allow.
+Note: we'll check for plagiarism.
 
-* **What is MRI?**  Motivation an purpose of MRI.
-* **Image acquisition**:  Why is a strong magnetic field needed? What does the word "resonance" in MRI mean? Why is an antenna (receiver coil) needed? From a signal processing point of view, what is the relationship between the data acquired from an MRI machine and MR images?
-* What are the **advantages and disadvantages of MRI** compared to other imaging modalities, like computer tomography (CT)? e.g. Does MRI require ionizing radiation? Does MRI provide better soft-tissue contrast? Is the acquisition speed of MRI as fast as CT? If not, why?
-* Give a **brief overview** of the contents of the following tasks.
+# Guidelines
 
-Use **references** when necessary. Try to cite scientific publications (e.g. journal papers) in your introduction.
-Your introduction and conclusion should not contain any images.
+The project report can be written in either English or German. Please write between 4 and 7 pages of text, not counting the images.
 
 
-[Next task: *k*-Space](../kspace)
+We expect you to:
+
+- Use the **LaTeX template** we provide
+  - [LaTeX template link](https://github.com/mt2-erlangen/LaTeX-template-2024)
+  - Do not modify the style or the formatting. No ornaments for page numbers!
+  - The template defines the overall structure of your project. You have to fill in all the gaps.
+  - Do not change the order of the sections in our template.
+  - Do not change the titles of sections or subsections.
+  - Do not change the order of the figures in the project. You can optionally add new figures to the report.
+  - We will only count answers that appear in the correct subsection of the report. If you want to avoid repeating yourself, use `\label{}` and `\ref{}`.
+  - The template contains examples for all commands necessary for the report. It is allowed to import and use other packages if desired. 
+
+
+- Use **scientific references** in your explanations to clearly separate your work from the work of others:
+  - Use the **bibliography** (see template `Bib/bibliography.tex`) and keep the citation style provided in the template.
+      The bibliography must be sorted (either alphabetically when using the Name/Year citation style or
+      by the order you use them in the text when numbering the sources).
+  - Do not use more than two references that are websites only. 
+
+
+- All **symbols in equations** need to be **explained** in the text.
+- All **equations, figures and tables**, if applicable, have to be **numbered and referenced** in the text.
+  - All your figures should look professional.
+  They should not be blurry or hand-drawn and images should not have a window border of ImageJ.
+  They should not overlap with the text.
+  - All figures need to have **captions** giving a brief description what the figure shows. The caption should be below the figure.
+  - Label all axes in all plots and coordinate systems!
+  - A list of figures is not needed.
+  - Replace the images in the report template with images from your own implementation applied to knee data.
+
+
+- **Do not use abbreviations without introducing them**. E.g., the first time you should write "Magnetic Resonance Imaging (MRI)".
+After that, "MRI" is enough.
+- Just like in storytelling, connect the context of the project report, so everyone can see the flow.
+- Do not use footnotes!
+- Check your spelling: there shouldn't be any obvious spelling errors that can be detected by a spell checker.
+
+To obtain all the points for the content of your report, additional to the above
+
+- Check whether you have addressed all the questions in the task description.
+- Check whether you have provided all the result figures and a detailed explanation of them.
+
+## Guidelines for the Use of Writing Assistants
+
+We welcome students to use writing assistants to enhance the quality of the written report. However, we would like to point out that
+students are responsible for the correctness of the content, and that **scientific references** are mandatory to verify all the claims made in the report.
+
+If you decide to use any writing assistant, we ask you to **add the tool to the list of references**.
+The use of spell-checking and translation software is encouraged and can be done without adding them to the list of references.    
+
+[Next](../thresholding)
