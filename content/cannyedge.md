@@ -48,7 +48,7 @@ The formula for calculating the gradient-direction at a given pixel is:
 >__Note__: 
 > The gradient-direction provides information about the angle or direction of an edge within the image. At any given point the edge will be __perpendicular__ to the gradient direction. This will become important when it comes to performing __Non-Maximum-Suppression__ (NMS). 
 > An example: 
-> <center><img src="gradient_edge_example.png" width="150" height="150"></center>
+> <center><img src="../gradient_edge_example.png" width="150" height="150"></center>
 ><center> white pixels &#8793; edge; &nbsp; arrow &#8793; gradient-direction </center> 
 ><br/>
 >
@@ -61,7 +61,7 @@ The formula for calculating the gradient-direction at a given pixel is:
 
 The getDir-method will determine the gradient-direction for each pixel and then round it to one of the following values: __0°, 45°, 90°, 135°__. These stem from the fact that an image is a discrete set of pixels and therefore we can only differentiate between these directions. 
 
-<center><img src="edge-directions.png" width="650" height="150"></center>
+<center><img src="../edge-directions.png" width="650" height="150"></center>
 
 <center>Gradient-directions: 0°, 45°, 90°, 135°</center>
 
