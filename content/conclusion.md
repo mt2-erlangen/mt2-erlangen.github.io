@@ -32,7 +32,7 @@ In the last part, summarize what you have implemented and explained in your proj
 
 Once you are finished with your code and satisfied with the results, please compress the entire `src` folder into a zip file and upload it to StudOn. 
 Afterward, write the report and submit the PDF file as well. 
-The deadline for submission is **August 25<sup>th</sup> at 23:55** via **StudOn**. We recommend that you submit earlier versions of your project to avoid accidentally missing the deadline. Only the last version will be considered.
+The deadline for submission is **August 26<sup>th</sup> at 23:55** via **StudOn**. We recommend that you submit earlier versions of your project to avoid accidentally missing the deadline. Only the last version will be considered.
 
 Thank you for your time and interest. We look forward to reading your reports and hope to see you again for future lectures, projects, or theses! 
 
