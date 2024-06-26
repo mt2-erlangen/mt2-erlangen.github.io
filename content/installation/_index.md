@@ -3,17 +3,53 @@ date= 2024-06-23T07:00:00Z
 title = "Installation"
 
 [extra]
-author= "Mischa Dombrowski, Stephan Seitz"
+author= "Sebastian Dietz, Mischa Dombrowski, Stephan Seitz"
 +++
 
+# Project Setup:
 
-# Getting Started
+Since you have been working with IntelliJ throughout the entire semester when doing your exercises, you should already have it installed on the device you intend to use. 
+If not, have a look at the setup-guide you were given at the beginning of the Semester and install it accordingly.
 
-This is just a test to make sure your Java installation is working before the project starts.
+If you encounter any problems while setting up your project, feel free to ask your tutors. 
 
-If you encounter any problem please create a post in the forum StudOn.
-For questions regarding the installtion of Java and ImageJ please visit one of the computer exercises.
-If everything is working for you, you just need to wait for next week when the actual exercises start.
+To do: 
+
+1. Download the project template from [Github](https://github.com/mt2-erlangen/project_ss2024). 
+2. Unpack the zip-file and be sure to select the file-destination such that it is not unpacked "into its own folder" (meaning that there would be a `project-ss24`-folder within the `project-ss24`-folder) as might be the case by default.
+3. Open IntelliJ and click 
+   > File &rarr; Open &rarr; project-ss24
+
+   and hit `ok` to open the empty project template. 
+
+    Make sure to select the entire `project-ss24`-folder and not one of the folders contained within. 
+4. Click
+   > File &rarr; Project Structure &rarr; Project 
+
+    and select `jbr-17` or `17` or a similar SDK. 
+   
+5. Go to
+   > File &rarr; Project Structure &rarr; Modules &rarr; Paths 
+   
+   Select `Use module compile output path` and click the folder-icon towards the right side of the path. Select the `plugins`-folder contained in your project as the destination. Again select the entire folder; do not access it and select anything contained within. 
+6. Again in the same window select
+   >Libraries &rarr; __+__ &rarr; Java
+
+    and select the __ij.jar__ file that is contained in the project-folder.
+
+7. After concluding these steps your project structure should look like this:   
+<br/>
+
+   <center><img src="../project_structure.png" width="250" height="250"></center>
+    there should not be any error-messages when you open for example Task_1.
+
+1. You can now right-click on the `ij.jar`-file in your project structure and select ``Run 'ij.jar'``. This should open the ImageJ interface. Check the `Plugins`-dropdown-menu. It should look like this: 
+    <br/>
+
+    <center><img src="../plugins_dropdown.png" width="250" height="300"></center>
+
+Once you are done with this and everything is working nicely, you can get started with working on your first task. 
+
 
 ## ImageJ
 
@@ -24,40 +60,6 @@ for medical and biological images.
 If you want to, you can download a stand-alone version of the program [here](https://fiji.sc/).
 This is not necessary for the exercises.
 
-## Getting started
-
-ImageJ can also be used as a Java library.
-We already created a Java project that uses ImageJ.
-You can download it from [https://github.com/mt2-erlangen/project_ss2024](https://github.com/mt2-erlangen/project_ss2024)
-and import with the IDE of your choice **we highly recommend you to use intellij**:
-
- - [Instructions for Eclipse](../import_eclipse)
- - [Instructions for IntelliJ](../import_intellij)
-
-
-## Run Your First ImageJ Program
-
-You should now be able to execute the file `src/main/java/project/Project.java`.
-
-![ImageJ](../import_eclipse/run.png)
-![ImageJ](../import_eclipse/imagej.png)
-
-The following code is opening the ImageJ main window and exits the running program when the window is closed.
-
-```java
-public class Project {
-
-    public static void main(String[] args) {
-        (new ij.ImageJ()).exitWhenQuitting(true);
-
-    }
-}
-```
-
- When you use IntelliJ, you can just open the file `Exercise00` and then click on the green
- arrow:
-
- ![run using intellij](../run_intellij.png)
 
 ## Debugging
 
