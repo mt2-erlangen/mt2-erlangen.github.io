@@ -2,7 +2,7 @@
 date= 2024-06-24T10:00:00Z
 title = "Project Work 3 - Otsu"
 [extra]
-author= "Mischa Dombrowski, Zhengguo Tan, Jinho Kim"
+author= "Sebastian Dietz, Mischa Dombrowski"
 +++
 
 # Overview
