@@ -2,7 +2,7 @@
 date= 2024-06-24T05:00:00Z
 title = "Project Work 0 - Introduction"
 [extra]
-author= "Mischa Dombrowski, Zhengguo Tan, Jinho Kim"
+author= "Mischa Dombrowski, Sebastian Dietz, Zhengguo Tan, Jinho Kim"
 +++
 
 # Overview
@@ -16,23 +16,47 @@ author= "Mischa Dombrowski, Zhengguo Tan, Jinho Kim"
 6) [Outlook and Conclusion](../conclusion)
 
 # Disclaimer
-This is a short introduction with general information and best practices including project report guidelines. __Thoroughly read it and stricly follow all rules__. We have also prepared a video with all necessary information about the report. Additionally, there will be a Q&A session for further questions. 
+This is a short introduction with general information and best practices including project report guidelines. __Thoroughly read it and stricly follow all rules__. We have also prepared a video with all necessary information about the report. 
 
-We also provide you with a basic [java template](https://github.com/mt2-erlangen/LaTeX-template-2024) including some useful helper functions. You have to use this template as the starting point of your project. For more information on the **installation** have a look at our [getting started guide](../installation).
+We provide you with a basic [java template](https://github.com/mt2-erlangen/project_ss2024) including some useful helper functions. You have to use this template as the starting point of your project. For more information on the **installation** have a look at our [getting started guide](../installation).
 
 Furthermore, we provide a [**latex-template**](https://github.com/mt2-erlangen/LaTeX-template-2024) that you should use. It gives a more detailed structure for the report. Don't change the order and replace all images with images generated from your own implementation.
 
-In case you are working on CIP machines you may run into quota issues due to large packages loaded by gradle. You can fix these issues with our [guide](../quota).
+In case you are working on CIP machines you may run into quota issues. You can fix these issues with our [guide](../quota).
 
 Please also note that you can connect remotely to CIP machines using a [remote SSH connection](https://wwwcip.informatik.uni-erlangen.de/documentation/services.de.html)
 
 
-# General Information
+
+## Introduction:
+
+This project aims to introduce you to some fundamental image-processing-techniques which find application in a large variety of fields. 
+Since you are studying to become biomedical engineers, you will mainly be working with an image of cells, as a simple example of images you might encounter over the course of your scientific career.
+
+<center><img src="../cells.png" width="250" height="250"></center>
+
+
+The techniques you will be working with are the following: 
+
++ Basic Thresholding / image-segmentation
++ Evaluation of your segmentation
++ Otsu-Segmentation
++ Primitive edge-detection
++ Canny edge-detection
+  
+By the end of this project, you will have built a set of __ImageJ-Plugins__ that are capable of performing all of these operations. In addition to that, you will be documenting your progress and results in the form of a __written Project-Report__. 
+This is why at the end of every task you will find a number of bullet-points detailing which topics you should include in your report. 
+
+The coding section of your project will be written in Java using __IntelliJ__ as the editor of choice. You should already be familiar with coding in IntelliJ from lectures like AuD-MT as well as from your MT2 computer-exercises.
+
+Your written project report will be written in LaTeX using the online editor __Overleaf__. 
+
+## General Information
 
 The project report, as well as the coding, are individual work. As such, you need to submit them individually. Also, do not use any built-in methods that we do not specifically allow.
 Note: we'll check for plagiarism.
 
-# Guidelines
+## Report Guidelines
 
 The project report can be written in either English or German. Please write between 4 and 7 pages of text, not counting the images.
 
@@ -79,7 +103,7 @@ To obtain all the points for the content of your report, additional to the above
 - Check whether you have addressed all the questions in the task description.
 - Check whether you have provided all the result figures and a detailed explanation of them.
 
-## Guidelines for the Use of Writing Assistants
+### Guidelines for the Use of Writing Assistants
 
 We welcome students to use writing assistants to enhance the quality of the written report. However, we would like to point out that
 students are responsible for the correctness of the content, and that **scientific references** are mandatory to verify all the claims made in the report.

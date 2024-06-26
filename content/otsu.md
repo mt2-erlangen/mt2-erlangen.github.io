@@ -136,7 +136,6 @@ Your plugin should return the following:
 <center><img src="../Otsu_Cells.png" width="500" height="500"></center>
 
 
-What is the Threshold-value that gets returned? 
 ---
 
 #### 3.3: Project-Report

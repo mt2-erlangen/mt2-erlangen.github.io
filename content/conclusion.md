@@ -2,7 +2,7 @@
 date= 2024-06-24T12:00:25Z
 title = "Project Work 6 - Outlook and Conclusion"
 [extra]
-author= "Zhengguo Tan, Jinho Kim, Mischa Dombrowski"
+author= "Mischa Dombrowski, Sebastian Dietz"
 +++
 
 # Overview
@@ -17,8 +17,9 @@ author= "Zhengguo Tan, Jinho Kim, Mischa Dombrowski"
 
 
 # 6. Outlook and Conclusion
-In this project, you learned Otsu's method and multiple edge detection algorithms.
-Now you know the basic concepts of how to process and segment images.
+You have now built all the tools needed to use the final provided plugin called `User_Interface`. 
+It allows you to play around with the different kinds of image-processing-techniques, you learned to apply over the course of this project.
+
 In subsequent steps, segmentation can be for example be applied to facilitate or automate the diagnosis for the radiologist.
 There is great research interest in segmentation, edge detection, and various similar processing methods.
 
@@ -27,7 +28,11 @@ There is great research interest in segmentation, edge detection, and various si
 
 In the last part, summarize what you have implemented and explained in your project report. Review the shortcomings of your approaches and how they could be mitigated in the future, and conclude your report.
 
-# Submission
+## Submission 
 
-Submit your project report as a PDF and your entire project folder of your code until **August 25<sup>th</sup> 23:55h** via **StudOn**.
-Your project must compile as a whole!
+Once you are finished with your code and satisfied with the results, please compress the entire `src` folder into a zip file and upload it to StudOn. 
+Afterward, write the report and submit the PDF file as well. 
+The deadline for submission is **August 25<sup>th</sup> at 23:55** via **StudOn**. We recommend that you submit earlier versions of your project to avoid accidentally missing the deadline. Only the last version will be considered.
+
+Best regards,  
+Your MT2 Team

@@ -25,48 +25,7 @@ Similar to Thresholding and Segmentation, Edge-Detection is a commonly used tech
 ## 4.1: The Filter-Kernels
 There are a variety of different Kernels used for edge detection; some of the most common ones are Sobel, Scharr, and Prewitt - Kernels.
 
-**Sobel**:
-
-X-Direction:
-
-1  0  -1 <br>
-2  0  -2 <br> 
-1  0  -1 
-
-Y-Direction:
-
-1  2  1 <br> 
-0  0  0 <br> 
--1  -2  -1 
-
-**Scharr**:
-
-X-Direction:
-
-47 0 -47 <br> 
-162 0 -162 <br> 
-47 0 -47
-
-Y-Direction:
-
-47 162 47 <br> 
-0 0 0 <br> 
--47 -162 -47
-
-
-**Prewitt**:
-
-X-Direction:
-
-1  0  -1 <br> 
-1 0 -1 <br> 
-1 0 -1
-
-Y-Direction:
-
-1  1  1 <br> 
-0 0 0 <br> 
--1 -1  -1
+<center><img src="../filter.png" width="659" height="333"></center>
 
 When applying these Filter-Kernels to an image through __convolution__, you essentially create the derivative of the image. 
 This is because these Kernels result in higher pixel-values in regions, where the image contains a sharp change in brightness (similar to derivatives in analysis). This "derivation" is performed in X- and Y-direction seperately.
@@ -125,7 +84,8 @@ To do:
    String[] Filters = {"Sobel","Scharr","Prewitt"};
    ```
 3. Add a popup-menu to select which filter you want to use 
-   >:bulb: Tip: Check the [ImageJ-API](https://imagej.net/ij/developer/api/ij/ij/gui/GenericDialog.html)
+
+   __Tip__: Check the [ImageJ-API](https://imagej.net/ij/developer/api/ij/ij/gui/GenericDialog.html)
 
 4. Show the dialog
 5. Check if the dialog was cancelled. If yes, terminate the plugin 
