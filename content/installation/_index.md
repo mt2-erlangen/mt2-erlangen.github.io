@@ -26,13 +26,14 @@ To do:
 4. Click
    > File &rarr; Project Structure &rarr; Project 
 
-    and select `jbr-17` or `17` or a similar SDK. 
+    and select `jbr-17` or `17` or a similar SDK. Click on `Apply`.
    
-5. Go to
-   > File &rarr; Project Structure &rarr; Modules &rarr; Paths 
+5. In the same window go to
+   >  Modules &rarr; Paths 
    
    Select `Use module compile output path` and click the folder-icon towards the right side of the path. Select the `plugins`-folder contained in your project as the destination. Again select the entire folder; do not access it and select anything contained within. 
 6. Again in the same window select
+
    >Libraries &rarr; __+__ &rarr; Java
 
     and select the __ij.jar__ file that is contained in the project-folder.
