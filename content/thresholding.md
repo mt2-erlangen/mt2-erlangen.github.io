@@ -35,6 +35,24 @@ public void run(ImageProcessor ip) {
      //check if the dialog was canceled
      if (gd.wasCanceled())
           return;
+
+     //get user choices  - remove everything from here to check installation 
+     int threshold = (int) gd.getNextNumber();
+     boolean correct = gd.getNextBoolean();
+
+     //correct illumination if selected
+     ImageProcessor ipCopy;
+     if (correct) {
+          ipCopy = correctIllumination(ip);
+     } else {
+          ipCopy = ip;
+     }
+     // threshold the image
+     ByteProcessor thresholdedIp = threshold(ipCopy, threshold);
+     ImagePlus thresholdedImage = new ImagePlus("Thresholded Image", thresholdedIp);
+     thresholdedImage.show();
+    }
+}
 ```
 
 You should be able to see the default ImageJ plugin. After you open the image provided in `img` you can click on `Plugins` and then `Task 1 Threshold` to run the algorithm.
