@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "d3-array": "^2.12.1",
-    "d3-scale": "^3.2.4",
+    "d3-scale": "^4.0.2",
     "sirv-cli": "^1.0.0",
     "svelte-canvas": "^0.6.1"
   }
