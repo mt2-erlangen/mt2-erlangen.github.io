@@ -11,12 +11,12 @@ author= "Sebastian Dietz, Mischa Dombrowski"
 1) [Thresholding](../thresholding)
 2) [Segmentation](../segmentation)
 3) [Otsu's Method](../otsu)
-4) [Edge Detection](../edgedetection) 
-5) [Canny Edge](../cannyedge) 
+4) [Edge Detection](../edgedetection)
+5) [Canny Edge](../cannyedge)
 6) [Outlook and Conclusion](../conclusion)
 
 
-# 2: Segmentation 
+# 2: Segmentation
 
 For your second task, you will be implementing a plugin, which will be capable of evaluating the quality of a segmentation by comparing it to a given reference-image. In clinical practice these reference images can be attained through manual segmentation of the image by a skilled physician.
 
@@ -29,11 +29,11 @@ In your case the provided reference image will look like this:
 ## 2.1: A new class
 
 
-In order to quantify the quality of your segmentation, you will be calculating the values for __Sensitivity__ and __Specificity__, which were introduced in your blackboard-exercise. In addition, you will be creating a dedicated class to store and access these values. 
+In order to quantify the quality of your segmentation, you will be calculating the values for __Sensitivity__ and __Specificity__, which were introduced in your blackboard-exercise. In addition, you will be creating a dedicated class to store and access these values.
 
 To do:
 
-1. Create a new class in the `src`-Folder named `EvaluationResult` 
+1. Create a new class in the `src`-Folder named `EvaluationResult`
 2. Create the class-variables `sensitivity` and `specificity` (both double)
 3. Implement a constructor:
    ```java
@@ -61,7 +61,14 @@ In order to calculate the values for __Sensitivity__ and __Specificity__, you wi
 
 For decerning which of these cases applies to a given pixel, the reference image is used as the "correct" segmentation.
 
-**Task**:
+The values for __Sensitivity__ and __Specificity__ can then be calculated as follows:
+
+>__Sensitivity = TP/(TP+FN)__
+>
+>__Specificity = TN/(TN+FP)__
+
+
+To do:
 
 1. Create a new method:
    ```java
@@ -69,24 +76,25 @@ For decerning which of these cases applies to a given pixel, the reference image
     segmentation , ImageProcessor reference ){}
    ```
 2. Check if both images have the same dimensions - if not return null
-3. Iterate over both images and count up the number of occurrances for each state 
-4. Calculate the values for __Sensitivity__ and __Specificity__ using the formulas from your blackboard-exercise
+3. Iterate over both images and count up the number of occurrances for each state
+4. Calculate the values for __Sensitivity__ and __Specificity__ using the formulas listed above
 5. Create a new `EvaluationResult`-object to store these values and return it
 ---
 
-Now that you have created a method which perfroms the actual evaluation, you will need to implement the `run`-method in order to apply the plugin to an image. 
+Now that you have created a method which perfroms the actual evaluation, you will need to implement the `run`-method in order to apply the plugin to an image.
 
-**Task**:
+To do:
 
 1. Use the `IJ.openImage()`-method to open a window, which allows the user to select the reference image.
 2. Check wether the reference image has been loaded successfully - if not throw a fitting exception
 
-   >__Tip__: 
+   >&#128161;__Tip:__
     Check the [ImageJ-API](https://imagej.net/ij/developer/api/ij/ij/io/Opener.html) to see how the method behaves when no image has been loaded
 
 3. Once the image was loaded successfully, apply your `evaluateSegmentation ()`-method and print your results
 
-   >__Note__: As a test for your code, you could for example choose the `cells_reference` image as both "segmentation" and "reference". The plugin should then return 1.0 for both values.
+   >&#128221;__Note:__
+   As a test for your code, you could for example choose the `cells_reference` image as both "segmentation" and "reference". The plugin should then return 1.0 for both values.
 
 ---
 ## 2.3: Project-Report
@@ -99,9 +107,9 @@ The part of your report concerning Task 3 should contain the following:
 
 Additionally you should also include your own results from this exercise:
 
-+ Using your plugin from Task 1 generate __6__ different segmentations of the "cells"-image using approapriate hyperparamters. 
-+ Use the plugin you implemented in this task to evaluate each segmentation 
-+ Display your results in an appropriate way 
++ Using your plugin from Task 1 generate __6__ different segmentations of the "cells"-image using approapriate hyperparamters.
++ Use the plugin you implemented in this task to evaluate each segmentation
++ Display your results in an appropriate way
 + Name two other ways to evaluate how good the segmentation is
 
 

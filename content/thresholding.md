@@ -11,62 +11,27 @@ author= "Sebastian Dietz, Mischa Dombrowski"
 1) [Thresholding](../thresholding)
 2) [Segmentation](../segmentation)
 3) [Otsu's Method](../otsu)
-4) [Edge Detection](../edgedetection) 
-5) [Canny Edge](../cannyedge) 
+4) [Edge Detection](../edgedetection)
+5) [Canny Edge](../cannyedge)
 6) [Outlook and Conclusion](../conclusion)
 
 
 # 1: Thresholding and Illumination-Correction
 
-# 1.1: Introduction 
-For this project you are mainly going to work on the cells image provided in the Project GitHub repository. Have a look at it.  
+# 1.1: Introduction
+Your first task consists of implementing an ImageJ-Plugin capable of performing a classic thresholding operation, as well as correcting for uneven illumination within an image.
 
-Your first task consists of implementing an ImageJ-Plugin capable of performing a classic thresholding operation, as well as correcting for uneven illumination within an image. 
+To get you started, you have been provided with an incomplete class called `Task_1_Threshold`.
 
-To get you started, you have been provided with an incomplete class called `Task_1_Threshold`. Firstly, check whether you have succesfully installed ImageJ by running the program:
-```java
-@Override
-public void run(ImageProcessor ip) {
-     GenericDialog gd = new GenericDialog("Thresholding");
-     gd.addNumericField("Threshold value:", 128, 0);
-     gd.addCheckbox("Correct uneven illumination", false);
-     gd.showDialog();
-
-     //check if the dialog was canceled
-     if (gd.wasCanceled())
-          return;
-
-     //get user choices  - remove everything from here to check installation 
-     int threshold = (int) gd.getNextNumber();
-     boolean correct = gd.getNextBoolean();
-
-     //correct illumination if selected
-     ImageProcessor ipCopy;
-     if (correct) {
-          ipCopy = correctIllumination(ip);
-     } else {
-          ipCopy = ip;
-     }
-     // threshold the image
-     ByteProcessor thresholdedIp = threshold(ipCopy, threshold);
-     ImagePlus thresholdedImage = new ImagePlus("Thresholded Image", thresholdedIp);
-     thresholdedImage.show();
-    }
-}
-```
-
-You should be able to see the default ImageJ plugin. After you open the image provided in `img` you can click on `Plugins` and then `Task 1 Threshold` to run the algorithm.
-
-
-# 1.1: Thresholding 
+# 1.2: Thresholding
 The concept of thresholding - as the name implies - is based on evaluating an image pixel by pixel and checking each time, whether it falls above or below a given threshold-value.
-If the pixel value in question is above the specified value, it will be set to white. If not it will be set to black. 
+If the pixel value in question is above the specified value, it will be set to white. If not it will be set to black.
 
 To do:
 
 1. Create a new method:
      ```java
-     public ByteProcessor threshold ( ImageProcessor ip , int threshold ){} 
+     public ByteProcessor threshold ( ImageProcessor ip , int threshold ){}
      ```
 
 2. Create a new `ByteProcessor` to store your result
@@ -74,11 +39,16 @@ To do:
 4. Set each pixel in the output - ByteProcessor according to your evaluation
 5. Return your result
 
-**Note**: You are not allowed to use inbuilt methods provided by ImageJ to perform the thresholding operation   
 
-# 1.2: Illumination-Correction
 
-Next we want to perform illumination-correction to the image by 
+> &#128221; **Note:**
+> Do not use inbuilt methods provided by ImageJ to perform the thresholding operation   
+
+# 1.3: Illumination-Correction
+
+For cases where the illumination of the image is uneven, you will now add the functionality to perform Illumination-Correction.
+
+To do:
 
 1. Create a new method:
     ```java
@@ -91,8 +61,8 @@ Next we want to perform illumination-correction to the image by
 5. Convert your result to a `ByteProcessor` and return it
 
 
-**Hint**: 
-The division of two images can simply be performed by iterating over them and performing it "pixelwise". 
+>&#128161;**Tip:**
+The division of two images can simply be performed by iterating over them and performing it "pixelwise".
 There is however a method provided by ImageJ, which allows you to move (copy) the entire image-data of one image to another, while applying a simple operation (such as division) to every pixel of both images in one go. Check the [ImageJ-API](https://imagej.net/ij/developer/api/ij/ij/process/Blitter.html) in case you want to use this method.
 
 ---
@@ -101,28 +71,28 @@ To allow you to test your results, the `run`-method already contains code for a 
 
 It pays to have a look at this code now, as you will eventually be creating a few dialogues of your own in later tasks.
 
-Consider using the "Cells" image to try out your code, since it will be the image you will be working with for the rest of your project. 
+Consider using the "Cells" image to try out your code, since it will be the image you will be working with for the rest of your project.
 
 ---
-# 1.3: Project Introduction
+# 1.4: Project Introduction
 
-Firstly, you should add a short introduction to your project report that smoothly introduces the reader to the topic. It should contain:
+To begin the written secion of your Final Project, you will first need to come up with an introduction. This introduction should:
 
-+ Capture the readers interest with a short motivation of the project 
++ Capture the readers interest with a short motivation of the project
 + Summarize and contextualize the approach to other research methods
 + Position your approach with respect to other approaches
 + Define the research problem and problem statement
 + Give an overview of the paper's structure
 
-# 1.4: Project-Report
+# 1.5: Project-Report
 
 The part of your report concerning Task_1 should contain the following:
 
 + A brief description of the methods you implemented
 + Provide a mathematically sound formulation of the thresholding operation
 + A short discussion on why it may be necessary to correct the illumination in microscopy-images
-+ Images __you__ generated with __your code__, that showcase what you described 
-+ Create a figure that shows a few examples of the image before and after thresholding. What does `correctIllumination` do? 
++ Images __you__ generated with __your code__, that showcase what you described
++ Create a figure that shows a few examples of the image before and after thresholding. What does `correctIllumination` do?
 
 
 [Next](../segmentation)

@@ -8,51 +8,60 @@ author= "Sebastian Dietz, Mischa Dombrowski, Stephan Seitz"
 
 # Project Setup:
 
-Since you have been working with IntelliJ throughout the entire semester when doing your exercises, you should already have it installed on the device you intend to use. 
+Since you have been working with IntelliJ throughout the entire semester when working on your exercises, you should already have it installed on the device you intend to use.
 If not, have a look at the setup-guide you were given at the beginning of the Semester and install it accordingly.
 
-If you encounter any problems while setting up your project, feel free to ask your tutors. 
+The setup for this project will work very similar to the setup for your exercises.
 
-To do: 
+If you encounter any problems while setting up, feel free to ask your tutors.
 
-1. Download the project template from [Github](https://github.com/mt2-erlangen/project_ss2024). 
-2. Unpack the zip-file and be sure to select the file-destination such that it is not unpacked "into its own folder" (meaning that there would be a `project-ss24`-folder within the `project-ss24`-folder) as might be the case by default.
-3. Open IntelliJ and click 
-   > File &rarr; Open &rarr; project-ss24
+To do:
 
-   and hit `ok` to open the empty project template. 
+1. Download the project template from [Github](https://github.com/mt2-erlangen/project_ss2024).
+<br>
+1. Unpack the zip-file and be sure to select the file-destination such that it is not unpacked "into its own folder" (meaning that there would be a `project-ss25`-folder within the `project-ss25`-folder) as might be the case by default.
+ <br>
+1. Open IntelliJ and click  **(File) &rarr; Open &rarr; project-ss25**
 
-    Make sure to select the entire `project-ss24`-folder and not one of the folders contained within. 
-4. Click
-   > File &rarr; Project Structure &rarr; Project 
+   and hit `ok` to open the empty project template.
 
-    and select `jbr-17` or `17` or a similar SDK. Click on `Apply`.
-   
-5. In the same window go to
-   >  Modules &rarr; Paths 
-   
-   Select `Use module compile output path` and click the folder-icon towards the right side of the path. Select the `plugins`-folder contained in your project as the destination. Again select the entire folder; do not access it and select anything contained within. 
-6. Again in the same window select
+    Make sure to select the entire `project-ss25`-folder and not one of the folders contained within.
+<br>
+1. Navigate to **File &rarr; Project Structure &rarr; Project** and select jbr-17 or 17 or a similar SDK.
+ The SDK that works for you may vary depending on your device and the IntelliJ version you are using. If you have been working on your exercises, simply use the one that worked for you when setting up initially.
+ <br>
 
-   >Libraries &rarr; __+__ &rarr; Java
+1.  Navigate to **File → Project Structure → Modules → Paths**.
+ Check, that **Use module compile output path** is selected and that the
+ **plugins**-folder contained in the is selected as the destination. If this is set
+ incorrectly, simply use the folder-icon towards the right of the path to navigate to
+ this folder and select it.
+ <br>
 
-    and select the __ij.jar__ file that is contained in the project-folder.
+1.  In the same window select **Libraries** and make sure that **ij** is listed.
+ If it is missing, add it by hitting **+ → Java** and selecting the ij.jar file that is contained within your project.
 
-7. After concluding these steps your project structure should look like this:   
+1. After concluding these steps your project structure should look something like this:   
 <br/>
 
    <center><img src="../project_structure.png" width="250" height="250"></center>
-    there should not be any error-messages when you open for example Task_1.
 
-1. You can now right-click on the `ij.jar`-file in your project structure and select ``Run 'ij.jar'``. This should open the ImageJ interface. Check the `Plugins`-dropdown-menu. It should look like this: 
+    You should now be able to build your project without any errors.
+
+<br>
+
+1. You can now right-click on the `ij.jar`-file in your project structure and select ``Run 'ij.jar'``. This should open the ImageJ interface. Check the `Plugins`-dropdown-menu. It should look like this:
     <br/>
 
-    <center><img src="../plugins_dropdown.png" width="250" height="300"></center>
+    <center><img src="../Plugins_dropdown.png" width="250" height="300"></center>
 
-Once you are done with this and everything is working nicely, you can get started with working on your first task. 
+Similar to the intitial exercise-setup, you should be able to run the included ``Setup_Test``- Plugin and the message should pop up.
 
+Once you are done with this and everything is working nicely, you can get started with working on your first task.
 
-## ImageJ
+## General Info:
+
+### ImageJ
 
 The image processing program we want to use during this semester is called ImageJ.
 It was developed at the US National Institutes of Health and is used nowadays especially in research
@@ -62,7 +71,7 @@ If you want to, you can download a stand-alone version of the program [here](htt
 This is not necessary for the exercises.
 
 
-## Debugging
+### Debugging
 
 <i>Everything here should just be a recap of what you know about debugging from the exercises. Feel free to skip if you know how debugging works!</i>
 
