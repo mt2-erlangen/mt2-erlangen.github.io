@@ -99,9 +99,9 @@ To do:
    &#128221; <strong> Note: </strong>
 
    Negative values are simply "mapped" to the corresponding positive value (for example -45° &#8793; 135° or -90° &#8793; 90°). You can do this by simply checking if the value is negative and then adding __180°__. If the closest match is 180° the direction is set to 0°
-</div>
+   </div>
  
-1. Return the final ByteProcessor
+6. Return the final ByteProcessor
 
 ---
 
