@@ -20,7 +20,7 @@ author= "Sebastian Dietz, Mischa Dombrowski"
 
 Similar to Thresholding and Segmentation, Edge-Detection is a commonly used technique in image processing (i.e. to descern boundarys of objects within an image etc.). In your project you will first be implementing a set of primitive edge-detection filters, as well as the more advanced Canny-Edge-Filter (Task 5). 
 
----
+___
 
 ## 4.1: The Filter-Kernels
 There are a variety of different Kernels used for edge detection; some of the most common ones are Sobel, Scharr, and Prewitt - Kernels.
@@ -35,7 +35,7 @@ Using both the X- and Y-derivative of an image, you can then generate the  __ima
 
 This image-gradient will then show the edges as bright and the rest of the image as black.
 
----
+___
 
 ## 4.2: Filtering and Gradient
 
@@ -48,10 +48,15 @@ To do:
    ```
 2. Create a new `FloatProcessor` to store the resulting image
 3. Iterate through the input image and perform the convolution 
-   > __Note__: 
-    >Since you are working with a 3x3 kernel, you can't simply iterate through the entire image because you would encounter OutOfBounds-exceptions when getting to the rim of the image. 
-    For the sake of simplicity you can therefore ignore the outermost row/column of pixels.
+
+   <div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
+   &#128221; <strong> Note: </strong> <br>
+   Since you are working with a 3x3 kernel, you can't simply iterate through the entire image because you would encounter OutOfBounds-exceptions when getting to the rim of the image. 
+   For the sake of simplicity you can therefore ignore the outermost row/column of pixels.
+   </div>	
 4. Return the resulting image
+
+___
 
 Now that your plugin can perform a convolution (and therefore a derivation), you can calculate the image-gradient.
 
@@ -68,7 +73,7 @@ To do:
 4. Iterate through the image and calculate the Gradient value for each pixel in the output-image
 5. Return the resulting image-gradient
 
----
+___
 
 ## 4.3: User-Dialog
 
@@ -85,15 +90,19 @@ To do:
    ```
 3. Add a popup-menu to select which filter you want to use 
 
-   __Tip__: Check the [ImageJ-API](https://imagej.net/ij/developer/api/ij/ij/gui/GenericDialog.html)
+   <div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
+   &#128161; <strong> Tip: </strong> Check the <a href="https://imagej.net/ij/developer/api/ij/ij/gui/GenericDialog.html">ImageJ-API</a> to see how popup-menus are implemented <br>
+   </div>
+
+  
 
 4. Show the dialog
-5. Check if the dialog was cancelled. If yes, terminate the plugin 
+5. Check if the dialog was cancelled. If it was, terminate the plugin 
 6. Get the __index__ (in the popup-menu) of the selected filter
 7. Perform the edge-detection using the selected filter and the methods you implemented
 8. Show your result
 
----
+___
 
 ## 4.4: Project-Report
 

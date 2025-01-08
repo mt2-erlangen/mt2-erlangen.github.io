@@ -37,7 +37,7 @@ To do:
 
 1. Convert the input-image to a `FloatProcessor` and apply a __gaussian blur__.
    <div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
-   &#128221; <strong> Note: </strong> 
+   &#128221; <strong> Note: </strong> <br>
 
    The $\sigma$-parameter is one of the values you can play around with later on to improve your results. Once you are done, you will be able to set this value via a user-dialog. For now, a good starting point would be the value __2__
    </div>
@@ -76,7 +76,7 @@ The atan2-method used to determine the direction returns the angle $\Theta$, tha
 
 The getDir-method will determine the gradient-direction for each pixel and then round it to one of the following values: __0°, 45°, 90°, 135°__. These stem from the fact that an image is a discrete set of pixels and therefore we can only differentiate between these directions. 
 
-<center><img src="../edge-directions.png" width="650" height="150"></center>
+<center><img src="../edge-directions.png" width="650" height="160"></center>
 
 <center>Gradient-directions: 0°, 45°, 90°, 135°</center>
 
@@ -100,10 +100,9 @@ To do:
 
    Negative values are simply "mapped" to the corresponding positive value (for example -45° &#8793; 135° or -90° &#8793; 90°). You can do this by simply checking if the value is negative and then adding __180°__. If the closest match is 180° the direction is set to 0°
    </div>
- 
-6. Return the final ByteProcessor
 
----
+6. Return the final ByteProcessor
+___
 
 ## 5.3: Non-Maximum-Suppression
 
@@ -123,7 +122,7 @@ To do:
 4. If it is a local maximum, store the value in the output-FloatProcessor
 5. Return the final FloatProcessor
 
----
+___
 
 ## 5.4: Hysteresis Thresholding
 
@@ -163,15 +162,15 @@ To avoid mistakes here, the following code, as well as the included `hasNeighbou
 
    (__Out__ refers to the output-image. If you named it differently, you can obviously change the code accordingly)
 
-1. Return the output image
+6. Return the output image
 
----
+___
 
 Add a simple __user-dialog__ to the `run`-method, which allows you to select values for $\sigma$, the upper threshold and the lower threshold.  
 
 Finally perform the `getDir`,`nonMaxSuppress` and `hysteresisThreshold` steps in sequence within your `run`-method and display your final result.
 
----
+___
 ## 5.5: Project-Report
 
 The part of your report concerning Task_5 should contain the following:
