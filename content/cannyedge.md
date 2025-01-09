@@ -151,7 +151,7 @@ To avoid mistakes here, the following code, as well as the included `hasNeighbou
       changed = false;
          for (int x = 0; x < In.getWidth(); x++) {
             for (int y = 0; y < In.getHeight(); y++) {
-               if (In.getPixelValue(x, y) >= tLow && hasNeighbours(Out, x, y) && Out.getPixel(x,y)==0) {
+               if (In.getPixelValue(x, y) > tLow && hasNeighbours(Out, x, y) && Out.getPixel(x,y)==0) {
                         Out.set(x, y, 255);
                         changed = true;
                     }
