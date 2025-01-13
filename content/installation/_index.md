@@ -17,17 +17,17 @@ If you encounter any problems while setting up, feel free to ask your tutors.
 
 To do: 
 
-1. Download the project template from [Github](https://github.com/mt2-erlangen/project_ss2024). 
+1. Download the project template from [Github](https://github.com/mt2-erlangen/MT2-project-ImageProcessing). 
 <br>
 
-2. Unpack the zip-file and be sure to select the file-destination such that it is not unpacked "into its own folder" (meaning that there would be a `project-ss25`-folder within the `project-ss25`-folder) as might be the case by default.
+2. Unpack the zip-file and be sure to select the file-destination such that it is not unpacked "into its own folder" (meaning that there would be a `MT2-project-ImageProcessing`-folder within the `MT2-project-ImageProcessing`-folder) as might be the case by default.
  <br>
 
-3. Open IntelliJ and click  **(File) &rarr; Open &rarr; project-ss25**
+3. Open IntelliJ and click  **(File) &rarr; Open &rarr; MT2-project-ImageProcessing**
 
    and hit `ok` to open the empty project template. 
 
-    Make sure to select the entire `project-ss25`-folder and not one of the folders contained within. 
+    Make sure to select the entire `MT2-project-ImageProcessing`-folder and not one of the folders contained within. 
 <br>
 
 4. Navigate to **File &rarr; Project Structure &rarr; Project** and select jbr-17 or 17 or a similar SDK. 
