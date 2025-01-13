@@ -56,7 +56,7 @@ To do:
 8. You can now right-click on the `ij.jar`-file in your project structure and select ``Run 'ij.jar'``. This should open the ImageJ interface. Check the `Plugins`-dropdown-menu. It should look like this: 
     <br/>
 
-    <center><img src="../plugins_dropdown.png" width="250" height="300"></center>
+    <center><img src="../Plugins_dropdown.png" width="250" height="300"></center>
 
 Similar to the intitial exercise-setup, you should be able to run the included ``Setup_Test``- Plugin and the message should pop up. 
 
