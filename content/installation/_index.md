@@ -44,7 +44,7 @@ To do:
 6.  In the same window select **Libraries** and make sure that **ij** is listed.
  If it is missing, add it by hitting **+ → Java** and selecting the ij.jar file that is contained within your project.
 
-7. After concluding these steps your project.structure should look something like this:   
+7. After concluding these steps, your project structure should look something like this:   
 <br/>
 
    <center><img src="../project_structure.png" width="240" height="320"></center>
