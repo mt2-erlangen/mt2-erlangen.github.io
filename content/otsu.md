@@ -34,13 +34,13 @@ Otsu's method works by maximizing the **between class variance** Ïƒ<sub>B</sub>Â
 
 with
 
-P~1~(&theta;) = $\sum_{i = 0}^{\theta}  h(i)$  (&#8793; number of pixels below the threshold (background))
+P<sub>1</sub>(&theta;) = $\sum_{i = 0}^{\theta}  h(i)$  (&#8793; number of pixels below the threshold (background))
 
-P~2~(&theta;) = 1 - P~1~(&theta;) = $\sum_{i = \theta +1}^{L-1}  h(i)$ (&#8793; number of pixels above the threshold (foreground))
+P<sub>2</sub>(&theta;) = 1 - P<sub>1</sub>(&theta;) = $\sum_{i = \theta +1}^{L-1}  h(i)$ (&#8793; number of pixels above the threshold (foreground))
 
-&mu;~1~(&theta;) = $\frac{1}{P1(\theta)}$ $\cdot$ $\sum_{i = 0}^{\theta} (i+1)h(i)$  (&#8793; mean intensity of the background)
+&mu;<sub>1</sub>(&theta;) = $\frac{1}{P1(\theta)}$ $\cdot$ $\sum_{i = 0}^{\theta} (i+1)h(i)$  (&#8793; mean intensity of the background)
 
-&mu;~2~(&theta;) = $\frac{1}{P2(\theta)}$ $\cdot$ $\sum_{i = \theta +1}^{L-1} (i+1)h(i)$  (&#8793; mean intensity of the foreground)
+&mu;<sub>2</sub>(&theta;) = $\frac{1}{P2(\theta)}$ $\cdot$ $\sum_{i = \theta +1}^{L-1} (i+1)h(i)$  (&#8793; mean intensity of the foreground)
 </div>
 
 with __h(i)__ being the normalized histogram of the image, __&theta;__ being the current threshold and __L__ being the length of the histogram-array.
