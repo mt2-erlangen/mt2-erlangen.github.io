@@ -29,7 +29,19 @@ ___
 
 Otsu's method works by maximizing the **between class variance** σ<sub>B</sub>² which is defined as:
 
-<center><img src="../Otsu.png" width="649" height="295"></center>
+<div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
+&sigma;<sub>B</sub><sup>2</sup> (&theta;) = P<sub>1</sub>(&theta;) 	&middot; P<sub>2</sub>(&theta;) &middot; (&mu;<sub>1</sub>(&theta;) - &mu;<sub>2</sub>(&theta;))<sup>2</sup> <br><br>
+
+with
+
+P~1~(&theta;) = $\sum_{i = 0}^{\theta}  h(i)$  (&#8793; number of pixels below the threshold (background))
+
+P~2~(&theta;) = 1 - P~1~(&theta;) = $\sum_{i = \theta +1}^{L-1}  h(i)$ (&#8793; number of pixels above the threshold (foreground))
+
+&mu;~1~(&theta;) = $\frac{1}{P1(\theta)}$ $\cdot$ $\sum_{i = 0}^{\theta} (i+1)h(i)$  (&#8793; mean intensity of the background)
+
+&mu;~2~(&theta;) = $\frac{1}{P2(\theta)}$ $\cdot$ $\sum_{i = \theta +1}^{L-1} (i+1)h(i)$  (&#8793; mean intensity of the foreground)
+</div>
 
 with __h(i)__ being the normalized histogram of the image, __&theta;__ being the current threshold and __L__ being the length of the histogram-array.
 
@@ -59,7 +71,9 @@ To do:
    ```
 
    a. Create a `double`-array of appropriate size to store the histogram-values
+   
    b. Iterate through the input-image and update the corresponding histogram-entry for each pixel's value
+   
    c. Normalize and return the histogram. 
 
 <div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
