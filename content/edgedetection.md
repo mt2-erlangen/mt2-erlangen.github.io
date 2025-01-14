@@ -25,7 +25,24 @@ ___
 ## 4.1: The Filter-Kernels
 There are a variety of different Kernels used for edge detection; some of the most common ones are Sobel, Scharr, and Prewitt - Kernels.
 
-<center><img src="../filter.png" width="659" height="333"></center>
+<div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
+<strong>Sobel:</strong>
+
+X-Direction: $\begin{bmatrix}1&0&-1\\2&0&-2\\1&0&-1\end{bmatrix}$ &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; Y-Direction: $\begin{bmatrix}1&2&1\\0&0&0\\-1&-2&-1\end{bmatrix}$
+
+---
+
+<strong>Scharr:</strong>
+
+X-Direction: $\begin{bmatrix}47&0&-47\\162&0&-162\\47&0&-47\end{bmatrix}$ &emsp;&emsp;&emsp;&nbsp;&nbsp;Y-Direction: $\begin{bmatrix}47&162&47\\0&0&0\\-47&-162&-47\end{bmatrix}$
+
+---
+
+<strong>Prewitt:</strong>
+
+X-Direction: $\begin{bmatrix}1&0&-1\\1&0&-1\\1&0&-1\end{bmatrix}$ &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;Y-Direction: $\begin{bmatrix}1&1&1\\0&0&0\\-1&-1&-1\end{bmatrix}$
+</div>
+
 
 When applying these Filter-Kernels to an image through __convolution__, you essentially create the derivative of the image. 
 This is because these Kernels result in higher pixel-values in regions, where the image contains a sharp change in brightness (similar to derivatives in analysis). This "derivation" is performed in X- and Y-direction seperately.
