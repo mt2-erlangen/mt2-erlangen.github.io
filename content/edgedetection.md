@@ -25,7 +25,7 @@ ___
 ## 4.1: The Filter-Kernels
 There are a variety of different Kernels used for edge detection; some of the most common ones are Sobel, Scharr, and Prewitt - Kernels.
 
-<center><img src="../filter.png" width="659" height="333"></center>
+<center><img src="../ED_Kernels.png" width="590" height="482"></center>
 
 When applying these Filter-Kernels to an image through __convolution__, you essentially create the derivative of the image. 
 This is because these Kernels result in higher pixel-values in regions, where the image contains a sharp change in brightness (similar to derivatives in analysis). This "derivation" is performed in X- and Y-direction seperately.
