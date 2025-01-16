@@ -16,15 +16,21 @@ author= "Mischa Dombrowski, Sebastian Dietz, Zhengguo Tan, Jinho Kim"
 6) [Outlook and Conclusion](../conclusion)
 
 # Disclaimer
-This is a short introduction with general information and best practices including project report guidelines. __Thoroughly read it and stricly follow all rules__. We have also prepared a video with all necessary information about the report. 
 
-We provide you with a basic [java template](https://github.com/mt2-erlangen/project_ss2024) including some useful helper functions. You have to use this template as the starting point of your project. For more information on the **installation** have a look at our [getting started guide](../installation).
+This is a short introduction with general information and best practices, as well as guidelines for your project-report. We highly suggest you __read through the entirety of this Introduction__ in order to get a detailed impression of the project-work ahead of you. We have also prepared a video with all the necessary information about the report. 
 
-Furthermore, we provide a [**latex-template**](https://github.com/mt2-erlangen/LaTeX-template-2024) that you should use. It gives a more detailed structure for the report. Don't change the order and replace all images with images generated from your own implementation.
+You have been provided with a basic [java template](https://github.com/mt2-erlangen/project_ss2024) containing a fully set up project, as well as the empty task-classes you will be working with.
 
-In case you are working on CIP machines you may run into quota issues. You can fix these issues with our [guide](../quota).
+For information on the **initial Setup**, have a look at our [getting started guide](../installation).
 
-Please also note that you can connect remotely to CIP machines using a [remote SSH connection](https://wwwcip.informatik.uni-erlangen.de/documentation/services.de.html)
+Furthermore, you have been provided a [**latex-template**](https://github.com/mt2-erlangen/LaTeX-template-2024) as a starting point for your report. 
+It already defines the structure your report should have, so please **do not change the order of the report-sections**. 
+
+In cases where the images to expect after completing a task were given in the exercise, you should obviously **only use images you generated with your own code in your report**
+
+If you are working on CIP machines, you may run into quota issues. You can fix these issues with this short [guide](../quota).
+
+Please also note, that you can connect remotely to CIP machines using a [remote SSH connection](https://wwwcip.informatik.uni-erlangen.de/documentation/services.de.html)
 
 
 
