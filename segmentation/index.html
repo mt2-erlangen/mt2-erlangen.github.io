@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Project Work 2 - Segmentation </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Project Work 2 - Segmentation ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;segmentation&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Project Work 2 - Segmentation">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Project Work 2 - Segmentation</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Sebastian Dietz, Mischa Dombrowski</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <h1 id="overview">Overview</h1>
+<ol start="0">
+<li><a href="../introduction">Introduction</a></li>
+<li><a href="../thresholding">Thresholding</a></li>
+<li><a href="../segmentation">Segmentation</a></li>
+<li><a href="../otsu">Otsu's Method</a></li>
+<li><a href="../edgedetection">Edge Detection</a> </li>
+<li><a href="../cannyedge">Canny Edge</a> </li>
+<li><a href="../conclusion">Outlook and Conclusion</a></li>
+</ol>
+<h1 id="2-segmentation">2: Segmentation</h1>
+<p>For your second task, you will be implementing a plugin, which will be capable of evaluating the quality of a segmentation by comparing it to a given reference-image. In clinical practice these reference images can be attained through manual segmentation of the image by a skilled physician.</p>
+<p>In your case the provided reference image will look like this:</p>
+<center><img src="../cells_reference.png" width="250" height="250"></center>
+<hr />
+<h2 id="2-1-a-new-class">2.1: A new class</h2>
+<p>In order to quantify the quality of your segmentation, you will be calculating the values for <strong>Sensitivity</strong> and <strong>Specificity</strong>, which were introduced in your blackboard-exercise. In addition, you will be creating a dedicated class to store and access these values. </p>
+<p>To do:</p>
+<ol>
+<li>Create a new class in the <code>src</code>-Folder named <code>EvaluationResult</code> </li>
+<li>Create the class-variables <code>sensitivity</code> and <code>specificity</code> (both double)</li>
+<li>Implement a constructor:<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public </span><span style="color:#bf616a;">EvaluationResult </span><span>( </span><span style="color:#b48ead;">double</span><span> specificity , </span><span style="color:#b48ead;">double</span><span> sensitivity ){}
+</span></code></pre>
+</li>
+<li>Implement getter-methods for both values:<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span> </span><span style="color:#b48ead;">public double </span><span style="color:#bf616a;">getSpecificity </span><span>(){}
+</span><span> </span><span style="color:#b48ead;">public double </span><span style="color:#bf616a;">getSensitivity </span><span>(){}
+</span></code></pre>
+</li>
+</ol>
+<hr />
+<h2 id="2-2-the-plugin">2.2: The Plugin</h2>
+<p>The rest of the code for this task will be implemented in the provided class <code>Task_2_EvaluateSegmentation</code>.</p>
+<p>In order to calculate the values for <strong>Sensitivity</strong> and <strong>Specificity</strong>, you will need to assign a &quot;state&quot; to each pixel of your segmented image. The states in question are:</p>
+<table><thead><tr><th>State</th><th></th></tr></thead><tbody>
+<tr><td>TP</td><td>&quot;True Positive&quot; → the pixel was correctly identified as part of the target</td></tr>
+<tr><td>TN</td><td>&quot;True Negative&quot; → the pixel was correctly identified  as background</td></tr>
+<tr><td>FP</td><td>&quot;False Positive&quot; → the pixel was falsely identified as part of the target</td></tr>
+<tr><td>FN</td><td>&quot;False Negative&quot; → the pixel was falsely identified as background</td></tr>
+</tbody></table>
+<p>For decerning which of these cases applies to a given pixel, the reference image is used as the &quot;correct&quot; segmentation.</p>
+<p>The values for <strong>Sensitivity</strong> and <strong>Specificity</strong> can then be calculated as follows: </p>
+<div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
+<strong> Sensitivity = TP/(TP+FN) </strong> <br>
+<strong> Specificity = TN/(TN+FP) </strong> <br> 
+</div>
+<p>To do:</p>
+<ol>
+<li>Create a new method:<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span> </span><span style="color:#b48ead;">private </span><span style="color:#ebcb8b;">EvaluationResult </span><span style="color:#bf616a;">evaluateSegmentation </span><span>( </span><span style="color:#ebcb8b;">ImageProcessor
+</span><span> segmentation , </span><span style="color:#ebcb8b;">ImageProcessor</span><span> reference ){}
+</span></code></pre>
+</li>
+<li>Check if both images have the same dimensions - if not return null</li>
+<li>Iterate over both images and count up the number of occurrances for each state </li>
+<li>Calculate the values for <strong>Sensitivity</strong> and <strong>Specificity</strong> using the formulas listed above</li>
+<li>Create a new <code>EvaluationResult</code>-object to store these values and return it</li>
+</ol>
+<hr />
+<p>Now that you have created a method which perfroms the actual evaluation, you will need to implement the <code>run</code>-method in order to apply the plugin to an image. </p>
+<p>To do:</p>
+<ol>
+<li>
+<p>Use the <code>IJ.openImage()</code>-method to open a window, which allows the user to select the reference image.</p>
+</li>
+<li>
+<p>Check wether the reference image has been loaded successfully - if not throw a fitting exception</p>
+<div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
+&#128161; <strong> Tip: </strong> <br>
+<p>Check the <a href="https://imagej.net/ij/developer/api/ij/ij/io/Opener.html">ImageJ-API</a> to see how the method behaves when no image has been loaded</p>
+</div>
+</li>
+<li>
+<p>Once the image was loaded successfully, apply your <code>evaluateSegmentation()</code>-method and print your results</p>
+<div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
+&#128221; <strong> Note: </strong> <br> 
+<p>As a test for your code, you could for example choose the <code>cells_reference</code> image as both &quot;segmentation&quot; and &quot;reference&quot;. The plugin should then return 1.0 for both values.</p>
+</div>
+</li>
+</ol>
+<hr />
+<h2 id="2-3-project-report">2.3: Project-Report</h2>
+<p>The part of your report concerning Task 3 should contain the following:</p>
+<ul>
+<li>A brief explanation as to what TP, TN, FP, FN mean</li>
+<li>The formulas for Specificity and Sensitivity</li>
+<li>A brief explanation on what Specificity and Sensitivity mean in the context of image-segmentation</li>
+</ul>
+<p>Additionally you should also include your own results from this exercise:</p>
+<ul>
+<li>Using your plugin from Task 1 generate <strong>6</strong> different segmentations of the &quot;cells&quot;-image using approapriate hyperparamters. </li>
+<li>Use the plugin you implemented in this task to evaluate each segmentation </li>
+<li>Display your results in an appropriate way </li>
+<li>Name two other ways to evaluate how good the segmentation is</li>
+</ul>
+<p><a href="../otsu">Next</a></p>
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>

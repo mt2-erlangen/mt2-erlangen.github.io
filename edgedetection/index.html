@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Project Work 4 - Edge Detection </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Project Work 4 - Edge Detection ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;edgedetection&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Project Work 4 - Edge Detection">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Project Work 4 - Edge Detection</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Sebastian Dietz, Mischa Dombrowski</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <h1 id="overview">Overview</h1>
+<ol start="0">
+<li><a href="../introduction">Introduction</a></li>
+<li><a href="../thresholding">Thresholding</a></li>
+<li><a href="../segmentation">Segmentation</a></li>
+<li><a href="../otsu">Otsu's Method</a></li>
+<li><a href="../edgedetection">Edge Detection</a> </li>
+<li><a href="../cannyedge">Canny Edge</a> </li>
+<li><a href="../conclusion">Outlook and Conclusion</a></li>
+</ol>
+<h1 id="4-primitive-edge-detection-filters">4: Primitive Edge-Detection Filters</h1>
+<p>Similar to Thresholding and Segmentation, Edge-Detection is a commonly used technique in image processing (i.e. to descern boundarys of objects within an image etc.). In your project you will first be implementing a set of primitive edge-detection filters, as well as the more advanced Canny-Edge-Filter (Task 5). </p>
+<hr />
+<h2 id="4-1-the-filter-kernels">4.1: The Filter-Kernels</h2>
+<p>There are a variety of different Kernels used for edge detection; some of the most common ones are Sobel, Scharr, and Prewitt - Kernels.</p>
+<center><img src="../ED_Kernels.png" width="590" height="482"></center>
+<p>When applying these Filter-Kernels to an image through <strong>convolution</strong>, you essentially create the derivative of the image. 
+This is because these Kernels result in higher pixel-values in regions, where the image contains a sharp change in brightness (similar to derivatives in analysis). This &quot;derivation&quot; is performed in X- and Y-direction seperately.
+Using both the X- and Y-derivative of an image, you can then generate the  <strong>image-gradient</strong> by calculating the <strong>euclidean norm</strong> over both derivatives at each pixel of the image. </p>
+<blockquote>
+<p>$G$ = $\sqrt{G_{x} ^ 2+G_{y} ^ 2}$</p>
+</blockquote>
+<p>This image-gradient will then show the edges as bright and the rest of the image as black.</p>
+<hr />
+<h2 id="4-2-filtering-and-gradient">4.2: Filtering and Gradient</h2>
+<p>To do:</p>
+<ol>
+<li>
+<p>Open the <code>Task_4_Filters</code>-class and create a new method: </p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">FloatProcessor </span><span style="color:#bf616a;">applyFilter </span><span>(</span><span style="color:#ebcb8b;">FloatProcessor In</span><span>, </span><span style="color:#b48ead;">int[][]</span><span> kernel){}
+</span></code></pre>
+</li>
+<li>
+<p>Create a new <code>FloatProcessor</code> to store the resulting image</p>
+</li>
+<li>
+<p>Iterate through the input image and perform the convolution </p>
+<div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
+&#128221; <strong> Note: </strong> <br>
+Since you are working with a 3x3 kernel, you can't simply iterate through the entire image because you would encounter OutOfBounds-exceptions when getting to the rim of the image. 
+For the sake of simplicity you can therefore ignore the outermost row/column of pixels.
+</div>	
+</li>
+<li>
+<p>Return the resulting image</p>
+</li>
+</ol>
+<hr />
+<p>Now that your plugin can perform a convolution (and therefore a derivation), you can calculate the image-gradient.</p>
+<p>To do: </p>
+<ol>
+<li>
+<p>Create a new method:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">FloatProcessor </span><span style="color:#bf616a;">getGradient </span><span>(</span><span style="color:#ebcb8b;">FloatProcessor In_X</span><span>, </span><span style="color:#ebcb8b;">FloatProcessor In_Y</span><span>){}
+</span></code></pre>
+<p>(In_X and In_Y are the derivatives in X- and Y-direction respectively)</p>
+</li>
+<li>
+<p>Check if the input-images have the same dimensions, if not throw a fitting exception</p>
+</li>
+<li>
+<p>Create a new <code>FloatProcessor</code> to store the resulting image</p>
+</li>
+<li>
+<p>Iterate through the image and calculate the Gradient value for each pixel in the output-image</p>
+</li>
+<li>
+<p>Return the resulting image-gradient</p>
+</li>
+</ol>
+<hr />
+<h2 id="4-3-user-dialog">4.3: User-Dialog</h2>
+<p>At this point your plugin contains everything needed to perform primitive edge-detection. 
+As a final step you will implement a simple user-dialog, which will allow the user to select between the three filters mentioned above. 
+The following code should be implemented in the <code>run</code>-method</p>
+<p>To do:</p>
+<ol>
+<li>
+<p>Create a new <code>GenericDialog</code></p>
+</li>
+<li>
+<p>Create a <code>String</code>-array:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#ebcb8b;">String</span><span style="color:#b48ead;">[] </span><span style="color:#ebcb8b;">Filters </span><span>= {&quot;</span><span style="color:#a3be8c;">Sobel</span><span>&quot;,&quot;</span><span style="color:#a3be8c;">Scharr</span><span>&quot;,&quot;</span><span style="color:#a3be8c;">Prewitt</span><span>&quot;};
+</span></code></pre>
+</li>
+<li>
+<p>Add a popup-menu to select which filter you want to use </p>
+<div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
+&#128161; <strong> Tip: </strong> Check the <a href="https://imagej.net/ij/developer/api/ij/ij/gui/GenericDialog.html">ImageJ-API</a> to see how popup-menus are implemented <br>
+</div>
+</li>
+<li>
+<p>Show the dialog</p>
+</li>
+<li>
+<p>Check if the dialog was cancelled. If it was, terminate the plugin </p>
+</li>
+<li>
+<p>Get the <strong>index</strong> (in the popup-menu) of the selected filter</p>
+</li>
+<li>
+<p>Perform the edge-detection using the selected filter and the methods you implemented</p>
+</li>
+<li>
+<p>Show your result</p>
+</li>
+</ol>
+<hr />
+<h2 id="4-4-project-report">4.4: Project-Report</h2>
+<p>The part of your report concerning Task_4 should contain the following:</p>
+<ul>
+<li>A short description on how these primitive Edge-Detection-Filters work</li>
+<li>Possible limitiations, which would require a more sophisticated approach to edge-detection</li>
+<li>Images you generated with your code</li>
+</ul>
+<p><a href="../cannyedge">Next</a></p>
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>

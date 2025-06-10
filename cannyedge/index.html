@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Project Work 5 - Canny Edge </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Project Work 5 - Canny Edge ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;cannyedge&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Project Work 5 - Canny Edge">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Project Work 5 - Canny Edge</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Sebastian Dietz, Mischa Dombrowski</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <h1 id="overview">Overview</h1>
+<ol start="0">
+<li><a href="../introduction">Introduction</a></li>
+<li><a href="../thresholding">Thresholding</a></li>
+<li><a href="../segmentation">Segmentation</a></li>
+<li><a href="../otsu">Otsu's Method</a></li>
+<li><a href="../edgedetection">Edge Detection</a> </li>
+<li><a href="../cannyedge">Canny Edge</a> </li>
+<li><a href="../conclusion">Outlook and Conclusion</a></li>
+</ol>
+<h1 id="5-canny-edge">5: Canny-Edge</h1>
+<p>The Canny-Edge algorithm is one of the more advanced algorithms to perform edge detection. Unlike primitive approaches, like those you implemented in Task 4, Canny's algorithm leads to clearly defined edges (only one pixel in width) and a significant reduction in false detections (meaning regions of sharp brightness-transition, which are not edges of interest). 
+This is achieved through the following process: </p>
+<ol>
+<li>Blurring the image (<strong>Gaussian Blur</strong>) to reduce noise</li>
+<li>Determining the <strong>image-gradient</strong> using the Sobel-kernel (→ Task 4)</li>
+<li>Determining the <strong>gradient-direction</strong> for each pixel</li>
+<li>Performing <strong>Non-Maximum-Suppression</strong> along the gradient-direction</li>
+<li>Performing <strong>Hysteresis-Thresholding</strong> to select edges of intrest </li>
+</ol>
+<p>These steps will be explained further later on.</p>
+<hr />
+<h2 id="5-1-blurring-and-gradient">5.1: Blurring and Gradient</h2>
+<p>The first part of this task can be implemented directly in the <code>run</code>-method of the <code>Task_5_CannyEdgeDetection</code>-class.</p>
+<p>To do:</p>
+<ol>
+<li>
+<p>Convert the input-image to a <code>FloatProcessor</code> and apply a <strong>gaussian blur</strong>.</p>
+<div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
+&#128221; <strong> Note: </strong> <br>
+<p>The $\sigma$-parameter is one of the values you can play around with later on to improve your results. Once you are done, you will be able to set this value via a user-dialog. For now, a good starting point would be the value <strong>2</strong></p>
+</div>
+</li>
+<li>
+<p>Create 3 new <code>FloatProcessors</code> to store the image-gradient and the derivatives. Use the methods you implemented in Task 4 to apply a <strong>Sobel</strong>-operator and to calculate the gradient.</p>
+</li>
+</ol>
+<hr />
+<h2 id="5-2-determining-gradient-directions">5.2 Determining Gradient-Directions</h2>
+<p>To calculate the direction of each pixel, you will now implement a new method called <code>getDir</code>.
+The formula for calculating the gradient-direction at a given pixel is:</p>
+<center> <strong> &Theta; = atan2(G<sub>y</sub> , G<sub>x</sub>) </strong> </center>
+<p>with G<sub>y</sub> and G<sub>x</sub> being the values of the respective y- and x-derivatives at the current position.</p>
+<div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
+&#128221; <strong> Note: </strong> 
+<p>The gradient-direction provides information about the angle or direction of an edge within the image. At any given point the edge will be <strong>perpendicular</strong> to the gradient direction. This will become important when it comes to performing <strong>Non-Maximum-Suppression</strong> (NMS). 
+An example: </p>
+<center><img src="../gradient_edge_example.png" width="150" height="150"></center>
+<center> white pixels &#8793; edge; &nbsp; arrow &#8793; gradient-direction </center> 
+<br/>
+<p>The atan2-method used to determine the direction returns the angle $\Theta$, that results from converting a cartesian coordinate <strong>(x,y)</strong> to radians <strong>(r,$\Theta$)</strong>. The angle theta is therefore returned in <strong>radians</strong> and you will need to convert it to degrees. </p>
+</div>
+<div style="background-color:rgb(250, 170, 170); border: 1px solid rgb(250, 170, 170); border-radius: 15px; padding: 15px; margin: 10px 0;">
+      &#9888; <strong> Important warning: </strong> &#9888;
+      <br>
+      The atan2-method expects coordinates in a standard <strong>cartesian coordinate-system </strong> (x→ / y↑). Since you are working with images, <strong>the y-axis is defined differently </strong> (x→ / y↓) and you will therefore need to call the method like this: <strong> Math.atan2 (-y, x) </strong>
+</div>
+<p>The getDir-method will determine the gradient-direction for each pixel and then round it to one of the following values: <strong>0°, 45°, 90°, 135°</strong>. These stem from the fact that an image is a discrete set of pixels and therefore we can only differentiate between these directions. </p>
+<center><img src="../edge-directions.png" width="650" height="160"></center>
+<center>Gradient-directions: 0°, 45°, 90°, 135°</center>
+<p>To do:</p>
+<ol>
+<li>
+<p>Create a new method:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">ByteProcessor </span><span style="color:#bf616a;">getDir </span><span>(</span><span style="color:#ebcb8b;">FloatProcessor X_Deriv</span><span>, </span><span style="color:#ebcb8b;">FloatProcessor Y_Deriv</span><span>){}
+</span></code></pre>
+</li>
+<li>
+<p>Create a <code>ByteProcessor</code> to store the directions</p>
+</li>
+<li>
+<p>Create an <code>int</code>-array:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">int[]</span><span> angles = {</span><span style="color:#d08770;">0</span><span>,</span><span style="color:#d08770;">45</span><span>,</span><span style="color:#d08770;">90</span><span>,</span><span style="color:#d08770;">135</span><span>,</span><span style="color:#d08770;">180</span><span>};
+</span></code></pre>
+<p>(180° is equivalent to 0° but needs to be considered as a seperate case)</p>
+</li>
+<li>
+<p>Iterate through the input-FloatProcessors and calculate the direction for each pixel (<strong>in degrees</strong>). Remember that the y-axis is inverted.</p>
+</li>
+<li>
+<p>Search for the closest match in the angles-array and store the final direction in the output-ByteProcessor. </p>
+<div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
+&#128221; <strong> Note: </strong>
+<p>Negative values are simply &quot;mapped&quot; to the corresponding positive value (for example -45° ≙ 135° or -90° ≙ 90°). You can do this by simply checking if the value is negative and then adding <strong>180°</strong>. If the closest match is 180° the direction is set to 0°</p>
+</div>
+</li>
+<li>
+<p>Return the final ByteProcessor</p>
+</li>
+</ol>
+<hr />
+<h2 id="5-3-non-maximum-suppression">5.3: Non-Maximum-Suppression</h2>
+<p>During NMS the goal is to reduce edges to a single-pixel-line. This is achieved by searching for local intensity-maxima <strong>in the Gradient-Direction</strong>, so that edge-information is preserved, but the blurriness of primitive edge-detection tools is removed.</p>
+<p>More specifically, this works by checking each pixel in relation to its two neighbouring pixels (along the gradient-direction). If the pixel is the highest of the three, it is kept as part of the edge. If not, it is discarded (set to 0). </p>
+<p>To do:</p>
+<ol>
+<li>
+<p>Create a new method:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">FloatProcessor </span><span style="color:#bf616a;">nonMaxSuppress</span><span>(</span><span style="color:#ebcb8b;">FloatProcessor Grad</span><span>, </span><span style="color:#ebcb8b;">ByteProcessor Dir</span><span>) {}
+</span></code></pre>
+</li>
+<li>
+<p>Create a new <code>FloatProcessor</code> to store the resulting image</p>
+</li>
+<li>
+<p>Iterate through the gradient-image. Check the direction for each pixel and then evaluate whether or not it is a local maximum <strong>in gradient-direction</strong>.</p>
+</li>
+<li>
+<p>If it is a local maximum, store the value in the output-FloatProcessor</p>
+</li>
+<li>
+<p>Return the final FloatProcessor</p>
+</li>
+</ol>
+<hr />
+<h2 id="5-4-hysteresis-thresholding">5.4: Hysteresis Thresholding</h2>
+<p>Hysteresis Thresholding is a special form of thresholding, which uses two threshold-values instead of one (upper and lower). Similar to standard thresholding, if a pixel's value falls above the upper threshold, it is kept as part of the image. If however, the pixel's value falls below, or is equal to the upper threshold, but above the lower threshold, the pixel is only kept as part of the image, if it is directly connected to a pixel above the upper threshold. Any pixel equal to or below the lower threshold is disregarded. </p>
+<p>To do: </p>
+<ol>
+<li>
+<p>Create a new method: </p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">ByteProcessor </span><span style="color:#bf616a;">hysteresisThreshold </span><span>(</span><span style="color:#ebcb8b;">FloatProcessor In</span><span>, </span><span style="color:#b48ead;">int</span><span> upper, </span><span style="color:#b48ead;">int</span><span> lower){}
+</span></code></pre>
+</li>
+<li>
+<p>Since you are working with a FloatProcessor and the values a pixel can have are not the easiest to work with, you can instead convert your input-values to percentages of the maximum value within the image. To do so, simply add: </p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">float</span><span> tHigh = ((</span><span style="color:#b48ead;">float</span><span>)</span><span style="color:#ebcb8b;">In</span><span>.</span><span style="color:#bf616a;">getMax</span><span>()*upper)/</span><span style="color:#d08770;">100</span><span style="color:#b48ead;">f</span><span>;
+</span><span style="color:#b48ead;">float</span><span> tLow = ((</span><span style="color:#b48ead;">float</span><span>)</span><span style="color:#ebcb8b;">In</span><span>.</span><span style="color:#bf616a;">getMax</span><span>()*lower)/</span><span style="color:#d08770;">100</span><span style="color:#b48ead;">f</span><span>;
+</span></code></pre>
+<p>You can then use tHigh and tLow as your threshold values, while being able to define them through low integer numbers. As a starting point you can for example use <strong>15</strong> as upper and <strong>5</strong> as lower. Feel free to experiment around with these. </p>
+</li>
+<li>
+<p>Create an output-<code>ByteProcessor</code> to store the final image </p>
+</li>
+<li>
+<p>Iterate through the input image and check the threshold condition for each pixel. Set pixels above the upper limit to white in the output image </p>
+</li>
+<li>
+<p>In order to check, whether a pixel above the lower threshold is connected to an existing edge, you will need to iterate through the image again and check the connections repeatedly, because a pixel can become connected to the edge through any number of adjacent pixels. 
+To avoid mistakes here, the following code, as well as the included <code>hasNeighbours()</code>-method will be provided. You can simply add this code after you performed the first iteration through the image.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>
+</span><span style="color:#b48ead;">boolean</span><span> changed = </span><span style="color:#d08770;">true</span><span>;
+</span><span style="color:#b48ead;">while </span><span>(changed) {
+</span><span>   changed = </span><span style="color:#d08770;">false</span><span>;
+</span><span>      </span><span style="color:#b48ead;">for </span><span>(</span><span style="color:#b48ead;">int</span><span> x = </span><span style="color:#d08770;">0</span><span>; x &lt; </span><span style="color:#ebcb8b;">In</span><span>.</span><span style="color:#bf616a;">getWidth</span><span>(); x++) {
+</span><span>         </span><span style="color:#b48ead;">for </span><span>(</span><span style="color:#b48ead;">int</span><span> y = </span><span style="color:#d08770;">0</span><span>; y &lt; </span><span style="color:#ebcb8b;">In</span><span>.</span><span style="color:#bf616a;">getHeight</span><span>(); y++) {
+</span><span>            </span><span style="color:#b48ead;">if </span><span>(</span><span style="color:#ebcb8b;">In</span><span>.</span><span style="color:#bf616a;">getPixelValue</span><span>(x, y) &gt; tLow &amp;&amp; </span><span style="color:#bf616a;">hasNeighbours</span><span>(</span><span style="color:#ebcb8b;">Out</span><span>, x, y) &amp;&amp; </span><span style="color:#ebcb8b;">Out</span><span>.</span><span style="color:#bf616a;">getPixel</span><span>(x,y)==</span><span style="color:#d08770;">0</span><span>) {
+</span><span>                     </span><span style="color:#ebcb8b;">Out</span><span>.</span><span style="color:#bf616a;">set</span><span>(x, y, </span><span style="color:#d08770;">255</span><span>);
+</span><span>                     changed = </span><span style="color:#d08770;">true</span><span>;
+</span><span>                 }
+</span><span>             }
+</span><span>         }
+</span><span>     }
+</span></code></pre>
+<p>(<strong>Out</strong> refers to the output-image. If you named it differently, you can obviously change the code accordingly)</p>
+</li>
+<li>
+<p>Return the output image</p>
+</li>
+</ol>
+<hr />
+<p>Add a simple <strong>user-dialog</strong> to the <code>run</code>-method, which allows you to select values for $\sigma$, the upper threshold and the lower threshold.</p>
+<p>Finally perform the <code>getDir</code>,<code>nonMaxSuppress</code> and <code>hysteresisThreshold</code> steps in sequence within your <code>run</code>-method and display your final result.</p>
+<hr />
+<h2 id="5-5-project-report">5.5: Project-Report</h2>
+<p>The part of your report concerning Task_5 should contain the following:</p>
+<ul>
+<li>A short description of what Canny-Edge-Detection aims to do and how it works</li>
+<li>In which ways it is superior to the more primitive approaches</li>
+<li>Images you generated with your code. How do the parameters influence your results? </li>
+</ul>
+<p><a href="../conclusion">Next</a></p>
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>

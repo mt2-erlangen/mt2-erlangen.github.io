@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Exercise 3 </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Exercise 3 ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;archive&#x2F;2020&#x2F;exercise-3&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Exercise 3">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Exercise 3</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Stephan Seitz</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <p><strong>Submission deadline: 25.05.20 23:59h</strong></p>
+<p>Please ensure that all files you created also contain <strong>your name and your IDM ID</strong> and also your partner's name and IDM ID if you're not working alone.</p>
+<p>Each exercise has <strong>10 points</strong>. You have to achieve <strong>30 of 60 points in six homework exercises</strong> to pass the module.</p>
+<h1 id="images-and-2-d-convolution">Images and 2-d Convolution</h1>
+<p>In this exercise, we finally to work with images. It's time to update the file <code>src/main/java/lme/DisplayUtils.java</code> <a href="https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/lme/DisplayUtils.java">to the newest version</a>.</p>
+<p>This should provide you the following methods to work with images:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#65737e;">// Open a file
+</span><span>    </span><span style="color:#b48ead;">public static </span><span>mt.</span><span style="color:#ebcb8b;">Image </span><span style="color:#bf616a;">openImage</span><span>(</span><span style="color:#ebcb8b;">String</span><span> path) 
+</span><span>
+</span><span>    </span><span style="color:#65737e;">// Download and open a file from the internet
+</span><span>    </span><span style="color:#b48ead;">public static </span><span>mt.</span><span style="color:#ebcb8b;">Image </span><span style="color:#bf616a;">openImageFromInternet</span><span>(</span><span style="color:#ebcb8b;">String</span><span> url, </span><span style="color:#ebcb8b;">String</span><span> filetype) 
+</span><span>
+</span><span>    </span><span style="color:#65737e;">// Save an image to a file
+</span><span>    </span><span style="color:#b48ead;">public static</span><span> void </span><span style="color:#bf616a;">saveImage</span><span>(mt.</span><span style="color:#ebcb8b;">Image</span><span> image, </span><span style="color:#ebcb8b;">String</span><span> path) 
+</span><span>
+</span><span>    </span><span style="color:#65737e;">//  Show images
+</span><span>    </span><span style="color:#b48ead;">public static</span><span> void </span><span style="color:#bf616a;">showImage</span><span>(</span><span style="color:#b48ead;">float[]</span><span> buffer, </span><span style="color:#ebcb8b;">String</span><span> title, </span><span style="color:#b48ead;">int</span><span> width) 
+</span><span>    </span><span style="color:#b48ead;">public static</span><span> void </span><span style="color:#bf616a;">showImage</span><span>(</span><span style="color:#b48ead;">float[]</span><span> buffer, </span><span style="color:#ebcb8b;">String</span><span> title, </span><span style="color:#b48ead;">long</span><span> width, </span><span style="color:#b48ead;">float[]</span><span> origin, </span><span style="color:#b48ead;">double</span><span> spacing, </span><span style="color:#b48ead;">boolean</span><span> replaceWindowWithSameName)
+</span><span>
+</span></code></pre>
+<p>They all work with the class <code>mt.Image</code> so let's create it!</p>
+<p>Before that, add the following two methods to your <code>Signal</code> class (they are used by the tests of this exercise):</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#65737e;">// Needs: import java.util.Random
+</span><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">addNoise</span><span>(</span><span style="color:#b48ead;">float</span><span> mean, </span><span style="color:#b48ead;">float</span><span> standardDeviation) {
+</span><span>	</span><span style="color:#ebcb8b;">Random</span><span> rand = </span><span style="color:#b48ead;">new </span><span style="color:#ebcb8b;">Random</span><span>();
+</span><span>	</span><span style="color:#b48ead;">for </span><span>(</span><span style="color:#b48ead;">int</span><span> i = </span><span style="color:#d08770;">0</span><span>; i &lt; buffer.length; i++) {
+</span><span>	    buffer[i] += mean + rand.</span><span style="color:#bf616a;">nextGaussian</span><span>() * standardDeviation;
+</span><span>	}
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">setBuffer</span><span>(</span><span style="color:#b48ead;">float[]</span><span> buffer) {
+</span><span>	</span><span style="color:#bf616a;">this</span><span>.buffer = buffer;
+</span><span>    }
+</span></code></pre>
+<p><strong>PS:</strong> The method <code>addNoise</code> is also useful to test your <code>mean</code> and <code>standardDeviation</code> calculation in exercise 2.
+Create a long signal and add noise with a specific <code>mean</code> and <code>standardDeviation</code>.
+The result of your <code>mean</code> and <code>standardDeviation</code> method should be approximatelly the same.</p>
+<h2 id="mt-image-java">mt/Image.java</h2>
+<P align="right"><i>4 Points</i>
+<p><em>The code for this section should go to <code>src/main/java/mt/Image.java</code></em></p>
+<p>Our goal is to share as much code with our <code>mt.Signal</code> class. So <code>mt.Image</code> will be a subclass of <code>mt.Signal</code>.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// &lt;your name&gt; &lt;your idm&gt;
+</span><span style="color:#65737e;">// &lt;your partner&#39;s name&gt; &lt;your partner&#39;s idm&gt; (if you submit with a group partner)
+</span><span style="color:#b48ead;">package </span><span>mt;
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>lme.</span><span style="color:#ebcb8b;">DisplayUtils</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">Image </span><span style="color:#b48ead;">extends </span><span style="color:#a3be8c;">Signal </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p><code>mt.Image</code> has five members (apart from the ones inherited by <code>mt.Signal</code>).</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#65737e;">// Dimensions of the image
+</span><span>    </span><span style="color:#b48ead;">protected int</span><span> width; 
+</span><span>    </span><span style="color:#b48ead;">protected int</span><span> height; 
+</span><span>
+</span><span>    </span><span style="color:#65737e;">// Same as Signal.minIndex but for X and Y dimension
+</span><span>    </span><span style="color:#b48ead;">protected int</span><span> minIndexX;
+</span><span>    </span><span style="color:#b48ead;">protected int</span><span> minIndexY;
+</span><span>
+</span><span>    </span><span style="color:#65737e;">// For exercise 4 (no need to do anything with it in exercise 3)
+</span><span>    </span><span style="color:#b48ead;">protected float[]</span><span> origin = </span><span style="color:#b48ead;">new float</span><span>[]{ </span><span style="color:#d08770;">0</span><span>, </span><span style="color:#d08770;">0 </span><span>};
+</span></code></pre>
+<p>And two constructors:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#65737e;">// Create an image with given dimensions
+</span><span>    </span><span style="color:#b48ead;">public </span><span style="color:#bf616a;">Image</span><span>(</span><span style="color:#b48ead;">int</span><span> width, </span><span style="color:#b48ead;">int</span><span> height, </span><span style="color:#ebcb8b;">String</span><span> name)
+</span><span>
+</span><span>    </span><span style="color:#65737e;">// Create an image with given dimensions and also provide the content
+</span><span>    </span><span style="color:#b48ead;">public </span><span style="color:#bf616a;">Image</span><span>(</span><span style="color:#b48ead;">int</span><span> width, </span><span style="color:#b48ead;">int</span><span> height, </span><span style="color:#ebcb8b;">String</span><span> name, </span><span style="color:#b48ead;">float[]</span><span> pixels)
+</span></code></pre>
+<p>As shown in the exercise slides, we will store all the pixels in one array, like we did in <code>Signal</code>.
+The array should have the size <code>width * height</code>.
+<code>minIndexX</code>,<code>minIndexY</code> should be 0 for normal images.</p>
+<p><img src="../image_constructor.png" alt="Constructor" /></p>
+<!--**TODO: Nice image here. With width and height and buffer_size=width * height**-->
+<p>Call the constructors of the super class <code>Signal</code> in the constructors of <code>Image</code>.
+You can call the constructor of a super class by placing <code>super(...)</code> with the respetive arguments in the first line of the constructor of the subclass.
+The constructor <code>public Image(int width, int height, String name, float[] pixels)</code> does not need to create its own array (take <code>pixels</code> for <code>buffer</code>).
+But you can check whether <code>pixels</code> has the correct size.</p>
+<p>Let's also provide some getters!</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#65737e;">// Image dimensions
+</span><span>    </span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">width</span><span>()
+</span><span>    </span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">height</span><span>()
+</span><span>
+</span><span>    </span><span style="color:#65737e;">// Minimum and maximum indices (should work like Signal.minIndex/maxIndex)
+</span><span>    </span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">minIndexX</span><span>()
+</span><span>    </span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">minIndexY</span><span>()
+</span><span>    </span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">maxIndexX</span><span>()
+</span><span>    </span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">maxIndexY</span><span>()
+</span></code></pre>
+<p><code>atIndex</code> and <code>setAtIndex</code> should work like in <code>Signal</code> except that they now have two coordinate indices.
+<code>atIndex</code> should return <code>0.0f</code> if either the <code>x</code> or <code>y</code> index are outside of the image ranges.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public float </span><span style="color:#bf616a;">atIndex</span><span>(</span><span style="color:#b48ead;">int</span><span> x, </span><span style="color:#b48ead;">int</span><span> y)
+</span><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">setAtIndex</span><span>(</span><span style="color:#b48ead;">int</span><span> x, </span><span style="color:#b48ead;">int</span><span> y, </span><span style="color:#b48ead;">float</span><span> value) {
+</span></code></pre>
+<p>Remember how we calculated the indices in the exercise slides. You have to apply that formula in <code>atIndex</code>/<code>setAtIndex</code>.</p>
+<p><img src="../smile_extended.png" alt="Constructor" /></p>
+<!--**TODO: Nice image here. With width and height and buffer_size=width * height**-->
+<p>Add the method <code>show</code> to display the image</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">show</span><span>() {
+</span><span>        </span><span style="color:#ebcb8b;">DisplayUtils</span><span>.</span><span style="color:#bf616a;">showImage</span><span>(buffer, name, </span><span style="color:#bf616a;">width</span><span>(), origin, </span><span style="color:#bf616a;">spacing</span><span>(), </span><span style="color:#65737e;">/*Replace window with same name*/</span><span style="color:#d08770;">true</span><span>);
+</span><span>    }
+</span></code></pre>
+<p>Open the image <code>pacemaker.png</code> in a file  <code>src/main/java/exercise/Exercise03</code> (in the same project as previous exercise):</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// &lt;your name&gt; &lt;your idm&gt;
+</span><span style="color:#65737e;">// &lt;your partner&#39;s name&gt; &lt;your partner&#39;s idm&gt; (if you submit with a group partner)
+</span><span style="color:#b48ead;">package </span><span>exercises;
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>mt.</span><span style="color:#ebcb8b;">GaussFilter2d</span><span>;
+</span><span style="color:#b48ead;">import </span><span>mt.</span><span style="color:#ebcb8b;">Image</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">Exercise03 </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">public static void </span><span style="color:#8fa1b3;">main</span><span style="color:#eff1f5;">(</span><span style="color:#ebcb8b;">String</span><span style="color:#b48ead;">[] </span><span style="color:#bf616a;">args</span><span style="color:#eff1f5;">) {
+</span><span style="color:#eff1f5;">        (</span><span style="color:#b48ead;">new </span><span style="color:#eff1f5;">ij.</span><span style="color:#ebcb8b;">ImageJ</span><span style="color:#eff1f5;">()).</span><span style="color:#bf616a;">exitWhenQuitting</span><span style="color:#eff1f5;">(</span><span style="color:#d08770;">true</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#ebcb8b;">Image</span><span style="color:#eff1f5;"> image </span><span>= </span><span style="color:#eff1f5;">lme.</span><span style="color:#ebcb8b;">DisplayUtils</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">openImageFromInternet</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">https://mt2-erlangen.github.io/pacemaker.png</span><span>&quot;</span><span style="color:#eff1f5;">, </span><span>&quot;</span><span style="color:#a3be8c;">.png</span><span>&quot;</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">        image.</span><span style="color:#bf616a;">show</span><span style="color:#eff1f5;">();
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    }
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p>The image is from <a href="https://www.springer.com/gp/book/9783319965192">our open access book</a>.</p>
+<p><img src="../pacemaker.png" alt="pacemaker.png" /></p>
+<h2 id="mt-imagefilter">mt.ImageFilter</h2>
+<P align="right"><i>3 Points</i>:
+<p>Like in Exercise 1, we want to be able to convolve our image signal.
+Infact, we will learn a lot of new ways to process images.
+Often, we need to create an output image of same size.
+Let's create an interface (<code>src/main/java/mt/ImageFilter.java</code>) for that, so we only need to implement this once.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">package </span><span>mt;
+</span><span>
+</span><span style="color:#b48ead;">public interface </span><span style="color:#ebcb8b;">ImageFilter </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">default </span><span style="color:#eff1f5;">mt.</span><span style="color:#ebcb8b;">Image </span><span style="color:#8fa1b3;">apply</span><span style="color:#eff1f5;">(mt.</span><span style="color:#ebcb8b;">Image </span><span style="color:#bf616a;">image</span><span style="color:#eff1f5;">) {
+</span><span style="color:#eff1f5;">        </span><span style="color:#ebcb8b;">Image</span><span style="color:#eff1f5;"> output </span><span>= </span><span style="color:#b48ead;">new </span><span style="color:#ebcb8b;">Image</span><span style="color:#eff1f5;">(image.</span><span style="color:#bf616a;">width</span><span style="color:#eff1f5;">(), image.</span><span style="color:#bf616a;">height</span><span style="color:#eff1f5;">(), image.</span><span style="color:#bf616a;">name</span><span style="color:#eff1f5;">() </span><span>+ &quot;</span><span style="color:#a3be8c;"> processed with </span><span>&quot; + </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">name</span><span style="color:#eff1f5;">());
+</span><span style="color:#eff1f5;">        </span><span style="color:#bf616a;">apply</span><span style="color:#eff1f5;">(image, output);
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">return</span><span style="color:#eff1f5;"> output;
+</span><span style="color:#eff1f5;">    }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">default void </span><span style="color:#8fa1b3;">apply</span><span style="color:#eff1f5;">(mt.</span><span style="color:#ebcb8b;">Image </span><span style="color:#bf616a;">input</span><span style="color:#eff1f5;">, mt.</span><span style="color:#ebcb8b;">Image </span><span style="color:#bf616a;">output</span><span style="color:#eff1f5;">) {
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">throw new </span><span style="color:#ebcb8b;">RuntimeException</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">Please implement this method!</span><span>&quot;</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">    }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    </span><span style="color:#ebcb8b;">String </span><span style="color:#8fa1b3;">name</span><span style="color:#eff1f5;">();
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p><em>The code for the convolution should go to <code>src/main/java/mt/LinearImageFilter.java</code></em></p>
+<p>Ok. Now the convolution. The class has already a method that we will need later. It uses your sum method.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// &lt;your name&gt; &lt;your idm&gt;
+</span><span style="color:#65737e;">// &lt;your partner&#39;s name&gt; &lt;your partner&#39;s idm&gt; (if you submit with a group partner)
+</span><span style="color:#b48ead;">package </span><span>mt;
+</span><span>
+</span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">LinearImageFilter </span><span style="color:#b48ead;">extends </span><span style="color:#a3be8c;">Image </span><span style="color:#b48ead;">implements </span><span style="color:#a3be8c;">ImageFilter </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">public void </span><span style="color:#8fa1b3;">normalize</span><span style="color:#eff1f5;">() {
+</span><span style="color:#eff1f5;">	</span><span style="color:#b48ead;">double</span><span style="color:#eff1f5;"> sum </span><span>= </span><span style="color:#bf616a;">sum</span><span style="color:#eff1f5;">();
+</span><span style="color:#eff1f5;">	</span><span style="color:#b48ead;">for </span><span style="color:#eff1f5;">(</span><span style="color:#b48ead;">int</span><span style="color:#eff1f5;"> i </span><span>= </span><span style="color:#d08770;">0</span><span style="color:#eff1f5;">; i </span><span>&lt;</span><span style="color:#eff1f5;"> buffer.length; i</span><span>++</span><span style="color:#eff1f5;">) {
+</span><span style="color:#eff1f5;">	    buffer[i] </span><span>/=</span><span style="color:#eff1f5;"> sum;
+</span><span style="color:#eff1f5;">	}
+</span><span style="color:#eff1f5;">    }
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p>Create a constructor for it. Recall how we implemented <code>LinearFilter</code>!
+<code>minIndexX</code> and <code>minIndexY</code> need to be set to $-\lfloor L_x/2 \rfloor$ and $-\lfloor L_y/2 \rfloor$ when $L_x$ is the
+filter's width and $L_y$ the filter's height.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public </span><span style="color:#bf616a;">LinearImageFilter</span><span>(</span><span style="color:#b48ead;">int</span><span> width, </span><span style="color:#b48ead;">int</span><span> height, </span><span style="color:#ebcb8b;">String</span><span> name)
+</span></code></pre>
+<p>Convolution in 2-d works similar to convolution in 1-d.<!-- [Compare with the formula from exercise 01](@/exercise_1.md#linearfilter-java)--></p>
+<p>$$K_x = \lfloor L_x/2 \rfloor$$
+$$K_y = \lfloor L_y/2 \rfloor$$
+$$g[x,y] = \sum_{y'=-K_y}^{+K_y} \sum_{x'=-K_x}^{+K_x} f[x-x', y-y'] \cdot h[ x', y' ] $$
+$$g[x,y] = \sum_{y'=\text{h.minIndexY}}^{\text{h.maxIndexY}} \sum_{x'=\text{h.minIndexX}}^{\text{h.maxIndexX}} f[x-x', y-y'] \cdot h[ x', y' ] $$</p>
+<p>Remember to use <code>atIndex</code> and <code>setAtIndex</code> to get and set the values.
+Implement the convolution in the method <code>apply</code>.
+The <code>result</code> image was already created by our interface <code>ImageFilter</code>.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">apply</span><span>(</span><span style="color:#ebcb8b;">Image</span><span> image, </span><span style="color:#ebcb8b;">Image</span><span> result)
+</span></code></pre>
+<p><img src="../filtering.png" alt="filtering" />
+<img src="https://raw.githubusercontent.com/vdumoulin/conv_arithmetic/master/gif/same_padding_no_strides.gif" alt="Animation" /></p>
+<P align="right"><i>Source: https://github.com/vdumoulin/conv_arithmetic</i>
+<p>Now it's time to test!
+Use the file <a href="https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/test/java/mt/LinearImageFilterTests.java"><code>src/test/java/mt/LinearImageFilterTests.java</code></a>.</p>
+<h2 id="gauss-filter">Gauss Filter</h2>
+<P align="right"><i>2 Points</i>
+<p><em>The code for the Gauss filter should go to <code>src/main/java/mt/GaussFilter2d.java</code>.</em></p>
+<p>The Gauss filter is a <code>LinearImageFilter</code> with special coefficients (the filter has the same height and width).</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// &lt;your name&gt; &lt;your idm&gt;
+</span><span style="color:#65737e;">// &lt;your partner&#39;s name&gt; &lt;your partner&#39;s idm&gt; (if you submit with a group partner)
+</span><span style="color:#b48ead;">package </span><span>mt;
+</span><span>
+</span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">GaussFilter2d </span><span style="color:#b48ead;">extends </span><span style="color:#a3be8c;">LinearImageFilter </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">    
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p>It has the following constructor</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public </span><span style="color:#bf616a;">GaussFilter2d</span><span>(</span><span style="color:#b48ead;">int</span><span> filterSize, </span><span style="color:#b48ead;">float</span><span> sigma)
+</span></code></pre>
+<p>In the constructor, set the coefficients according to the unormalized 2-d normal distribution with standard deviation $\sigma$ (<code>sigma</code>).
+<code>Math.exp</code> is the exponetial function.  Use <code>setAtIndex</code>: $x$ should run from <code>minIndexX</code> to <code>maxIndexX</code> and $y$ from <code>minIndexY</code> to <code>maxIndexY</code>.</p>
+<p>$$ h[x,y] = \mathrm{e}^{-\frac{x^2+y^2}{2 \sigma^2}}$$</p>
+<p>Call <code>normalize()</code> at the end of the constructor to ensure that all coefficients sum up to one.</p>
+<p>Test your Gauss filter in <code>Exercise03.java</code>.
+Use arbitray values for <code>sigma</code> and <code>filterSize</code>.
+The Gauss filter will blur your input image clearly if you chose a large value for sigma.</p>
+<p><img src="../pacemaker-blurred.png" alt="Blurred image" /></p>
+<p>There is also a unit test file that you can use: <a href="https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/test/java/mt/GaussFilter2dTests.java"><code>src/test/java/mt/GaussFilter2dTests.java</code></a></p>
+<h2 id="calculating-with-images">Calculating with Images</h2>
+<P align="right"><i>1 Points</i>
+<p><em>The code for this section should go to <code>src/main/java/mt/Image.java</code>.</em></p>
+<p>Implement the method <code>Image.minus</code> in <code>Image.java</code> that subtracts the current image element-wise with another one and returns the result:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">Image </span><span style="color:#bf616a;">minus</span><span>(</span><span style="color:#ebcb8b;">Image</span><span> other)
+</span></code></pre>
+<p>We use this method to calculate error images.
+You can implement this with only one loop over the elements of the <code>buffer</code>s of the two images.</p>
+<h2 id="demo">Demo</h2>
+<p><em>This is not required for the exercise!</em></p>
+<p>Place the file <a href="https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/exercises/Exercise03Demo.java"><code>src/main/java/exercises/Exercise03Demo.java</code></a>
+in your project folder and run it.</p>
+<p><img src="../exercise3demo.png" alt="Demo" /></p>
+<p>You should see an interactive demo applying your Gauss filter to a noisy image.
+You change change the used parameters.</p>
+<h2 id="submitting">Submitting</h2>
+<p>Please ensure that all files you created also contain your name and your IDM ID and also your partner's name and IDM ID if you're not working alone.</p>
+<p>Then, compress your source code folder <code>src</code> to a zip archive (src.zip) and submit it on studOn.</p>
+<!--To answer the question place-->
+<!--* Original Image-->
+<!--* Image with addNoise-->
+<!--* Gauss filtered-->
+<!--* 1 - Gauss filtered-->
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>

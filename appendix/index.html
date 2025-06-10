@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Project Work Optional </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Project Work Optional ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;appendix&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Project Work Optional">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Project Work Optional</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Zhengguo Tan</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <h2 id="mri-is-a-fourier-machine">MRI is a Fourier machine</h2>
+<p>MRI acquires data in the frequency domain (also known as $k$-space), and the relationship between such $k$-space data and image contents reads,</p>
+<p>$$ s(k_x, k_y) = \int \rho(x, y) e^{-i \pi (k_x \cdot x + k_y \cdot y)} \text{d}x \text{d}y $$</p>
+<p>It is worth noting from this equation that,</p>
+<ul>
+<li>
+<p>the image content $\rho$ is discretized into a two-dimensional (2D) matrix with its spatial coordinates $x$ and $y$.</p>
+</li>
+<li>
+<p>the MR signal $s$ is sampled at the $k$-space points ($k_x$, $k_y$), and is an integral over all discrete points ($x$, $y$) in image domain.</p>
+</li>
+<li>
+<p>the MR signal is sampled is a point-by-point manner, which is an important reason why MRI is slow.</p>
+</li>
+</ul>
+<p>In short, Fourier transform plays an important role in MRI. The exploration of Fourier transform properties has fostered many crucial MRI developments and innovations.</p>
+<p><strong>Task Optional.1:</strong> The equation above shows how a 2D image $\rho(x,y)$ can be formed in MRI. Can this equation be extended to 3D acquisition? In other words, instead of acquiring one 2D plane, can we use MRI to acquire 3D volume such as to cover a whole organ (like the brain)? May you try to write down the equation for the 3D Fourier transform? What may be the difficulties in reconstructing 3D volume images? Think about computational time and organ motion during acquisition.</p>
+<h2 id="simple-example-one-dimensional-1d-fourier-transform">Simple example: one-dimensional (1D) Fourier transform</h2>
+<p>In this hands-on example, we will focus on 1D signal and its corresponding Fourier transform. Therefore, the above equation reduces to</p>
+<p>$$ s(k_x) = \int \rho(x) e^{-i \pi k_x \cdot x} \text{d}x $$</p>
+<p>In the regime of digital signal processing, we deal with discretized signal,</p>
+<p>$$ s(k_x) = \sum_x \rho(x) e^{-i \pi k_x \cdot x} $$</p>
+<p>Therefore, given the dicretized signal $\rho(x)$, we can compute its corresponding Fourier transform $s(k_x)$ at any $k$-space point $k_x$.</p>
+<p><strong>Task Optional.2:</strong> Suppose we have a rectangular signal,</p>
+<p>$$\rho(x) = 1$$</p>
+<p>for $x \in [-10, 9]$ and $x$ is an integer. That is, $x=-10,-9,-8,-7,\cdots,9$.</p>
+<p>Therefore, the Fourier transform of $\rho(x)$ at $k_x = 0$ is simply</p>
+<p>$$ s(0) = \sum_{x=-10}^{9} 1 e^{-i \pi 0 \cdot x} = 20 $$</p>
+<p>If we define $k_x \in [-0.3, 0.3]$ with a step size of $0.01$. That is, $k_x = -0.30, -0.29, -0.28, \cdots, 0.30$. To compute $s(k_x)$, we provide the following <code>Java</code> code:</p>
+<pre data-lang="Java" style="background-color:#2b303b;color:#c0c5ce;" class="language-Java "><code class="language-Java" data-lang="Java"><span style="color:#b48ead;">import </span><span>org.apache.commons.math3.analysis.function.</span><span style="color:#ebcb8b;">Sinc</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">project_box1d </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">public static void </span><span style="color:#8fa1b3;">main</span><span style="color:#eff1f5;">(</span><span style="color:#ebcb8b;">String</span><span style="color:#b48ead;">[] </span><span style="color:#bf616a;">args</span><span style="color:#eff1f5;">) {
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">double</span><span style="color:#eff1f5;"> kx_min </span><span>= -</span><span style="color:#d08770;">0.3</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">double</span><span style="color:#eff1f5;"> kx_max </span><span>= </span><span style="color:#d08770;">0.3</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">double</span><span style="color:#eff1f5;"> kx_step </span><span>= </span><span style="color:#d08770;">0.01</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">for </span><span style="color:#eff1f5;">(</span><span style="color:#b48ead;">double</span><span style="color:#eff1f5;"> kx </span><span>=</span><span style="color:#eff1f5;"> kx_min; kx </span><span>&lt;=</span><span style="color:#eff1f5;"> kx_max; kx </span><span>+=</span><span style="color:#eff1f5;"> kx_step) {
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">double</span><span style="color:#eff1f5;"> real_s </span><span>= </span><span style="color:#d08770;">0.</span><span style="color:#eff1f5;">; </span><span style="color:#65737e;">// real part
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">double</span><span style="color:#eff1f5;"> imag_s </span><span>= </span><span style="color:#d08770;">0.</span><span style="color:#eff1f5;">; </span><span style="color:#65737e;">// imaginary part
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">int</span><span style="color:#eff1f5;"> x_num </span><span>= </span><span style="color:#d08770;">0</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">for </span><span style="color:#eff1f5;">(</span><span style="color:#b48ead;">int</span><span style="color:#eff1f5;"> x </span><span>= -</span><span style="color:#d08770;">10</span><span style="color:#eff1f5;">; x </span><span>&lt; </span><span style="color:#d08770;">10</span><span style="color:#eff1f5;">; </span><span>++</span><span style="color:#eff1f5;">x) {
+</span><span style="color:#eff1f5;">                real_s </span><span>+= </span><span style="color:#ebcb8b;">Math</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">cos</span><span style="color:#eff1f5;">(</span><span style="color:#ebcb8b;">Math</span><span style="color:#eff1f5;">.</span><span style="color:#d08770;">PI </span><span>*</span><span style="color:#eff1f5;"> kx </span><span>*</span><span style="color:#eff1f5;"> x);
+</span><span style="color:#eff1f5;">                imag_s </span><span>+= </span><span style="color:#65737e;">/*  */</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">                x_num</span><span>++</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            real_s </span><span>/=</span><span style="color:#eff1f5;"> x_num;
+</span><span style="color:#eff1f5;">            imag_s </span><span>/=</span><span style="color:#eff1f5;"> x_num;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">var</span><span style="color:#eff1f5;"> sinc </span><span>= </span><span style="color:#b48ead;">new </span><span style="color:#ebcb8b;">Sinc</span><span style="color:#eff1f5;">(</span><span style="color:#d08770;">true</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">double</span><span style="color:#eff1f5;"> sinc_s </span><span>=</span><span style="color:#eff1f5;"> sinc.</span><span style="color:#bf616a;">value</span><span style="color:#eff1f5;">(kx </span><span>* </span><span style="color:#d08770;">10</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#ebcb8b;">System</span><span style="color:#eff1f5;">.out.</span><span style="color:#bf616a;">println</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">integral: </span><span>&quot; + </span><span style="color:#ebcb8b;">String</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">format</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">%.2f</span><span>&quot;</span><span style="color:#eff1f5;">, real_s</span><span>/</span><span style="color:#eff1f5;">x_num) </span><span>+ &quot;</span><span style="color:#a3be8c;">; sinc: </span><span>&quot; + </span><span style="color:#ebcb8b;">String</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">format</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">%.2f</span><span>&quot;</span><span style="color:#eff1f5;">, sinc_s));
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">    }
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<ul>
+<li>
+<p>Please fill in the missing codes to compute the imaginary part of $s$.</p>
+</li>
+<li>
+<p>Try to run your solution in Java.</p>
+</li>
+<li>
+<p>Are the values between <code>real_s</code> and <code>sinc_s</code> the same? If so, may you explain why?</p>
+</li>
+</ul>
+<p>To potential prepare you for scientific computing, we also provide the <code>Python</code> solution:</p>
+<pre data-lang="Python" style="background-color:#2b303b;color:#c0c5ce;" class="language-Python "><code class="language-Python" data-lang="Python"><span style="color:#65737e;"># %% Import packages
+</span><span style="color:#b48ead;">import </span><span>numpy </span><span style="color:#b48ead;">as </span><span>np
+</span><span style="color:#b48ead;">import </span><span>matplotlib.pyplot </span><span style="color:#b48ead;">as </span><span>plt
+</span><span>
+</span><span style="color:#65737e;"># %% Compute the signal integral (Fourier transform)
+</span><span>x = np.</span><span style="color:#bf616a;">arange</span><span>(-</span><span style="color:#d08770;">10</span><span>, </span><span style="color:#d08770;">10</span><span>, </span><span style="color:#d08770;">1</span><span>)
+</span><span>
+</span><span>kx = np.</span><span style="color:#bf616a;">arange</span><span>(-</span><span style="color:#d08770;">0.3</span><span>, </span><span style="color:#d08770;">0.3 </span><span>+ </span><span style="color:#d08770;">1E-6</span><span>, </span><span style="color:#d08770;">0.01</span><span>)
+</span><span>
+</span><span>s = np.</span><span style="color:#bf616a;">zeros_like</span><span>(kx, </span><span style="color:#bf616a;">dtype</span><span>=np.complex64)
+</span><span>
+</span><span style="color:#b48ead;">for </span><span>n </span><span style="color:#b48ead;">in </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#96b5b4;">len</span><span>(kx)):
+</span><span>    s[n] = np.</span><span style="color:#bf616a;">sum</span><span>(np.</span><span style="color:#bf616a;">exp</span><span>(-</span><span style="color:#d08770;">1</span><span style="color:#b48ead;">j </span><span>* np.pi * kx[n] * x)) / </span><span style="color:#96b5b4;">len</span><span>(x)
+</span><span>
+</span><span style="color:#65737e;"># %% scatter plots
+</span><span>fig, ax = plt.</span><span style="color:#bf616a;">subplots</span><span>(</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#bf616a;">figsize</span><span>=(</span><span style="color:#d08770;">12</span><span>, </span><span style="color:#d08770;">3</span><span>))
+</span><span>
+</span><span>x1 = np.</span><span style="color:#bf616a;">arange</span><span>(</span><span style="color:#d08770;">0</span><span>, </span><span style="color:#96b5b4;">len</span><span>(x)*</span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">1</span><span>)
+</span><span>y1 = np.</span><span style="color:#bf616a;">zeros_like</span><span>(x1)
+</span><span>y1[</span><span style="color:#96b5b4;">len</span><span>(x)//</span><span style="color:#d08770;">2 </span><span>: </span><span style="color:#96b5b4;">len</span><span>(x) + </span><span style="color:#96b5b4;">len</span><span>(x)//</span><span style="color:#d08770;">2 </span><span>- </span><span style="color:#d08770;">1</span><span>] = </span><span style="color:#d08770;">1
+</span><span>
+</span><span>ax[</span><span style="color:#d08770;">0</span><span>].</span><span style="color:#bf616a;">plot</span><span>(x1 - </span><span style="color:#96b5b4;">len</span><span>(x1) // </span><span style="color:#d08770;">2</span><span>, y1, &#39;</span><span style="color:#a3be8c;">-b</span><span>&#39;)
+</span><span>ax[</span><span style="color:#d08770;">0</span><span>].</span><span style="color:#bf616a;">set_ylim</span><span>([-</span><span style="color:#d08770;">0.5</span><span>, </span><span style="color:#d08770;">2</span><span>])
+</span><span>ax[</span><span style="color:#d08770;">0</span><span>].</span><span style="color:#bf616a;">set_title</span><span>(&#39;</span><span style="color:#a3be8c;">box function</span><span>&#39;)
+</span><span>
+</span><span>ax[</span><span style="color:#d08770;">1</span><span>].</span><span style="color:#bf616a;">plot</span><span>(kx, np.</span><span style="color:#bf616a;">real</span><span>(s), &#39;</span><span style="color:#a3be8c;">-r</span><span>&#39;)
+</span><span>ax[</span><span style="color:#d08770;">1</span><span>].</span><span style="color:#bf616a;">set_xticks</span><span>(np.</span><span style="color:#bf616a;">arange</span><span>(np.</span><span style="color:#bf616a;">min</span><span>(kx), np.</span><span style="color:#bf616a;">max</span><span>(kx), </span><span style="color:#d08770;">0.1</span><span>))
+</span><span>ax[</span><span style="color:#d08770;">1</span><span>].</span><span style="color:#bf616a;">grid</span><span>()
+</span><span>ax[</span><span style="color:#d08770;">1</span><span>].</span><span style="color:#bf616a;">set_title</span><span>(&#39;</span><span style="color:#a3be8c;">Fourier transform</span><span>&#39;)
+</span><span>
+</span><span>ax[</span><span style="color:#d08770;">2</span><span>].</span><span style="color:#bf616a;">plot</span><span>(kx, np.</span><span style="color:#bf616a;">sinc</span><span>(kx*</span><span style="color:#d08770;">10</span><span>), &#39;</span><span style="color:#a3be8c;">-g</span><span>&#39;)
+</span><span>ax[</span><span style="color:#d08770;">2</span><span>].</span><span style="color:#bf616a;">set_xticks</span><span>(np.</span><span style="color:#bf616a;">arange</span><span>(np.</span><span style="color:#bf616a;">min</span><span>(kx), np.</span><span style="color:#bf616a;">max</span><span>(kx), </span><span style="color:#d08770;">0.1</span><span>))
+</span><span>ax[</span><span style="color:#d08770;">2</span><span>].</span><span style="color:#bf616a;">grid</span><span>()
+</span><span>ax[</span><span style="color:#d08770;">2</span><span>].</span><span style="color:#bf616a;">set_title</span><span>(&#39;</span><span style="color:#a3be8c;">sinc(kx * 10)</span><span>&#39;)
+</span><span>
+</span><span>plt.</span><span style="color:#bf616a;">show</span><span>()
+</span></code></pre>
+<p>You should be able to get the following plots:
+What happens if you change the scaling factor of the <code>sinc</code> function. For instance, instead of using <code>np.sinc(kx*10)</code>, what does the green curve look like if you change $10$ to $1$?</p>
+<p><a href="../kspace">Back to the Image Reconstruction</a></p>
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>

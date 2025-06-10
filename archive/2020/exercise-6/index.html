@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Exercise 6 </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Exercise 6 ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;archive&#x2F;2020&#x2F;exercise-6&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Exercise 6">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Exercise 6</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Stephan Seitz</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <p><strong>Submission deadline: 29.06.20 23:55h</strong></p>
+<p>In the last exercise, we want to have a look at edge detection and segmentation.</p>
+<h2 id="edge-detection">Edge Detection</h2>
+<P align=right> <i>7 Points</i>
+<p>Open a test image in a new file <code>src/main/java/exercise/Exercise06.java</code>.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// Your name
+</span><span style="color:#65737e;">// Team parnter name
+</span><span style="color:#b48ead;">package </span><span>exercises;
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>lme.</span><span style="color:#ebcb8b;">DisplayUtils</span><span>;
+</span><span style="color:#b48ead;">import </span><span>mt.</span><span style="color:#ebcb8b;">LinearImageFilter</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">Exercise06 </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">public static void </span><span style="color:#8fa1b3;">main</span><span style="color:#eff1f5;">(</span><span style="color:#ebcb8b;">String</span><span style="color:#b48ead;">[] </span><span style="color:#bf616a;">args</span><span style="color:#eff1f5;">) {
+</span><span style="color:#eff1f5;">	(</span><span style="color:#b48ead;">new </span><span style="color:#eff1f5;">ij.</span><span style="color:#ebcb8b;">ImageJ</span><span style="color:#eff1f5;">()).</span><span style="color:#bf616a;">exitWhenQuitting</span><span style="color:#eff1f5;">(</span><span style="color:#d08770;">true</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">	mt.</span><span style="color:#ebcb8b;">Image</span><span style="color:#eff1f5;"> cells </span><span>= </span><span style="color:#eff1f5;">lme.</span><span style="color:#ebcb8b;">DisplayUtils</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">openImageFromInternet</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">https://upload.wikimedia.org/wikipedia/commons/8/86/Emphysema_H_and_E.jpg</span><span>&quot;</span><span style="color:#eff1f5;">, </span><span>&quot;</span><span style="color:#a3be8c;">.jpg</span><span>&quot;</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    }
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p>We will use the <a href="https://en.wikipedia.org/wiki/Sobel_operator">Sobel Filter</a>, to estimate the gradient of the image.
+The Sobel Filter uses two filter kernels. One to estimate the x-component of the gradient and one for the y-component.</p>
+<p><img src="../sobel.png" alt="Sobel" /></p>
+<p>Create two <code>LinearImageFilter</code>s with those coeffients. You can use <code>filterX.setBuffer(new float[]{...})</code>
+or <code>setAtIndex</code> to do that.
+Filter the original image with both of them!</p>
+<table>
+    <tr>
+	<td><img src="./cell2_EdgesX.png" alt=""></td>
+	<td><img src="./cell2_EdgesY.png" alt=""></td>
+    </tr>
+    <tr>
+	<th>X component of gradient $\delta_x$</th>
+	<th>Y component of gradient $\delta_y$</th>
+    </tr>
+</table>
+<p>You should now have two intermediate results that can be interpreted as the x-component $\delta_x$
+and y-component $\delta_y$of the estimated gradient for each pixel.</p>
+<p>Use those two images to calculate the norm of the gradient for each pixel!</p>
+<p>$$ \left|\left| \nabla I \right|\right| =\left|\left| \left(\delta_x,\ \delta_x \right) \right|\right| = \sqrt{ \delta_x^2 + \delta_y^2}$$</p>
+<p><img src="../cell2_GradientMagnitude.png" alt="Gradient" /></p>
+<p>Find a good threshold and set all gradient magnitude values to zero that are below this values and all other to <code>1.f</code> to
+obtain an image like this with a clear segmentation in edge pixels and non-edge pixels.</p>
+<p><img src="../cell2_GradientSegmented.png" alt="Gradient Segmented" /></p>
+<h2 id="segmentation">Segmentation</h2>
+<P align=right> <i>3 Points</i>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Emphysema_H_and_E.jpg" alt="cells" /></p>
+<P align=right> <i>Source: https://commons.wikimedia.org/wiki/File:Emphysema_H_and_E.jpg (cc-by-2.0)</i>
+<p>For histologic examinations colored subtances called stains are used to enhance the constrast
+of different portions of the tissue.</p>
+<p>Use a suitable threshold to segment the individual sites with high contrast (0 background, 1 contrasted cells).
+You can use the following method to overlay your segmentation with the original image.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#65737e;">// In lme.DisplayUtils
+</span><span>    </span><span style="color:#b48ead;">public static</span><span> void </span><span style="color:#bf616a;">showSegmentedCells</span><span>(mt.</span><span style="color:#ebcb8b;">Image</span><span> original, mt.</span><span style="color:#ebcb8b;">Image</span><span> segmented) 
+</span><span>    </span><span style="color:#65737e;">// You may also try `showSegmentedCells(cells, segmentation, true);` with the newest version of DisplayUtils
+</span></code></pre>
+<p><img src="../SegmentationOnImageNoWatershed.png" alt="cells" /></p>
+<h2 id="improving-your-segmentation">Improving your Segmentation</h2>
+<p><em>This is optional and not required for the exercise.
+You might want to go directly to the evaluation of this year's exercises:
+<a href="https://forms.gle/2pbmuWtmeTtaVcKL7">https://forms.gle/2pbmuWtmeTtaVcKL7</a></em></p>
+<p>You may notice that by just choosing a threshold you may not be able to separate each individual structure.</p>
+<p><img src="../cell2_segmented.png" alt="cells" /></p>
+<p>You can try out some operations from the menu <em>Process &gt; Binary</em> while you have your 0/1 segmentation focused.
+You have to convert to 8-bit first. E.g.</p>
+<!--There's a trick to improve your segmentation using [the watershed method](https://en.wikipedia.org/wiki/Watershed_%28image_processing%29). -->
+<!--Click on the following menu items while displaying your 0/1 segmentation.-->
+<ul>
+<li><em>Image &gt; Type &gt; 8-bit</em></li>
+<li><em>Process &gt; Binary &gt; Watershed</em></li>
+</ul>
+<!--![cells](./cell2_segmented_watershed.png)-->
+<p>Or &quot;click&quot; on menu items in your program code.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    segmentation.</span><span style="color:#bf616a;">show</span><span>();
+</span><span>    </span><span style="color:#d08770;">IJ</span><span>.</span><span style="color:#bf616a;">run</span><span>(&quot;</span><span style="color:#a3be8c;">8-bit</span><span>&quot;);
+</span><span>    </span><span style="color:#d08770;">IJ</span><span>.</span><span style="color:#bf616a;">run</span><span>(&quot;</span><span style="color:#a3be8c;">Watershed</span><span>&quot;);
+</span><span>    </span><span style="color:#ebcb8b;">DisplayUtils</span><span>.</span><span style="color:#bf616a;">showSegmentedCells</span><span>(cells, segmentation);
+</span></code></pre>
+<p><img src="../SegmentationOnImage.png" alt="cells" /></p>
+<h2 id="evaluation">Evaluation</h2>
+<p>We redesigned the exercises from scratch for this semester.
+Therefore, some of the exercises might have been difficult to understand or too much work. 
+We are glad for your feedback to help future semesters' students😊:
+<a href="https://forms.gle/2pbmuWtmeTtaVcKL7">https://forms.gle/2pbmuWtmeTtaVcKL7</a></p>
+<!--Also other morphologic operations from the "Binary" menu may help to improve the segmentation.-->
+<!--[>## Morphologic Operations<]-->
+<!--<P align=right> <i>5 Bonus points</i>-->
+<!--[>![Breast Cancer](./one_color.png)<]-->
+<!--![Breast Cancer](./one_color.png)-->
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Project Work 3 – Projection </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Project Work 3 – Projection ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;archive&#x2F;2020&#x2F;projection&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Project Work 3 – Projection">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Project Work 3 – Projection</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Stephan Seitz</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <h1 id="projections">Projections</h1>
+<p>To understand how we can reconstruct a volume from X-ray images, we will first go through the process of how these X-ray images
+were acquired from a physical volume.</p>
+<p>In your project report you should...</p>
+<ul>
+<li>explain the reader the physical process of <strong>X-ray attenuation</strong> and its material dependance.
+What materials in the human body attenuate more X-rays than others?
+How is this represented in a CT reconstruction? Or in other words: what quantity does a CT reconstruction actually show?
+Which kind of tissues appear therefore lighter and which darker?</li>
+<li>explain the <strong>fundamental theorem</strong> hat describes this process (X-ray attenuation). Give a formula!
+Explain all the symbols that you use in the formula.</li>
+<li>prove your explanations with references, also provide the source of the formula.</li>
+</ul>
+<p>In this project work, we will make some simplifying assumptions on the acquisition geometry.
+I made a drawing of the path of a single X-ray through a slice of our volume.
+Since this ray crosses the origin of our coordinate system we call it the <strong>principal ray</strong>.</p>
+<p><img src="../drawing_compressed.jpg" alt="drawing" /></p>
+<p>What are the coordinates $\vec{x}_{P}$ of a point $P$ on the line of the principal ray in dependency of the angle $\theta$ ($\alpha$ in drawing) and the distance
+from origin $r$?</p>
+<p>In reality, not all X-rays cross the coordinate origin. 
+What are the coordinates $\vec{x}_{P'}$ of a point $P'$ that is on a ray that hits the detector at coordinate $s$ in depedency of $r$ and $\theta$?
+We assume parallel rays.</p>
+<p><em>Hint: What vector do you have to add to $P$ to get to $P'$?</em></p>
+<p><img src="../drawing_parallel_compressed.jpg" alt="drawing" /></p>
+<p>Unfortunally, the figure was written on paper and you shouldn't use hand drawn figures in the project report (as you can see they look ugly).
+Please create one or two plots on the computer that are explaining your derived the ray equations to the reader of the project
+report. Decide which information is important for the reader to understand your text.</p>
+<ul>
+<li>How does the described situation differ from the <strong>actual acquisition geometry</strong> of modern CT scanners?
+What are the reasons for that? Could our simplified situation be implemented in reality?</li>
+</ul>
+<!--- **After Implementation:** what would you need to change in your implementation to cover the real geometry?-->
+<ul>
+<li><strong>After Implementation:</strong> Describe briefly your implementation of the projection.
+Do not refer any Java classes or variable names!
+Give a formula for how you calculated the different projection angles.
+Give a formula for how you calculated the projection result for each ray.
+What physical effects were neglected in our simulation but are present in reality?
+Name at least three non-idealities of real systems.</li>
+</ul>
+<p>This part of the project work should be not longer than <strike>1.5 pages</strike>.
+<strong>After some remarks from you: 2 pages are also ok.</strong>.</p>
+<h2 id="implementation">Implementation</h2>
+<p>We already have an volume class which can store the stack of image slices. Additionally, we also want
+to store the projection images (referred as sinograms) for these stack of image slices. For this create
+create a class <code>mt.Projector</code> in a file <code>src/main/java/mt/Projector.java</code>, which can hold both volume slices
+and the sinograms.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// Your name here &lt;your idm&gt;
+</span><span style="color:#b48ead;">package </span><span>mt;
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>java.util.stream.</span><span style="color:#ebcb8b;">IntStream</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">Projector </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">    </span><span style="color:#65737e;">// Our volume
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">private </span><span style="color:#eff1f5;">mt.</span><span style="color:#ebcb8b;">Volume </span><span style="color:#eff1f5;">volume;
+</span><span style="color:#eff1f5;">    </span><span style="color:#65737e;">// Our sinogram
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">private </span><span style="color:#eff1f5;">mt.</span><span style="color:#ebcb8b;">Volume </span><span style="color:#eff1f5;">sinogram;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p>Imlement a constructor for this class.
+It should call <code>this.volume.centerOrigin()</code> and set the origin of each sinogram slice to <code>0.0f, -sinogram.physicalHeight() * 0.5f</code> so we use the same coordinate
+systems as in our drawings (it might be handy to set the origin of sinogram to <code>0.0f, -sinogram.physicalHeight() * 0.5f, -sinogram.physicalDepth() * 0.5f</code>, requires a <code>Volume.setOrigin</code> method)</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public </span><span style="color:#bf616a;">Projector</span><span>(mt.</span><span style="color:#ebcb8b;">Volume</span><span> projectionVolume, mt.</span><span style="color:#ebcb8b;">Volume</span><span> sinogram) {
+</span><span>        ... </span><span style="color:#65737e;">// Implementation here
+</span><span>        </span><span style="color:#b48ead;">assert</span><span> sinogram.</span><span style="color:#bf616a;">depth</span><span>() == volume.</span><span style="color:#bf616a;">depth</span><span>() : &quot;</span><span style="color:#a3be8c;">Should have same amount of slices</span><span>&quot;;
+</span><span>    }
+</span></code></pre>
+<p>Constructor and Setters/Getters:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">setSinogram</span><span>(</span><span style="color:#ebcb8b;">Volume</span><span> sinogram)
+</span><span>    </span><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">Volume </span><span style="color:#bf616a;">sinogram</span><span>()
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">setVolume</span><span>(</span><span style="color:#ebcb8b;">Volume</span><span> volume)
+</span><span>    </span><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">Volume </span><span style="color:#bf616a;">volume</span><span>()
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">numAngles</span><span>() </span><span style="color:#65737e;">// == sinogram.width()
+</span></code></pre>
+<p>We assume that we aquire $N$ projections at $N$ different angles $\theta$.
+All angles should have the same distance from each other and divide $2\cdot \pi$ in $N$ equal parts (we always use <a href="https://en.wikipedia.org/wiki/Radian">radians</a> for angles).</p>
+<p>Implement a method which computes angle value of $n^{th}$ angle index. We want to use the method such that at $n=0$ our angle value should return $\theta=0$, at $n=1$ returns $\theta= \frac{2\cdot \pi}{N}$, and so on. Think of a general formula to compute the $n^{th}$ angle and describe it briefly in the description of your implmentation.</p>
+<p>Use this formula to implement the following method:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#65737e;">// In mt.Projector
+</span><span>    </span><span style="color:#b48ead;">public float </span><span style="color:#bf616a;">getNthAngle</span><span>(</span><span style="color:#b48ead;">int</span><span> angleIdx)
+</span></code></pre>
+<p>Now, recall the formula you derived for the position of point $P'$ in the previous section.
+We could directly use those coordinates $\vec{x}$ to calculate the integral in Lambert-Beer's law for a ray with angle $\theta$ and shift $s$ over a slice $\mu$ on our computers:</p>
+<p>$$ I_{\textrm{mono}} = I_{0} \cdot  \exp\left(-\intop\mu\left(\vec{x}\right)\textrm{d}\vec{x}\right) = I_{0} \cdot  \exp\left(-\intop_{-R}^{R}\mu\left(r,\theta, s\right)\textrm{d}r\right)$$</p>
+<p><em>$R$ is the radius of the circle circumscribing our rectangular slice. You can see it in the drawing.
+The path integral goes along the path marked in yellow in the drawings.</em></p>
+<p>We are only interested in the value of the line integral</p>
+<p>$$ P(\theta, s) = \intop_{-R}^{R}\mu\left(r, s, \theta\right)\textrm{d}r $$</p>
+<p>and we have to replace the integral by a sum (computers cannot calculate integrals directly)</p>
+<p>$$ P(\theta, s) = \sum_{r=-R}^{R}\mu\left(r,\theta, s\right) \cdot \mathtt{spacing}$$</p>
+<p>Calculate this sum for a fixed $s$ and $\theta$ on a slice of our volume!
+You can use <code>volumeSlice.interpolatedAt(x,y)</code> to deterime $\mu(\vec{x})$ and access values of our slice.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#65737e;">// in mt.Projector
+</span><span>    </span><span style="color:#b48ead;">public float </span><span style="color:#bf616a;">projectRay</span><span>(mt.</span><span style="color:#ebcb8b;">Image</span><span> volumeSlice, </span><span style="color:#b48ead;">float</span><span> s, </span><span style="color:#b48ead;">float</span><span> theta)
+</span></code></pre>
+<p>We have now calculated one value of one of the gray rays on our slice which translates to one point in our sinogram.</p>
+<p><img src="../sinogram.png" alt="sinogram" /></p>
+<p>Next we want to call this function for every ray and every pixel of our sinogram in the following method:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#65737e;">// in mt.Projector
+</span><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">projectSlice</span><span>(</span><span style="color:#b48ead;">int</span><span> sliceIdx) {
+</span></code></pre>
+<p>To do that ...</p>
+<ul>
+<li>
+<p>Get the slice <code>sliceIdx</code> from <code>this.volume</code> using <code>getSlice</code></p>
+<ul>
+<li>This is a slice of our volume with coordinates $x$ and $y$.</li>
+<li>$x$ runs from left to right</li>
+<li>$y$ runs from top to bottom</li>
+</ul>
+</li>
+<li>
+<p>Get the sinogram for that slice <code>sliceIdx</code> from <code>this.sinogramm</code> using <code>getSlice</code></p>
+<ul>
+<li>This is a slice of our sinogram with physical coordinates $s$ and $\theta$.</li>
+<li>$\theta$ runs from left to right</li>
+<li>$s$ runs from top to bottom</li>
+</ul>
+</li>
+<li>
+<p>Iterate over each pixel of the sinogram. I would use <code>angleIdx</code>, <code>sIndex</code>  as a loop variables.</p>
+<ul>
+<li>Calculate the actual value of <code>s</code> from <code>sIndex</code>.</li>
+<li>Calculate <code>theata</code> from <code>angleIndex</code> by calling the function <code>getNthAngle</code></li>
+<li>Call <code>projectRay</code> with <code>s</code> and <code>theta</code></li>
+<li>Save the result to sinogram at positions <code>angleIndex</code> and <code>sIndex</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Hint</strong> Computing <code>s</code> from <code>sIndex</code> is just using the physical coordinates and shifting the origin of $s$ axis in
+the sinogram to the center.
+This can be done by muliplying <code>sIndex</code> with <code>sinogram.spacing()</code> (pixel size of the detector) and adding
+<code>sinogram.origin()[1]</code> (<code>== -sinogram.physicalHeight() * 0.5f</code>).</p>
+<p>We recommend you to test your algorithm using a simple image.
+Choose a good size for the sinogram to capture the whole image (e.g. height == <code>volume.height</code>).
+For simplicity, you do not need to change the spacing of the volume or the sinogram.</p>
+<table>
+<tr> 
+    <td><a href="../dot.png" ><img align="center" src="../dot.png" ></a></ts>
+    <td><a href="../sinogram_dot.png" ><img align="center" src="../sinogram_dot.png" ></a></ts>
+</tr>
+<tr> 
+    <th>Simple test slice</th>
+    <th>Sinogram of that slice</th>
+</td>
+</table>
+<p><em>I used a high number of 500 angles to get a near square image.
+When you are using less angles the width of your sinogram will be smaller.
+Use less angles to compute the results faster.</em></p>
+<p>You may also apply <code>projectSlice</code> on all slices and display the sinogram.
+<code>Ctrl+Shift+H</code> should reveal a rotating torso when using one the Cancer Archive scans:</p>
+<video controls loop width="300">
+  <source src="../sinogram_ct_scan.webm" type="video/webm">
+</video> 
+<p>Or of the test image above</p>
+<video controls loop width="300">
+  <source src="../sinogram_rotation.webm" type="video/webm">
+</video> 
+<p><a href="../volume">Previous section</a></p>
+<p><a href="../sinogram">Next section</a></p>
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>

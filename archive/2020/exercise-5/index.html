@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Exercise 5 </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Exercise 5 ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;archive&#x2F;2020&#x2F;exercise-5&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Exercise 5">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Exercise 5</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Stephan Seitz</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <h1 id="submission">Submission</h1>
+<p><strong>Submission deadline: 08.06.20 23:55h</strong></p>
+<p>Please ensure that all files you created also contain <strong>your name and your IDM ID</strong> and also your partner's name and IDM ID if you're not working alone.</p>
+<p>Each exercise has <strong>10 points</strong>. You have to achieve <strong>30 of 60 points in six homework exercises</strong> to pass the module.</p>
+<h1 id="quanitfying-errors">Quanitfying Errors</h1>
+<P align="right"><i>3 Points</i>
+<p>In <a href="../exercise-3">Exercise03</a>, we have seen that we can use linear low-pass filters, like the Gauss filter, to reduce 
+the amount of noise in images. Let's test that!</p>
+<p>Add two static methods to the <code>Image</code> class:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public static float </span><span style="color:#bf616a;">meanSquaredError</span><span>(</span><span style="color:#ebcb8b;">Image</span><span> a, </span><span style="color:#ebcb8b;">Image</span><span> b);
+</span><span style="color:#b48ead;">public static float </span><span style="color:#bf616a;">psnr</span><span>(</span><span style="color:#ebcb8b;">Image</span><span> a, </span><span style="color:#ebcb8b;">Image</span><span> b, </span><span style="color:#b48ead;">float</span><span> maxValue); </span><span style="color:#65737e;">// maxValue is 255 for PNG images
+</span></code></pre>
+<!--$ \mathrm{MSE}_{ab} =  \frac{1}{M} \sum_{i=0}^M \left(a_i - b_i\right)^2 $$-->
+<p>$$ \mathrm{MSE}_{ab}=  \frac{1}{M} \sum _{i=0}^{M} \left(a_i - b_i\right)^2 $$</p>
+<p>$$        \mathrm{PSNR_{ab}} = 20\cdot  \log_{10}(\mathtt{maxPossibleValue}) - 10\cdot \log_{10}(\mathrm{MSE}_{ab}) $$</p>
+<!--Take adavatage of the fact that you already implemented a `minus` method.-->
+<p>Static also means that you will use them like <code>float mse = Image.meanSquaredError(imageA, imageB);</code>.</p>
+<p>Open a test image and add some noise using <code>addNoise</code> in <code>exercise.Exercise05</code> (<code>src/main/java/exercise/Exercise05</code>).</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    (</span><span style="color:#b48ead;">new </span><span>ij.</span><span style="color:#ebcb8b;">ImageJ</span><span>()).</span><span style="color:#bf616a;">exitWhenQuitting</span><span>(</span><span style="color:#d08770;">true</span><span>);
+</span><span>    </span><span style="color:#ebcb8b;">Image</span><span> original = lme.</span><span style="color:#ebcb8b;">DisplayUtils</span><span>.</span><span style="color:#bf616a;">openImageFromInternet</span><span>(&quot;</span><span style="color:#a3be8c;">https://mt2-erlangen.github.io/shepp_logan.png</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">.png</span><span>&quot;);
+</span><span>    original.</span><span style="color:#bf616a;">setName</span><span>(&quot;</span><span style="color:#a3be8c;">Original</span><span>&quot;);
+</span><span>    
+</span><span>    </span><span style="color:#ebcb8b;">Image</span><span> noise = </span><span style="color:#b48ead;">new </span><span style="color:#ebcb8b;">Image</span><span>(original.</span><span style="color:#bf616a;">width</span><span>(), original.</span><span style="color:#bf616a;">height</span><span>(), &quot;</span><span style="color:#a3be8c;">Noise</span><span>&quot;);
+</span><span>    noise.</span><span style="color:#bf616a;">addNoise</span><span>(</span><span style="color:#d08770;">0.</span><span style="color:#b48ead;">f</span><span>, </span><span style="color:#d08770;">10.</span><span style="color:#b48ead;">f</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#ebcb8b;">Image</span><span> noisyImage = original.</span><span style="color:#bf616a;">minus</span><span>(noise); </span><span style="color:#65737e;">// You might also implement your own `plus` ;-)
+</span></code></pre>
+<p>Apply a Gauss filter (choose a good <code>filterSize</code> and <code>sigma</code>) on the noise image and compare the result with the original image.
+Can the error be reduced in comparision to the unfiltered noisy image? Also take a look on the error images that you can
+calculate using your <code>minus</code> method of the class <code>Image</code>.</p>
+<ul>
+<li><em>Hint: You can use a for-loop to try out different values for <code>sigma</code></em>.</li>
+<li><em>Hint: You do not need to submit written answers to the questions in the text. Just do the correponding experiments!</em></li>
+</ul>
+<h1 id="non-linear-filters">Non-Linear Filters</h1>
+<P align="right"><i>3 Points</i>
+<p>A quality criterion for medical images are sharp edges.
+However, though the Gauss filter reduces the noise it also blurs out those edges.
+In this exercise, we try to mitigate that problem using non-linear filters.</p>
+<p>Non-linear filters calculate similar to a convolution each pixel value in the output from a neighborhood of the
+input image. Remember the sliding window from exercise 3? Non-linear filters do exactly the same.</p>
+<p><img src="https://raw.githubusercontent.com/vdumoulin/conv_arithmetic/master/gif/same_padding_no_strides.gif" alt="Animation" /></p>
+<P align="right"><i>Source: https://github.com/vdumoulin/conv_arithmetic</i>
+<p>Create a class <code>mt.NonLinearFilter</code> in the file <code>src/main/java/mt/NonLinearFilter.java</code>:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// Your name here &lt;your idm&gt;
+</span><span style="color:#65737e;">// Your team partner here &lt;partner&#39;s idm&gt;
+</span><span style="color:#b48ead;">package </span><span>mt;
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>lme.</span><span style="color:#ebcb8b;">WeightingFunction2d</span><span>;
+</span><span style="color:#b48ead;">import </span><span>lme.</span><span style="color:#ebcb8b;">NeighborhoodReductionFunction</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">NonLinearFilter </span><span style="color:#b48ead;">implements </span><span style="color:#a3be8c;">ImageFilter </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    </span><span style="color:#65737e;">// Name of the filter
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">protected </span><span style="color:#ebcb8b;">String </span><span style="color:#eff1f5;">name; 
+</span><span style="color:#eff1f5;">    </span><span style="color:#65737e;">// Size of the neighborhood, 3 would mean a 3x3 neighborhood
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">protected int </span><span style="color:#eff1f5;">filterSize;
+</span><span style="color:#eff1f5;">    </span><span style="color:#65737e;">// Calculates a weight for each neighbor
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">protected </span><span style="color:#ebcb8b;">WeightingFunction2d </span><span style="color:#eff1f5;">weightingFunction </span><span>= </span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">centerValue</span><span style="color:#eff1f5;">,</span><span style="color:#bf616a;">neighborValue</span><span style="color:#eff1f5;">,</span><span style="color:#bf616a;">x</span><span style="color:#eff1f5;">,</span><span style="color:#bf616a;">y</span><span style="color:#eff1f5;">) </span><span style="color:#b48ead;">-&gt; </span><span style="color:#d08770;">1.</span><span style="color:#b48ead;">f</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">    </span><span style="color:#65737e;">// Calculates output value from neighbors and weights
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">protected </span><span style="color:#eff1f5;">lme.</span><span style="color:#ebcb8b;">NeighborhoodReductionFunction </span><span style="color:#eff1f5;">reductionFunction;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">NonLinearFilter</span><span style="color:#eff1f5;">(</span><span style="color:#ebcb8b;">String </span><span style="color:#bf616a;">name</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">filterSize</span><span style="color:#eff1f5;">) {
+</span><span style="color:#eff1f5;">        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.filterSize </span><span>=</span><span style="color:#eff1f5;"> filterSize;
+</span><span style="color:#eff1f5;">        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.name </span><span>=</span><span style="color:#eff1f5;"> name;
+</span><span style="color:#eff1f5;">    }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    @</span><span style="color:#bf616a;">Override
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">String </span><span style="color:#8fa1b3;">name</span><span style="color:#eff1f5;">() {
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">return</span><span style="color:#eff1f5;"> name;
+</span><span style="color:#eff1f5;">    }
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p>As you can see, <code>NonLinearFilter</code> uses two interfaces. You can copy them into your <code>src/main/java/lme/</code> folder.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// in file `src/main/java/lme/WeightingFunction2d.java`
+</span><span style="color:#b48ead;">package </span><span>lme;
+</span><span>
+</span><span>@</span><span style="color:#bf616a;">FunctionalInterface </span><span style="color:#65737e;">// Does nothing. But Eclipse is happier when it&#39;s there.
+</span><span style="color:#b48ead;">public interface </span><span style="color:#ebcb8b;">WeightingFunction2d </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">    </span><span style="color:#65737e;">// Assigns  a neighbor (shiftX, shiftY) a weight depending on its value and the value of the pixel in the middle of the neighborhood
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">float </span><span style="color:#8fa1b3;">getWeight</span><span style="color:#eff1f5;">(</span><span style="color:#b48ead;">float </span><span style="color:#bf616a;">centerValue</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">float </span><span style="color:#bf616a;">neighborValue</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">shiftX</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">shiftY</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p>and</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// in file `src/main/java/lme/NeighborhoodReductionFunction.java`
+</span><span style="color:#b48ead;">package </span><span>lme;
+</span><span>
+</span><span>@</span><span style="color:#bf616a;">FunctionalInterface
+</span><span style="color:#b48ead;">public interface </span><span style="color:#ebcb8b;">NeighborhoodReductionFunction </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">    </span><span style="color:#65737e;">// Calculates the output pixels from the values of the neighborhood pixels and their weight
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">float </span><span style="color:#8fa1b3;">reduce</span><span style="color:#eff1f5;">(</span><span style="color:#b48ead;">float[] </span><span style="color:#bf616a;">values</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">float[] </span><span style="color:#bf616a;">weights</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p>Implement the method <code>apply</code> for <code>NonLinearFilter</code>.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    @</span><span style="color:#bf616a;">Override
+</span><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">apply</span><span>(</span><span style="color:#ebcb8b;">Image</span><span> input, </span><span style="color:#ebcb8b;">Image</span><span> result)
+</span></code></pre>
+<p>The method should calculate each output pixel from a neighborhood. So</p>
+<ul>
+<li>Create an array to hold the values of the neighborhood pixels. How many neighborhood pixels are there?</li>
+<li>Loop over each output pixel
+<ul>
+<li>Fill the array of neighborhood pixels with values from the input image (needs two inner loops)</li>
+<li>Use <code>this.reductionFunction.reduce</code> to determine the value of the output pixel. You can use <code>null</code> for the second parameter for now (we will implement <code>weights</code> later).</li>
+<li>Save the value to the output image (using <code>setAtIndex</code>).</li>
+</ul>
+</li>
+</ul>
+<p>Overall, the method should look very similar to your <code>LinearImageFilter.apply</code> method.</p>
+<p>To test your method, implement a <code>MedianFilter</code> in a file <code>src/main/mt/MedianFilter.java</code> as a subclass of <code>NonLinearFilter</code>.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// Your name here
+</span><span style="color:#65737e;">// Team partner&#39;s name here
+</span><span style="color:#b48ead;">package </span><span>mt;
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>java.util.</span><span style="color:#ebcb8b;">Arrays</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">MedianFilter </span><span style="color:#b48ead;">extends </span><span style="color:#a3be8c;">NonLinearFilter </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">	</span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">MedianFilter</span><span style="color:#eff1f5;">(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">filterSize</span><span style="color:#eff1f5;">) {
+</span><span style="color:#eff1f5;">            </span><span style="color:#65737e;">// TODO:
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">super</span><span style="color:#eff1f5;">(...);
+</span><span style="color:#eff1f5;">            reductionFunction </span><span>= </span><span style="color:#eff1f5;">...;
+</span><span style="color:#eff1f5;">	}
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p>The <code>MedianFilter</code> is a <code>LinearImageFilter</code> with
+<code>reductionFunction</code> <code>(values, weights) -&gt; { Arrays.sort(values); return values[values.length / 2]; }</code>
+(it sorts the values and takes the one in the middle).
+All you need to do is to call the <code>super</code> constructor and set <code>reductionFunction</code>.</p>
+<p>Does the median filter also reduce the noise in the image?</p>
+<h2 id="bilateral-filter">Bilateral Filter</h2>
+<P align="right"><i>2 Points</i>
+<p>Next, we will implement the <code>BilateralFilter</code>.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">package </span><span>mt;
+</span><span>
+</span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">BilateralFilter </span><span style="color:#b48ead;">extends </span><span style="color:#a3be8c;">NonLinearFilter </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">    </span><span style="color:#ebcb8b;">GaussFilter2d </span><span style="color:#eff1f5;">gaussFilter;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">BilateralFilter</span><span style="color:#eff1f5;">(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">filterSize</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">float </span><span style="color:#bf616a;">spatialSigma</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">float </span><span style="color:#bf616a;">valueSigma</span><span style="color:#eff1f5;">){
+</span><span style="color:#eff1f5;">        ...
+</span><span style="color:#eff1f5;">    }
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p>The bilateral assign a weight to each neightborhood pixel.
+So modify your <code>NonLinearFilter.apply</code> method that it also creates a <code>weights</code> array and uses <code>weightingFunction.getWeight</code> to
+fill it. <code>reductionFunction</code> should now also be called with the <code>weights</code> array.</p>
+<p>The bilateral has to parameters $\sigma_{\text{value}}$ and $\sigma_{\text{spatial}}$.
+For large values of $\sigma_{\text{spatial}}$ the bilateral filter behaves like a Gauss filter.
+Initialize <code>gaussFilter</code> in the constructor. Set <code>weightingFunction</code> so that the weights $w_s$ of the Gauss filter are returned.
+Set <code>reductionFunction</code>. It should multiply each of the <code>values</code> with its weight and then sum the results up.</p>
+<p>Your <code>BilateralFilter</code> should now behave like a Gauss filter. Does it pass the test in <code>GaussFilter2dTests</code> when you
+use <code>BilateralFilter</code> instead of <code>GaussFilter2d</code>?</p>
+<h3 id="edge-preserving-filtering">Edge-Preserving Filtering</h3>
+<P align="right"><i>2 Points</i>
+<p>To make our bilateral filter edge preserving, we have to use also $\sigma_{\text{value}}$.
+The value weight $w_v$ is calculated as follows</p>
+<p>$$ w_v = \exp\left(-\frac{\left(\mathtt{centerValue}-\mathtt{value}\right)^2}{2 \sigma_{\text{value}}^2}\right) $$</p>
+<p>Just multiply with this value $w_v$ in <code>weightingFunction</code>. The total weight of a pixel will then be $w_v \cdot w_s$.</p>
+<p>Now we have the problem that our weights will no longer add up to one! To solve this problem divide by the sum of <code>weights</code>
+in the <code>reductionFunction</code>.</p>
+<p>Can you reduce the error even more using the bilateral filter? My results look like this.</p>
+<table style="width:100% text-align:;">
+  <tr>
+    <th><a href="../shepp_logan_original.png" ><img align="center" src="../shepp_logan_original.png" ></a></th>
+    <th><a href="../shepp_logan_noisy.png" ><img align="center" src="../shepp_logan_noisy.png" ></a></th>
+    <th><a href="../shepp_logan_gauss.png" ><img align="center" src="../shepp_logan_gauss.png" ></a></th>
+    <th><a href="../shepp_logan_bilateral.png" ><img align="center" src="../shepp_logan_bilateral.png" ></a></th>
+  </tr>
+  <tr>
+    <th>Original</th>
+    <th>Noisy</th>
+    <th>Gauss filtered</th>
+    <th>Bilateral filtered</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th><a href="../error_noise.png" ><img align="center" src="../error_noise.png" ></a></th>
+    <th><a href="../error_gauss.png" ><img align="center" src="../error_gauss.png" ></a></th>
+    <th><a href="../error_bilateral.png" ><img align="center" src="../error_bilateral.png" ></a></th>
+  </tr>
+  <tr>
+    <th></th>
+    <th>Error Unfiltered</th>
+    <th>Error Gauss</th>
+    <th>Error Bilateral</th>
+  </tr>
+</table> 
+<!--Java unzip: https://www.journaldev.com/960/java-unzip-file-example-->
+<!--https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage?SeriesInstanceUID=1.3.6.1.4.1.14519.5.2.1.2857.5885.605148569068237074211642729801-->
+<!--```java-->
+<!--public float power();    // Mean of the squared signal values-->
+<!--public float powerDb();  // 10 * Math.log(power)-->
+<!--```-->
+<!--The power of a signal is calculated like the mean value. Except that you calculate the mean of the squared singal values.-->
+<!--You can calculate the mean squared error like that-->
+<!--```java-->
+<!--Image errorImage = original - noisy;         // original and noisy are of type mt.Image-->
+<!--float meanSquaredError = errorImage.power(); //-->
+<!--```-->
+<!--```java-->
+<!--public float power();    // Mean of the squared signal values-->
+<!--public float powerDb();  // 10 * Math.log(power)-->
+<!--```-->
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>

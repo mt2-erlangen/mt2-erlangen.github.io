@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Project Work 1 - Thresholding </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Project Work 1 - Thresholding ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;thresholding&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Project Work 1 - Thresholding">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Project Work 1 - Thresholding</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Sebastian Dietz, Mischa Dombrowski</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <h1 id="overview">Overview</h1>
+<ol start="0">
+<li><a href="../introduction">Introduction</a></li>
+<li><a href="../thresholding">Thresholding</a></li>
+<li><a href="../segmentation">Segmentation</a></li>
+<li><a href="../otsu">Otsu's Method</a></li>
+<li><a href="../edgedetection">Edge Detection</a> </li>
+<li><a href="../cannyedge">Canny Edge</a> </li>
+<li><a href="../conclusion">Outlook and Conclusion</a></li>
+</ol>
+<h1 id="1-thresholding-and-illumination-correction">1: Thresholding and Illumination-Correction</h1>
+<h1 id="1-1-introduction">1.1: Introduction</h1>
+<p>Your first task consists of implementing an ImageJ-Plugin capable of performing a classic thresholding operation, as well as correcting for uneven illumination within an image. </p>
+<p>To get you started, you have been provided with an incomplete class called <code>Task_1_Threshold</code>. </p>
+<hr />
+<h1 id="1-2-thresholding">1.2: Thresholding</h1>
+<p>The concept of thresholding - as the name implies - is based on evaluating an image pixel by pixel and checking each time, whether it falls above or below a given threshold-value.
+If the pixel value in question is above the specified value, it will be set to white. If not it will be set to black. </p>
+<p>To do:</p>
+<ol>
+<li>
+<p>Create a new method:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">ByteProcessor </span><span style="color:#bf616a;">threshold </span><span>( </span><span style="color:#ebcb8b;">ImageProcessor</span><span> ip , </span><span style="color:#b48ead;">int</span><span> threshold ){} 
+</span></code></pre>
+</li>
+<li>
+<p>Create a new <code>ByteProcessor</code> to store your result</p>
+</li>
+<li>
+<p>Iterate over the entire input image and check the threshold-condition for each pixel</p>
+</li>
+<li>
+<p>Set each pixel in the output - ByteProcessor according to your evaluation</p>
+</li>
+<li>
+<p>Return your result</p>
+</li>
+</ol>
+<div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
+   &#128221; <strong> Note: </strong> <br>
+   Do not use inbuilt methods provided by ImageJ to perform the thresholding operation 
+   </div>   
+<hr />
+<h1 id="1-3-illumination-correction">1.3: Illumination-Correction</h1>
+<p>For cases where the illumination of the image is uneven, you will now add the functionality to perform Illumination-Correction.</p>
+<p>To do:</p>
+<ol>
+<li>
+<p>Create a new method:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">ByteProcessor </span><span style="color:#bf616a;">correctIllumination </span><span>( </span><span style="color:#ebcb8b;">ImageProcessor</span><span> ip ){}
+</span></code></pre>
+</li>
+<li>
+<p>Convert the input image to a <code>FloatProcessor</code> (make sure, that the original image remains unchanged)</p>
+</li>
+<li>
+<p>Apply a <code>Gaussian Filter</code> to the newly created image ($\sigma$ = 75) by using the <code>blurGaussian()</code>-function provided by ImageJ.</p>
+</li>
+<li>
+<p>Divide the original image by the filtered image (result should also be a  <code>FloatProcessor</code>)</p>
+</li>
+<li>
+<p>Convert your result to a <code>ByteProcessor</code> and return it</p>
+</li>
+</ol>
+<div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
+   &#128161; <strong> Tip: </strong> <br>
+The division of two images can simply be performed by iterating over them and performing it "pixelwise". 
+<p>There is however a method provided by ImageJ, which allows you to move (copy) the entire image-data of one image to another, while applying a simple operation (such as division) to every pixel of both images in one go. Check the <a href="https://imagej.net/ij/developer/api/ij/ij/process/Blitter.html">ImageJ-API</a> in case you want to use this method.</p>
+</div>
+<hr />
+<p>To allow you to test your results, the <code>run</code>-method already contains code for a simple user interface, which gives you the option to select a value for your threshold, as well as let you choose whether or not you want to correct the illumination before thresholding. This code has been commented out to avoid causing errors by calling methods you had not implemented yet.</p>
+<p>It pays to have a look at this code now, as you will eventually be creating a few dialogues of your own in later tasks.</p>
+<p>Consider using the &quot;Cells&quot; image to try out your code, since it will be the image you will be working with for the rest of your project. </p>
+<hr />
+<h1 id="1-4-project-introduction">1.4: Project Introduction</h1>
+<p>To begin the written section of your Final Project, you will first need to come up with an introduction. This introduction should:</p>
+<ul>
+<li>Capture the readers interest with a short motivation of the project </li>
+<li>Summarize and contextualize the approach to other research methods</li>
+<li>Position your approach with respect to other approaches</li>
+<li>Define the research problem and problem statement</li>
+<li>Give an overview of the paper's structure</li>
+</ul>
+<h1 id="1-5-project-report">1.5: Project-Report</h1>
+<p>The part of your report concerning Task_1 should contain the following:</p>
+<ul>
+<li>A brief description of the methods you implemented</li>
+<li>Provide a mathematically sound formulation of the thresholding operation</li>
+<li>A short discussion on why it may be necessary to correct the illumination in microscopy-images</li>
+<li>Images <strong>you</strong> generated with <strong>your code</strong>, that showcase what you described </li>
+<li>Create a figure that shows a few examples of the image before and after thresholding. What does <code>correctIllumination</code> do? </li>
+</ul>
+<p><a href="../segmentation">Next</a></p>
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>

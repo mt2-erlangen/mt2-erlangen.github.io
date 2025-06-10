@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Project Work 3 - Otsu </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Project Work 3 - Otsu ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;otsu&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Project Work 3 - Otsu">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Project Work 3 - Otsu</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Sebastian Dietz, Mischa Dombrowski</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <h1 id="overview">Overview</h1>
+<ol start="0">
+<li><a href="../introduction">Introduction</a></li>
+<li><a href="../thresholding">Thresholding</a></li>
+<li><a href="../segmentation">Segmentation</a></li>
+<li><a href="../otsu">Otsu's Method</a></li>
+<li><a href="../edgedetection">Edge Detection</a> </li>
+<li><a href="../cannyedge">Canny Edge</a> </li>
+<li><a href="../conclusion">Outlook and Conclusion</a></li>
+</ol>
+<h1 id="3-otsu-s-method">3: Otsu's Method</h1>
+<p>Otsu's method is a commonly used algorithm to compute the ideal threshold-value for image-segmentation. It is used in cases where the image-histogram is bimodal (meaning it contains two distinct peaks) to find the ideal &quot;middle ground&quot;. </p>
+<p>We highly recommmend that you have a look at the <a href="https://ieeexplore.ieee.org/document/4310076">original publication</a> from 1975 regarding the algorithm (Access should be granted if you try to access it using the university internet).</p>
+<hr />
+<h2 id="3-1-theory">3.1: Theory</h2>
+<p>Otsu's method works by maximizing the <strong>between class variance</strong> σ<sub>B</sub>² which is defined as:</p>
+<div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
+&sigma;<sub>B</sub><sup>2</sup> (&theta;) = P<sub>1</sub>(&theta;) 	&middot; P<sub>2</sub>(&theta;) &middot; (&mu;<sub>1</sub>(&theta;) - &mu;<sub>2</sub>(&theta;))<sup>2</sup> <br><br>
+<p>with</p>
+<p>P<sub>1</sub>(θ) = $\sum_{i = 0}^{\theta}  h(i)$  (≙ number of pixels below the threshold (background))</p>
+<p>P<sub>2</sub>(θ) = 1 - P<sub>1</sub>(θ) = $\sum_{i = \theta +1}^{L-1}  h(i)$ (≙ number of pixels above the threshold (foreground))</p>
+<p>μ<sub>1</sub>(θ) = $\frac{1}{P1(\theta)}$ $\cdot$ $\sum_{i = 0}^{\theta} (i+1)h(i)$  (≙ mean intensity of the background)</p>
+<p>μ<sub>2</sub>(θ) = $\frac{1}{P2(\theta)}$ $\cdot$ $\sum_{i = \theta +1}^{L-1} (i+1)h(i)$  (≙ mean intensity of the foreground)</p>
+</div>
+<p>with <strong>h(i)</strong> being the normalized histogram of the image, <strong>θ</strong> being the current threshold and <strong>L</strong> being the length of the histogram-array.</p>
+<hr />
+<h2 id="3-2-coding">3.2: Coding</h2>
+<p>In order to implement this algorithm, you will need to:</p>
+<ul>
+<li>Generate the histogram of the image</li>
+<li>Use the histogram to determine P<sub>1</sub>(θ) and P<sub>2</sub>(θ) for all possible θ's</li>
+<li>Use these values to calculate μ<sub>1</sub>(θ) and μ<sub>2</sub>(θ) for all possible θ's</li>
+<li>Calculate σ<sub>B</sub>² (θ) for all possible θ's</li>
+</ul>
+<p>Moving foreward, these steps will be explained in further detail. 
+Since your code for this task can get rather long, you should pay attention to an orderly programming style to avoid difficulties while debugging later on. You can also add comments to your code to help you keep track of your work. </p>
+<p>To do:</p>
+<ol>
+<li>Open the  <code>Task_3_Otsu</code>-class and take note of the empty methods provided. Each of these methods will be performing one of the calculations detailed above. </li>
+</ol>
+<br/>  
+<ol start="2">
+<li>
+<p>Complete the method:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>   </span><span style="color:#b48ead;">public double[] </span><span style="color:#bf616a;">getHistogram</span><span>(</span><span style="color:#ebcb8b;">ImageProcessor</span><span> in) {}
+</span></code></pre>
+<p>a. Create a <code>double</code>-array of appropriate size to store the histogram-values</p>
+<p>b. Iterate through the input-image and update the corresponding histogram-entry for each pixel's value</p>
+<p>c. Normalize and return the histogram. </p>
+</li>
+</ol>
+<div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
+   &#128221; <strong> Note: </strong> <br>
+   Normalizing refers to converting the histogram to a probability distribution. If you are unsure how to do that, have a look at the original publication 
+</div>
+<br>
+<ol start="3">
+<li>
+<p>Complete the methods to compute P<sub>1</sub>(θ), P<sub>2</sub>(θ), μ<sub>1</sub>(θ) and μ<sub>2</sub>(θ):</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public double[] </span><span style="color:#bf616a;">getP1</span><span>(</span><span style="color:#b48ead;">double[]</span><span> histogram){}
+</span><span style="color:#b48ead;">public double[] </span><span style="color:#bf616a;">getP2</span><span>(</span><span style="color:#b48ead;">double[] </span><span style="color:#d08770;">P1</span><span>){}
+</span><span style="color:#b48ead;">public double[] </span><span style="color:#bf616a;">getMu1</span><span>(</span><span style="color:#b48ead;">double[]</span><span> histogram, </span><span style="color:#b48ead;">double[] </span><span style="color:#d08770;">P1</span><span>){}
+</span><span style="color:#b48ead;">public double[] </span><span style="color:#bf616a;">getMu2</span><span>(</span><span style="color:#b48ead;">double[]</span><span> histogram, </span><span style="color:#b48ead;">double[] </span><span style="color:#d08770;">P2</span><span>){}
+</span></code></pre>
+<p>P<sub>1</sub>(θ) and P<sub>2</sub>(θ):</p>
+<ul>
+<li>
+<p>Consider which values for <strong>θ</strong> are possible in an <strong>8-bit</strong> grayscale image</p>
+</li>
+<li>
+<p>Iterate through the possible values of <strong>θ</strong> and calculate P<sub>1</sub>(θ) and P<sub>2</sub>(θ) for each instance 
+</br></p>
+</li>
+</ul>
+<p>μ<sub>1</sub>(θ) and μ<sub>2</sub>(θ):</p>
+<ul>
+<li>Calculate the values for μ<sub>1</sub>(θ) and μ<sub>2</sub>(θ) according to the formulas provided above. </li>
+</ul>
+<div style="background-color:rgb(235, 235, 235); border: 1px solid rgb(235, 235, 235); border-radius: 15px; padding: 15px; margin: 10px 0;">
+&#128221; <strong> Note: </strong> <br>
+<p><strong>Pay attention to the possibility of dividing by zero.</strong>
+You can handle this, by checking beforehand, if you will be dividing by zero and simply dividing by a very small number instead. We recommend you use <strong>10e-10</strong></p>
+</div>
+</li>
+</ol>
+<br/>  
+<ol start="4">
+<li>Determine the values for σ<sub>B</sub>² (θ) in the method:<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>   </span><span style="color:#b48ead;">public double[] </span><span style="color:#bf616a;">getSigmas</span><span>(</span><span style="color:#b48ead;">double[] </span><span style="color:#d08770;">P1</span><span>, </span><span style="color:#b48ead;">double[] </span><span style="color:#d08770;">P2</span><span>, </span><span style="color:#b48ead;">double[]</span><span> mu1, </span><span style="color:#b48ead;">double[]</span><span> mu2) {}
+</span></code></pre>
+a. Create a new <code>double</code>-array of suitable length
+b. Calculate σ<sub>B</sub>² (θ) for each value of θ and store it in the array you just created
+c. Return the array of sigmas</li>
+</ol>
+<br/>  
+<ol start="5">
+<li>
+<p>Find the maximum of your sigmas-array using:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>   </span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">getMaximum</span><span>(</span><span style="color:#b48ead;">double[]</span><span> sigmas){}
+</span></code></pre>
+<p>Determine the index (within the array of possible σ's) of the maximum value for σ<sub>B</sub>² (θ) and store the index as an <code>int</code>-variable
+(In case there is no definite maximum, you can simply select the <strong>σ with the highest index</strong>, as this adds the least amount of extra programming)</p>
+<p>The maximum value this method returns is your <strong>Otsu-Threshold-Value</strong></p>
+</li>
+</ol>
+</br>
+<ol start="6">
+<li>
+<p>Complete the method: </p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">ByteProcessor </span><span style="color:#bf616a;">otsuSegmentation</span><span>(</span><span style="color:#ebcb8b;">ImageProcessor</span><span> ip) {}
+</span></code></pre>
+<p>This method will combine all the steps for calculating the Otsu-Threshold, as well as return the Image after having applied the Otsu-Threshold and print the determined value to the terminal. 
+</br></p>
+<p>a. First apply an illumnation-correction to the input image. To do this, inherit the methods you implemented in <strong>Task_1</strong> by using:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#ebcb8b;">Task_1_Threshold Threshold </span><span>= </span><span style="color:#b48ead;">new </span><span style="color:#ebcb8b;">Task_1_Threshold</span><span>();
+</span></code></pre>
+<p>You can call methods belonging to the Threshold-Object like this: <code>Threshold.correctIllumination()</code>.</p>
+<p>b. Use the &quot;illumination-corrected&quot; image to perform all of the calculations you implemented </p>
+<p>c. Apply a Thresholding-operation to your image using the determined Otsu-Threshold and store the result in a ByteProcessor. </p>
+<p>d. Print the Otsu-Threshold to the terminal and return the result-ByteProcessor<br />
+<br/></p>
+</li>
+<li>
+<p>Complete the <code>run</code>-method such that it applies the Otsu-Segmentation-Process to the Input-Image and displays the resulting image.</p>
+</li>
+</ol>
+<p>To check your code you can perform an Otsu-Segmentation of the &quot;Cells&quot;-image.
+Your plugin should return the following: </p>
+<center><img src="../Otsu_Cells.png" width="500" height="500"></center>
+<hr />
+<h4 id="3-3-project-report">3.3: Project-Report</h4>
+<p>The part of your report concerning Task_3 should contain the following:</p>
+<ul>
+<li>A brief explanation of what Otsu's method is</li>
+<li>What it aims to achieve and how </li>
+<li>Its limitations</li>
+<li>Example of your segmentation</li>
+<li>In the original publication, Otsu mentions that &quot;An optimal threshold is selected automatically and stably, not based on the differentiation (i.e. a local property such as valley), but on the integration (i.e., a global
+property) of the histogram.&quot; Explain what this means, especially where the integration comes from. </li>
+<li>Compare the results to the naive thresholding method </li>
+<li>Otsu's method, while still applied and useful in practice, has several shortcomings. Discuss two of them and name examples of current methods that can be applied to similar problems that solve these issues, by providing a citation and briefly explaining them. </li>
+</ul>
+<p><a href="../edgedetection">Next</a></p>
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Import a Gradle project with Eclipse </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Import a Gradle project with Eclipse ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;archive&#x2F;WS2021&#x2F;import_eclipse&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Import a Gradle project with Eclipse">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Import a Gradle project with Eclipse</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Stephan Seitz</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <ul>
+<li>
+<p>On Windows, <a href="https://www.oracle.com/java/technologies/javase-jdk14-downloads.html">download the latest Java version (14.1) from Oracle</a>.
+On Ubuntu Linux, you can install <code>sudo apt install openjdk-14-jdk</code> (only on 19.10) or <code>sudo apt install openjdk-11-jdk</code>.
+At least Java 11 is required.</p>
+</li>
+<li>
+<p>Install Eclipse from <a href="https://www.eclipse.org/downloads/">https://www.eclipse.org/downloads/</a></p>
+</li>
+<li>
+<p>Open Eclipse </p>
+<p><img src="https://mt2-erlangen.github.io/archive/WS2021/import_eclipse/1.png" alt="ss" /></p>
+</li>
+<li>
+<p>Import...</p>
+<p><img src="https://mt2-erlangen.github.io/archive/WS2021/import_eclipse/2.png" alt="ss" /></p>
+</li>
+<li>
+<p>Existing Gradle Project...</p>
+<p><img src="https://mt2-erlangen.github.io/archive/WS2021/import_eclipse/3.png" alt="ss" /></p>
+</li>
+<li>
+<p>Chose path of the downloaded project and click <code>Next</code></p>
+<p><img src="https://mt2-erlangen.github.io/archive/WS2021/import_eclipse/4.png" alt="ss" /></p>
+</li>
+<li>
+<p>Grab a coffee while it's downloading ImageJ</p>
+<p><img src="https://mt2-erlangen.github.io/archive/WS2021/import_eclipse/5.png" alt="ss" /></p>
+</li>
+<li>
+<p>Try to run Exercise01</p>
+<p><img src="https://mt2-erlangen.github.io/archive/WS2021/import_eclipse/run.png" alt="ss" /></p>
+</li>
+<li>
+<p>You are seeing red squiggles, you found a bug in a Eclipse plugin. Upgrade it in the Eclipse Marketplace! </p>
+<p><img src="https://mt2-erlangen.github.io/archive/WS2021/import_eclipse/marketplace.png" alt="ss" /></p>
+</li>
+<li>
+<p>Search for <code>gradle build</code>! Then, click on the <code>Installed</code> button of &quot;Buildship Gradle Integration.</p>
+<p><img src="https://mt2-erlangen.github.io/archive/WS2021/import_eclipse/search_for_gradle_build.png" alt="ss" /></p>
+</li>
+<li>
+<p>... and click on <code>Update</code>! This should solve the bug after a restart.</p>
+<p><img src="https://mt2-erlangen.github.io/archive/WS2021/import_eclipse/eclipse_gradle.png" alt="ss" /></p>
+</li>
+<li>
+<p>You should now see ImageJ when you start Exercise01.</p>
+<p><img src="https://mt2-erlangen.github.io/archive/WS2021/import_eclipse/imagej.png" alt="ss" /></p>
+</li>
+<li>
+<p>If you're still facing problems: please also check whether a valid Java Runtime Enviroment was found by right-clicking on the project folder
+(if it still has red crosses). Select <code>Properties</code> -&gt; <code>Java Build Path</code>. Sometimes Eclipse does not find your Java
+installation. You can select it there.</p>
+<p><img src="https://mt2-erlangen.github.io/archive/WS2021/import_eclipse/6.png" alt="ss" /></p>
+</li>
+</ul>
+<p><a href="../exercise-1">Back to exercise 01</a></p>
+<!--- Ensure that Eclipse can find your Java Runtime Enviroment-->
+<!--![ss](../openproperties.png)  -->
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>

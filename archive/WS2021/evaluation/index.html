@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Project Work 5 – Statistical Evaluation </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Project Work 5 – Statistical Evaluation ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;archive&#x2F;WS2021&#x2F;evaluation&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Project Work 5 – Statistical Evaluation">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Project Work 5 – Statistical Evaluation</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Paul Stöwer</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <h1 id="statistical-evaluation">Statistical Evaluation</h1>
+<p>Lets try to evaluate the Method Otsu's with our MIP image and a picture of cultured neuroblastoma cells <a href="http://cellimagelibrary.org/images/40217">[1]</a> for comparison:</p>
+<p style="text-align: center;">
+<table><tr>
+<td> <img src="../MIP.png" alt="MIP.png"  style="width: 256;"/> </td>
+<td> <img src="../nuclei.jpg" style="width: 256;"/> </td>
+</tr>
+<tr>
+<th>MIP Image of Volume1</th> 
+<th>Picture of cells </th> 
+</tr>
+</table>
+ <p>
+<p style="text-align: center;">
+<table><tr>
+<td> <img src="../mip_otsu.png" alt="mip_otsu.png"  style="width: 256;"/> </td>
+<td> <img src="../segmentationNuclei.png" style="width: 256;"/> </td>
+</tr>
+<tr>
+<th>MIP Image Segmentation with Otsu Threshold</th> 
+<th>Cell Image Segmentation with Otsu Threshold </th> 
+</tr>
+</table>
+<p>
+<p>Explain in your report:</p>
+<ul>
+<li>What are the limitations of the Method of Otsu's?
+<ul>
+<li>Use the example of the MIP Image and the Cell Image.</li>
+<li>Include and use both histograms in your explanation.</li>
+</ul>
+</li>
+</ul>
+<h2 id="root-mean-square-error">Root Mean Square Error</h2>
+<p>We can also try to compare different threshold with a ground truth image to find the best threshold and evaluate our results. We will implement a new method in our <code>PostProcessing</code> class:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>
+</span><span style="color:#b48ead;">public static float </span><span style="color:#bf616a;">RootMeanSquareError</span><span>(</span><span style="color:#ebcb8b;">Image</span><span> reference, </span><span style="color:#ebcb8b;">Image</span><span> result)
+</span><span>
+</span></code></pre>
+<p>The Root Mean Square Error is defined as following: $RMSE(\theta)=\sqrt{E((\hat{\theta}-\theta)^2)}$.
+<br>We want to compare our segmented images. Therefore our estimated value $\theta$ can be described by our pixel values: $RMSE=\sqrt{\frac{1}{n}\sum_{i=1}^n(\hat{x}_i-x_i)^2}$, where $\hat{x_i}$ are the pixel values of our ground truth image and $x_i$ the pixel values from our segmentation.</p>
+<p>We can now use the following Image as ground truth Image $\hat{\theta}$:</p>
+<image align="center" src="../MIP_gt.png" >
+<p><a href="https://faubox.rrze.uni-erlangen.de/getlink/fiJxq2dDqhVQXUxZoN1JrdZ6/GroundTruth">Download</a></p>
+<p>We can make use of our Signal Class in our Framework again: Create a <code>Signal</code> with the size of all possible thresholds in your image. Afterwards you can show a graph with the different errors in comparison to the corresponding threshold. Which threshold has the lowest RSME in comparison with our ground truth image $\hat{\theta}$?</p>
+<p>Describe in your report:</p>
+<ul>
+<li>Why do we need statistical evaluation methods in science?
+<ul>
+<li>Include a graph wich shows the relationship between threshold and RSME for all possible grey values.</li>
+<li>Describe the graph and compare the RSME with the according threshold</li>
+<li>What is the big disadvantage of the RSME in our case? </li>
+</ul>
+</li>
+</ul>
+<p>The content for this section should be about half a page long. </p>
+<p><a href="../otsu">Previous: Method of Otsu's</a></p>
+<p><a href="../conclusion">Next: Outlook and Conclusion</a></p>
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Exercise 4 </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Exercise 4 ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;archive&#x2F;WS2021&#x2F;exercise-4&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Exercise 4">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Exercise 4</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Srikrishna Jaganathan</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <h1 id="submission">Submission</h1>
+<p><strong>Submission deadline: 01.06.20 23:55h</strong></p>
+<p>Please ensure that all files you created also contain <strong>your name and your IDM ID</strong> and also your partner's name and IDM ID if you're not working alone.</p>
+<p>Each exercise has <strong>10 points</strong>. You have to achieve <strong>30 of 60 points in six homework exercises</strong> to pass the module.</p>
+<h1 id="image-transformations">Image Transformations</h1>
+<p>In the previous exercises, we built a Signal and Image class for performing basic operations on the 
+input data. We also implemented various filters to process the data and remove noise. 
+In this exercise we will build on top of the image class and implement methods for performing image transformations.</p>
+<p>In many medical applications there is a need to align two images so that we 
+can combine the information between the images. This can be due to the images coming from 
+different modalities like (CT and MRI) or in scenarios were you have an patient data at from 
+different time (before and after an surgery)  and you want to compare between these two images. 
+In all these scenarios we use image registration bring the different images together.</p>
+<p>In the below image, two x-ray views (1) and (2) are fused together to obtain the combined view(3)
+which produces more information for diagnosis. This is achieved using image registration between view(1) and view
+<img src="../x_ray_bone_fusion.png" alt="Hand X-ray fusion" /> </p>
+<p><a href="https://link.springer.com/article/10.1007/BF00173434">Image Source: Hawkes, David J., et al. &quot;Registration and display of the combined bone scan and 
+radiograph in the diagnosis and management of wrist injuries.&quot; European journal of nuclear medicine 
+18.9 (1991): 752-756. </a></p>
+<p>One of the crucial components of image registration is image transformations.
+In this exercise we will implement basic image transformations. Additionally, we need to implement an 
+interpolation method to find out the image intensity values at the transformed coordinates. </p>
+<!-- Think of image interpolation as computing the values in the actual physical space. -->
+<h2 id="overview-of-tasks">Overview of tasks</h2>
+<p><img src="../transformations.png" alt="List of tasks" /></p>
+<p>We will implement the following tasks for this exercise.</p>
+<ol>
+<li><strong>Helper functions</strong> (<em>a. Image origin</em>, <em>b. Interpolation</em>)</li>
+<li><strong>Image Transformation</strong> (<em>a. Translation</em>, <em>b. Rotation</em>, <em>c. Scaling</em>)</li>
+</ol>
+<p>We introduce the basic theory about image transformations in <a href="../img_transform_theory">theoretical background section</a>.
+Please read the theory before proceeding since we don't re-introduce everything in the task description. </p>
+<h2 id="task-description">Task Description</h2>
+<ul>
+<li>We provide the main method for the task with an interactive ImageJ plug-in in the files
+<a href="https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/exercises/Exercise04.java"><code>src/main/java/exercises/Exercise04.java</code></a>
+and <a href="https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/mt/ImageTransformer.java"><code>src/main/java/mt/ImageTransformer.java</code></a></li>
+</ul>
+<h3 id="0-getting-started">0. Getting started</h3>
+<P align="right"><i>1 Point</i>
+<ul>
+<li>
+<p>For Exercise 4 we provide a GUI that displays the image with different image transformation options.
+<img src="../x_ray_gui.png" alt="Visualize GUI" /></p>
+</li>
+<li>
+<p>Once you have all the transformations implemented you should be able to adjust the sliders and perform the desired transformations in an interactive manner.</p>
+</li>
+<li>
+<p>The transformations requires an origin point about which we perform all the transformation.</p>
+</li>
+<li>
+<p>Extend the <code>Image</code> class with these three methods</p>
+</li>
+</ul>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#65737e;">// store the origin points x,y as 
+</span><span>    </span><span style="color:#65737e;">// a class variable
+</span><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">setOrigin</span><span>(</span><span style="color:#b48ead;">float</span><span> x, </span><span style="color:#b48ead;">float</span><span> y)
+</span><span>
+</span><span>    </span><span style="color:#65737e;">// the origin() returns the {x,y} as float 
+</span><span>    </span><span style="color:#65737e;">// array from the stored origin class variable. 
+</span><span>    </span><span style="color:#b48ead;">public float[] </span><span style="color:#bf616a;">origin</span><span>()
+</span><span>
+</span><span>    </span><span style="color:#65737e;">// Sets the origin to the center of the image
+</span><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">centerOrigin</span><span>()
+</span></code></pre>
+<ul>
+<li>To ensure that everything is running, run the main function.</li>
+<li>We already set the origin point for you in the file <code>src/main/java/exercises/Exercise04.java</code></li>
+<li>To ensure that everything is running, run the main function of <code>Exercise04</code>.</li>
+</ul>
+<h3 id="1-image-interpolation">1. Image interpolation</h3>
+<P align="right"><i>4 Points</i>
+<ul>
+<li>
+<p>Since the image transformations heavily relies on the interpolation, we first implement the interpolation method by extending the <code>Image</code> class  with the following method:</p>
+</li>
+<li>
+<p><code>public float interpolatedAt(float x, float y)  </code></p>
+</li>
+<li>
+<p>The method takes in a physical $(x,y)$ coordinate and returns the image intensity at that position.
+We use bilinear interpolation to find the value at $(x,y)$ (described in the <a href="../img_transform_theory">theory</a>).</p>
+</li>
+<li>
+<p>We can rewrite the interpolation equation using the linear interpolation formula when we want to interpolate between two points $x_1,x_2$ with function value $f(x_1),f(x_2)$ to find out the function value $f(x)$ at $x$.</p>
+</li>
+</ul>
+<p>$$ \frac{f(x) - f(x_1)}{x-x_1} = \frac{f(x_2) - f(x_1)}{x_2 - x_1} $$</p>
+<!--or-->
+<!--$$ \frac{f(x) - f(x_1)}{x-x_1} = \frac{f(x_2) - f(x_1)}{x_2 - x_1} $$-->
+<!--![bilinear]( ../bilinear.png )-->
+<ul>
+<li>Since we already know the difference $x_2 - x_1$ is either 1.0 if we have a pixel spacing of 1.0 or pixel spacing, we can simplify the above equation as follows:</li>
+</ul>
+<p>$$f(x) = f(x_1) + (x-x_1) (f(x_2) - f(x_1))$$</p>
+<p><img src="../bilinear_simplified.png" alt="bilinear" /></p>
+<ul>
+<li>
+<p>You can use the function below to compute linear interpolation between two points $x_1,x_2$ at $x$</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>
+</span><span> </span><span style="color:#65737e;">// Definition of arguments
+</span><span> </span><span style="color:#65737e;">// diff_x_x1 = x - x_1 compute the difference between point x and x_1
+</span><span> </span><span style="color:#65737e;">// fx_1 = f(x_1), pixel value at point x_1
+</span><span> </span><span style="color:#65737e;">// fx_2 = f(x_2), pixel value at point x_2 
+</span><span>
+</span><span> </span><span style="color:#b48ead;">float </span><span style="color:#bf616a;">linearInterpolation</span><span>(</span><span style="color:#b48ead;">float</span><span> fx_1, </span><span style="color:#b48ead;">float</span><span> fx_2, </span><span style="color:#b48ead;">float</span><span> diff_x_x1) {
+</span><span>     </span><span style="color:#b48ead;">return</span><span> fx_1 + diff_x_x1 * (fx_1 - fx_2);
+</span><span> }
+</span><span> 
+</span></code></pre>
+</li>
+<li>
+<p>We now have an way to interpolate between two points in 1D. We need to extend this to 2D case such that we can use 
+it for interpolating values in our image. An illustration of how this can be done is 
+already given in the <a href="https://mt2-erlangen.github.io/archive/WS2021/exercise-4/./img_transform_theory">theory</a> section.</p>
+</li>
+<li>
+<p><strong>Implementation detail</strong> We describe here possible way to implement the interpolation scheme.</p>
+<ul>
+<li>
+<p>Find the 4 nearest pixel indices, for the given physical coordinate $(x,y)$. To do, this you have to transform
+the physical coordinate to the index space of the image.</p>
+</li>
+<li>
+<p>Hint: In physical space all the values of $x$ and $y$
+are computed from origin. So we just need to subtract the origin from the coordinates for this correction.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>x -= origin[</span><span style="color:#d08770;">0</span><span>]
+</span><span>y -= origin[</span><span style="color:#d08770;">1</span><span>]
+</span></code></pre>
+</li>
+<li>
+<p>Pixel spacing also alters the physical coordinates and needs to be corrected for. 
+This can be done using just by dividing each coordinate by the pixel spacing.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>x /= spacing;
+</span><span>y /= spacing
+</span></code></pre>
+</li>
+<li>
+<p>Hint: Since each pixel is a unit square you can round up and down each coordinate ($x$ and $y$) separately 
+to get the 4 nearest pixels coordinates.</p>
+</li>
+<li>
+<p>Interpolate along an axis (here we choose the x-axis) initially using the linear interpolation 
+function to obtain intermediate points.</p>
+</li>
+<li>
+<p>Now interpolate along the intermediate points (i.e you are interpolating along y-axis)</p>
+</li>
+<li>
+<p><strong>Note:</strong> Take care of image origin and pixel spacing for the input coordinates before you perform any of the steps.
+Also, always use <code>atIndex</code> and <code>setIndex</code> for accessing the image values. 
+This ensures that we handle the values at boundary correctly.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example:
+Here we look at a single point to understand how to implement our algorithm</p>
+<ul>
+<li>
+<p>If we have an input $(x,y) = (0.4,0.4)$, then the 4 nearest pixel coordinates are $(0,0)$,$(1,0),(1,1),(0,1)$</p>
+</li>
+<li>
+<p>Interpolating the values between the points $a = (0,0)$, $b = (1,0)$, find the intermediate 
+value at point $I_1 = (0.4,0)$.</p>
+</li>
+<li>
+<p>Similarly interpolate between $c = (0,1)$ and $d = (1,1)$ to find the intermediate value at point $I_2 = (0.4,1)$.</p>
+</li>
+<li>
+<p>Now we can just use the values at the intermediate points $I_1 = (0.4,0)$ and $I_2 = (0.4,1)$ and 
+perform a linear interpolation in the y direction to obtain the final result at $(0.4,0.4)$.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-image-transformation">2. Image Transformation</h3>
+<P align="right"><i>5 Points</i>
+<p>Now we can start with the implementation of <code>ImageTransformer</code> class.</p>
+<ul>
+<li>The class consists of the following member functions for translation</li>
+</ul>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// Transformation parameters
+</span><span style="color:#b48ead;">public float</span><span> shiftX; </span><span style="color:#65737e;">// tx
+</span><span style="color:#b48ead;">public float</span><span> shiftY; </span><span style="color:#65737e;">// ty
+</span><span style="color:#b48ead;">public float</span><span> rotation; </span><span style="color:#65737e;">// theta
+</span><span style="color:#b48ead;">public float</span><span> scale; </span><span style="color:#65737e;">// s
+</span></code></pre>
+<ul>
+<li>
+<p>Also use the interface <code>ImageFilter</code> abstract class which you have implemented in the previous exercises. 
+This can be done using <code>implements</code> keyword.</p>
+</li>
+<li>
+<p>Add the method <code>apply(Image input,Image output)</code> which takes in two variables input and 
+output of <code>Image</code> class type. The input variable provides the input image to our transformer class. 
+The output variable is where the transformed image is stored.</p>
+</li>
+<li>
+<p>Consider each pixel in the image with index $(i,j)$. When we access an image pixel we get 
+the pixel intensity stored at the location $(i,j)$.</p>
+</li>
+<li>
+<p>Here $(i,j)$ represents the image coordinates $(x,y)$ and the pixel value at $(i,j)$ represents $f(x,y)$.</p>
+</li>
+<li>
+<p>We want to transform $(x,y) \to (x',y')$ and find the pixel value at the new location for a 
+given set of input transformation parameters $t_x,t_y,\theta,s$ to transform the input image coordinate $(x,y)$.</p>
+</li>
+<li>
+<p>Let us go over a possible approach to implement the <code>apply</code> method which 
+implements (translation,rotation and scaling). In addition, once we have the transformed coordinates $(x',y')$ we 
+interpolate the value at this coordinate to set the output value of the new image.</p>
+</li>
+<li>
+<p>We can implement the transformations and interpolation using the equations defined 
+in the <a href="../img_transform_theory">theory section</a>. </p>
+</li>
+<li>
+<p>However, from the implementation perspective it is much easier to ask what will be my output image value 
+at the current position $(x',y')$  for the given  transformations parameters.</p>
+</li>
+<li>
+<p>For this we need to find the input coordinate $(x,y)$ for the given transformation parameters.
+This mapping from $(x',y') \to (x,y)$ is known as the inverse transformation.</p>
+</li>
+<li>
+<p>Just to recap our current aim is to iterate over the output image along each 
+pixel $(i,j)$ (also referred as $(x',y')$) and find the inverse transformation (x,y).
+Once we find $(x,y)$ we can just interpolate the values in the input image at $(x,y)$ and
+set it to the output image value at (x',y').</p>
+</li>
+<li>
+<p>An example code to accomplish this looks like below:</p>
+</li>
+</ul>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// We need to compute (x,y) from (x&#39;,y&#39;)
+</span><span style="color:#65737e;">// We use xPrime,yPrime in the code to indicate (x&#39;,y&#39;)
+</span><span style="color:#65737e;">// Interpolate the values at (x,y) from the input image to get
+</span><span style="color:#b48ead;">float</span><span> pixelValue = input.</span><span style="color:#bf616a;">interpolatedAt</span><span>(x,y);
+</span><span>
+</span><span style="color:#65737e;">// Set your result at the current output pixel (x&#39;,y&#39;)
+</span><span>output.</span><span style="color:#bf616a;">setAtIndex</span><span>(xPrime, yPrime, pixelValue);
+</span><span>
+</span></code></pre>
+<ul>
+<li>
+<p>The inverse transformations can be computed using the following equations.</p>
+</li>
+<li>
+<p>Translation</p>
+<ul>
+<li>$x =  x' - t_x$</li>
+<li>$y =  y' - t_y$ </li>
+</ul>
+</li>
+<li>
+<p>Rotation</p>
+<ul>
+<li>$x= x' \cos\theta + y' \sin\theta$</li>
+<li>$y= - x \sin\theta + y' \cos\theta$</li>
+</ul>
+</li>
+<li>
+<p>Scaling</p>
+<ul>
+<li>$x=  \frac{x'}{s}$</li>
+<li>$y=  \frac{y'}{s}$</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation detail</strong> Now you can directly use the above equations to implement translation, rotation and scaling.
+The entire <code>apply</code> method for the <code>ImageTransformer</code> class can be implemented as follows:</p>
+<ul>
+<li>
+<p>Iterate over each pixel in the output image (although they are just the same as input initially).</p>
+</li>
+<li>
+<p>At each pixel the index $(i,j)$ represents our coordinates $(x',y')$ of the output image</p>
+</li>
+<li>
+<p>Apply the transformations using the equations described above to find $(x,y)$</p>
+</li>
+<li>
+<p>Now set the output image value at $(i,j)$ (also referred as (x',y')) from the interpolated values at $(x,y)$ 
+from the input image.</p>
+</li>
+<li>
+<p>Use the <code>setIndex()</code> for setting the values of the output image and <code>atIndex()</code> for getting the values 
+from input image.</p>
+</li>
+<li>
+<p>In the above formulation we assume that we have pixel spacing of $spacing = 1.0$ and the 
+image origin at $(x_0, y_0) = (0,0)$.</p>
+</li>
+<li>
+<p>You can extend this to work for different values of pixel spacing and origin.</p>
+</li>
+<li>
+<p>Hint: Think of pixel spacing as a scaling and origin as a translation transformation. 
+(apply both spacing and origin transformation to the input coordinates $(x,y)$ as  $(x * px , y * py) + (x_0,y_0))$ </p>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Project Work 2 – Volumes </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Project Work 2 – Volumes ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;archive&#x2F;WS2021&#x2F;volume&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Project Work 2 – Volumes">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Project Work 2 – Volumes</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Stephan Seitz</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <h1 id="getting-started">Getting started</h1>
+<p><strong>Important: You have to work alone on your project work. No team partners allowed anymore 😔!</strong></p>
+<p>MR reconstruction for a three-dimensional volume can be done with two different methods. We are using slice selection in this project.
+So we will need one class that represents our volume of the MRI images.
+It turns out that we can interpret our volume just as a list of 2-d images.</p>
+<p>Explain in you report the method of slice selection:</p>
+<ul>
+<li>Which field of the MRI scanner is used to encode specific positions in the patient?</li>
+<li>How many of these fields exist and which directions do they cover?</li>
+<li>How is a specific slice selected?</li>
+</ul>
+<p>This part should be about a quarter to half a page long.</p>
+<table>
+<tr>
+<td><img align="center" src="../volume_slices.png" ></td>
+</tr>
+<tr>
+<th>A volume: very much just multiple images stacked one over another</th>
+</tr>
+</table>
+<p>Create a class <code>mt.Volume</code></p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// Your name &lt;your idm&gt;
+</span><span style="color:#65737e;">// No team partner... So sad 😢!
+</span><span>
+</span><span style="color:#b48ead;">package </span><span>mt;
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>java.util.</span><span style="color:#ebcb8b;">Arrays</span><span>;
+</span><span style="color:#b48ead;">import </span><span>java.util.stream.</span><span style="color:#ebcb8b;">IntStream</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">Volume </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">    </span><span style="color:#65737e;">// Here we store our images
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">protected </span><span style="color:#eff1f5;">mt.</span><span style="color:#ebcb8b;">Image</span><span style="color:#b48ead;">[] </span><span style="color:#eff1f5;">slices;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    </span><span style="color:#65737e;">// Dimensions of our volume
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">protected int </span><span style="color:#eff1f5;">width, height, depth;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    </span><span style="color:#65737e;">// Spacing and origin like for mt.Image
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">protected float </span><span style="color:#eff1f5;">spacing </span><span>= </span><span style="color:#d08770;">1.</span><span style="color:#b48ead;">f</span><span style="color:#eff1f5;">; </span><span style="color:#65737e;">// spacing is now our voxel size
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">protected float[] </span><span style="color:#eff1f5;">origin </span><span>= </span><span style="color:#b48ead;">new float</span><span style="color:#eff1f5;">[]{</span><span style="color:#d08770;">0</span><span style="color:#eff1f5;">, </span><span style="color:#d08770;">0</span><span style="color:#eff1f5;">, </span><span style="color:#d08770;">0</span><span style="color:#eff1f5;">}; </span><span style="color:#65737e;">// position of the top-left-bottom corner
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    </span><span style="color:#65737e;">// A name for the volume
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">protected </span><span style="color:#ebcb8b;">String </span><span style="color:#eff1f5;">name;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p>Create a constructor. Remember: <code>width</code>, <code>height</code>, <code>depth</code>, <code>name</code> must be set and <code>slices</code> must be created as an array.
+We need <code>depth</code> images of size <code>width</code> $\times$ <code>height</code> for the <code>slices</code>.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public </span><span style="color:#bf616a;">Volume</span><span>(</span><span style="color:#b48ead;">int</span><span> width, </span><span style="color:#b48ead;">int</span><span> height, </span><span style="color:#b48ead;">int</span><span> depth, </span><span style="color:#ebcb8b;">String</span><span> name)
+</span></code></pre>
+<p>Getters/setters...</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">width</span><span>()
+</span><span>    </span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">height</span><span>()
+</span><span>    </span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">depth</span><span>()
+</span><span>    </span><span style="color:#b48ead;">public float </span><span style="color:#bf616a;">physicalWidth</span><span>() </span><span style="color:#65737e;">// width * spacing()
+</span><span>    </span><span style="color:#b48ead;">public float </span><span style="color:#bf616a;">physicalHeight</span><span>() </span><span style="color:#65737e;">// height * spacing()
+</span><span>    </span><span style="color:#b48ead;">public float </span><span style="color:#bf616a;">physicalDepth</span><span>() </span><span style="color:#65737e;">// depth * spacing()
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">public </span><span>mt.</span><span style="color:#ebcb8b;">Image </span><span style="color:#bf616a;">getSlice</span><span>(</span><span style="color:#b48ead;">int</span><span> z) 
+</span><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">setSlice</span><span>(</span><span style="color:#b48ead;">int</span><span> z, mt.</span><span style="color:#ebcb8b;">Image</span><span> slice)
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">public float </span><span style="color:#bf616a;">spacing</span><span>()
+</span><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">setSpacing</span><span>(</span><span style="color:#b48ead;">float</span><span> spacing) </span><span style="color:#65737e;">// should also set spacing also for all slices!
+</span><span>    </span><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">String </span><span style="color:#bf616a;">name</span><span>()
+</span><span>    </span><span style="color:#b48ead;">public float[] </span><span style="color:#bf616a;">origin</span><span>()
+</span><span>
+</span><span>    </span><span style="color:#65737e;">// should set origin to (-0.5 physicalWidth, -0.5 physicalHeight, -0.5 physicalDepth) and call centerOrigin on each slice
+</span><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">centerOrigin</span><span>()
+</span></code></pre>
+<p>We need also another setter Method in our <code>image</code> class:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">setSpacing</span><span>(</span><span style="color:#b48ead;">float</span><span> spacing) </span><span style="color:#65737e;">// set spacing for the image
+</span><span>
+</span></code></pre>
+<p>Now comes the interesting part: visualize the volume!
+You will need to update <a href="https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/lme/DisplayUtils.java"><code>src/main/java/lme/DisplayUtils.java</code></a> file and use the following command to visualize the volume.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">show</span><span>() {
+</span><span>        lme.</span><span style="color:#ebcb8b;">DisplayUtils</span><span>.</span><span style="color:#bf616a;">showVolume</span><span>(</span><span style="color:#bf616a;">this</span><span>);
+</span><span>    }
+</span></code></pre>
+<p>We will work for our upcoming post-processing tasks with a magnetic resonance angiography (MRA) dataset. MRA is a special method in MRI to visualize vessels in images. You can download a volume from <a href="https://www.nitrc.org/projects/icbmmra">https://www.nitrc.org/projects/icbmmra</a>.</p>
+<p><em>Note: The data set is in the NIfTI (Neuroimaging Informatics Technology Initiative) format, which you need to convert into our .tif format. ImageJ has a Plugin for it, which you would need to install.</em></p>
+<p>You can also use one of the three already converted image sets:</p>
+<ul>
+<li><a href="https://faubox.rrze.uni-erlangen.de/getlink/fiEiBLTLYJYTcrRKXhqyt7BJ/Volume1">Image set 1</a></li>
+<li><a href="https://faubox.rrze.uni-erlangen.de/getlink/fiXR5Rswri8h8bXwX4Cm313K/Volume2">Image set 2</a></li>
+<li><a href="https://faubox.rrze.uni-erlangen.de/getlink/fi9rmMH2NvvcUgeMyaQsD6tq/Volume3">Image set 3</a></li>
+</ul>
+<p>Open the saved tiff file in the main of a file <code>src/main/java/project/Playground.java</code>:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>
+</span><span style="color:#b48ead;">package </span><span>project;
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>mt.</span><span style="color:#ebcb8b;">Volume</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">Playground </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">public static void </span><span style="color:#8fa1b3;">main</span><span style="color:#eff1f5;">(</span><span style="color:#ebcb8b;">String</span><span style="color:#b48ead;">[] </span><span style="color:#bf616a;">args</span><span style="color:#eff1f5;">) {
+</span><span style="color:#eff1f5;">        (</span><span style="color:#b48ead;">new </span><span style="color:#eff1f5;">ij.</span><span style="color:#ebcb8b;">ImageJ</span><span style="color:#eff1f5;">()).</span><span style="color:#bf616a;">exitWhenQuitting</span><span style="color:#eff1f5;">(</span><span style="color:#d08770;">true</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">        
+</span><span style="color:#eff1f5;">        </span><span style="color:#ebcb8b;">Volume</span><span style="color:#eff1f5;"> groundTruth </span><span>= </span><span style="color:#ebcb8b;">DisplayUtils</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">openVolume</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">path/to/file.tif</span><span>&quot;</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">        groundTruth.</span><span style="color:#bf616a;">show</span><span style="color:#eff1f5;">();
+</span><span style="color:#eff1f5;">        
+</span><span style="color:#eff1f5;">    }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">}
+</span><span>
+</span></code></pre>
+<p>You can now scroll through the different slices.</p>
+<iframe src="https://giphy.com/embed/3o6gbenQcUjEGTaNfW" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/sloth-sloths-slothilda-3o6gbenQcUjEGTaNfW">via GIPHY</a></p>
+<p>Here a short summary of handy functions of ImageJ when working with MRI images.</p>
+<ul>
+<li>Ctrl+Shift+C: Brightness and Contrast</li>
+<li>Ctrl+Shift+H: Orthogonal Views (view volume from three sides)</li>
+<li>After selecting a line: Ctrl+K Line Plot</li>
+<li>Ctrl+I: Get patient information of a DICOM</li>
+<li>Look at a <a href="../clearvolume">3-d rendering with ClearVolume</a></li>
+</ul>
+<p><a href="../introduction">Previous: Introduction</a> </p>
+<p><a href="../postprocessing">Next: Post-Processing</a></p>
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>

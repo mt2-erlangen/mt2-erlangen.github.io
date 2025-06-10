@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Project Work 6 – Iterative Reconstruction and Conclusion </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Project Work 6 – Iterative Reconstruction and Conclusion ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;archive&#x2F;2020&#x2F;reconstruction&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Project Work 6 – Iterative Reconstruction and Conclusion">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Project Work 6 – Iterative Reconstruction and Conclusion</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Stephan Seitz</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <h1 id="iterative-reconstruction">Iterative Reconstruction</h1>
+<p>Using backprojection, we could achieve a blurry reconstruction result.
+The Filtered Backprojection algorithm solves this problem by applying a filtering step before backprojection.
+For the project work, we will take a different approach.</p>
+<p>In the last section, you measured the error between your reconstruction and the ground truth volume.
+However, this is only possible when doing a simulation and not when reconstructing an unknown real object.
+What we can do instead is meassuring the error in the projection domain by simply projecting the reconstruction!
+Implement the following method to use with our <code>reconstructionProjector</code>:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#65737e;">// In mt/Projector.java
+</span><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">reconstructIteratively</span><span>(</span><span style="color:#ebcb8b;">Image</span><span> meassuredProjection, </span><span style="color:#b48ead;">int</span><span> sliceIdx, </span><span style="color:#b48ead;">int</span><span> numIterations)
+</span></code></pre>
+<p>It should</p>
+<ul>
+<li>call <code>projectSlice</code> on <code>volume</code> to obtain a projection of our reconstruction</li>
+<li>calculate an error image subtracting <code>singogram.getSlice(sliceIdx)</code> from <code>meassuredProjection</code></li>
+<li>replace the current slice of <code>singogram</code> by our error image</li>
+<li>call <code>backprojectSlice</code> with the current <code>sliceIdx</code></li>
+<li>repeat all this for <code>numIterations</code> iterations</li>
+</ul>
+<p><img src="../iterative.png" alt="pic alt" title="Iterative Reconstruction" /></p>
+<p>So we're now doing an reconstruction of the error sinogram and adding it to our blurry image.
+Does this reduce our error?</p>
+<p>Our reconstruction algorithm is now finished. But it operates only on 2-d slices.
+Create 3-d versions of <code>projectSlice</code>, <code>backprojectSlice</code> and <code>reconstructIteratively</code>:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">project</span><span>()
+</span><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">backproject</span><span>()
+</span><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">reconstructIteratively</span><span>(</span><span style="color:#ebcb8b;">Volume</span><span> measuredProjections, </span><span style="color:#b48ead;">int</span><span> numIterations)
+</span></code></pre>
+<p>All they should do is calling their 2-d version for each slice.
+You should now be able to reconstruct volumes.</p>
+<p><em>Hint: You can use the following construct instead of a for-loop to enable multi-threaded calculation.</em></p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#65737e;">// You have to replace `var` by `java.util.concurrent.atomic.AtomicInteger` when using Java 1.8
+</span><span>    var progress = </span><span style="color:#b48ead;">new </span><span>java.util.concurrent.atomic.</span><span style="color:#ebcb8b;">AtomicInteger</span><span>(</span><span style="color:#d08770;">0</span><span>);
+</span><span>    </span><span style="color:#ebcb8b;">IntStream</span><span>.</span><span style="color:#bf616a;">range</span><span>(</span><span style="color:#d08770;">0</span><span>, sinogram.</span><span style="color:#bf616a;">depth</span><span>()).</span><span style="color:#bf616a;">parallel</span><span>().</span><span style="color:#bf616a;">forEach</span><span>(</span><span style="color:#bf616a;">z </span><span style="color:#b48ead;">-&gt; </span><span>{
+</span><span>        </span><span style="color:#ebcb8b;">System</span><span>.out.</span><span style="color:#bf616a;">println</span><span>(&quot;</span><span style="color:#a3be8c;">Progess: </span><span>&quot; + (</span><span style="color:#b48ead;">int</span><span>) (progress.</span><span style="color:#bf616a;">incrementAndGet</span><span>() * </span><span style="color:#d08770;">100.0 </span><span>/ (</span><span style="color:#b48ead;">double</span><span>) sinogram.</span><span style="color:#bf616a;">depth</span><span>()) + &quot;</span><span style="color:#a3be8c;"> %</span><span>&quot;);
+</span><span>        </span><span style="color:#65737e;">//Do stuff here for slice z
+</span><span>        ...
+</span><span>    });
+</span></code></pre>
+<h2 id="project-report">Project Report</h2>
+<p>For the project, <strong>describe how your iterative reconstruction algorithm works</strong>. You should not mention implementation details
+like variable or function names. <strong>Compare it with the Filtered Backprojection</strong> algorithm! It's not necessary to explain 
+Filtered Backprojection Algorithm in detail. Just highlight the main difference.</p>
+<p><strong>Test your reconstruction algorithm</strong> on a slice of a CT reconstruction of the Cancer Imaging Archive.
+Measure the error of the reconstructed slices after each iteration (so call <code>reconstructIteratively</code> with <code>numIterations == 1</code>).
+<strong>Include a figure</strong> showing this <strong>error in dependence of the iteration number</strong> in the project report.
+Include images comparing ground truth, the backprojected slice and the result after a few iterations.</p>
+<p><strong>Comment on the error and the images</strong> in your text.
+Does the result of the iterative reconstruction look better than solely using backprojection?</p>
+<p>This part of the project report should be no longer than 1.5 pages.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>In the last part, summarize want you have implemented and explained in your project report.
+Review the shortcommings of your simplified approach and how they could be mitigated in future.
+Draw a conclusion on your work!</p>
+<p>This part of the project work should be about a quarter page long and should contain no images.</p>
+<h1 id="submission">Submission</h1>
+<p>Submit your project report as a PDF and your entire project folder of your code until <strong>August 16 23:55h</strong>.
+Your project must compile as a whole!
+Make sure that you had a last look at our <a href="../checklist">checklist</a>.</p>
+<h1 id="evaluation">Evaluation</h1>
+<p>We hope you had a fun project work!
+<a href="https://forms.gle/EZZsFXz5QrgTAutu9">You can help us to improve the instructions for next year!</a></p>
+<p><a href="../backprojection">Previous section</a></p>
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>

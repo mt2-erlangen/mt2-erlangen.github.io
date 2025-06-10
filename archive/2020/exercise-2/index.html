@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Exercise 2 </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Exercise 2 ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;archive&#x2F;2020&#x2F;exercise-2&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Exercise 2">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Exercise 2</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Stephan Seitz</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <!--files = glob.glob('**/*mat', recursive=True)-->
+<!--import scipy.io -->
+<!--for f in files: -->
+<!--data = scipy.io.loadmat(f) -->
+<!--scipy.io.savemat(f, data) -->
+<p><strong>Submission deadline: 18.05.20 23:59h</strong></p>
+<p>Please ensure that all files you created also contain <strong>your name and your IDM ID</strong> and also your partner's name and IDM ID if you're not working alone.</p>
+<p>Each exercise has <strong>10 points</strong>. You have to achieve <strong>30 of 60 points in six homework exercises</strong> to pass the module.</p>
+<h1 id="statistical-measures">Statistical Measures</h1>
+<p>In this exercise, we want to have a look on how we can analyze signals using simple statistical measures.
+We will use a freely available ECG data set with the goal to distinguish healthy from patients with heart rythm problems.</p>
+<p><img src="../heartbeat.png" alt="ECG curve" /></p>
+<p>You can find the original data set <a href="https://data.mendeley.com/datasets/7dybx7wyfn/3">here</a>
+but we recommend to use a post-processed version available on studOn.</p>
+<h2 id="gradle-build-system">Gradle Build System</h2>
+<p>In Medizintechnik II we use the build system <a href="https://gradle.org/">Gradle</a>.
+Gradle is especially popular for Android projects since it's easy to add new software dependencies that will be automatically
+downloaded.</p>
+<p>In our case, the published data set is saved as Matlab <code>*.mat</code> files.
+To read those files, an external dependency was already added to our <code>build.gradle</code> file.</p>
+<pre data-lang="groovy" style="background-color:#2b303b;color:#c0c5ce;" class="language-groovy "><code class="language-groovy" data-lang="groovy"><span>    implementation &#39;</span><span style="color:#a3be8c;">us.hebi.matlab.mat:mfl-core:0.5.6</span><span>&#39;
+</span></code></pre>
+<p>does the magic and automatically downloaded a <a href="https://github.com/HebiRobotics/MFL">*.mat file reader</a>.
+In case, you need to add external software to your own projects you can use <a href="https://search.maven.org/">this search engine</a>.</p>
+<h2 id="tasks">Tasks</h2>
+<h1 id="loading-one-of-file-of-the-data-set">Loading one of File of the Data Set</h1>
+<p>Load the file <code>src/main/java/exercises/Exercise02.java</code> (<a href="https://github.com/mt2-erlangen/exercises-ss2020/blob/master/src/main/java/exercises/Exercise02.java">available here (Click the <code>raw</code> button)</a>) into your existing project.
+It alread contain some code for parsing the program parameters:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public static</span><span> void </span><span style="color:#bf616a;">main</span><span>(</span><span style="color:#ebcb8b;">String</span><span style="color:#b48ead;">[]</span><span> args) throws </span><span style="color:#ebcb8b;">IOException </span><span>{
+</span><span>	(</span><span style="color:#b48ead;">new </span><span>ij.</span><span style="color:#ebcb8b;">ImageJ</span><span>()).</span><span style="color:#bf616a;">exitWhenQuitting</span><span>(</span><span style="color:#d08770;">true</span><span>);
+</span><span>
+</span><span>	</span><span style="color:#ebcb8b;">System</span><span>.out.</span><span style="color:#bf616a;">println</span><span>(&quot;</span><span style="color:#a3be8c;">Started with the following arguments:</span><span>&quot;);
+</span><span>	</span><span style="color:#b48ead;">for </span><span>(</span><span style="color:#ebcb8b;">String</span><span> arg : args) {
+</span><span>	    </span><span style="color:#ebcb8b;">System</span><span>.out.</span><span style="color:#bf616a;">println</span><span>(arg);
+</span><span>	}
+</span><span>
+</span><span>	</span><span style="color:#b48ead;">if </span><span>(args.length == </span><span style="color:#d08770;">1</span><span>) {
+</span><span>	    </span><span style="color:#ebcb8b;">File</span><span> file = </span><span style="color:#b48ead;">new </span><span style="color:#ebcb8b;">File</span><span>(args[</span><span style="color:#d08770;">0</span><span>]);
+</span><span>	    </span><span style="color:#b48ead;">if </span><span>(file.</span><span style="color:#bf616a;">isFile</span><span>()) {
+</span><span>		</span><span style="color:#65737e;">// Your code here:
+</span><span>
+</span><span>
+</span><span>	    } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>		    </span><span style="color:#ebcb8b;">System</span><span>.err.</span><span style="color:#bf616a;">println</span><span>(&quot;</span><span style="color:#a3be8c;">Could not find </span><span>&quot; + file);
+</span><span>	    }
+</span><span>
+</span><span>	} </span><span style="color:#b48ead;">else </span><span>{
+</span><span>	    </span><span style="color:#ebcb8b;">System</span><span>.out.</span><span style="color:#bf616a;">println</span><span>(&quot;</span><span style="color:#a3be8c;">Wrong argcount: </span><span>&quot; + args.length);
+</span><span>	    </span><span style="color:#ebcb8b;">System</span><span>.</span><span style="color:#bf616a;">exit</span><span>(-</span><span style="color:#d08770;">1</span><span>);
+</span><span>	}
+</span></code></pre>
+<p>Launch <code>Exercise02</code> with the one of the files of the data set as an argument (e.g. <code>&lt;where_you_saved_your_data_set&gt;/MLII/1 NSR/100m (0).mat</code>)!</p>
+<ul>
+<li><a href="../set_args_eclipse">How to do that in Eclipse</a></li>
+<li><a href="../set_args_intellij">How to do that in IntelliJ</a></li>
+</ul>
+<p>Your program should print now the file name you selected:</p>
+<p><img src="../start_with_args.png" alt="Stared with arguments" /></p>
+<p><strong>Remember to never put file names directly in your code. Your program will then only work on your machine!</strong></p>
+<p>Let's open this file!</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">if </span><span>(file.</span><span style="color:#bf616a;">isFile</span><span>()) {
+</span><span>    </span><span style="color:#65737e;">// A file should be opened 
+</span><span>    us.hebi.matlab.mat.types.</span><span style="color:#ebcb8b;">Matrix</span><span> mat = </span><span style="color:#ebcb8b;">Mat5</span><span>.</span><span style="color:#bf616a;">readFromFile</span><span>(file).</span><span style="color:#bf616a;">getMatrix</span><span>(</span><span style="color:#d08770;">0</span><span>);
+</span><span>    </span><span style="color:#ebcb8b;">Signal</span><span> heartSignal = </span><span style="color:#b48ead;">new </span><span>mt.</span><span style="color:#ebcb8b;">Signal</span><span>(mat.</span><span style="color:#bf616a;">getNumElements</span><span>(), &quot;</span><span style="color:#a3be8c;">Heart Signal</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(</span><span style="color:#b48ead;">int</span><span> i = </span><span style="color:#d08770;">0</span><span>; i &lt; heartSignal.</span><span style="color:#bf616a;">size</span><span>(); ++i) {
+</span><span>	    heartSignal.</span><span style="color:#bf616a;">buffer</span><span>()[i] = mat.</span><span style="color:#bf616a;">getFloat</span><span>(i);
+</span><span>    }
+</span><span>    heartSignal.</span><span style="color:#bf616a;">show</span><span>();
+</span><span>
+</span><span>
+</span><span>} </span><span style="color:#b48ead;">else if </span><span>(file.</span><span style="color:#bf616a;">isDirectory</span><span>()) {
+</span></code></pre>
+<p>You should now see the signal. However, this plot does not have any labels with physical units attached.
+We will change that later.</p>
+<p><img src="../dimensionless.png" alt="dimensionless ECG curve" /></p>
+<h1 id="extension-of-signal-java">Extension of Signal.java</h1>
+<P align="right"><i>4 Points</i>
+<p>To analyze this and other signals, we will extend our <code>Signal</code> class.
+Please implement the following methods in <code>Signal.java</code> that calculate some descriptive properties of the signal:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public float </span><span style="color:#bf616a;">min</span><span>()        </span><span style="color:#65737e;">//&lt; lowest signal value
+</span><span>    </span><span style="color:#b48ead;">public float </span><span style="color:#bf616a;">max</span><span>()        </span><span style="color:#65737e;">//&lt; largest signal value
+</span><span>    </span><span style="color:#b48ead;">public float </span><span style="color:#bf616a;">sum</span><span>()        </span><span style="color:#65737e;">//&lt; sum of all signal values
+</span><span>    </span><span style="color:#b48ead;">public float </span><span style="color:#bf616a;">mean</span><span>()       </span><span style="color:#65737e;">//&lt; mean value of the signal
+</span><span>    </span><span style="color:#b48ead;">public float </span><span style="color:#bf616a;">variance</span><span>()   </span><span style="color:#65737e;">//&lt; variance of the signal
+</span><span>    </span><span style="color:#b48ead;">public float </span><span style="color:#bf616a;">stddev</span><span>()     </span><span style="color:#65737e;">//&lt; standard deviation of the signal
+</span></code></pre>
+<p>Test the methods in your main function and check whether the calculated values seem plausible
+by looking at your plot and printing the calculated values.</p>
+<h1 id="physical-dimensions">Physical Dimensions</h1>
+<P align="right"><i>1 Points</i>
+<p><em>The code for this section belong to <code>Signal.java</code></em></p>
+<p>In the last exercise, we treated signals as pure sequence of numbers without any physical dimensions.
+But for medical measurements physical dimensions are important.
+We want to extend our plot to look like this with the horizontal axis labeled with seconds:</p>
+<p><img src="../find_peaks.png" alt="pic alt" /></p>
+<p>To do this we will add a new member to our signal that's describing the physical distance between two samples</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">protected float</span><span> spacing = </span><span style="color:#d08770;">1.0</span><span style="color:#b48ead;">f</span><span>;  </span><span style="color:#65737e;">//&lt; Use 1.0f as a default when we don&#39;t set the physical distance between points
+</span></code></pre>
+<p>Add also a setter and getter method</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">setSpacing</span><span>(</span><span style="color:#b48ead;">float</span><span> spacing) 
+</span><span>    </span><span style="color:#b48ead;">public float </span><span style="color:#bf616a;">spacing</span><span>() 
+</span></code></pre>
+<p>Read in the <a href="http://dx.doi.org/10.17632/7dybx7wyfn.3">discription of the data</a> set the sampling frequency of the signal
+and use it to calculate the spacing between two samples. Set this property <code>setSpacing</code> in the main method.</p>
+<p>Next, we want to change <code>show()</code> to regard our spacing and to accept a <code>ij.gui.Plot</code> so that we can set the axis of our plot.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">show</span><span>(</span><span style="color:#ebcb8b;">Plot</span><span> plot) {
+</span><span>	    </span><span style="color:#ebcb8b;">DisplayUtils</span><span>.</span><span style="color:#bf616a;">showArray</span><span>(buffer, plot, </span><span style="color:#65737e;">/*start of the signal=*/</span><span style="color:#d08770;">0.</span><span style="color:#b48ead;">f</span><span>, spacing);
+</span><span>    }
+</span></code></pre>
+<p>Because we are lazy, we can still keep the original usage of <code>show()</code></p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">show</span><span>() {
+</span><span>	    </span><span style="color:#ebcb8b;">DisplayUtils</span><span>.</span><span style="color:#bf616a;">showArray</span><span>(buffer, name, , </span><span style="color:#65737e;">/*start of the signal=*/</span><span style="color:#d08770;">0.</span><span style="color:#b48ead;">f</span><span>, spacing);
+</span><span>    }
+</span></code></pre>
+<p>Please create an instance of <code>ij.gui.Plot</code> in the main method of <code>Exercise02</code> with descriptive labels for both axis and use if for <code>heartSignal.show(...)</code>.</p>
+<!--You can find a complete description of this class [here](https://imagej.nih.gov/ij/developer/api/ij/gui/Plot.html).-->
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// Constructs a new Plot with the default options.
+</span><span style="color:#ebcb8b;">Plot</span><span> plot = </span><span style="color:#b48ead;">new </span><span style="color:#ebcb8b;">Plot</span><span>(&quot;</span><span style="color:#a3be8c;">chosee title here</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">choose xLabel here</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">choose yLabel here</span><span>&quot;)
+</span><span>heartSignal.</span><span style="color:#bf616a;">show</span><span>(plot);
+</span><span>
+</span><span style="color:#65737e;">//... add here more plotting stuff
+</span><span>
+</span><span>plot.</span><span style="color:#bf616a;">show</span><span>()
+</span></code></pre>
+<h1 id="determine-the-heart-frequency">Determine the Heart Frequency</h1>
+<P align="right"><i>5 Points</i>
+<p><em>The remainder of this exercise will be implemented in <code>Exercise02.java</code></em></p>
+<p>Create a file  <code>src/main/java/lme/HeartSignalPeaks.java</code> with following content</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">package </span><span>lme;
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>java.util.</span><span style="color:#ebcb8b;">ArrayList</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">HeartSignalPeaks </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">	</span><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">ArrayList</span><span style="color:#eff1f5;">&lt;</span><span style="color:#ebcb8b;">Double</span><span style="color:#eff1f5;">&gt; xValues </span><span>= </span><span style="color:#b48ead;">new </span><span style="color:#ebcb8b;">ArrayList</span><span style="color:#eff1f5;">&lt;</span><span style="color:#ebcb8b;">Double</span><span style="color:#eff1f5;">&gt;();
+</span><span style="color:#eff1f5;">	</span><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">ArrayList</span><span style="color:#eff1f5;">&lt;</span><span style="color:#ebcb8b;">Double</span><span style="color:#eff1f5;">&gt; yValues </span><span>= </span><span style="color:#b48ead;">new </span><span style="color:#ebcb8b;">ArrayList</span><span style="color:#eff1f5;">&lt;</span><span style="color:#ebcb8b;">Double</span><span style="color:#eff1f5;">&gt;();
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p><code>ArrayList</code> behave like arrays, except you can add new items to make it longer. <a href="https://www.w3schools.com/java/java_arraylist.asp">You can read more about them here.</a></p>
+<p>We now want to find the peaks of the heart signal. We do that by finding local maxima within region that are above a certain
+threshold (here in blue).
+Find a good value of this threshold so that all peaks are above this value.
+You may use <code>mean()</code>, <code>max()</code>, <code>min()</code> to calculate it.
+You can see your threshold by ploting it:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    plot.</span><span style="color:#bf616a;">setColor</span><span>(&quot;</span><span style="color:#a3be8c;">blue</span><span>&quot;);
+</span><span>    plot.</span><span style="color:#bf616a;">add</span><span>(&quot;</span><span style="color:#a3be8c;">lines</span><span>&quot;, </span><span style="color:#b48ead;">new double</span><span>[] { </span><span style="color:#d08770;">0</span><span>, </span><span style="color:#65737e;">/* a high value */</span><span style="color:#d08770;">10000 </span><span>}, </span><span style="color:#b48ead;">new double</span><span>[] { threshold, threshold });
+</span></code></pre>
+<p><img src="../find_peaks.png" alt="pic alt" /></p>
+<p>Implement the following method that finds all peaks of the signal.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public static </span><span>lme.</span><span style="color:#ebcb8b;">HeartSignalPeaks </span><span style="color:#bf616a;">getPeakPositions</span><span>(mt.</span><span style="color:#ebcb8b;">Signal</span><span> signal, </span><span style="color:#b48ead;">float</span><span> threshold)
+</span></code></pre>
+<p>To determine the signal peaks, one can use normal maximum search over the signal values.
+Save the found maximum value (i.e. signal amplitude) in x(<code>max</code>) and
+the location of maximum (i.e. the time at which the peak occurs) in y(<code>arg max</code>).</p>
+<p>You can implement the peak finding method as follows:</p>
+<ul>
+<li>
+<p>Loop over the signal and at each index</p>
+</li>
+<li>
+<p>Use  <code>boolean</code> variable to determine if the current signal value is above the threshold.</p>
+</li>
+<li>
+<p>If the previous signal value was above the threshold (i.e <code>boolean</code> value was true), and the current value is below threshold (i.e <code>boolean</code> value is false)</p>
+</li>
+<li>
+<p>Add the previous signal value as a instance of <code>HeartSignalPeaks</code> (like <code>peaks.xValues</code> and <code>peaks.yValues</code>)</p>
+</li>
+</ul>
+<p>This is a suggested workflow, but feel free to use your own ideas to efficently find the peaks of the signal.</p>
+<p>You can plot the peaks you have found:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    plot.</span><span style="color:#bf616a;">setColor</span><span>(&quot;</span><span style="color:#a3be8c;">red</span><span>&quot;);
+</span><span>    plot.</span><span style="color:#bf616a;">addPoints</span><span>(peaks.xValues, peaks.yValues, </span><span style="color:#d08770;">0</span><span>);
+</span></code></pre>
+<p>Next, create a Signal with the difference in time between succesive peaks (import <code>import java.util.ArrayList;</code>). </p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>	</span><span style="color:#b48ead;">public static </span><span>mt.</span><span style="color:#ebcb8b;">Signal </span><span style="color:#bf616a;">calcPeakIntervals</span><span>(lme.</span><span style="color:#ebcb8b;">HeartSignalPeaks</span><span> peaks) {
+</span><span>		</span><span style="color:#ebcb8b;">ArrayList</span><span>&lt;</span><span style="color:#ebcb8b;">Double</span><span>&gt; peakPositions = peaks.xValues;
+</span><span>		</span><span style="color:#b48ead;">if  </span><span>(peakPositions.</span><span style="color:#bf616a;">size</span><span>() &gt; </span><span style="color:#d08770;">1</span><span>) {
+</span><span>			</span><span style="color:#ebcb8b;">Signal</span><span> intervals = </span><span style="color:#b48ead;">new </span><span>mt.</span><span style="color:#ebcb8b;">Signal</span><span>(peaks.xValues.</span><span style="color:#bf616a;">size</span><span>() - </span><span style="color:#d08770;">1</span><span>, &quot;</span><span style="color:#a3be8c;">Peak Intervals</span><span>&quot;);
+</span><span>
+</span><span>			</span><span style="color:#b48ead;">for </span><span>(</span><span style="color:#b48ead;">int</span><span> i = </span><span style="color:#d08770;">0</span><span>; i &lt; peakPositions.</span><span style="color:#bf616a;">size</span><span>() - </span><span style="color:#d08770;">1</span><span>; ++i) {
+</span><span>				intervals.</span><span style="color:#bf616a;">buffer</span><span>()[i] = (</span><span style="color:#b48ead;">float</span><span>) (peakPositions.</span><span style="color:#bf616a;">get</span><span>(i + </span><span style="color:#d08770;">1</span><span>) - peakPositions.</span><span style="color:#bf616a;">get</span><span>(i));
+</span><span>			}
+</span><span>			</span><span style="color:#b48ead;">return</span><span> intervals;
+</span><span>		} </span><span style="color:#b48ead;">else </span><span>{
+</span><span>			</span><span style="color:#b48ead;">return new </span><span>mt.</span><span style="color:#ebcb8b;">Signal</span><span>(</span><span style="color:#d08770;">1</span><span>, &quot;</span><span style="color:#a3be8c;">No Intervals found</span><span>&quot;);
+</span><span>		}
+</span><span>	}
+</span></code></pre>
+<p>You can use that signal to determine the mean cycle duration (<code>peakIntervals.mean()</code>), the mean heart frequency (<code>(1. / intervals.mean())</code>) and
+beats per minute (<code>60. * 1. / intervals.mean()</code>). Print those values!</p>
+<h1 id="summary-of-tasks">Summary of tasks</h1>
+<p>To summarize the list of tasks that needs to be implemented to complete this exercise</p>
+<ol>
+<li>Set the file path correctly to load the signal into your program (Ensures you can load the signal inside the program)</li>
+<li>Add labels to the plot, include spacing variable in signal class for visualizing plots in physical dimensions.</li>
+<li>Implement methods to compute statistical measures (like mean, median,...). (Use the formula provied in lecture/exercise slides)</li>
+<li>Determine the threshold (follow the description provided here)</li>
+<li>Find the peaks (follow the description provided here)</li>
+<li>Calculate intervals between the peaks</li>
+</ol>
+<h3 id="note">Note</h3>
+<p>While setting file path as arguments, add &quot;path&quot; if there are spaces in file name since java parses space as new arguments.</p>
+<h1 id="bonus">Bonus</h1>
+<p><em>This is not required for the exercise.</em></p>
+<p>Run <code>Exercise02</code> with other files of the data set as an argument.
+What is the meaning of the mean value and the variance of time distance between the peeks?
+How do signals with low variance in the peak distances look like and how signals with high variance?</p>
+<!--https://data.mendeley.com/datasets/7dybx7wyfn/3-->
+<!--```-->
+<!--Plawiak, Pawel (2017), “ECG signals (1000 fragments)”, Mendeley Data, v3 http://dx.doi.org/10.17632/7dybx7wyfn.3 -->
+<!--```-->
+<!--For research purposes, the ECG signals were obtained from the PhysioNet service (http://www.physionet.org)-->
+<!--from the MIT-BIH Arrhythmia database. -->
+<!--The created database with ECG signals is described below. -->
+<!--1) The ECG signals were from 45 patients: 19 female (age: 23-89) and 26 male (age: 32-89).-->
+<!--2) The ECG signals contained 17 classes: normal sinus rhythm, pacemaker rhythm, and 15 types-->
+<!--of cardiac dysfunctions (for each of which at least 10 signal fragments were collected).-->
+<!--3) All ECG signals were recorded at a sampling frequency of 360 [Hz] and a gain of 200 [adu / mV]. 4)-->
+<!--For the analysis, 1000, 10-second (3600 samples) fragments of the ECG signal (not overlapping) were randomly selected.-->
+<!--5) Only signals derived from one lead, the MLII, were used.-->
+<!--6) Data are in mat format (Matlab).-->
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Exercise 1 </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Exercise 1 ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;archive&#x2F;WS2021&#x2F;exercise-1&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Exercise 1">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Exercise 1</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Stephan Seitz</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <h1 id="signals-and-convolution">Signals and Convolution</h1>
+<p><strong>Submission deadline: 11.05.20 23:59h</strong></p>
+<p>Please ensure that all files you created also contain <strong>your name and your IDM ID</strong> and also your partner's name and IDM ID if you're not working alone.</p>
+<p>Each exercise has <strong>10 points</strong>. You have to achieve <strong>30 of 60 points in six homework exercises</strong> to pass the module.</p>
+<h2 id="imagej">ImageJ</h2>
+<p>The image processing program we want to use during this semester is called ImageJ.
+It was developed at the US National Institutes of Health and is used nowadays especially in research 
+for medical and biological images.</p>
+<p>If you want to, you can download a stand-alone version of the program <a href="https://fiji.sc/">here</a>.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>ImageJ can also be used as a Java library.
+We already created a Java project that uses ImageJ.
+You can download it from <a href="https://github.com/mt2-erlangen/exercises-ss2021">https://github.com/mt2-erlangen/exercises-ss2021</a> and import with the IDE of your choice:</p>
+<ul>
+<li><a href="../import_eclipse">Instructions for Eclipse</a></li>
+<li><a href="../import_intellij">Instructions for IntelliJ</a></li>
+</ul>
+<h1 id="tasks">Tasks</h1>
+<!--Standard project layout-->
+<!--http://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html-->
+<p>You should now be able to execute the file <code>src/main/java/exercises/Exercise01.java</code></p>
+<p><img src="../import_eclipse/run.png" alt="ImageJ" />
+<img src="../import_eclipse/imagej.png" alt="ImageJ" /></p>
+<p>The following code is opening the ImageJ main window and exits the running program when the window is closed.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">Exercise01 </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">public static void </span><span style="color:#8fa1b3;">main</span><span style="color:#eff1f5;">(</span><span style="color:#ebcb8b;">String</span><span style="color:#b48ead;">[] </span><span style="color:#bf616a;">args</span><span style="color:#eff1f5;">) {
+</span><span style="color:#eff1f5;">        (</span><span style="color:#b48ead;">new </span><span style="color:#eff1f5;">ij.</span><span style="color:#ebcb8b;">ImageJ</span><span style="color:#eff1f5;">()).</span><span style="color:#bf616a;">exitWhenQuitting</span><span style="color:#eff1f5;">(</span><span style="color:#d08770;">true</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    }
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p>IntelliJ will only allow to run <code>Exercise01</code> when there are no errors in the project. You can just out-comment the method <code>lme.Algorithms.convolution1d</code> until you implemented your <code>Signal</code> class.</p>
+<h3 id="signal-java">Signal.java</h3>
+<P align="right"><i>4 Points</i>
+<p>As a first step, we will implement the class <code>Signal</code> 
+which should hold a signal of finite length.
+Create the file <code>src/main/java/mt/Signal.java</code>.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// &lt;your name&gt; &lt;your idm&gt;
+</span><span style="color:#65737e;">// &lt;your partner&#39;s name&gt; &lt;your partner&#39;s idm&gt; (if you submit with a group partner)
+</span><span style="color:#b48ead;">package </span><span>mt;
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>lme.</span><span style="color:#ebcb8b;">DisplayUtils</span><span>;
+</span><span style="color:#b48ead;">import </span><span>ij.gui.</span><span style="color:#ebcb8b;">Plot</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">Signal </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p>Signal should have the following members</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">protected float[]</span><span> buffer; </span><span style="color:#65737e;">// Array to store signal values
+</span><span>    </span><span style="color:#b48ead;">protected </span><span style="color:#ebcb8b;">String</span><span> name;    </span><span style="color:#65737e;">// Name of the signal
+</span><span>    </span><span style="color:#b48ead;">protected int</span><span> minIndex;   </span><span style="color:#65737e;">// Index of first array element (should be 0 for signals)
+</span></code></pre>
+<p>Implement two constructors for <code>Signal</code></p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public </span><span style="color:#bf616a;">Signal</span><span>(</span><span style="color:#b48ead;">int</span><span> length, </span><span style="color:#ebcb8b;">String</span><span> name)     </span><span style="color:#65737e;">// Create signal with a certain length (set values later)
+</span><span>    </span><span style="color:#b48ead;">public </span><span style="color:#bf616a;">Signal</span><span>(</span><span style="color:#b48ead;">float[]</span><span> buffer, </span><span style="color:#ebcb8b;">String</span><span> name) </span><span style="color:#65737e;">// Create a signal from a provided array
+</span></code></pre>
+<p>Implement the following getter methods for <code>Signal</code></p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">size</span><span>()        </span><span style="color:#65737e;">// Size of the signal
+</span><span>    </span><span style="color:#b48ead;">public float[] </span><span style="color:#bf616a;">buffer</span><span>()  </span><span style="color:#65737e;">// Get the internal array 
+</span><span>    </span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">minIndex</span><span>()    </span><span style="color:#65737e;">// Get lowest index of signal (that is stored in buffer)
+</span><span>    </span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">maxIndex</span><span>()    </span><span style="color:#65737e;">// Get highest index of signal (that is stored in buffer)
+</span><span>    </span><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">String </span><span style="color:#bf616a;">name</span><span>()     </span><span style="color:#65737e;">// Get the name of the signal
+</span></code></pre>
+<p>Next, we want to visualize our Signal in the method <code>show</code>. You can use provided function <code>lme.DisplayUtils.showArray</code>.
+To test it, create a <code>Signal</code> with arbitray values in the main method of <code>Exercise01</code> and call its <code>show</code> method.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">show</span><span>() {
+</span><span>        </span><span style="color:#ebcb8b;">DisplayUtils</span><span>.</span><span style="color:#bf616a;">showArray</span><span>(</span><span style="color:#bf616a;">this</span><span>.buffer, </span><span style="color:#bf616a;">this</span><span>.name, </span><span style="color:#65737e;">/*start index=*/</span><span style="color:#d08770;">0</span><span>, </span><span style="color:#65737e;">/*distance between values=*/</span><span style="color:#d08770;">1</span><span>);
+</span><span>    }
+</span></code></pre>
+<p>In our black board exercises, we agreed that we want to continue our signals with zeros where we don't have any values stored.
+If we access indices of our <code>Signal</code> with values smaller than <code>minIndex()</code> or larger <code>maxIndex()</code> we want to return <code>0.0f</code>.
+If a user accesses an index between <code>minIndex()</code> and <code>maxIndex()</code> we want to return the corresponding value stored in our array.</p>
+<p><img src="../signal-min-max.png" alt="minIndex" /></p>
+<p>Implement the method <code>atIndex</code> and <code>setAtIndex</code>. Please be aware that <code>minIndex</code> can be smaller than 0 for subclasses of Signal.
+If <code>setAtIndex</code> is called with an invalid index (smaller than <code>minIndex</code> or greater than <code>maxIndex</code>), it's ok for the program to crash.
+This should not happen for <code>atIndex</code>.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public float </span><span style="color:#bf616a;">atIndex</span><span>(</span><span style="color:#b48ead;">int</span><span> i)
+</span><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">setAtIndex</span><span>(</span><span style="color:#b48ead;">int</span><span> i, </span><span style="color:#b48ead;">float</span><span> value)
+</span></code></pre>
+<p>You can check the correctness of <code>atIndex</code>/<code>setAtIndex</code> with the test <code>testAtIndex</code> in file <code>src/test/java/SignalTests.java</code>.</p>
+<h3 id="linearfilter-java">LinearFilter.java</h3>
+<P align="right"><i>3 Points</i>
+<p>Implement <code>LinearFilter</code> in file <code>src/main/java/LinearFilter.java</code> as a subclass of <code>Signal</code>.
+<code>LinearFilter</code> should work like <code>Signal</code> except its <code>minIndex</code> should be at <code>- floor(coefficients.length/2)</code> as in the exercise slides.</p>
+<p><img src="../tip2.png" alt="tip2" /></p>
+<p><code>LinearFilter</code> should have a constructor that checks that coefficients is an array of odd size or throws an error otherwise (any error is ok).</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#b48ead;">public </span><span style="color:#bf616a;">LinearFilter</span><span>(</span><span style="color:#b48ead;">float[]</span><span> coefficients, </span><span style="color:#ebcb8b;">String</span><span> name)
+</span></code></pre>
+<p>and a method that executes the discrete convolution on another <code>Signal input</code> and returns an output of same size.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>   </span><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">Signal </span><span style="color:#bf616a;">apply</span><span>(</span><span style="color:#ebcb8b;">Signal</span><span> input);
+</span></code></pre>
+<p>You should be able to directly use the formula from the exercise slides (f is the input signal, h our filter, $L$ the filter length)</p>
+<p>$$K = \lfloor L/2 \rfloor$$
+$$g[k] = \sum_{\kappa=-K}^{K} f[k-\kappa] \cdot h[ \kappa ]$$</p>
+<p>or with our <code>minIndex</code>/<code>maxIndex</code> methods for each index $k$ of the output signal.
+$$g[k] = \sum_{\kappa=h.\text{minIndex}}^{h.\text{maxIndex}} f[k-\kappa] \cdot h[\kappa] $$</p>
+<p>Be sure that you use <code>atIndex</code> to access the values of <code>input</code> and the filter.</p>
+<p><img src="../tip3.png" alt="tip3" /></p>
+<p>You can test your convolution function with the tests provided in <code>src/test/java/LinearFilterTests.java</code>.</p>
+<p>Good test cases are:</p>
+<ul>
+<li><code>{0,0,1,0,0}</code>: this filter should not change your signal at all</li>
+<li><code>{0,1,0,0,0}</code>: this filter should move your signal one value to the <strong>left</strong></li>
+<li><code>{0,0,0,1,0}</code>: this filter should move your signal one value to the <strong>right</strong></li>
+</ul>
+<h2 id="questions">Questions</h2>
+<P align="right"><i>3 Points</i>
+<p>In this task we want to convolve a test <code>Signal</code> with three different linear filters.
+Filter the signal $f[k]$  <code>Signal(new float[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0}, &quot;f(k)&quot;)</code>
+with filters</p>
+<ul>
+<li>$h_1[k]$: <code>{1.0f/3 ,1/3.f ,1/3.f}</code>,</li>
+<li>$h_2[k]$: <code>{1/5.f, 1/5.f , 1/5.f, 1/5.f, 1/5.f}</code>,</li>
+<li>$h_3[k]$: <code>{0.5f, 0, -0.5f}</code>.</li>
+</ul>
+<p>Save the images of the input signal and filtered results (recommended filetype: <code>png</code>).
+Create a PDF document (e.g. with Word or LibreOffice) with those images in which you describe briefly how the filters modified the input signal and why.</p>
+<h2 id="submitting">Submitting</h2>
+<p>Please ensure that all files you created also contain your name and your IDM ID and also your partner's name and IDM ID if you're not working alone.</p>
+<p>Then, compress your source code folder <code>src</code> to a zip archive (<code>src.zip</code>) and submit it and your PDF document via StudOn!</p>
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>

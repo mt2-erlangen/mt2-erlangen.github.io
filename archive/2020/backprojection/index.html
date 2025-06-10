@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+>
+</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Project Work 5 – Backprojection </title>
+    <link rel="apple-touch-icon" sizes="57x57" href="https://mt2-erlangen.github.io/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://mt2-erlangen.github.io/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://mt2-erlangen.github.io/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://mt2-erlangen.github.io/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://mt2-erlangen.github.io/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://mt2-erlangen.github.io/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://mt2-erlangen.github.io/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://mt2-erlangen.github.io/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mt2-erlangen.github.io/apple-icon-180x180.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://mt2-erlangen.github.io/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mt2-erlangen.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://mt2-erlangen.github.io/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mt2-erlangen.github.io/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" itemprop="about" content="">
+    <meta name="keywords" itemprop="keywords" content="">
+    <meta itemprop="headline" content="Medizintechnik II – Exercises"/>
+    <meta itemprop="educationalUse" content="knowledge share" />
+    <meta itemprop="copyrightYear" content="2022" />
+    <meta property="og:title" content="Medizintechnik II – Exercises Project Work 5 – Backprojection ">
+    <meta property="og:description" content="  ">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;archive&#x2F;2020&#x2F;backprojection&#x2F;">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image:alt" content="Project Work 5 – Backprojection">
+
+    <meta property="fb:app_id" content="???" />
+    <meta name="twitter:site" content="@???">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Code+Pro">
+    <link rel="stylesheet" href="/site.css">
+</head>
+
+<body>
+    <div 
+     itemscope itemtype="http://schema.org/Organization">
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <!--<a href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;" >Anchor Text</a>-->
+            <a class="title" href="..">
+                    <img src="&#x2F;imgs&#x2F;common&#x2F;joint_logo_small.png" alt="" href="https:&#x2F;&#x2F;mt2-erlangen.github.io&#x2F;">
+                    <h1 >Medizintechnik II – Exercises</h1>
+            </a>
+        </div>
+    </header>
+
+    <div class="container padding-header">
+        
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post post-page">
+    
+        
+    
+    <header>
+        
+        <h1 class="title" itemprop="headline">Project Work 5 – Backprojection</h1>
+        <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Stephan Seitz</span>
+        </address>
+        <div class="extra">
+            
+
+            
+        </div>
+    </header>
+    <div itemprop="articleBody" class="body">
+      <h2 id="backprojection">Backprojection</h2>
+<p>If we have a look at the sinogram values corresponding to one detector position we get some information about the projected object.
+For instance, we can see the profile of the projected circle in the following image.</p>
+<p><img src="../sinogram.png" alt="sinogram" /></p>
+<p>However, if we have no access to the original volume slice we can not tell anything about the distance of the object to the detector.
+All the following situations would generate the same projection!</p>
+<p><img src="../projection_distance.png" alt="sinogram" /></p>
+<p>So apparently, we get some information in the direction of the detector plane, but all information orthogonal to the detector plane
+is lost.
+So one thing that we can do if we want to perform a reconstruction from the sinogram is to take the information in direction of the detector plane
+and uniormly smear it into the direction orthogonal to the detector plane in a range where we assume the object is located.
+We call this process <strong>backprojection</strong>.</p>
+<table>
+<tr>
+    <th><img align="center" src="../backprojection.png" ></th>
+<tr>
+<tr>
+    <td>The backprojection smears the value of the projection uniformly over the paths of the rays</td>
+<tr>
+</table>
+<p>Use the following method, that is calculating the value that we want to smear back.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#65737e;">// in mt.Projector
+</span><span>    </span><span style="color:#b48ead;">public float </span><span style="color:#bf616a;">backprojectRay</span><span>(mt.</span><span style="color:#ebcb8b;">Image</span><span> sinogramSlice, </span><span style="color:#b48ead;">int</span><span> angleIdx, </span><span style="color:#b48ead;">float</span><span> s) {
+</span><span>        sinogramSlice.</span><span style="color:#bf616a;">setOrigin</span><span>(</span><span style="color:#d08770;">0.</span><span style="color:#b48ead;">f</span><span>, -sinogram.physicalHeight * </span><span style="color:#d08770;">0.5</span><span style="color:#b48ead;">f</span><span>);
+</span><span>        </span><span style="color:#b48ead;">return</span><span> sinogramSlice.</span><span style="color:#bf616a;">interpolatedAt</span><span>(angleIdx * sinogram.spacing, s) </span><span style="color:#65737e;">// * sinogram.spacing is necessary because spacing is not valid for our angle indices (actually each coordinate should have their own spacing. That&#39;s the revenge for us being lazy.).
+</span><span>                / (volume.</span><span style="color:#bf616a;">physicalWidth</span><span>() * </span><span style="color:#ebcb8b;">Math</span><span>.</span><span style="color:#bf616a;">sqrt</span><span>(</span><span style="color:#d08770;">2</span><span>)) </span><span style="color:#65737e;">// we guess that this is the size of our object, diagonal of our slice
+</span><span>                / sinogramSlice.</span><span style="color:#bf616a;">width</span><span>()  </span><span style="color:#65737e;">// we will backproject for each angle. We can take the mean of all angle position that we have here.
+</span><span>                ;
+</span><span>    }
+</span></code></pre>
+<p>Use this method in <code>backprojectSlice</code> to backproject for each pixel <code>x</code>, <code>y</code> a horizontal line of the sinogram (all possible angles).</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#65737e;">// in mt.Projector
+</span><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">backprojectSlice</span><span>(</span><span style="color:#b48ead;">int</span><span> sliceIdx)
+</span><span>    </span><span style="color:#65737e;">// A helper method
+</span><span>    </span><span style="color:#b48ead;">public</span><span> void </span><span style="color:#bf616a;">backprojectSlice</span><span>(</span><span style="color:#b48ead;">int</span><span> sliceIdx, </span><span style="color:#b48ead;">int</span><span> angleIdx)
+</span></code></pre>
+<p>To do this </p>
+<ul>
+<li>Create a loop over all <code>angleIdx</code>
+<ul>
+<li>Call the helper method for all angle indices (there are <code>sinogram.width</code> angles)</li>
+</ul>
+</li>
+<li>In <code>public void backprojectSlice(int sliceIdx, int angleIdx)</code>
+<ul>
+<li>Get the slice with index <code>sliceIdx</code></li>
+<li>Loop over all <code>x</code>, <code>y</code> of this image</li>
+<li>Calculate the physical coordinates from the integers <code>x</code> and <code>y</code> (times <code>spacing</code> plus <code>origin</code>!)</li>
+<li>Calculate the actual angle <code>theta</code> from the <code>angleIdx</code></li>
+<li>Calculate <code>s</code> from the physical coordinate.
+<ul>
+<li><code>s</code> is the physical distance of the point $\vec{x}$ from the ray through the origin at angle <code>theta</code>.</li>
+<li>Can you write down the line equation for this line?</li>
+<li>Can you use the line equation to calculate the distance of $\vec{x}$ an the line through the origin?</li>
+</ul>
+</li>
+<li>Call <code>backprojectRay</code> with <code>angleIdx</code> and <code>s</code></li>
+<li>Add this result of <code>backprojectRay</code> to current value at position <code>x</code>, <code>y</code> and save the sum at that position</li>
+</ul>
+</li>
+</ul>
+<!--*Hint: You may have seen that all the CT reconstructions from the Cancer Imaging Archive contain only image information-->
+<!--within a circular region. If you want to, you can only regard `x`,`y` coordinates within that region or set them to 0 after-->
+<!--the backprojection. If you do that, you should mention it in the project report.*-->
+<h2 id="reconstruction">Reconstruction</h2>
+<p>Next, we want to try out whether we can use our backprojection to reconstruct a volume.
+Whenever we want to test whether a method works, we need something to compare it with.
+The best possible result, the &quot;true&quot; values, is usally called ground truth.
+We can use one of the reconstructions that we downloaded from the Cancer Imaging Archive as a ground truth volume.
+The best possible result for our reconstruction is to come as close as possible to the original (ground truth) volume.</p>
+<p>Create a file <code>src/main/java/project/GroundTruthReconstruction.java</code>.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// Your name &lt;your idm&gt;
+</span><span style="color:#b48ead;">package </span><span>project;
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>mt.</span><span style="color:#ebcb8b;">Projector</span><span>;
+</span><span style="color:#b48ead;">import </span><span>mt.</span><span style="color:#ebcb8b;">Volume</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">GroundTruthReconstruction </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">public static void </span><span style="color:#8fa1b3;">main</span><span style="color:#eff1f5;">(</span><span style="color:#ebcb8b;">String</span><span style="color:#b48ead;">[] </span><span style="color:#bf616a;">args</span><span style="color:#eff1f5;">) {
+</span><span style="color:#eff1f5;">        (</span><span style="color:#b48ead;">new </span><span style="color:#eff1f5;">ij.</span><span style="color:#ebcb8b;">ImageJ</span><span style="color:#eff1f5;">()).</span><span style="color:#bf616a;">exitWhenQuitting</span><span style="color:#eff1f5;">(</span><span style="color:#d08770;">true</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    }
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p>It's important that we never mix up the ground truth with the results of our algorithm.
+Create therefore an instance of <code>Projector</code> that will have the task to simulate projections.
+You can call it <code>groundTruthProjector</code>.
+Open a test volume and create an empty (all pixels 0) sinogram. They are needed to call the constructor of <code>Projector</code>.</p>
+<p>Call <code>groundTruthProjector.projectSlice</code> with an arbiray slice index.</p>
+<!--You get the generated sinogram slice with `groundTruthProjector.sinogram().getSlice(...)`.-->
+<p>Create an empty volume (all pixels 0)  with the same dimensions as the ground truth volume and a copy of <code>groundTruthProjector.sinogram()</code>.
+You can add the following method to <code>mt.Volume</code> to create copies.</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span>    </span><span style="color:#65737e;">// in mt/Volume.java
+</span><span>    </span><span style="color:#b48ead;">public </span><span style="color:#ebcb8b;">Volume </span><span style="color:#bf616a;">clone</span><span>(</span><span style="color:#ebcb8b;">String</span><span> name) {
+</span><span>        </span><span style="color:#ebcb8b;">Volume</span><span> result = </span><span style="color:#b48ead;">new </span><span style="color:#ebcb8b;">Volume</span><span>(</span><span style="color:#bf616a;">width</span><span>(), </span><span style="color:#bf616a;">height</span><span>(), </span><span style="color:#bf616a;">depth</span><span>(), name);
+</span><span>        </span><span style="color:#ebcb8b;">IntStream</span><span>.</span><span style="color:#bf616a;">range</span><span>(</span><span style="color:#d08770;">0</span><span>, </span><span style="color:#bf616a;">depth</span><span>()).</span><span style="color:#bf616a;">forEach</span><span>(</span><span style="color:#bf616a;">z</span><span style="color:#b48ead;">-&gt;</span><span> result.</span><span style="color:#bf616a;">getSlice</span><span>(z).</span><span style="color:#bf616a;">setBuffer</span><span>(</span><span style="color:#ebcb8b;">Arrays</span><span>.</span><span style="color:#bf616a;">copyOf</span><span>(slices[z].</span><span style="color:#bf616a;">buffer</span><span>(), slices[z].</span><span style="color:#bf616a;">buffer</span><span>().length)));
+</span><span>        </span><span style="color:#b48ead;">return</span><span> result;
+</span><span>    }
+</span></code></pre>
+<p>Create a new projector <code>reconstructionProjector</code> with the empty volume and the copy of our sinogram.
+Use <code>backprojectSlice(...)</code> to create your first reconstruction of a slice.</p>
+<p>A good way to test your implementation is to incremently apply more and more backprojections on your reconstruction.
+When you calculated the <code>sinogram</code> for <code>SLICE_IDX</code> you can use</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#65737e;">// in project.GroundTruthReconstruction.java
+</span><span>
+</span><span style="color:#65737e;">// Choose the slice in the middle. Hopefully showing something interesting.
+</span><span style="color:#b48ead;">final int </span><span style="color:#d08770;">SLICE_IDX </span><span>= ????; </span><span style="color:#65737e;">// &lt; Use a index for which you already calculated `projectSlice`
+</span><span>
+</span><span style="color:#b48ead;">for </span><span>(</span><span style="color:#b48ead;">int</span><span> i = </span><span style="color:#d08770;">0</span><span>; i&lt; projector.</span><span style="color:#bf616a;">numAngles</span><span>(); i++ ) {
+</span><span>    </span><span style="color:#b48ead;">try </span><span>{
+</span><span>        </span><span style="color:#ebcb8b;">TimeUnit</span><span>.</span><span style="color:#d08770;">MILLISECONDS</span><span>.</span><span style="color:#bf616a;">sleep</span><span>(</span><span style="color:#d08770;">500</span><span>);
+</span><span>    } </span><span style="color:#b48ead;">catch </span><span>(</span><span style="color:#ebcb8b;">InterruptedException </span><span style="color:#bf616a;">e</span><span>) {
+</span><span>        e.</span><span style="color:#bf616a;">printStackTrace</span><span>();
+</span><span>    }
+</span><span>    projector.</span><span style="color:#bf616a;">backprojectSlice</span><span>(</span><span style="color:#d08770;">SLICE_IDX</span><span>, i);
+</span><span>    projector.</span><span style="color:#bf616a;">volume</span><span>().</span><span style="color:#bf616a;">getSlice</span><span>(</span><span style="color:#d08770;">SLICE_IDX</span><span>).</span><span style="color:#bf616a;">show</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#65737e;">//// Optionally save the intermediate results to a file:
+</span><span>    </span><span style="color:#65737e;">//DisplayUtils.saveImage(projector.volume().getSlice(SLICE_IDX), &quot;/media/dos/shepp_9_&quot;+i+&quot;.png&quot;);
+</span><span>}
+</span></code></pre>
+<p>This will wait 500ms between each backprojection. Do your rays meet at the right points? Use a simple test image with
+only a single white circle if not. This should help you debug the issue.</p>
+<table>
+    <tr>
+        <td> 
+            <video controls loop width="300">
+            <source src="../shepp_9_cropped.webm" type="video/webm">
+            </video> 
+        </td>
+        <td> 
+            <video controls loop width="300">
+            <source src="../shepp_100_cropped.webm" type="video/webm">
+            </video> 
+        </td>
+    </tr>
+    <tr>
+        <th>Backprojection using 9 views</th>
+        <th>Backprojection using 100 views</th>
+    </tr>
+</table>
+<h2 id="project-report">Project Report</h2>
+<p>For the project report, you should briefly describe your backprojection reconstruction algorithm.</p>
+<ul>
+<li><strong>Describe your implementation</strong>, create at least one figure supporting your explanations.
+You should never mention implementation details like for-loops or variable names, but important parameters like the number
+of projection angles you used</li>
+<li><strong>Test</strong> your reconstruction algorithm
+<ul>
+<li>using a simple test image like a white circle or square</li>
+<li>using a CT reconstruction that you downloaded . Cite the data source!</li>
+</ul>
+</li>
+<li><strong>How do images look like</strong>? If they are blurry, what is the reason for that.
+Show the images in your project report.
+Mention in one sentence how the Filtered Backprojection algorithm tries to solve that problem.</li>
+<li>How big are your <strong>errors</strong> in comparison to the ground truth? If you are using a measure like the Mean Squared Error give
+a formula defining it.</li>
+</ul>
+<p>The content for this section should be about one page long. </p>
+<p><a href="../sinogram">Previous section</a></p>
+<p><a href="../reconstruction">Next section</a></p>
+
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="footer">
+    Last site update:  2025-06-10 13:04
+    </div>
+
+</body>
+</html>
