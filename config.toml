@@ -47,8 +47,8 @@ twitter_username="@???" # OPTIONAL, Twitter User to help with metrics
 ## Sidebar automatic links
 sidebar = [
     {name = "Materials", urls=[
-        {name="Github (Java project template)", url="https://github.com/mt2-erlangen/project_ss2024"},
-        {name="StudOn", url="https://www.studon.fau.de/crs4685855.html"},
+        {name="Java project template", url="https://github.com/mt2-erlangen/project_ss2024"},
+        {name="StudOn", url="https://www.studon.fau.de/studon/ilias.php?baseClass=ilrepositorygui&ref_id=5533686"},
         {name="LaTeX Template", url="https://github.com/mt2-erlangen/LaTeX-template-2024"},
     ]},
 ]

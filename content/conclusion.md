@@ -1,5 +1,5 @@
 +++
-date= 2024-06-24T12:00:25Z
+date= 2025-06-24T12:00:25Z
 title = "Project Work 6 - Outlook and Conclusion"
 [extra]
 author= "Mischa Dombrowski, Sebastian Dietz"
@@ -38,7 +38,7 @@ ___
 Once you are finished with your code and satisfied with the results, please compress the entire `src` folder into a zip file and upload it to StudOn. 
 Afterwards, write the report and submit the PDF file as well. 
 
-The deadline for submission is **August 26<sup>th</sup> at 23:55** via **StudOn**. 
+The deadline for submission is **August 08<sup>th</sup> at 23:55** via **StudOn**. 
 
 We recommend that you submit earlier versions of your project to avoid accidentally missing the deadline. Only the last version will be considered.
 

@@ -1,5 +1,5 @@
 +++
-date= 2024-06-24T05:00:00Z
+date= 2025-06-24T05:00:00Z
 title = "Project Work 0 - Introduction"
 [extra]
 author= "Mischa Dombrowski, Sebastian Dietz, Zhengguo Tan, Jinho Kim"
@@ -23,7 +23,7 @@ You have been provided with a basic [java template](https://github.com/mt2-erlan
 
 For information on the **initial Setup**, have a look at our [getting started guide](../installation).
 
-Furthermore, you have been provided a [**latex-template**](https://github.com/mt2-erlangen/LaTeX-template-2024) as a starting point for your report. 
+Furthermore, you have been provided a [**latex-template**](https://github.com/mt2-erlangen/LaTeX-template-2025) as a starting point for your report. 
 It already defines the structure your report should have, so please **do not change the order of the report-sections**. 
 
 In cases where the images to expect after completing a task were given in the exercise, you should obviously **only use images you generated with your own code in your report**

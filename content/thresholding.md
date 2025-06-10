@@ -1,5 +1,5 @@
 +++
-date= 2024-06-24T08:00:00Z
+date= 2025-06-24T08:00:00Z
 title = "Project Work 1 - Thresholding"
 [extra]
 author= "Sebastian Dietz, Mischa Dombrowski"
