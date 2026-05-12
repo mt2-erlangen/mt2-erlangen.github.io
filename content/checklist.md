@@ -1,5 +1,5 @@
 +++
-date= 2023-06-11T08:00:00Z
+date= 2026-06-05T08:00:00Z
 title = "Project Work 0 - Project Report"
 [extra]
 author = "Mischa Dombrowski, Jinho Kim, Stephan Seitz"
@@ -7,32 +7,50 @@ author = "Mischa Dombrowski, Jinho Kim, Stephan Seitz"
 
 # General Information
 
-The deadline for the project report is on April 3<sup>rd</sup> 2024.\
+The deadline for the project report is on August 8<sup>th</sup> 2026.\
 The project report, as well as the coding, are individual work. As such, you need to submit them individually.
 Note: we'll check for plagiarism.
 
-# Guidelines
+# Disclaimer
 
-The project report can be written in either English or German. Please write between 4 and 6 pages of text, not counting the images.
+This is a short introduction with general information and best practices, as well as guidelines for your project-report. We highly suggest you __read through the entirety of this Introduction__ in order to get a detailed impression of the project-work ahead of you. We have also prepared a video with all the necessary information about the report. 
+
+You have been provided with a basic [java template](https://github.com/mt2-erlangen/MT2-Project-MRI) containing a fully set up project, as well as the empty task-classes you will be working with.
+
+For information on the **initial Setup**, have a look at our [getting started guide](../installation).
+
+Furthermore, you have been provided a [**latex-template**](https://github.com/mt2-erlangen/LaTeX-template-2025) as a starting point for your report. 
+It already defines the structure your report should have, so please **do not change the order of the report-sections**. 
+
+In cases where the images to expect after completing a task were given in the exercise, you should obviously **only use images you generated with your own code in your report**
+
+If you are working on CIP machines, you may run into quota issues. You can fix these issues with this short [guide](../quota).
+
+Please also note, that you can connect remotely to CIP machines using a [remote SSH connection](https://wwwcip.informatik.uni-erlangen.de/documentation/services.de.html)
+
+## Report Guidelines
+
+The project report can be written in either English or German. Please write between 4 and 7 pages of text, not counting the images.
 
 
 We expect you to:
 
 - Use the **LaTeX template** we provide
-  - [LaTeX template link](https://github.com/mt2-erlangen/latex-template)
+  - [LaTeX template link](https://github.com/mt2-erlangen/LaTeX-template-2025)
   - Do not modify the style or the formatting. No ornaments for page numbers!
   - The template defines the overall structure of your project. You have to fill in all the gaps.
   - Do not change the order of the sections in our template.
   - Do not change the titles of sections or subsections.
   - Do not change the order of the figures in the project. You can optionally add new figures to the report.
+  - We will only count answers that appear in the correct subsection of the report. If you want to avoid repeating yourself, use `\label{}` and `\ref{}`.
+  - The template contains examples for all commands necessary for the report. It is allowed to import and use other packages if desired. 
 
 
 - Use **scientific references** in your explanations to clearly separate your work from the work of others:
-  - Create a **bibliography**, using the citation style provided in the template.
+  - Use the **bibliography** (see template `Bib/literatur.bib`) and keep the citation style provided in the template.
       The bibliography must be sorted (either alphabetically when using the Name/Year citation style or
       by the order you use them in the text when numbering the sources).
-  - Do not use more than two references that are websites only. If you have to cite a website use the recommended style from
-    the exercise slides.
+  - Do not use more than two references that are websites only. 
 
 
 - All **symbols in equations** need to be **explained** in the text.
@@ -57,12 +75,13 @@ To obtain all the points for the content of your report, additional to the above
 - Check whether you have addressed all the questions in the task description.
 - Check whether you have provided all the result figures and a detailed explanation of them.
 
-## Guidelines for the Use of Writing Assistants
+### Guidelines for the Use of Writing Assistants
 
 We welcome students to use writing assistants to enhance the quality of the written report. However, we would like to point out that
 students are responsible for the correctness of the content, and that **scientific references** are mandatory to verify all the claims made in the report.
 
-If you decide to use any writing assistant, we ask you to add the tool to the list of references.
+If you decide to use any writing assistant, we ask you to **add the tool to the list of references**.
 The use of spell-checking and translation software is encouraged and can be done without adding them to the list of references.    
+
 
 [To the Introduction](../introduction)

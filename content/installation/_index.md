@@ -1,87 +1,97 @@
 +++
-date= 2022-05-02
-title = "Exercise 0"
+date= 2026-06-23T07:00:00Z
+title = "Installation"
 
 [extra]
-author= "Mischa Dombrowski, Stephan Seitz"
+author= "Sebastian Dietz, Mischa Dombrowski, Stephan Seitz"
 +++
 
+# Project Setup
 
-# Getting Started
+Since you have been working with IntelliJ throughout the semester, you should already have it installed.
+If not, refer to the setup guide from the beginning of the semester.
 
-This is just a test to make sure your Java installation is working before the project starts.
+If you encounter any problems, feel free to ask your tutors.
 
-If you encounter any problem please create a post in the forum StudOn.
-For questions regarding the installtion of Java and ImageJ please visit one of the computer exercises.
-If everything is working for you, you just need to wait for next week when the actual exercises start.
+## 1. Download the template
 
-## ImageJ
+Download or clone the project template from [Github](https://github.com/mt2-erlangen/MT2-Project-MRI.git).
 
-The image processing program we want to use during this semester is called ImageJ.
-It was developed at the US National Institutes of Health and is used nowadays especially in research
-for medical and biological images.
+The easiest way is to click **Code → Download ZIP**, unzip it, and place the folder somewhere convenient (e.g. your Desktop).
 
-If you want to, you can download a stand-alone version of the program [here](https://fiji.sc/).
-This is not necessary for the exercises.
+## 2. Open the project in IntelliJ
 
-## Getting started
+Open IntelliJ and go to **File → Open**, then select the folder that contains `build.gradle` — this is the `MT2-Project-MRI` folder itself, **not** any parent folder you may have unzipped it into.
 
-ImageJ can also be used as a Java library.
-We already created a Java project that uses ImageJ.
-You can download it from [https://github.com/mt2-erlangen/exercises-ss2022](https://github.com/mt2-erlangen/exercises-ss2022)
-and import with the IDE of your choice **we highly recommend you to use intellij**:
+For example, if you unzipped to `~/Desktop/MT2-Project-MRI/`, open `MT2-Project-MRI`. Opening a parent folder is the most common mistake and will cause run configurations and Gradle sync to not work.
 
- - [Instructions for Eclipse](../import_eclipse)
- - [Instructions for IntelliJ](../import_intellij)
+IntelliJ will detect it as a Gradle project and show a popup asking to load the Gradle project — click **Load** (or **Trust Project** if prompted).
 
+## 3. Wait for Gradle to sync
 
-## Run Your First ImageJ Program
+IntelliJ will now download all required libraries automatically (this may take a minute on first run). You can watch the progress in the bottom status bar.
 
-You should now be able to execute the file `src/main/java/project/Project.java`.
+If IntelliJ does not sync automatically, click the **Gradle elephant icon** in the top-right toolbar and hit the refresh button.
 
-![ImageJ](../import_eclipse/run.png)
-![ImageJ](../import_eclipse/imagej.png)
+## 4. Select the JDK
 
-The following code is opening the ImageJ main window and exits the running program when the window is closed.
+Navigate to **File → Project Structure → Project** and make sure the SDK is set to **Java 17** (or whichever version you used for the exercises).
 
-```java
-public class Project {
+## 5. Run the project
 
-    public static void main(String[] args) {
-        (new ij.ImageJ()).exitWhenQuitting(true);
+The run configuration **"Project"** is already included in the template. You will see it in the top-right dropdown next to the green run button. Simply select **Project** and click the green arrow.
 
-    }
-}
-```
+**If "Project" does not appear in the dropdown**, one of the following is likely the cause:
 
- When you use IntelliJ, you can just open the file `Exercise00` and then click on the green
- arrow:
+- **Gradle has not finished syncing yet** — wait for the progress bar at the bottom of IntelliJ to finish, then check again.
+- **The module is not recognised** — go to **File → Project Structure → Modules** and check that a module named `MT2-Project-MRI.main` is listed. If not, try **File → Invalidate Caches → Invalidate and Restart**, then wait for Gradle to re-sync.
+- **The IDE has not updated** - Create a dummy configuration. Afterwards the Configuration `Project` should appear. 
 
- ![run using intellij](../run_intellij.png)
+As a fallback, you can always run the project manually: navigate to `src/main/java/project/Project.java` in the file tree, right-click it, and select **Run 'Project.main()'**.
 
-## Debugging
+This will open the **ImageJ** window. At this point you will see an error in the console — that is expected! It means the template is set up correctly and you are ready to start implementing.
+
+## General Info
+
+### What is included in the template?
+
+The template contains the following:
+
+- `src/main/java/project/` — the files you need to implement:
+  - `ComplexImage.java` — Tasks 2 & 4
+  - `ComplexSignal.java` — Task 3
+  - `LinearComplexImageFilter.java` — Task 4
+  - `SincFilter2d.java` — Task 4
+  - `MaxPooling2d.java` — Task 4
+  - `Project.java` — the main entry point (do not modify)
+  - `ProjectHelpers.java` — FFT and file I/O utilities (provided, do not modify)
+- `src/main/java/mt/` — base classes from the exercises (provided)
+  - `Image.java` — you need to add `setBufferFromCenterArea()` here (Task 4)
+- `kdata_knee.h5` / `kdata_brain.h5` — MRI k-space data files
+
+### ImageJ
+
+ImageJ is the image display library used in this project. It opens automatically when you run `Project.java`. All results are displayed as ImageJ windows — you do not need to install anything separately.
+
+### Debugging
 
 <i>Everything here should just be a recap of what you know about debugging from the exercises. Feel free to skip if you know how debugging works!</i>
 
 To do the project during this semester, you will often need to use the debug mode to find errors in your code.
-Please make sure that you know how to run your program in debug mode, since you might not have seen it before (Shame on you AuD!).
 Please always try to debug an issue first before you ask a tutor for help!
 
-To debug an application just click on the bug symbol! You can try this with file `src/main/java/exercises/DebugExample.java`.
-<img align="center" src="../debug_intellj.png" ></td>
-
-<img align="center" src="../debug_eclipse.png" ></td>
+To debug an application just click on the bug symbol!
+<img align="center" src="../debug_intellj.png" >
 
 Also set some breakpoints (where the program should stop) by clicking on the space left to the line numbers.
 
 <figure>
-<img align="center" src="../eclipse_breakpoint.png" ></td>
+<img align="center" src="../eclipse_breakpoint.png" >
 <figcaption><i>A Breakpoint. The program will stop here in debug mode.</i></figcaption>
 </figure>
 
-
 You should also know how to make the debugger stop on an exception (to see what's wrong when the program is crashing).
-There is a bug in program! When you run it, you should see a crash:
+When you run it, you should see a crash:
 
 ![](../exception_breakpoint_intellj.png)
 
@@ -96,17 +106,9 @@ Confirm with `Done`.
 When you run the program again in debug mode it will stop at the line where the error happened.
 This will help you to find out what is wrong at that point.
 
-Also Eclispe will stop automatically and indicate what the problem is (if it doesn't please upgrade to the newest version of Eclispe):
-
-![](../exception_breakpoint_eclipse.png)
-
-Very useful is also the calculator symbol, that let's you evaluate expressions.
-If you don't know, what is wrong in a line, you can tell the calculator to the termine the value of `a` or `a.x` to determine which one
-is `null` (or of `very.complicated.expression[2]` when things get more complicated and a variable is not shown in the list below).
+Very useful is also the calculator symbol, that lets you evaluate expressions.
+If you don't know what is wrong in a line, you can use it to determine the value of `a` or `a.x` to find out which one is `null`.
 
 ![](../intellij_calculator.png)
-
-In Eclipse, the calculator are a pair of glasses (make sure you are in debug perspective, menu: `Window > Perspective > Open Perspective > Debug`).
-![](../eclipse_watches.png)
 
 Now you should be well prepared for the project!

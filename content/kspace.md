@@ -1,5 +1,5 @@
 +++
-date= 2023-06-20T08:00:10Z
+date= 2026-06-20T08:00:10Z
 title = "Project Work 2 - k-Space"
 [extra]
 author= "Mischa Dombrowski, Zhengguo Tan, Jinho Kim"
@@ -96,7 +96,7 @@ spatial/image domain. In other words, $k$-space is an intermediate step between 
 ## 2.2 The ComplexImage Class
 
 In order to deal with 2D arrays of complex numbers in this project, we need to implement a new class, ```ComplexImage```,
-in ```ComplexImage.java```. For the sake of consistency and efficiency, we will use the code base of exercises 1-4.
+in ```ComplexImage.java```. 
 Accordingly, we will implement the real part and the imaginary part of our complex image each into an ```Image``` object.
 
 ```java

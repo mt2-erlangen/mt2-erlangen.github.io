@@ -1,5 +1,5 @@
 +++
-date= 2023-06-20T08:00:25Z
+date= 2026-06-20T08:00:25Z
 title = "Project Work 5 - Outlook and Conclusion"
 [extra]
 author= "Zhengguo Tan, Jinho Kim, Mischa Dombrowski"
@@ -27,5 +27,17 @@ In the last part, summarize what you have implemented and explained in your proj
 
 # Submission
 
-Submit your project report as a PDF and your entire project folder of your code until **April 3<sup>rd</sup> 23:55h** via **StudOn**.
+Submit your project report as a PDF and your code as a ZIP file.
 Your project must compile as a whole!
+
+## Packaging your code
+
+Use the provided script to create the ZIP file:
+
+```sh
+./zip_submission.sh
+```
+
+This creates `submission.zip` which unpacks directly to `src/`. No extra nesting, no build artifacts.
+**Do not pack the folder manually.** A wrongly structured ZIP (e.g. unpacking to a project folder instead of `src/`) cannot be graded automatically and may result in **0 points**.
+If you choose to pack manually anyway, make sure the ZIP unpacks to exactly `src/` and nothing else.
