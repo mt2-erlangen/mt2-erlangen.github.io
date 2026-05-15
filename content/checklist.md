@@ -7,7 +7,7 @@ author = "Mischa Dombrowski, Jinho Kim, Stephan Seitz"
 
 # General Information
 
-The deadline for the project report is on August 8<sup>th</sup> 2026.\
+The deadline for the project report is on August 1<sup>st</sup> 2026.\
 The project report, as well as the coding, are individual work. As such, you need to submit them individually.
 Note: we'll check for plagiarism.
 
